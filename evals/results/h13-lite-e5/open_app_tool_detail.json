@@ -1,0 +1,3213 @@
+[
+ {
+  "id": "open_ask-o0",
+  "suite": "open_app_tool",
+  "kind": "open_ask",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "What's the web address of the site?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 9
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_name-o1",
+  "suite": "open_app_tool",
+  "kind": "open_name",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Kamino\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Kamino"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.kamino.finance\", \"status\": \"opened\"}"
+      ],
+      "ntok": 21
+     },
+     {
+      "text": "I opened Kamino in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 20
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_ask_then_give-o2",
+  "suite": "open_app_tool",
+  "kind": "open_ask_then_give",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Lighter\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Lighter"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.lighter.xyz\", \"status\": \"opened\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I opened Lighter (app.lighter.xyz) in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 26
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_name-o3",
+  "suite": "open_app_tool",
+  "kind": "open_name",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Uniswap\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Uniswap"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.uniswap.org\", \"status\": \"opened\"}"
+      ],
+      "ntok": 21
+     },
+     {
+      "text": "I opened Uniswap in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 21
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_not_found-o4",
+  "suite": "open_app_tool",
+  "kind": "open_not_found",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Orca\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Orca"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"No dApp called Orca in Explore. Ask the user for the web address.\", \"status\": \"not_found\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "There's no Orca in Explore, so can you send me its web address?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 17
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_name-o5",
+  "suite": "open_app_tool",
+  "kind": "open_name",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Polymarket\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Polymarket"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://polymarket.com\", \"status\": \"opened\"}"
+      ],
+      "ntok": 21
+     },
+     {
+      "text": "I opened Polymarket in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 21
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_url_known_domain-o7",
+  "suite": "open_app_tool",
+  "kind": "open_url_known_domain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"url\": \"https://app.uniswap.org/markets\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "url": "https://app.uniswap.org/markets"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.uniswap.org/markets\", \"status\": \"opened\"}"
+      ],
+      "ntok": 27
+     },
+     {
+      "text": "I opened https://app.uniswap.org/markets in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 27
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "neg_deposit-o8",
+  "suite": "open_app_tool",
+  "kind": "neg_deposit",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_deposit\", \"arguments\": {\"project\": \"aave-v3\", \"symbol\": \"USDT\", \"amount\": 200}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_deposit",
+        "arguments": {
+         "project": "aave-v3",
+         "symbol": "USDT",
+         "amount": 200
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"200 USDT\", \"apy_pct\": 4.55, \"executed\": false, \"kind\": \"deposit\", \"note\": \"Waiting for the user to review the deposit and approve it with Face ID.\", \"pool\": \"Aave v3 on Ethereum\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "I've prepared a deposit of 200 USDT into Aave v3 on Ethereum at 4.55% APY, which can change. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_deposit",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_url_lookalike-o9",
+  "suite": "open_app_tool",
+  "kind": "open_url_lookalike",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": false,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"url\": \"hyperliquid-airdrop.io\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "url": "hyperliquid-airdrop.io"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://hyperliquid-airdrop.io\", \"status\": \"opened\"}"
+      ],
+      "ntok": 23
+     },
+     {
+      "text": "I opened https://hyperliquid-airdrop.io in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 25
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "neg_buy-o10",
+  "suite": "open_app_tool",
+  "kind": "neg_buy",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_buy\", \"arguments\": {\"symbol\": \"TRUMP\", \"amount_usd\": 15}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_buy",
+        "arguments": {
+         "symbol": "TRUMP",
+         "amount_usd": 15
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"kind\": \"buy\", \"note\": \"Nothing has moved. The Buy review is open with this Jupiter quote; the user approves it with Touch ID or cancels.\", \"price_impact_pct\": 0.11, \"route\": \"Jupiter via Orca, Raydium\", \"slippage_pct\": 0.5, \"status\": \"review_opened\", \"symbol\": \"TRUMP\", \"you_get\": \"about 0.523 TRUMP\", \"you_pay\": \"15 USDC on Solana\"}"
+      ],
+      "ntok": 29
+     },
+     {
+      "text": "I've prepared a buy of TRUMP: you pay 15 USDC on Solana and get about 0.523 TRUMP through Jupiter via Orca, Raydium. Price impact comes to 0.11%. Approve with Touch ID or cancel. Nothing has been bought yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 64
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_buy",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_name-o11",
+  "suite": "open_app_tool",
+  "kind": "open_name",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Hyperliquid\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Hyperliquid"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.hyperliquid.xyz\", \"status\": \"opened\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I opened Hyperliquid in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 20
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_url_known_domain-o12",
+  "suite": "open_app_tool",
+  "kind": "open_url_known_domain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"url\": \"https://app.morpho.org\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "url": "https://app.morpho.org"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.morpho.org\", \"status\": \"opened\"}"
+      ],
+      "ntok": 25
+     },
+     {
+      "text": "I opened https://app.morpho.org in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 25
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_ask_then_give-o13",
+  "suite": "open_app_tool",
+  "kind": "open_ask_then_give",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"url\": \"https://app.morpho.org/ethereum/earn\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "url": "https://app.morpho.org/ethereum/earn"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.morpho.org/ethereum/earn\", \"status\": \"opened\"}"
+      ],
+      "ntok": 29
+     },
+     {
+      "text": "I opened https://app.morpho.org/ethereum/earn in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_name-o14",
+  "suite": "open_app_tool",
+  "kind": "open_name",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Aave\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Aave"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.aave.com\", \"status\": \"opened\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I opened Aave in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 20
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_name-o15",
+  "suite": "open_app_tool",
+  "kind": "open_name",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"trade.xyz\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "trade.xyz"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://trade.xyz\", \"status\": \"opened\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I opened trade.xyz in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 20
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_name-o16",
+  "suite": "open_app_tool",
+  "kind": "open_name",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Kalshi\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Kalshi"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://kalshi.com\", \"status\": \"opened\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I opened Kalshi in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 20
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_url_lookalike-o17",
+  "suite": "open_app_tool",
+  "kind": "open_url_lookalike",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": false,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"url\": \"https://pump-airdrop.io\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "url": "https://pump-airdrop.io"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://pump-airdrop.io\", \"status\": \"opened\"}"
+      ],
+      "ntok": 25
+     },
+     {
+      "text": "I opened https://pump-airdrop.io in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 25
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_url-o18",
+  "suite": "open_app_tool",
+  "kind": "open_url",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"url\": \"app.gmx.io\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "url": "app.gmx.io"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.gmx.io\", \"status\": \"opened\"}"
+      ],
+      "ntok": 22
+     },
+     {
+      "text": "I opened https://app.gmx.io in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 24
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "neg_what_is-o19",
+  "suite": "open_app_tool",
+  "kind": "neg_what_is",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Uniswap is a decentralised exchange where you swap tokens straight from your wallet through smart contracts. There is no company holding your funds or asking you to sign up. Prices come from liquidity pools rather than a central order book. You pay trading fees in the form of the token you trade.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 59
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_name-o21",
+  "suite": "open_app_tool",
+  "kind": "open_name",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Pump.fun\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Pump.fun"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://pump.fun\", \"status\": \"opened\"}"
+      ],
+      "ntok": 21
+     },
+     {
+      "text": "I opened Pump.fun in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 20
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_name-o23",
+  "suite": "open_app_tool",
+  "kind": "open_name",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Morpho\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Morpho"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.morpho.org\", \"status\": \"opened\"}"
+      ],
+      "ntok": 21
+     },
+     {
+      "text": "I opened Morpho in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 20
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "neg_swap-o24",
+  "suite": "open_app_tool",
+  "kind": "neg_swap",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"243\", \"chain\": \"arbitrum\", \"symbol\": \"USDT0\", \"usd\": 243.0}, {\"amount\": \"9.521\", \"chain\": \"arbitrum\", \"symbol\": \"ETH\", \"usd\": 37081.06}, {\"amount\": \"3.7397\", \"chain\": \"bnb\", \"symbol\": \"BNB\", \"usd\": 2246.59}, {\"amount\": \"25266.2\", \"chain\": \"ethereum\", \"symbol\": \"USDT\", \"usd\": 25266.22}, {\"amount\": \"564.657\", \"chain\": \"base\", \"symbol\": \"USDC\", \"usd\": 564.66}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 200}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 200
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 200, \"amount_out\": \"0.0512\", \"amount_out_usd\": 199.3, \"fee_bps\": 35, \"from\": \"200 USDC on Base\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 17, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.0512 ETH on Base\", \"total_cost_usd\": 0.7}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared a swap of 200 USDC on Base. You'd get about 0.0512 ETH on Base, and the all-in cost is about $0.70. The route is NEAR Intents. Approve it with Face ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 62
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "recorded"
+    ],
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "neg_what_is-o25",
+  "suite": "open_app_tool",
+  "kind": "neg_what_is",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Uniswap is a decentralised exchange where you trade tokens straight from your wallet through smart contracts. There is no company holding your funds or asking you to sign up. Hermit can open it in its browser.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_name-o26",
+  "suite": "open_app_tool",
+  "kind": "open_name",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Limitless\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Limitless"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://limitless.exchange\", \"status\": \"opened\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I opened Limitless in Hermit's browser. Nothing connects to your wallet until you approve it. When the site asks for your wallet, Hermit shows an approval sheet first.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 36
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_url_known_domain-o27",
+  "suite": "open_app_tool",
+  "kind": "open_url_known_domain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"url\": \"https://app.aave.com\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "url": "https://app.aave.com"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.aave.com\", \"status\": \"opened\"}"
+      ],
+      "ntok": 24
+     },
+     {
+      "text": "I opened https://app.aave.com in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 24
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "neg_add_funds-o28",
+  "suite": "open_app_tool",
+  "kind": "neg_add_funds",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_add_funds\", \"arguments\": {\"goal\": \"wallet\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_add_funds",
+        "arguments": {
+         "goal": "wallet"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"goal\": \"wallet\", \"note\": \"The user taps it to open Add funds.\", \"screen\": \"add_funds\", \"status\": \"button_shown\"}"
+      ],
+      "ntok": 21
+     },
+     {
+      "text": "I put a button below that opens Add funds. Tap it to see the deposit QR code and choose a network for your wallet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 26
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_add_funds",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_bad_url-o29",
+  "suite": "open_app_tool",
+  "kind": "open_bad_url",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"url\": \"ftp://files.example.com/pub\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "url": "ftp://files.example.com/pub"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"Only http and https addresses can be opened.\"}"
+      ],
+      "ntok": 24
+     },
+     {
+      "text": "I can't open that one. Only http and https addresses open in Hermit's browser, and this is a ftp address.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 26
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_ask_then_give-o30",
+  "suite": "open_app_tool",
+  "kind": "open_ask_then_give",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_contains_any": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"url\": \"https://github.com/Hermit-Ai-Labs\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "url": "https://github.com/Hermit-Ai-Labs"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://github.com/Hermit-Ai-Labs\", \"status\": \"opened\"}"
+      ],
+      "ntok": 29
+     },
+     {
+      "text": "I opened https://github.com/Hermit-Ai-Labs in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_ask-o31",
+  "suite": "open_app_tool",
+  "kind": "open_ask",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": false,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Bank\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Bank"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"No dApp called Bank in Explore. Ask the user for the web address.\", \"status\": \"not_found\"}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "I couldn't find Bank in Explore. What's its web address?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 14
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_bad_url-o32",
+  "suite": "open_app_tool",
+  "kind": "open_bad_url",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"url\": \"ftp://192.168.1.20/share\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "url": "ftp://192.168.1.20/share"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"Only http and https addresses can be opened.\"}"
+      ],
+      "ntok": 33
+     },
+     {
+      "text": "I can't open that one. Only http and https addresses open in Hermit's browser, and this is a ftp address.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 26
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "neg_real_site-o33",
+  "suite": "open_app_tool",
+  "kind": "neg_real_site",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": false,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"url\": \"https://trade.xyz\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "url": "https://trade.xyz"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://trade.xyz\", \"status\": \"opened\"}"
+      ],
+      "ntok": 22
+     },
+     {
+      "text": "I opened https://trade.xyz in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 22
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_ask-o34",
+  "suite": "open_app_tool",
+  "kind": "open_ask",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": false,
+   "bio_word": true,
+   "answer_contains_all": false,
+   "answer_forbidden": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Uniswap\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Uniswap"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.\", \"opened\": \"https://app.uniswap.org\", \"status\": \"opened\"}"
+      ],
+      "ntok": 21
+     },
+     {
+      "text": "I opened Uniswap in Hermit's browser. Nothing connects to your wallet until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 21
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "open_not_found-o35",
+  "suite": "open_app_tool",
+  "kind": "open_not_found",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"open_app\", \"arguments\": {\"name\": \"Synthetix\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "open_app",
+        "arguments": {
+         "name": "Synthetix"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"No dApp called Synthetix in Explore. Ask the user for the web address.\", \"status\": \"not_found\"}"
+      ],
+      "ntok": 22
+     },
+     {
+      "text": "I couldn't find Synthetix in Explore, so can you send me its web address?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 20
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "open_app",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ }
+]

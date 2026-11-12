@@ -1,0 +1,7667 @@
+[
+ {
+  "id": "trade_view-0",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"HYPE\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "HYPE"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -3.91, \"price\": 19.702, \"source\": \"Hyperliquid mark price\", \"symbol\": \"HYPE\"}",
+       "{\"account_value\": 8353.04, \"available_usdc\": 8353.04, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(8353.04 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(19.702 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(8353.04 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(19.702 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"1250\"}",
+       "{\"result\": \"18.32\"}"
+      ],
+      "ntok": 94
+     },
+     {
+      "text": "HYPE is at $19.702, down 3.91% in the last 24 hours. My read: already extended, chasing is the risk, though I can't predict when it turns. Leverage cuts both ways. The order I'd prepare: short $1,250 HYPE at 5x with a stop at $18.32. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 89
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-1",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_loss",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round((106556 - 99097) / 106556 * 45, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round((106556 - 99097) / 106556 * 45, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"3.15\"}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "If it stops you out at $99,097, that's roughly $3.15 on the $45 position, not counting fees. A fast move can fill the stop worse. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 48
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-2",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_do",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"BTC\", \"side\": \"short\", \"size_usd\": 20, \"leverage\": 3, \"order_type\": \"market\", \"stop_loss\": 103641}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "BTC",
+         "side": "short",
+         "size_usd": 20,
+         "leverage": 3,
+         "order_type": "market",
+         "stop_loss": 103641
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 60
+     },
+     {
+      "text": "I've prepared a 3x short on BTC for $20 with a stop at $103,641. It's waiting for your Face ID, nothing happens until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 42
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-3",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_x5",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"position_math\", \"arguments\": {\"side\": \"long\", \"entry\": 1.5989, \"size_usd\": 40, \"leverage\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "position_math",
+        "arguments": {
+         "side": "long",
+         "entry": 1.5989,
+         "size_usd": 40,
+         "leverage": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"distance_to_liq_pct\": 20, \"entry\": 1.5989, \"leverage\": 5, \"liquidation_price\": 1.28, \"maintenance_margin_used\": 0, \"margin\": 8, \"quantity\": 25.017199, \"side\": \"long\", \"size_usd\": 40}"
+      ],
+      "ntok": 46
+     },
+     {
+      "text": "At 5x the order would be: long $40 ARB at 5x with a stop at $1.487. It needs $8 of margin and liquidation would be about $1.28, 20% from the current price. Leverage makes gains and losses bigger, so keep the stop tight. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 77
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "position_math",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-4",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"HYPE\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "HYPE"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 11.23, \"price\": 30.896, \"source\": \"Hyperliquid mark price\", \"symbol\": \"HYPE\"}",
+       "{\"account_value\": 848.26, \"available_usdc\": 848.26, \"margin_used\": 0, \"open_orders\": [{\"coin\": \"INJ\", \"price\": 30.727, \"side\": \"sell\", \"size\": 34.91}], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(848.26 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(30.896 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(848.26 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(30.896 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"125\"}",
+       "{\"result\": \"28.73\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "Live price: HYPE at $30.896, up 11.23% in 24h. My lean is mildly bullish, nothing strong, and I can't predict where it goes. A stop can fill worse than set when the market moves fast. The order I'd prepare: long $125 HYPE at 3x with a stop at $28.73. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 93
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-5",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"AVAX\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "AVAX"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 1.18, \"price\": 22.13, \"source\": \"Hyperliquid mark price\", \"symbol\": \"AVAX\"}",
+       "{\"account_value\": 0, \"available_usdc\": 0, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "AVAX is trading at $22.13, up 1.18% over 24h. I can't predict the next move, and there's no clear edge, so I'd keep it small. A stop order can fill at a worse price in a fast move. You have nothing to trade with on Hyperliquid right now, so there's no order to size yet. Want me to open Add funds?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 89
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-6",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SUI\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SUI"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 11.86, \"price\": 2.0862, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SUI\"}",
+       "{\"account_value\": 14807.87, \"available_usdc\": 14807.87, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(14807.87 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(2.0862 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(14807.87 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(2.0862 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"2220\"}",
+       "{\"result\": \"1.9402\"}"
+      ],
+      "ntok": 95
+     },
+     {
+      "text": "Live price: SUI at $2.0862, up 11.86% in 24h. My read: already extended, chasing is the risk, though I can't predict when it turns. Leverage cuts both ways. The order I'd prepare: short $2,220 SUI at 3x with a stop at $1.9402. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 91
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-7",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_loss",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(215 * (0.6587 - 0.6126) / 0.6587, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(215 * (0.6587 - 0.6126) / 0.6587, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"15.05\"}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "If it stops you out at $0.6126, that's roughly $15.05 on the $215 position, not counting fees. A fast move can fill the stop worse. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 50
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-8",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 10.55, \"price\": 150.18, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 2907.08, \"available_usdc\": 2907.08, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(2907.08 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(150.18 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(2907.08 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(150.18 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"435\"}",
+       "{\"result\": \"139.67\"}"
+      ],
+      "ntok": 94
+     },
+     {
+      "text": "Live price: SOL at $150.18, up 10.55% in 24h. My lean is mildly bullish, nothing strong, and I can't predict where it goes. A stop order can fill at a worse price in a fast move. The order I'd prepare: long $435 SOL at 3x with a stop at $139.67. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 93
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-9",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"XRP\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "XRP"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -5.96, \"price\": 2.9044, \"source\": \"Hyperliquid mark price\", \"symbol\": \"XRP\"}",
+       "{\"error\": \"No wallet on this iPhone yet\"}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "XRP is $2.9044, down 5.96% in the last 24 hours. I can't predict where it goes next, and there's no clear edge, so I'd keep it small. A stop order can fill at a worse price in a fast move. XRP can swing hard in a day. You have nothing to trade with on this iPhone yet, so there's no position to close. Want me to open Add funds?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 98
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-10",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SUI\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SUI"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -1.66, \"price\": 2.5387, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SUI\"}",
+       "{\"account_value\": 190.47, \"available_usdc\": 190.47, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(190.47 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(2.5387 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(190.47 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(2.5387 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"25\"}",
+       "{\"result\": \"2.361\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "SUI is at $2.5387, down 1.66% in the last 24 hours. I'd lean a little bearish here, though it's a weak lean and nobody can predict this. Leverage makes gains and losses bigger. The order I'd prepare: long $25 SUI at 3x with a stop at $2.361. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 89
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-11",
+  "suite": "trade_view",
+  "kind": "trade_view_nomarket",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BRETT\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BRETT"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"No Hyperliquid market for BRETT. Answer from what you know instead, and say there's no live price here.\"}",
+       "{\"account_value\": 366.32, \"available_usdc\": 77.02, \"margin_used\": 289.3, \"open_orders\": [{\"coin\": \"BTC\", \"price\": 90156, \"side\": \"buy\", \"size\": 0.02}], \"positions\": [{\"coin\": \"XRP\", \"entry\": 1.0595, \"leverage\": 2, \"liquidation\": 1.5813, \"side\": \"short\", \"size\": 546.1, \"unrealised_pnl\": -28.78}]}"
+      ],
+      "ntok": 38
+     },
+     {
+      "text": "There's no live price for BRETT here, so I can't quote you a number or a daily move. Memecoins are very volatile and I can't predict them, so leverage could liquidate you quickly. Without a live market there's no order I can prepare. If you want to talk about a coin with a live market, like BTC, ETH or SOL, say so.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 79
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-12",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"DOGE\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "DOGE"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 0.74, \"price\": 0.10189, \"source\": \"Hyperliquid mark price\", \"symbol\": \"DOGE\"}",
+       "{\"account_value\": 3646.63, \"available_usdc\": 3517.71, \"margin_used\": 128.92, \"open_orders\": [], \"positions\": [{\"coin\": \"HYPE\", \"entry\": 54.674, \"leverage\": 5, \"liquidation\": 65.282, \"side\": \"short\", \"size\": 11.79, \"unrealised_pnl\": 3.22}]}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(3517.71 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(0.10189 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(3517.71 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(0.10189 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"525\"}",
+       "{\"result\": \"0.0948\"}"
+      ],
+      "ntok": 95
+     },
+     {
+      "text": "DOGE is trading at $0.10189, up 0.74% over 24h. I'd lean a little bullish here, though it's a weak lean and nobody can predict this. A stop can fill worse than set when the market moves fast. The order I'd prepare: long $525 DOGE at 3x with a stop at $0.0948. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 95
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-13",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_x5",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"position_math\", \"arguments\": {\"side\": \"long\", \"entry\": 86682, \"size_usd\": 2795, \"leverage\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "position_math",
+        "arguments": {
+         "side": "long",
+         "entry": 86682,
+         "size_usd": 2795,
+         "leverage": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"distance_to_liq_pct\": 20, \"entry\": 86682, \"leverage\": 5, \"liquidation_price\": 69345.6, \"maintenance_margin_used\": 0, \"margin\": 559, \"quantity\": 0.032244, \"side\": \"long\", \"size_usd\": 2795}"
+      ],
+      "ntok": 47
+     },
+     {
+      "text": "At 5x the order would be: long $2,795 BTC at 5x with a stop at $80,614. It needs $559 of margin and liquidation would be about $69,345.6, 20% from the current price. The stop is closer, but stops can slip when the market moves fast. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 87
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "position_math",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-14",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"DOGE\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "DOGE"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -6.88, \"price\": 0.41617, \"source\": \"Hyperliquid mark price\", \"symbol\": \"DOGE\"}",
+       "{\"account_value\": 500.87, \"available_usdc\": 354.53, \"margin_used\": 146.34, \"open_orders\": [], \"positions\": [{\"coin\": \"HYPE\", \"entry\": 53.682, \"leverage\": 10, \"liquidation\": 58.756, \"side\": \"short\", \"size\": 27.26, \"unrealised_pnl\": -1.42}]}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(354.53 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(0.41617 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(354.53 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(0.41617 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"50\"}",
+       "{\"result\": \"0.387\"}"
+      ],
+      "ntok": 94
+     },
+     {
+      "text": "Live price: DOGE at $0.41617, down 6.88% in 24h. My lean is mildly bearish, nothing strong, and I can't predict where it goes. A stop order can fill at a worse price in a fast move. Leverage cuts both ways. The order I'd prepare: long $50 DOGE at 3x with a stop at $0.387. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 100
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-15",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_do",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"ETH\", \"side\": \"long\", \"size_usd\": 335, \"leverage\": 2, \"order_type\": \"market\", \"stop_loss\": 2852}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "ETH",
+         "side": "long",
+         "size_usd": 335,
+         "leverage": 2,
+         "order_type": "market",
+         "stop_loss": 2852
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Touch ID.\"}"
+      ],
+      "ntok": 59
+     },
+     {
+      "text": "I've prepared a 2x long on ETH for $335 with a stop at $2,852. It's waiting for your Touch ID, nothing happens until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-16",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SUI\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SUI"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 11.78, \"price\": 1.2881, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SUI\"}",
+       "{\"account_value\": 934.72, \"available_usdc\": 934.72, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(934.72 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(1.2881 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(934.72 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(1.2881 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"140\"}",
+       "{\"result\": \"1.1979\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "SUI is trading at $1.2881, up 11.78% over 24h. I'd be careful: already extended, chasing is the risk, and I can't predict what comes next. Leverage cuts both ways. The order I'd prepare: long $140 SUI at 3x with a stop at $1.1979. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 90
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-17",
+  "suite": "trade_view",
+  "kind": "trade_view_idea",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BTC\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"ETH\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BTC"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "ETH"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -4.57, \"price\": 84872, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BTC\"}",
+       "{\"change_24h_pct\": 2.98, \"price\": 2494.67, \"source\": \"Hyperliquid mark price\", \"symbol\": \"ETH\"}",
+       "{\"change_24h_pct\": -1.14, \"price\": 99.73, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 776.22, \"available_usdc\": 43.45, \"margin_used\": 732.77, \"open_orders\": [], \"positions\": [{\"coin\": \"BTC\", \"entry\": 83650, \"leverage\": 10, \"liquidation\": 91557, \"side\": \"short\", \"size\": 0.0876, \"unrealised_pnl\": -107.05}]}"
+      ],
+      "ntok": 77
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(43.45 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(84872 * 0.93, 0)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(43.45 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(84872 * 0.93, 0)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"10\"}",
+       "{\"result\": \"78931\"}"
+      ],
+      "ntok": 91
+     },
+     {
+      "text": "You're already short 0.0876 BTC, and BTC is down 4.57% in 24h. I'd say a bounce is possible but it can keep falling, and nobody can predict the bottom. A stop can fill worse than set when the market moves fast. The order I'd prepare: long $10 BTC at 2x with a stop at $78,931. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 95
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-18",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"INJ\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "INJ"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -1.2, \"price\": 34.236, \"source\": \"Hyperliquid mark price\", \"symbol\": \"INJ\"}",
+       "{\"account_value\": 148.9, \"available_usdc\": 148.9, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(148.9 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(34.236 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(148.9 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(34.236 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"20\"}",
+       "{\"result\": \"31.84\"}"
+      ],
+      "ntok": 92
+     },
+     {
+      "text": "Right now INJ is $34.236, down 1.2% on the day. My read: no clear edge, so I'd keep it small. I can't predict where it goes next. A stop order can fill at a worse price in a fast move. Leverage cuts both ways. The order I'd prepare: short $20 INJ at 3x with a stop at $31.84. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 99
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-19",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BNB\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BNB"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -12.95, \"price\": 832.17, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BNB\"}",
+       "{\"account_value\": 109.11, \"available_usdc\": 109.11, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(109.11 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(832.17 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(109.11 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(832.17 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"15\"}",
+       "{\"result\": \"773.92\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "BNB is at $832.17, down 12.95% in the last 24 hours. After a drop like that, a bounce is possible but it can keep falling. I can't predict where it stops. A stop order can fill at a worse price in a fast move. The order I'd prepare: long $15 BNB at 3x with a stop at $773.92. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 100
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-20",
+  "suite": "trade_view",
+  "kind": "trade_view_idea",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BTC\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"ETH\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BTC"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "ETH"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 12.77, \"price\": 105608, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BTC\"}",
+       "{\"change_24h_pct\": 7.45, \"price\": 4146.29, \"source\": \"Hyperliquid mark price\", \"symbol\": \"ETH\"}",
+       "{\"change_24h_pct\": -1.09, \"price\": 217.19, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 253.97, \"available_usdc\": 0, \"margin_used\": 253.97, \"open_orders\": [], \"positions\": [{\"coin\": \"ARB\", \"entry\": 1.5194, \"leverage\": 2, \"liquidation\": 2.2678, \"side\": \"short\", \"size\": 334.3, \"unrealised_pnl\": -4.55}]}"
+      ],
+      "ntok": 77
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(253.97 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(217.19 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(253.97 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(217.19 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"35\"}",
+       "{\"result\": \"201.99\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "I checked BTC, ETH and SOL over the last 24 hours: BTC is up 12.77%, ETH is up 7.45%, SOL is down 1.09%. BTC moved the most, at $105,608, up 12.77%. It's already extended, chasing is the risk, and I can't predict whether it keeps running. A stop order can fill at a worse price in a fast move. The order I'd prepare: long $35 BTC at 3x with a stop at $201.99. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 133
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-21",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 6.35, \"price\": 115.81, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 82.13, \"available_usdc\": 82.13, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(82.13 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(115.81 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(82.13 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(115.81 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"10\"}",
+       "{\"result\": \"107.7\"}"
+      ],
+      "ntok": 92
+     },
+     {
+      "text": "Live price: SOL at $115.81, up 6.35% in 24h. My lean is mildly bullish, nothing strong, and I can't predict where it goes. A stop order can fill at a worse price in a fast move. Leverage cuts both ways. The order I'd prepare: long $10 SOL at 3x with a stop at $107.7. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 96
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-22",
+  "suite": "trade_view",
+  "kind": "trade_view_idea",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BTC\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"ETH\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BTC"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "ETH"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 6.03, \"price\": 100578, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BTC\"}",
+       "{\"change_24h_pct\": -5.06, \"price\": 1952.68, \"source\": \"Hyperliquid mark price\", \"symbol\": \"ETH\"}",
+       "{\"change_24h_pct\": 6.13, \"price\": 191.57, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 1640.28, \"available_usdc\": 1504.62, \"margin_used\": 135.66, \"open_orders\": [], \"positions\": [{\"coin\": \"SOL\", \"entry\": 194.89, \"leverage\": 10, \"liquidation\": null, \"side\": \"long\", \"size\": 6.961, \"unrealised_pnl\": -23.11}]}"
+      ],
+      "ntok": 77
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(1504.62 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(191.57 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(1504.62 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(191.57 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"225\"}",
+       "{\"result\": \"178.16\"}"
+      ],
+      "ntok": 94
+     },
+     {
+      "text": "I checked BTC, ETH and SOL over the last 24 hours: BTC is up 6.03%, ETH is down 5.06%, SOL is up 6.13%. SOL moved the most, at $191.57, up 6.13%. It's already extended, chasing is the risk, and I can't predict whether it keeps running. A stop order can fill at a worse price in a fast move. Leverage cuts both ways. The order I'd prepare: long $225 SOL at 2x with a stop at $178.16. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 137
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-23",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_x5",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"position_math\", \"arguments\": {\"side\": \"short\", \"entry\": 3934.16, \"size_usd\": 155, \"leverage\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "position_math",
+        "arguments": {
+         "side": "short",
+         "entry": 3934.16,
+         "size_usd": 155,
+         "leverage": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"distance_to_liq_pct\": 20, \"entry\": 3934.16, \"leverage\": 5, \"liquidation_price\": 4720.99, \"maintenance_margin_used\": 0, \"margin\": 31, \"quantity\": 0.039398, \"side\": \"short\", \"size_usd\": 155}"
+      ],
+      "ntok": 48
+     },
+     {
+      "text": "At 5x the order would be: short $155 ETH at 5x, stop at $4,210. It needs $31 of margin and liquidation would be about $4,720.99, 20% from the current price. That's farther than your stop, but a fast move can slip past a stop. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 84
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "position_math",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-24",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"HYPE\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "HYPE"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 2.47, \"price\": 24.842, \"source\": \"Hyperliquid mark price\", \"symbol\": \"HYPE\"}",
+       "{\"account_value\": 975.8, \"available_usdc\": 297.05, \"margin_used\": 678.75, \"open_orders\": [{\"coin\": \"NEAR\", \"price\": 2.322, \"side\": \"buy\", \"size\": 1152.45}], \"positions\": [{\"coin\": \"APT\", \"entry\": 4.098, \"leverage\": 10, \"liquidation\": 4.485, \"side\": \"short\", \"size\": 1656.3, \"unrealised_pnl\": -21.53}]}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(297.05 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(24.842 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(297.05 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(24.842 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"45\"}",
+       "{\"result\": \"23.1\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "HYPE is trading at $24.842, up 2.47% over 24h. It's quiet, so there's no clear edge, so I'd keep it small, and nobody can predict a quiet market. A stop order can fill at a worse price in a fast move. Leverage cuts both ways. The order I'd prepare: long $45 HYPE at 3x with a stop at $23.1. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 104
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-25",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_loss",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round((75275 - 70006) / 75275 * 100, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round((75275 - 70006) / 75275 * 100, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"7\"}"
+      ],
+      "ntok": 48
+     },
+     {
+      "text": "If it stops you out at $70,006, that's roughly 7% under your entry, before fees. A fast move can fill the stop worse. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 42
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-26",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_do",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"INJ\", \"side\": \"long\", \"size_usd\": 10, \"leverage\": 3, \"order_type\": \"market\", \"stop_loss\": 25.84}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "INJ",
+         "side": "long",
+         "size_usd": 10,
+         "leverage": 3,
+         "order_type": "market",
+         "stop_loss": 25.84
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 60
+     },
+     {
+      "text": "I've prepared a 3x long on INJ for $10 with a stop at $25.84. It's waiting for your Face ID, nothing happens until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-27",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 8.61, \"price\": 141.39, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 157.51, \"available_usdc\": 157.51, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(157.51 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(141.39 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(157.51 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(141.39 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"20\"}",
+       "{\"result\": \"131.49\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "Live price: SOL at $141.39, up 8.61% in 24h. My lean is mildly bullish, nothing strong, and I can't predict where it goes. A stop order can fill at a worse price in a fast move. The order I'd prepare: long $20 SOL at 3x with a stop at $131.49. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 91
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-28",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -4.26, \"price\": 254.94, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 4823.7, \"available_usdc\": 4284.45, \"margin_used\": 539.25, \"open_orders\": [], \"positions\": [{\"coin\": \"LINK\", \"entry\": 13.287, \"leverage\": 2, \"liquidation\": 19.831, \"side\": \"short\", \"size\": 81.17, \"unrealised_pnl\": 18.43}]}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(4284.45 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(254.94 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(4284.45 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(254.94 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"640\"}",
+       "{\"result\": \"237.09\"}"
+      ],
+      "ntok": 94
+     },
+     {
+      "text": "Live price: SOL at $254.94, down 4.26% in 24h. My lean is mildly bearish, nothing strong, and I can't predict where it goes. A stop order can fill at a worse price in a fast move. Leverage cuts both ways. The order I'd prepare: short $640 SOL at 3x with a stop at $237.09. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 99
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-29",
+  "suite": "trade_view",
+  "kind": "trade_view_idea_fu_x5",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"position_math\", \"arguments\": {\"side\": \"short\", \"entry\": 198.85, \"size_usd\": 40, \"leverage\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "position_math",
+        "arguments": {
+         "side": "short",
+         "entry": 198.85,
+         "size_usd": 40,
+         "leverage": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"distance_to_liq_pct\": 20, \"entry\": 198.85, \"leverage\": 5, \"liquidation_price\": 238.62, \"maintenance_margin_used\": 0, \"margin\": 8, \"quantity\": 0.201157, \"side\": \"short\", \"size_usd\": 40}"
+      ],
+      "ntok": 46
+     },
+     {
+      "text": "At 5x the order would be: short $40 SOL at 5x with a stop at $212.77. It needs $8 of margin and liquidation would be about $238.62, 20% from the current price. Higher leverage means less room before a move against you. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 76
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "position_math",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-30",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"TIA\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "TIA"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 4.46, \"price\": 3.464, \"source\": \"Hyperliquid mark price\", \"symbol\": \"TIA\"}",
+       "{\"account_value\": 847.57, \"available_usdc\": 847.57, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(847.57 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(3.464 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(847.57 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(3.464 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"125\"}",
+       "{\"result\": \"3.2215\"}"
+      ],
+      "ntok": 92
+     },
+     {
+      "text": "Right now TIA is $3.464, up 4.46% on the day. I'd lean a little bullish here, though it's a weak lean and nobody can predict this. A stop order can fill at a worse price in a fast move. The order I'd prepare: long $125 TIA at 3x with a stop at $3.2215. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 92
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-31",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BTC\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BTC"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 5.48, \"price\": 78009, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BTC\"}",
+       "{\"account_value\": 2172.73, \"available_usdc\": 2172.73, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 36
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(2172.73 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(78009 * 0.93, 0)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(2172.73 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(78009 * 0.93, 0)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"325\"}",
+       "{\"result\": \"72548\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "Live price: BTC at $78,009, up 5.48% in 24h. My read: already extended, chasing is the risk, though I can't predict when it turns. Leverage cuts both ways. A stop order can fill at a worse price in a fast move. The order I'd prepare: short $325 BTC at 2x with a stop at $72,548. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 100
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-32",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_do",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"HYPE\", \"side\": \"long\", \"size_usd\": 150, \"leverage\": 3, \"order_type\": \"market\", \"stop_loss\": 25.18}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "HYPE",
+         "side": "long",
+         "size_usd": 150,
+         "leverage": 3,
+         "order_type": "market",
+         "stop_loss": 25.18
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 61
+     },
+     {
+      "text": "I've prepared a 3x long on HYPE for $150 with a stop at $25.18. It's waiting for your Face ID, nothing happens until you approve it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 42
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-33",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_x5",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"position_math\", \"arguments\": {\"side\": \"short\", \"entry\": 0.881, \"size_usd\": 30, \"leverage\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "position_math",
+        "arguments": {
+         "side": "short",
+         "entry": 0.881,
+         "size_usd": 30,
+         "leverage": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"distance_to_liq_pct\": 20, \"entry\": 0.881, \"leverage\": 5, \"liquidation_price\": 1.06, \"maintenance_margin_used\": 0, \"margin\": 6, \"quantity\": 34.052213, \"side\": \"short\", \"size_usd\": 30}"
+      ],
+      "ntok": 45
+     },
+     {
+      "text": "At 5x the order would be: short $30 ARB at 5x, stop at $0.9427. It needs $6 of margin and liquidation would be about $1.06, 20% from the current price. That's farther than your stop, but a fast move can slip past a stop. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 80
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "position_math",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-34",
+  "suite": "trade_view",
+  "kind": "trade_view_nomarket",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"TURBO\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "TURBO"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"No Hyperliquid market for TURBO. Answer from what you know instead, and say there's no live price here.\"}",
+       "{\"account_value\": 442.53, \"available_usdc\": 442.53, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 38
+     },
+     {
+      "text": "I don't have a live price for TURBO: there's no live price here because Hyperliquid has no market for it. Memecoins are very volatile and I can't predict them, so leverage could liquidate you quickly. Without a live market there's no order I can prepare. I can give a view on a coin with a live market instead, like BTC, ETH or SOL.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 81
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-35",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_loss",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(165 * (153.01 - 142.3) / 153.01, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(165 * (153.01 - 142.3) / 153.01, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"11.55\"}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "If it stops you out at $142.3, that's roughly $11.55 on the $165 position, before fees. A fast move can fill the stop worse. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 48
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-36",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SUI\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SUI"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -4.91, \"price\": 3.1962, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SUI\"}",
+       "{\"account_value\": 273.92, \"available_usdc\": 273.92, \"margin_used\": 0, \"open_orders\": [{\"coin\": \"TIA\", \"price\": 4.643, \"side\": \"sell\", \"size\": 690.95}], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(273.92 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(3.1962 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(273.92 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(3.1962 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"40\"}",
+       "{\"result\": \"2.9725\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "Live price: SUI at $3.1962, down 4.91% in 24h. My read: already extended, chasing is the risk, though I can't predict when it turns. Leverage cuts both ways. The order I'd prepare: short $40 SUI at 3x with a stop at $2.9725. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 87
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-37",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BNB\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BNB"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -1.88, \"price\": 701.51, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BNB\"}",
+       "{\"account_value\": 2515.79, \"available_usdc\": 2515.79, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(2515.79 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(701.51 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(2515.79 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(701.51 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"375\"}",
+       "{\"result\": \"652.4\"}"
+      ],
+      "ntok": 94
+     },
+     {
+      "text": "BNB is at $701.51, down 1.88% in the last 24 hours. I'd lean a little bearish here, though it's a weak lean and nobody can predict this. A stop order can fill at a worse price in a fast move. Leverage cuts both ways. The order I'd prepare: long $375 BNB at 3x with a stop at $652.4. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 102
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-38",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"LINK\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "LINK"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 7.31, \"price\": 18.086, \"source\": \"Hyperliquid mark price\", \"symbol\": \"LINK\"}",
+       "{\"account_value\": 542.71, \"available_usdc\": 0, \"margin_used\": 542.71, \"open_orders\": [], \"positions\": [{\"coin\": \"INJ\", \"entry\": 38.867, \"leverage\": 3, \"liquidation\": 26.042, \"side\": \"long\", \"size\": 41.89, \"unrealised_pnl\": -27.44}]}"
+      ],
+      "ntok": 36
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(542.71 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(18.086 * 1.07, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(542.71 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(18.086 * 1.07, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"80\"}",
+       "{\"result\": \"19.352\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "Live price: LINK at $18.086, up 7.31% in 24h. My lean is mildly bullish, nothing strong, and I can't predict where it goes. A stop order can fill at a worse price in a fast move. Leverage cuts both ways. The order I'd prepare: long $80 LINK at 3x with a stop at $19.352. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 97
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-39",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SUI\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SUI"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -10.79, \"price\": 1.7948, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SUI\"}",
+       "{\"account_value\": 329.77, \"available_usdc\": 329.77, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(329.77 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(1.7948 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(329.77 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(1.7948 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"45\"}",
+       "{\"result\": \"1.6692\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "SUI is at $1.7948, down 10.79% in the last 24 hours. I'd be careful: already moved hard, chasing is the risk, and I can't predict direction. A stop can fill worse than set when the market moves fast. The order I'd prepare: long $45 SUI at 3x with a stop at $1.6692. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 96
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-40",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"XRP\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "XRP"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -1.87, \"price\": 0.4601, \"source\": \"Hyperliquid mark price\", \"symbol\": \"XRP\"}",
+       "{\"account_value\": 240.61, \"available_usdc\": 240.61, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(240.61 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(0.4601 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(240.61 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(0.4601 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"35\"}",
+       "{\"result\": \"0.4279\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "XRP is at $0.4601, down 1.87% in the last 24 hours. I'd lean a little bullish here, though it's a weak lean and nobody can predict this. A stop can fill worse than set when the market moves fast. The order I'd prepare: long $35 XRP at 3x with a stop at $0.4279. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 94
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-41",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_do",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"SOL\", \"side\": \"short\", \"size_usd\": 140, \"leverage\": 2, \"order_type\": \"market\", \"stop_loss\": 118.55}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "SOL",
+         "side": "short",
+         "size_usd": 140,
+         "leverage": 2,
+         "order_type": "market",
+         "stop_loss": 118.55
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 62
+     },
+     {
+      "text": "I've prepared a 2x short on SOL for $140 with a stop at $118.55. Review it and approve with Face ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 39
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-42",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"LINK\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "LINK"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 2.07, \"price\": 12.087, \"source\": \"Hyperliquid mark price\", \"symbol\": \"LINK\"}",
+       "{\"account_value\": 1950.71, \"available_usdc\": 1950.71, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 36
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(1950.71 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(12.087 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(1950.71 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(12.087 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"290\"}",
+       "{\"result\": \"11.24\"}"
+      ],
+      "ntok": 94
+     },
+     {
+      "text": "Live price: LINK at $12.087, up 2.07% in 24h. My lean is mildly bullish, nothing strong, and I can't predict where it goes. A stop order can fill at a worse price in a fast move. The order I'd prepare: long $290 LINK at 3x with a stop at $11.24. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 91
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-43",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_x5",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"position_math\", \"arguments\": {\"side\": \"short\", \"entry\": 3.276, \"size_usd\": 40, \"leverage\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "position_math",
+        "arguments": {
+         "side": "short",
+         "entry": 3.276,
+         "size_usd": 40,
+         "leverage": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"distance_to_liq_pct\": 20, \"entry\": 3.276, \"leverage\": 5, \"liquidation_price\": 3.93, \"maintenance_margin_used\": 0, \"margin\": 8, \"quantity\": 12.210012, \"side\": \"short\", \"size_usd\": 40}"
+      ],
+      "ntok": 45
+     },
+     {
+      "text": "At 5x the order would be: short $40 OP at 5x, stop at $3.5053. It needs $8 of margin and liquidation would be about $3.93, 20% from the current price. That's farther than your stop, but a fast move can slip past a stop. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 79
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "position_math",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-44",
+  "suite": "trade_view",
+  "kind": "trade_view_idea",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BTC\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"ETH\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BTC"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "ETH"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 9.71, \"price\": 101129, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BTC\"}",
+       "{\"change_24h_pct\": -1.34, \"price\": 2711.37, \"source\": \"Hyperliquid mark price\", \"symbol\": \"ETH\"}",
+       "{\"change_24h_pct\": -9.18, \"price\": 228.83, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 270.02, \"available_usdc\": 270.02, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 77
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(270.02 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(228.83 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(270.02 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(228.83 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"40\"}",
+       "{\"result\": \"212.81\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "Quick scan of BTC, ETH and SOL over 24h: BTC is up 9.71%, ETH is down 1.34%, SOL is down 9.18%. BTC moved the most, at $101,129, up 9.71%. After a move like that it looks already extended, chasing is the risk. Nobody can predict the next leg. Leverage cuts both ways. The order I'd prepare: short $40 BTC at 2x with a stop at $212.81. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 124
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-45",
+  "suite": "trade_view",
+  "kind": "trade_view_idea_fu_do",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"BTC\", \"side\": \"short\", \"size_usd\": 175, \"leverage\": 2, \"order_type\": \"market\", \"stop_loss\": 112744}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "BTC",
+         "side": "short",
+         "size_usd": 175,
+         "leverage": 2,
+         "order_type": "market",
+         "stop_loss": 112744
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Touch ID.\"}"
+      ],
+      "ntok": 61
+     },
+     {
+      "text": "I've prepared a short on BTC: $175 at 2x, stop at $112,744. Approve it with Touch ID if it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 39
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-46",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 9.03, \"price\": 120.8, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 200.98, \"available_usdc\": 200.98, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(200.98 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(120.8 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(200.98 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(120.8 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"30\"}",
+       "{\"result\": \"112.34\"}"
+      ],
+      "ntok": 92
+     },
+     {
+      "text": "Live price: SOL at $120.8, up 9.03% in 24h. My read: already extended, chasing is the risk, though I can't predict when it turns. A stop can fill worse than set when the market moves fast. The order I'd prepare: long $30 SOL at 2x with a stop at $112.34. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 91
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-47",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BTC\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BTC"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -4.85, \"price\": 97206, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BTC\"}",
+       "{\"account_value\": 1334.19, \"available_usdc\": 1334.19, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 36
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(1334.19 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(97206 * 0.93, 0)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(1334.19 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(97206 * 0.93, 0)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"200\"}",
+       "{\"result\": \"90402\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "BTC is $97,206 right now, down 4.85% in 24h. I'd say a bounce is possible but it can keep falling, and nobody can predict the bottom. Leverage cuts both ways. The order I'd prepare: long $200 BTC at 3x with a stop at $90,402. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 85
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-48",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": false,
+   "no_invented_price": false,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"DOGE\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "DOGE"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -8.6, \"price\": 0.24079, \"source\": \"Hyperliquid mark price\", \"symbol\": \"DOGE\"}",
+       "{\"account_value\": 8582.55, \"available_usdc\": 7937.35, \"margin_used\": 645.2, \"open_orders\": [{\"coin\": \"HYPE\", \"price\": 38.765, \"side\": \"buy\", \"size\": 68.73}], \"positions\": [{\"coin\": \"DOGE\", \"entry\": 0.23496, \"leverage\": 3, \"liquidation\": 0.31172, \"side\": \"short\", \"size\": 8238, \"unrealised_pnl\": -48.03}]}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(7937.35 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(0.24079 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(7937.35 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(0.24079 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"1190\"}",
+       "{\"result\": \"0.2239\"}"
+      ],
+      "ntok": 95
+     },
+     {
+      "text": "You're already short 8238 DOGE, and its liquidation price is $0.3117. Right now DOGE is $0.2408, down 8.6% on the day. I'd be careful: already extended down, chasing is the risk, and I can't predict what comes next. A stop order can fill at a worse price in a fast move. The order I'd prepare: long $1,190 DOGE at 3x with a stop at $0.2239. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 123
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-49",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BTC\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BTC"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 3.31, \"price\": 69868, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BTC\"}",
+       "{\"account_value\": 636.72, \"available_usdc\": 0, \"margin_used\": 636.72, \"open_orders\": [], \"positions\": [{\"coin\": \"BTC\", \"entry\": 69587, \"leverage\": 2, \"liquidation\": 34968, \"side\": \"long\", \"size\": 0.0183, \"unrealised_pnl\": 5.14}]}"
+      ],
+      "ntok": 36
+     },
+     {
+      "text": "You're already long 0.0183 BTC, liquidation $34,968. BTC is trading at $69,868, up 3.31% over 24h. It's already extended, chasing is the risk, and I can't predict whether it keeps running. Leverage cuts both ways. You have nothing to trade with on Hyperliquid right now, so there's no order to size yet. Want me to open Add funds?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 102
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-50",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"APT\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "APT"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -0.1, \"price\": 4.963, \"source\": \"Hyperliquid mark price\", \"symbol\": \"APT\"}",
+       "{\"account_value\": 1764.66, \"available_usdc\": 1154.49, \"margin_used\": 610.17, \"open_orders\": [], \"positions\": [{\"coin\": \"ETH\", \"entry\": 3857.9, \"leverage\": 5, \"liquidation\": 4606.45, \"side\": \"short\", \"size\": 0.7908, \"unrealised_pnl\": -154.17}]}"
+      ],
+      "ntok": 36
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(1154.49 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(4.963 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(1154.49 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(4.963 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"170\"}",
+       "{\"result\": \"4.6156\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "Live price: APT at $4.963, down 0.1% in 24h. My lean is mildly bearish, nothing strong, and I can't predict where it goes. Leverage cuts both ways. APT can swing hard in a day. The order I'd prepare: long $170 APT at 3x with a stop at $4.6156. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 94
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-51",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"DOGE\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "DOGE"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -10.48, \"price\": 0.34998, \"source\": \"Hyperliquid mark price\", \"symbol\": \"DOGE\"}",
+       "{\"account_value\": 1993.04, \"available_usdc\": 1993.04, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(1993.04 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(0.34998 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(1993.04 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(0.34998 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"295\"}",
+       "{\"result\": \"0.3255\"}"
+      ],
+      "ntok": 95
+     },
+     {
+      "text": "DOGE is at $0.34998, down 10.48% in the last 24 hours. I'd be careful: already moved hard, chasing is the risk, and I can't predict direction. A stop can fill worse than set when the market moves fast. The order I'd prepare: long $295 DOGE at 3x with a stop at $0.3255. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 98
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-52",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 10.48, \"price\": 215.65, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 396.97, \"available_usdc\": 0, \"margin_used\": 396.97, \"open_orders\": [], \"positions\": [{\"coin\": \"XRP\", \"entry\": 1.8057, \"leverage\": 10, \"liquidation\": 1.6333, \"side\": \"long\", \"size\": 2198.4, \"unrealised_pnl\": -17.59}]}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "SOL is $215.65, up 10.48% in 24 hours. You have nothing to trade with on Hyperliquid right now, so I can't size an order. Want me to open Add funds?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 52
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-53",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_x5",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"position_math\", \"arguments\": {\"side\": \"long\", \"entry\": 88252, \"size_usd\": 2575, \"leverage\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "position_math",
+        "arguments": {
+         "side": "long",
+         "entry": 88252,
+         "size_usd": 2575,
+         "leverage": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"distance_to_liq_pct\": 20, \"entry\": 88252, \"leverage\": 5, \"liquidation_price\": 70601.6, \"maintenance_margin_used\": 0, \"margin\": 515, \"quantity\": 0.029178, \"side\": \"long\", \"size_usd\": 2575}"
+      ],
+      "ntok": 47
+     },
+     {
+      "text": "At 5x the order would be: long $2,575 BTC at 5x with a stop at $82,074. It needs $515 of margin and liquidation would be around $70,601.6, 20% away. The stop is closer, but stops can slip when the market moves fast. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 84
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "position_math",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-54",
+  "suite": "trade_view",
+  "kind": "trade_view_idea",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BTC\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"ETH\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BTC"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "ETH"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 11.33, \"price\": 100111, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BTC\"}",
+       "{\"change_24h_pct\": 11.99, \"price\": 3784.11, \"source\": \"Hyperliquid mark price\", \"symbol\": \"ETH\"}",
+       "{\"change_24h_pct\": 8.14, \"price\": 225.57, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 17695.23, \"available_usdc\": 17553.58, \"margin_used\": 141.65, \"open_orders\": [], \"positions\": [{\"coin\": \"LINK\", \"entry\": 16.863, \"leverage\": 5, \"liquidation\": 13.558, \"side\": \"long\", \"size\": 42, \"unrealised_pnl\": 42.21}]}"
+      ],
+      "ntok": 77
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(17553.58 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(3784.11 * 0.93, 0)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(17553.58 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(3784.11 * 0.93, 0)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"2630\"}",
+       "{\"result\": \"3519\"}"
+      ],
+      "ntok": 96
+     },
+     {
+      "text": "I pulled BTC, ETH and SOL. BTC is up 11.33%, ETH is up 11.99%, SOL is up 8.14% in 24h. ETH moved the most, at $3,784.11, up 11.99%. The one I'd size most is BTC, where the risk is a bounce back. A stop can fill worse than set when the market moves fast. Leverage cuts both ways. The order I'd prepare: long $2,630 BTC at 2x with a stop at $3,519. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 138
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-55",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"HYPE\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "HYPE"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -1.66, \"price\": 18.456, \"source\": \"Hyperliquid mark price\", \"symbol\": \"HYPE\"}",
+       "{\"account_value\": 19103.26, \"available_usdc\": 18508.9, \"margin_used\": 594.36, \"open_orders\": [], \"positions\": [{\"coin\": \"SUI\", \"entry\": 2.5825, \"leverage\": 2, \"liquidation\": 1.2977, \"side\": \"long\", \"size\": 460.3, \"unrealised_pnl\": 23.98}]}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(18508.9 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(18.456 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(18508.9 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(18.456 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"2775\"}",
+       "{\"result\": \"17.16\"}"
+      ],
+      "ntok": 94
+     },
+     {
+      "text": "HYPE is trading at $18.456, down 1.66% over 24h. I'd lean a little bearish here, though it's a weak lean and nobody can predict this. A stop order can fill at a worse price in a fast move. Leverage cuts both ways. The order I'd prepare: long $2,775 HYPE at 3x with a stop at $17.16. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 103
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-56",
+  "suite": "trade_view",
+  "kind": "trade_view_coin_fu_loss",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(10 * (0.22107 - 0.2056) / 0.22107, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(10 * (0.22107 - 0.2056) / 0.22107, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"0.7\"}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "The stop at $0.2056 would cost about $0.7 on the $10 position, before fees. Stops can slip in a fast market, so it could be more. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 47
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-57",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"NEAR\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "NEAR"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 6.67, \"price\": 6.411, \"source\": \"Hyperliquid mark price\", \"symbol\": \"NEAR\"}",
+       "{\"account_value\": 2761.66, \"available_usdc\": 2761.66, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(2761.66 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(6.411 * 0.93, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(2761.66 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(6.411 * 0.93, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"410\"}",
+       "{\"result\": \"5.9622\"}"
+      ],
+      "ntok": 93
+     },
+     {
+      "text": "Live price: NEAR at $6.411, up 6.67% in 24h. My lean is mildly bullish, nothing strong, and I can't predict where it goes. A stop order can fill at a worse price in a fast move. The order I'd prepare: long $410 NEAR at 3x with a stop at $5.9622. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 93
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-58",
+  "suite": "trade_view",
+  "kind": "trade_view_coin",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"AVAX\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "AVAX"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 7.31, \"price\": 14.49, \"source\": \"Hyperliquid mark price\", \"symbol\": \"AVAX\"}",
+       "{\"account_value\": 358.48, \"available_usdc\": 358.48, \"margin_used\": 0, \"open_orders\": [{\"coin\": \"ARB\", \"price\": 0.9653, \"side\": \"sell\", \"size\": 953.39}], \"positions\": []}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(358.48 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(14.49 * 0.93, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(358.48 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(14.49 * 0.93, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"50\"}",
+       "{\"result\": \"13.48\"}"
+      ],
+      "ntok": 92
+     },
+     {
+      "text": "Live price: AVAX at $14.49, up 7.31% in 24h. My read: already extended, chasing is the risk, though I can't predict when it turns. Leverage cuts both ways. The order I'd prepare: long $50 AVAX at 3x with a stop at $13.48. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 85
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "trade_view-59",
+  "suite": "trade_view",
+  "kind": "trade_view_idea",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_ask_for_data",
+   "no_invented_price",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BTC\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"ETH\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BTC"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "ETH"
+        }
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       },
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 4.33, \"price\": 110400, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BTC\"}",
+       "{\"change_24h_pct\": 0.85, \"price\": 3479, \"source\": \"Hyperliquid mark price\", \"symbol\": \"ETH\"}",
+       "{\"change_24h_pct\": 0.9, \"price\": 202.49, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}",
+       "{\"account_value\": 448.71, \"available_usdc\": 78.46, \"margin_used\": 370.25, \"open_orders\": [{\"coin\": \"APT\", \"price\": 9.015, \"side\": \"buy\", \"size\": 366.91}], \"positions\": [{\"coin\": \"BTC\", \"entry\": 105786, \"leverage\": 3, \"liquidation\": 140346, \"side\": \"short\", \"size\": 0.0105, \"unrealised_pnl\": -48.45}]}"
+      ],
+      "ntok": 77
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(78.46 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(110400 * 0.93, 0)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(78.46 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       },
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(110400 * 0.93, 0)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"10\"}",
+       "{\"result\": \"102672\"}"
+      ],
+      "ntok": 92
+     },
+     {
+      "text": "You're already short 0.0105 BTC, and I'd keep it small since BTC is already extended, chasing is the risk. The one I'd look at: BTC at $110,400, up 4.33% in 24h. A sharp move can hit liquidation, and leverage magnifies that. Leverage cuts both ways. The order I'd prepare: long $10 BTC at 3x with a stop at $102,672. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 115
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ }
+]

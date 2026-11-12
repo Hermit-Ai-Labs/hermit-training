@@ -1,0 +1,3538 @@
+[
+ {
+  "id": "close_position-000",
+  "suite": "close_position",
+  "kind": "neg_pnl",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 11675.78, \"available_usdc\": 9317.75, \"margin_used\": 2358.03, \"open_orders\": [], \"positions\": [{\"coin\": \"ETH\", \"entry\": 4657.37, \"leverage\": 5, \"liquidation\": 5561.04, \"side\": \"short\", \"size\": 2.5315, \"unrealised_pnl\": 429.44}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "You have no open LINK position on Hyperliquid right now.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 12
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-001",
+  "suite": "close_position",
+  "kind": "one_position_unnamed",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 9149.47, \"available_usdc\": 7517.88, \"margin_used\": 1631.59, \"open_orders\": [], \"positions\": [{\"coin\": \"NEAR\", \"entry\": 2.606, \"leverage\": 10, \"liquidation\": 2.852, \"side\": \"short\", \"size\": 6260.9, \"unrealised_pnl\": -294.26}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"NEAR\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "NEAR"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"all of the NEAR short, 6260.9 NEAR\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": -294.26}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I've prepared closing all of the NEAR short, 6260.9 NEAR: market, reduce only. Unrealised PnL there is roughly -$294.26. It's waiting for your Face ID approval.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 51
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-002",
+  "suite": "close_position",
+  "kind": "full_named_tp",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"OP\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "OP"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"all of the OP short, 6960.8 OP\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": 267.99}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "I've prepared closing all of the OP short, 6960.8 OP: market, reduce only. Unrealised PnL is +$267.99. Review it and approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 47
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-003",
+  "suite": "close_position",
+  "kind": "full_named_plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"TAO\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "TAO"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"all of the TAO short, 1.96 TAO\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": -29.85}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I've prepared closing all of the TAO short, 1.96 TAO: market, reduce only. Unrealised PnL is -$29.85. Approve it with Touch ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 48
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-004",
+  "suite": "close_position",
+  "kind": "full_named_cut",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"TAO\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "TAO"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"all of the TAO long, 21.03 TAO\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": -310.61}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I've prepared closing all of the TAO long, 21.03 TAO: market, reduce only. Unrealised PnL is -$310.61. Review it and approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 47
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-007",
+  "suite": "close_position",
+  "kind": "ambiguous_ask",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 22259.55, \"available_usdc\": 10225.92, \"margin_used\": 12033.63, \"open_orders\": [], \"positions\": [{\"coin\": \"SOL\", \"entry\": 152.17, \"leverage\": 5, \"liquidation\": 181.7, \"side\": \"short\", \"size\": 158.44, \"unrealised_pnl\": 1408.53}, {\"coin\": \"OP\", \"entry\": 1.5477, \"leverage\": 3, \"liquidation\": 2.0533, \"side\": \"short\", \"size\": 10502.2, \"unrealised_pnl\": -635.38}, {\"coin\": \"ETH\", \"entry\": 3691.28, \"leverage\": 3, \"liquidation\": 2473.22, \"side\": \"long\", \"size\": 1.4577, \"unrealised_pnl\": 215.58}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "You have a SOL short, an OP short and an ETH long open. Which one do you want to close?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 23
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-008",
+  "suite": "close_position",
+  "kind": "full_named_tp",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"LINK\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "LINK"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"all of the LINK long, 71.38 LINK\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": 107.5}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "Prepared: closing all of the LINK long, 71.38 LINK, market, reduce only. Unrealised PnL there is roughly +$107.50. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 48
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-009",
+  "suite": "close_position",
+  "kind": "full_named_plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"ETH\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "ETH"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"all of the ETH short, 5.0035 ETH\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": 375.76}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "I've prepared closing all of the ETH short, 5.0035 ETH (Market, reduce only), waiting for your Touch ID. It carries an unrealised profit of $375.76. There is no tool for withdrawing from Hyperliquid. Tell me when the close is approved, I'll check the account, and then we can discuss the withdrawal.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 77
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-010",
+  "suite": "close_position",
+  "kind": "partial_named",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"SOL\", \"percent\": 50}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "SOL",
+         "percent": 50
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"50% of the SOL short, 144.38 SOL\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": 1539.09}"
+      ],
+      "ntok": 27
+     },
+     {
+      "text": "I've prepared closing 50% of the SOL short, 144.38 SOL: market, reduce only. Unrealised PnL is +$1,539.09. Approve it with Face ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 55
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-011",
+  "suite": "close_position",
+  "kind": "partial_named",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"HYPE\", \"percent\": 25}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "HYPE",
+         "percent": 25
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"25% of the HYPE short, 53.3375 HYPE\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": -33.92}"
+      ],
+      "ntok": 27
+     },
+     {
+      "text": "I've prepared closing 25% of the HYPE short, 53.3375 HYPE: market, reduce only. Unrealised PnL is -$33.92. Approve it with Face ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 54
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-012",
+  "suite": "close_position",
+  "kind": "ambiguous_ask",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 5183.63, \"available_usdc\": 3914.21, \"margin_used\": 1269.42, \"open_orders\": [], \"positions\": [{\"coin\": \"HYPE\", \"entry\": 50.87, \"leverage\": 3, \"liquidation\": 34.084, \"side\": \"long\", \"size\": 25.34, \"unrealised_pnl\": 33.12}, {\"coin\": \"TAO\", \"entry\": 261.52, \"leverage\": 10, \"liquidation\": 286.24, \"side\": \"short\", \"size\": 32.11, \"unrealised_pnl\": -194.59}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "You have a HYPE long and a TAO short open. Which one should I close?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 19
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-013",
+  "suite": "close_position",
+  "kind": "neg_pnl",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 15480.91, \"available_usdc\": 15480.91, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "You have no open positions and no margin used at the moment.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 13
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-014",
+  "suite": "close_position",
+  "kind": "everything_many_ask",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 15238.36, \"available_usdc\": 1761.18, \"margin_used\": 13477.18, \"open_orders\": [{\"coin\": \"BTC\", \"price\": 62405, \"side\": \"sell\", \"size\": 0.919}], \"positions\": [{\"coin\": \"ETH\", \"entry\": 3911.82, \"leverage\": 5, \"liquidation\": 4670.83, \"side\": \"short\", \"size\": 4.8844, \"unrealised_pnl\": -991.09}, {\"coin\": \"ARB\", \"entry\": 1.4678, \"leverage\": 2, \"liquidation\": 2.1907, \"side\": \"short\", \"size\": 3423.1, \"unrealised_pnl\": -231.74}, {\"coin\": \"APT\", \"entry\": 5.542, \"leverage\": 3, \"liquidation\": 3.713, \"side\": \"long\", \"size\": 2006.4, \"unrealised_pnl\": 359.15}, {\"coin\": \"INJ\", \"entry\": 28.446, \"leverage\": 15, \"liquidation\": 26.683, \"side\": \"long\", \"size\": 804.77, \"unrealised_pnl\": -426.53}, {\"coin\": \"LINK\", \"entry\": 22.14, \"leverage\": 20, \"liquidation\": 23.131, \"side\": \"short\", \"size\": 1726.22, \"unrealised_pnl\": 564.47}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "You have five open positions: an ETH short, an ARB short, an APT long, an INJ long and a LINK short. Which ones do you want to close?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 37
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-015",
+  "suite": "close_position",
+  "kind": "one_position_unnamed_partial",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 21499.24, \"available_usdc\": 15194.77, \"margin_used\": 6304.47, \"open_orders\": [{\"coin\": \"BTC\", \"price\": 82412, \"side\": \"buy\", \"size\": 0.48}], \"positions\": [{\"coin\": \"BTC\", \"entry\": 85115, \"leverage\": 20, \"liquidation\": 88926, \"side\": \"short\", \"size\": 1.4814, \"unrealised_pnl\": -2422.09}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"BTC\", \"percent\": 15}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "BTC",
+         "percent": 15
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"15% of the BTC short, 0.22221 BTC\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": -363.31}"
+      ],
+      "ntok": 26
+     },
+     {
+      "text": "I've prepared closing 15% of the BTC short, 0.22221 BTC: market, reduce only. Unrealised PnL there is roughly -$363.31. Review it and approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 52
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-016",
+  "suite": "close_position",
+  "kind": "neg_short_with_long_open",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "How much (in dollars) and what leverage?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 10
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-017",
+  "suite": "close_position",
+  "kind": "full_named_plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"ARB\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "ARB"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"all of the ARB short, 40287 ARB\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": 1063.58}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "I've prepared closing all of the ARB short, 40287 ARB: market, reduce only. Unrealised PnL is +$1,063.58. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 50
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-018",
+  "suite": "close_position",
+  "kind": "neg_reduce_leverage",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": false,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 20307.88, \"available_usdc\": 16627.35, \"margin_used\": 3680.53, \"open_orders\": [], \"positions\": [{\"coin\": \"ETH\", \"entry\": 4766.54, \"leverage\": 5, \"liquidation\": 3832.39, \"side\": \"long\", \"size\": 3.8608, \"unrealised_pnl\": -1372.55}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "Your ETH long is at 5x, more than the 3x I'd say for a reduction. Shall I close it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 27
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-019",
+  "suite": "close_position",
+  "kind": "partial_named",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"INJ\", \"percent\": 15}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "INJ",
+         "percent": 15
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"15% of the INJ long, 71.9505 INJ\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": -28.64}"
+      ],
+      "ntok": 27
+     },
+     {
+      "text": "I've prepared closing 15% of the INJ long, 71.9505 INJ, market, reduce only. Unrealised PnL is -$28.64. Approve it with Touch ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 54
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-020",
+  "suite": "close_position",
+  "kind": "full_named_cut",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"ARB\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "ARB"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"all of the ARB long, 4549.7 ARB\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": -87.35}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "I've prepared closing all of the ARB long, 4549.7 ARB: market, reduce only. Unrealised PnL there is roughly -$87.35. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 49
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-021",
+  "suite": "close_position",
+  "kind": "ambiguous_ask_answered",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"APT\", \"percent\": 25}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "APT",
+         "percent": 25
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"25% of the APT short, 42.6025 APT\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": -28.84}"
+      ],
+      "ntok": 26
+     },
+     {
+      "text": "I've prepared closing 25% of the APT short, 42.6025 APT: market, reduce only. Unrealised PnL there is roughly -$28.84. Approve it with Face ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 56
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-022",
+  "suite": "close_position",
+  "kind": "partial_named",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"NEAR\", \"percent\": 33.33}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "NEAR",
+         "percent": 33.33
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"33.33% of the NEAR short, 7553.945 NEAR\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": 672.3}"
+      ],
+      "ntok": 30
+     },
+     {
+      "text": "I've prepared closing 33.33% of the NEAR short, 7553.945 NEAR, market, reduce only. Unrealised PnL is +$672.30. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-023",
+  "suite": "close_position",
+  "kind": "partial_named",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"HYPE\", \"percent\": 45}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "HYPE",
+         "percent": 45
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"45% of the HYPE short, 358.6545 HYPE\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": 564.52}"
+      ],
+      "ntok": 27
+     },
+     {
+      "text": "I've prepared closing 45% of the HYPE short, 358.6545 HYPE: market, reduce only. Unrealised PnL is +$564.52. Approve it with Face ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-024",
+  "suite": "close_position",
+  "kind": "side_only_ask",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 17454.41, \"available_usdc\": 5113.14, \"margin_used\": 12341.27, \"open_orders\": [], \"positions\": [{\"coin\": \"INJ\", \"entry\": 37.146, \"leverage\": 5, \"liquidation\": 29.866, \"side\": \"long\", \"size\": 414.17, \"unrealised_pnl\": 419.14}, {\"coin\": \"BTC\", \"entry\": 112311, \"leverage\": 15, \"liquidation\": 119202, \"side\": \"short\", \"size\": 0.6758, \"unrealised_pnl\": -1148.86}, {\"coin\": \"HYPE\", \"entry\": 30.449, \"leverage\": 10, \"liquidation\": 27.542, \"side\": \"long\", \"size\": 1380.78, \"unrealised_pnl\": -1003.83}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "You have an INJ long, a BTC short and a HYPE long open. Which one do you want to close?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 25
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-025",
+  "suite": "close_position",
+  "kind": "blocked",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"ARB\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "ARB"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Nothing was prepared. Tell the user why.\", \"reasons\": [\"The assistant has reached its limit for today.\"], \"status\": \"blocked\"}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "I couldn't prepare that: the assistant has reached its limit for today. You can still close it yourself in Trade > Positions.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 26
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-026",
+  "suite": "close_position",
+  "kind": "partial_named",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"HYPE\", \"percent\": 33.33}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "HYPE",
+         "percent": 33.33
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"33.33% of the HYPE long, 85.9581 HYPE\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": 72.12}"
+      ],
+      "ntok": 30
+     },
+     {
+      "text": "I've prepared closing 33.33% of the HYPE long, 85.9581 HYPE, market, reduce only. Unrealised PnL is +$72.12. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 55
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-027",
+  "suite": "close_position",
+  "kind": "one_position_unnamed_partial",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 13714.36, \"available_usdc\": 12630.51, \"margin_used\": 1083.85, \"open_orders\": [], \"positions\": [{\"coin\": \"BTC\", \"entry\": 112901, \"leverage\": 2, \"liquidation\": 168509, \"side\": \"short\", \"size\": 0.0192, \"unrealised_pnl\": -30.39}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"BTC\", \"percent\": 45}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "BTC",
+         "percent": 45
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"45% of the BTC short, 0.00864 BTC\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": -13.68}"
+      ],
+      "ntok": 26
+     },
+     {
+      "text": "I've prepared closing 45% of the BTC short, 0.00864 BTC: market, reduce only. Unrealised PnL there is roughly -$13.68. It's waiting for your Face ID approval.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 52
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-028",
+  "suite": "close_position",
+  "kind": "neg_should_close",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_ask_for_data",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"BTC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "BTC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 19324.89, \"available_usdc\": 17325.49, \"margin_used\": 1999.4, \"open_orders\": [], \"positions\": [{\"coin\": \"BTC\", \"entry\": 112642, \"leverage\": 2, \"liquidation\": 168122, \"side\": \"short\", \"size\": 0.0355, \"unrealised_pnl\": 285.31}]}",
+       "{\"change_24h_pct\": -5.81, \"price\": 104605, \"source\": \"Hyperliquid mark price\", \"symbol\": \"BTC\"}"
+      ],
+      "ntok": 36
+     },
+     {
+      "text": "BTC is at $104,605, down 5.81% over the last 24 hours. Your BTC short (2x) is up $285.31, with liquidation at $168,122. It's drifting against you, so the risk is worth a look. I can't know where it goes next, but it's sitting in a box and there's no slippage, so it's your call. Want me to set one?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 107
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-030",
+  "suite": "close_position",
+  "kind": "no_wallet_account",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"No wallet on this Mac yet\"}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "There's no wallet on this Mac yet. Open Wallets to create or import one, then ask me again.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 23
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-031",
+  "suite": "close_position",
+  "kind": "neg_should_close",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_ask_for_data",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"NEAR\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "NEAR"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 1200.57, \"available_usdc\": 1075.89, \"margin_used\": 124.68, \"open_orders\": [], \"positions\": [{\"coin\": \"NEAR\", \"entry\": 2.991, \"leverage\": 15, \"liquidation\": 2.806, \"side\": \"long\", \"size\": 625.3, \"unrealised_pnl\": 38.14}]}",
+       "{\"change_24h_pct\": 8.06, \"price\": 3.052, \"source\": \"Hyperliquid mark price\", \"symbol\": \"NEAR\"}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "Your NEAR long is up $38.14 (unrealised), with a liquidation at $2.806. NEAR is at $3.052, up 8.06% over the past day. That's a reasonable move, but it can keep going. I can't predict where it stops. Your account value is $1,200.57 with $1075.89 available. Want me to prepare closing it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 103
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-032",
+  "suite": "close_position",
+  "kind": "everything_full",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Which coin do you mean?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 6
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-033",
+  "suite": "close_position",
+  "kind": "full_named_plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"BNB\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "BNB"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"all of the BNB short, 35.18 BNB\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": -495.33}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I've prepared closing all of the BNB short, 35.18 BNB: market, reduce only. Unrealised PnL is -$495.33. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 47
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-034",
+  "suite": "close_position",
+  "kind": "neg_short_with_long_open",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "How much (in dollars) and what leverage?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 10
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-035",
+  "suite": "close_position",
+  "kind": "neg_should_close",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_ask_for_data",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"AVAX\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       },
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "AVAX"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 1125.15, \"available_usdc\": 997.15, \"margin_used\": 128, \"open_orders\": [], \"positions\": [{\"coin\": \"AVAX\", \"entry\": 44.63, \"leverage\": 5, \"liquidation\": 35.88, \"side\": \"long\", \"size\": 14.34, \"unrealised_pnl\": 36.28}]}",
+       "{\"change_24h_pct\": 5.21, \"price\": 47.16, \"source\": \"Hyperliquid mark price\", \"symbol\": \"AVAX\"}"
+      ],
+      "ntok": 37
+     },
+     {
+      "text": "AVAX is at $47.16, up 5.21% over the past day. You're 5x long from $44.63, up $36.28, liquidation $35.88. It's drifting against you, so the risk is worth a look. I can't know where it goes next, so it's about how much risk you want. Closing locks in the result; holding keeps the risk on. Want me to prepare closing it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 106
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     0,
+     "get_price",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-036",
+  "suite": "close_position",
+  "kind": "no_position",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"DOGE\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "DOGE"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"The user has no open DOGE position on Hyperliquid. Tell them.\", \"prepared\": false, \"status\": \"no_position\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "You have no open DOGE position on Hyperliquid, so there's nothing to close.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 18
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-037",
+  "suite": "close_position",
+  "kind": "ambiguous_ask_answered",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"NEAR\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "NEAR"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"all of the NEAR long, 3033.4 NEAR\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": 336.71}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "Closing all of the NEAR long, 3033.4 NEAR is prepared, market, reduce only. You're up about $336.71 on it right now. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 49
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-038",
+  "suite": "close_position",
+  "kind": "no_position",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"NEAR\", \"percent\": 35}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "NEAR",
+         "percent": 35
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"The user has no open NEAR position on Hyperliquid. Tell them.\", \"prepared\": false, \"status\": \"no_position\"}"
+      ],
+      "ntok": 27
+     },
+     {
+      "text": "You have no open NEAR position on Hyperliquid, so there's nothing to close. Want me to pull up your open positions?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 27
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "close_position-039",
+  "suite": "close_position",
+  "kind": "no_position",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"ETH\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "ETH"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"The user has no open ETH position on Hyperliquid. Tell them.\", \"prepared\": false, \"status\": \"no_position\"}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "You have no open ETH position on Hyperliquid, so there's nothing to close.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 17
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ }
+]

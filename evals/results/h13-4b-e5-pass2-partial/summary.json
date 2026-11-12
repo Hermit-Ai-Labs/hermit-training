@@ -1,0 +1,2176 @@
+{
+ "tag": "h13-4b-e5",
+ "family": "4b",
+ "base": "base4b",
+ "adapter": "runs/h13-4b/final",
+ "limit": 160,
+ "bs": 32,
+ "suites": {
+  "tools_fixed": {
+   "n": 125,
+   "ok": 110,
+   "checks": {
+    "arg_provenance": [
+     125,
+     125
+    ],
+    "args_exact": [
+     96,
+     110
+    ],
+    "bio_word": [
+     125,
+     125
+    ],
+    "decision": [
+     124,
+     125
+    ],
+    "final_nonempty": [
+     125,
+     125
+    ],
+    "first_name": [
+     98,
+     110
+    ],
+    "len_ok": [
+     125,
+     125
+    ],
+    "no_false_claim": [
+     29,
+     29
+    ],
+    "no_invented_price": [
+     19,
+     20
+    ],
+    "no_relay": [
+     124,
+     125
+    ],
+    "no_runaway": [
+     125,
+     125
+    ],
+    "no_unbacked_done": [
+     125,
+     125
+    ],
+    "pack_respected": [
+     125,
+     125
+    ],
+    "parse_ok": [
+     125,
+     125
+    ],
+    "preamble_ok": [
+     125,
+     125
+    ],
+    "selection": [
+     112,
+     125
+    ],
+    "terminates": [
+     125,
+     125
+    ],
+    "types_ok": [
+     125,
+     125
+    ],
+    "wrong_money": [
+     123,
+     125
+    ]
+   },
+   "by_kind": {
+    "add_funds_hl": [
+     4,
+     4
+    ],
+    "add_funds_wallet": [
+     1,
+     4
+    ],
+    "approval_invariant": [
+     3,
+     4
+    ],
+    "balances": [
+     2,
+     4
+    ],
+    "balances_chain": [
+     4,
+     4
+    ],
+    "balances_chain_empty": [
+     4,
+     4
+    ],
+    "balances_empty": [
+     3,
+     4
+    ],
+    "chat_no_live_price": [
+     4,
+     4
+    ],
+    "hl_account": [
+     3,
+     4
+    ],
+    "hl_empty": [
+     4,
+     4
+    ],
+    "hl_pnl": [
+     4,
+     4
+    ],
+    "markets_funding": [
+     4,
+     4
+    ],
+    "markets_none": [
+     1,
+     4
+    ],
+    "position_math": [
+     4,
+     4
+    ],
+    "position_math_missing": [
+     4,
+     4
+    ],
+    "price": [
+     4,
+     4
+    ],
+    "price_compare": [
+     4,
+     4
+    ],
+    "price_error": [
+     4,
+     4
+    ],
+    "price_multi": [
+     4,
+     4
+    ],
+    "send": [
+     3,
+     4
+    ],
+    "send_error": [
+     4,
+     4
+    ],
+    "send_scam_warn": [
+     4,
+     4
+    ],
+    "swap": [
+     3,
+     4
+    ],
+    "swap_error": [
+     4,
+     4
+    ],
+    "tool_error": [
+     2,
+     3
+    ],
+    "tool_error_retry": [
+     1,
+     2
+    ],
+    "trade_change": [
+     4,
+     4
+    ],
+    "trade_error": [
+     4,
+     4
+    ],
+    "trade_full": [
+     4,
+     4
+    ],
+    "trade_missing": [
+     4,
+     4
+    ],
+    "user_given_price": [
+     4,
+     4
+    ],
+    "yields": [
+     4,
+     4
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "args_exact",
+    "decision",
+    "final_nonempty",
+    "selection",
+    "types_ok"
+   ],
+   "reply_tokens": {
+    "n": 125,
+    "p50": 32,
+    "p95": 69,
+    "max": 125,
+    "hit_cap": 0
+   },
+   "selected": 160,
+   "finished": 125,
+   "sha_mismatch": 0
+  },
+  "knowledge_fix": {
+   "n": 40,
+   "ok": 26,
+   "checks": {
+    "arg_provenance": [
+     40,
+     40
+    ],
+    "asked_when_needed": [
+     40,
+     40
+    ],
+    "bio_word": [
+     40,
+     40
+    ],
+    "decimals_ok": [
+     38,
+     40
+    ],
+    "decision": [
+     38,
+     40
+    ],
+    "exact_digits": [
+     40,
+     40
+    ],
+    "facts_ok": [
+     26,
+     40
+    ],
+    "final_nonempty": [
+     40,
+     40
+    ],
+    "first_name": [
+     40,
+     40
+    ],
+    "len_ok": [
+     40,
+     40
+    ],
+    "no_ask_for_data": [
+     40,
+     40
+    ],
+    "no_chain_invented": [
+     37,
+     40
+    ],
+    "no_invented_price": [
+     40,
+     40
+    ],
+    "no_relay": [
+     40,
+     40
+    ],
+    "no_runaway": [
+     40,
+     40
+    ],
+    "no_unbacked_done": [
+     40,
+     40
+    ],
+    "pack_respected": [
+     40,
+     40
+    ],
+    "parse_ok": [
+     40,
+     40
+    ],
+    "preamble_ok": [
+     40,
+     40
+    ],
+    "restraint": [
+     40,
+     40
+    ],
+    "right_tool": [
+     40,
+     40
+    ],
+    "route_text": [
+     40,
+     40
+    ],
+    "selection": [
+     40,
+     40
+    ],
+    "terminates": [
+     40,
+     40
+    ],
+    "types_ok": [
+     40,
+     40
+    ],
+    "wrong_money": [
+     40,
+     40
+    ]
+   },
+   "by_kind": {
+    "knowledge_fix": [
+     26,
+     40
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "facts_ok",
+    "len_ok",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "restraint",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 40,
+    "p50": 37,
+    "p95": 60,
+    "max": 71,
+    "hit_cap": 0
+   },
+   "selected": 40,
+   "finished": 40,
+   "sha_mismatch": 0
+  },
+  "buy_jupiter": {
+   "n": 35,
+   "ok": 30,
+   "checks": {
+    "answer_contains_all": [
+     23,
+     26
+    ],
+    "answer_forbidden": [
+     23,
+     35
+    ],
+    "arg_provenance": [
+     35,
+     35
+    ],
+    "asked_when_needed": [
+     34,
+     35
+    ],
+    "bio_word": [
+     35,
+     35
+    ],
+    "decimals_ok": [
+     35,
+     35
+    ],
+    "decision": [
+     34,
+     35
+    ],
+    "exact_digits": [
+     31,
+     35
+    ],
+    "final_nonempty": [
+     35,
+     35
+    ],
+    "first_name": [
+     30,
+     35
+    ],
+    "len_ok": [
+     35,
+     35
+    ],
+    "no_ask_for_data": [
+     35,
+     35
+    ],
+    "no_chain_invented": [
+     35,
+     35
+    ],
+    "no_invented_price": [
+     35,
+     35
+    ],
+    "no_relay": [
+     35,
+     35
+    ],
+    "no_runaway": [
+     35,
+     35
+    ],
+    "no_unbacked_done": [
+     35,
+     35
+    ],
+    "pack_respected": [
+     35,
+     35
+    ],
+    "parse_ok": [
+     35,
+     35
+    ],
+    "preamble_ok": [
+     35,
+     35
+    ],
+    "restraint": [
+     34,
+     35
+    ],
+    "right_tool": [
+     30,
+     35
+    ],
+    "route_text": [
+     35,
+     35
+    ],
+    "selection": [
+     30,
+     35
+    ],
+    "terminates": [
+     35,
+     35
+    ],
+    "types_ok": [
+     35,
+     35
+    ],
+    "wrong_money": [
+     33,
+     35
+    ]
+   },
+   "by_kind": {
+    "buy_pay": [
+     4,
+     4
+    ],
+    "buy_ok": [
+     8,
+     8
+    ],
+    "buy_insufficient": [
+     3,
+     3
+    ],
+    "neg_swap": [
+     0,
+     2
+    ],
+    "buy_nowallet": [
+     1,
+     1
+    ],
+    "buy_blocked": [
+     2,
+     2
+    ],
+    "buy_unverified": [
+     2,
+     3
+    ],
+    "neg_price": [
+     2,
+     2
+    ],
+    "neg_open_uniswap": [
+     1,
+     1
+    ],
+    "neg_view": [
+     0,
+     1
+    ],
+    "buy_impact": [
+     2,
+     2
+    ],
+    "neg_open_hyperliquid": [
+     2,
+     2
+    ],
+    "neg_ask": [
+     1,
+     2
+    ],
+    "buy_swapstyle": [
+     2,
+     2
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "asked_when_needed",
+    "bio_word",
+    "exact_digits",
+    "len_ok",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "right_tool",
+    "route_text",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 35,
+    "p50": 52,
+    "p95": 84,
+    "max": 95,
+    "hit_cap": 0
+   },
+   "selected": 39,
+   "finished": 35,
+   "sha_mismatch": 0
+  },
+  "close_position": {
+   "n": 15,
+   "ok": 13,
+   "checks": {
+    "arg_provenance": [
+     15,
+     15
+    ],
+    "asked_when_needed": [
+     14,
+     15
+    ],
+    "bio_word": [
+     15,
+     15
+    ],
+    "decimals_ok": [
+     15,
+     15
+    ],
+    "decision": [
+     14,
+     15
+    ],
+    "exact_digits": [
+     14,
+     15
+    ],
+    "final_nonempty": [
+     15,
+     15
+    ],
+    "first_name": [
+     13,
+     15
+    ],
+    "len_ok": [
+     15,
+     15
+    ],
+    "no_ask_for_data": [
+     15,
+     15
+    ],
+    "no_chain_invented": [
+     15,
+     15
+    ],
+    "no_invented_price": [
+     15,
+     15
+    ],
+    "no_relay": [
+     15,
+     15
+    ],
+    "no_runaway": [
+     15,
+     15
+    ],
+    "no_unbacked_done": [
+     15,
+     15
+    ],
+    "pack_respected": [
+     15,
+     15
+    ],
+    "parse_ok": [
+     15,
+     15
+    ],
+    "preamble_ok": [
+     15,
+     15
+    ],
+    "restraint": [
+     15,
+     15
+    ],
+    "right_tool": [
+     13,
+     15
+    ],
+    "route_text": [
+     15,
+     15
+    ],
+    "selection": [
+     13,
+     15
+    ],
+    "terminates": [
+     15,
+     15
+    ],
+    "types_ok": [
+     15,
+     15
+    ],
+    "wrong_money": [
+     15,
+     15
+    ]
+   },
+   "by_kind": {
+    "full_named_tp": [
+     1,
+     1
+    ],
+    "partial_named": [
+     3,
+     3
+    ],
+    "ambiguous_ask": [
+     1,
+     1
+    ],
+    "neg_short_with_long_open": [
+     0,
+     2
+    ],
+    "full_named_plain": [
+     2,
+     2
+    ],
+    "full_named_cut": [
+     1,
+     1
+    ],
+    "ambiguous_ask_answered": [
+     2,
+     2
+    ],
+    "side_only_ask": [
+     1,
+     1
+    ],
+    "neg_should_close": [
+     2,
+     2
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "asked_when_needed",
+    "bio_word",
+    "exact_digits",
+    "len_ok",
+    "no_ask_for_data",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "right_tool",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 15,
+    "p50": 51,
+    "p95": 101,
+    "max": 101,
+    "hit_cap": 0
+   },
+   "selected": 38,
+   "finished": 15,
+   "sha_mismatch": 0
+  },
+  "activity_tool": {
+   "n": 28,
+   "ok": 24,
+   "checks": {
+    "answer_forbidden": [
+     25,
+     25
+    ],
+    "arg_provenance": [
+     28,
+     28
+    ],
+    "asked_when_needed": [
+     28,
+     28
+    ],
+    "bio_word": [
+     28,
+     28
+    ],
+    "decimals_ok": [
+     28,
+     28
+    ],
+    "decision": [
+     28,
+     28
+    ],
+    "exact_digits": [
+     26,
+     28
+    ],
+    "final_nonempty": [
+     28,
+     28
+    ],
+    "first_name": [
+     27,
+     28
+    ],
+    "len_ok": [
+     28,
+     28
+    ],
+    "list_len_ok": [
+     25,
+     25
+    ],
+    "no_ask_for_data": [
+     28,
+     28
+    ],
+    "no_chain_invented": [
+     28,
+     28
+    ],
+    "no_invented_price": [
+     28,
+     28
+    ],
+    "no_relay": [
+     28,
+     28
+    ],
+    "no_runaway": [
+     28,
+     28
+    ],
+    "no_unbacked_done": [
+     28,
+     28
+    ],
+    "pack_respected": [
+     28,
+     28
+    ],
+    "parse_ok": [
+     28,
+     28
+    ],
+    "preamble_ok": [
+     28,
+     28
+    ],
+    "restraint": [
+     28,
+     28
+    ],
+    "right_tool": [
+     27,
+     28
+    ],
+    "route_text": [
+     28,
+     28
+    ],
+    "rows_verbatim": [
+     21,
+     25
+    ],
+    "selection": [
+     27,
+     28
+    ],
+    "terminates": [
+     28,
+     28
+    ],
+    "types_ok": [
+     28,
+     28
+    ],
+    "wrong_money": [
+     28,
+     28
+    ]
+   },
+   "by_kind": {
+    "general_list": [
+     5,
+     5
+    ],
+    "pending_none_pending": [
+     1,
+     1
+    ],
+    "specific_hit_failed": [
+     1,
+     2
+    ],
+    "error_wallet": [
+     1,
+     1
+    ],
+    "limit_list": [
+     4,
+     4
+    ],
+    "kind_pending_match": [
+     3,
+     3
+    ],
+    "not_activity_balance": [
+     1,
+     1
+    ],
+    "not_activity_hash": [
+     1,
+     1
+    ],
+    "followup_pending": [
+     2,
+     2
+    ],
+    "pending_pending": [
+     2,
+     2
+    ],
+    "specific_hit_in_progress": [
+     0,
+     2
+    ],
+    "specific_hit_confirmed": [
+     1,
+     2
+    ],
+    "last_kind_match": [
+     1,
+     1
+    ],
+    "latest_row": [
+     1,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "exact_digits",
+    "len_ok",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "restraint",
+    "right_tool",
+    "rows_verbatim",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 28,
+    "p50": 45,
+    "p95": 221,
+    "max": 224,
+    "hit_cap": 0
+   },
+   "selected": 29,
+   "finished": 28,
+   "sha_mismatch": 0
+  },
+  "open_app_tool": {
+   "n": 29,
+   "ok": 24,
+   "checks": {
+    "answer_contains_all": [
+     23,
+     29
+    ],
+    "answer_contains_any": [
+     15,
+     17
+    ],
+    "answer_forbidden": [
+     27,
+     29
+    ],
+    "arg_provenance": [
+     29,
+     29
+    ],
+    "asked_when_needed": [
+     28,
+     29
+    ],
+    "bio_word": [
+     29,
+     29
+    ],
+    "decimals_ok": [
+     29,
+     29
+    ],
+    "decision": [
+     27,
+     29
+    ],
+    "exact_digits": [
+     26,
+     29
+    ],
+    "final_nonempty": [
+     29,
+     29
+    ],
+    "first_name": [
+     24,
+     29
+    ],
+    "len_ok": [
+     29,
+     29
+    ],
+    "no_ask_for_data": [
+     29,
+     29
+    ],
+    "no_chain_invented": [
+     28,
+     29
+    ],
+    "no_invented_price": [
+     29,
+     29
+    ],
+    "no_relay": [
+     29,
+     29
+    ],
+    "no_runaway": [
+     29,
+     29
+    ],
+    "no_unbacked_done": [
+     29,
+     29
+    ],
+    "pack_respected": [
+     29,
+     29
+    ],
+    "parse_ok": [
+     29,
+     29
+    ],
+    "preamble_ok": [
+     29,
+     29
+    ],
+    "restraint": [
+     27,
+     29
+    ],
+    "right_tool": [
+     24,
+     29
+    ],
+    "route_text": [
+     29,
+     29
+    ],
+    "selection": [
+     24,
+     29
+    ],
+    "terminates": [
+     29,
+     29
+    ],
+    "types_ok": [
+     28,
+     29
+    ],
+    "wrong_money": [
+     29,
+     29
+    ]
+   },
+   "by_kind": {
+    "open_ask": [
+     2,
+     3
+    ],
+    "open_name": [
+     6,
+     9
+    ],
+    "open_ask_then_give": [
+     3,
+     3
+    ],
+    "open_not_found": [
+     2,
+     2
+    ],
+    "open_url_known_domain": [
+     3,
+     3
+    ],
+    "neg_deposit": [
+     1,
+     1
+    ],
+    "open_url_lookalike": [
+     1,
+     1
+    ],
+    "open_url": [
+     1,
+     1
+    ],
+    "neg_what_is": [
+     2,
+     2
+    ],
+    "neg_add_funds": [
+     1,
+     1
+    ],
+    "open_bad_url": [
+     2,
+     2
+    ],
+    "neg_real_site": [
+     0,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "asked_when_needed",
+    "bio_word",
+    "exact_digits",
+    "len_ok",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "right_tool",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 29,
+    "p50": 26,
+    "p95": 45,
+    "max": 48,
+    "hit_cap": 0
+   },
+   "selected": 33,
+   "finished": 29,
+   "sha_mismatch": 0
+  },
+  "multistep": {
+   "n": 120,
+   "ok": 85,
+   "checks": {
+    "arg_provenance": [
+     120,
+     120
+    ],
+    "bio_word": [
+     120,
+     120
+    ],
+    "chain_complete": [
+     87,
+     120
+    ],
+    "exact_digits": [
+     97,
+     120
+    ],
+    "len_ok": [
+     120,
+     120
+    ],
+    "no_early_prepare": [
+     113,
+     120
+    ],
+    "no_relay": [
+     120,
+     120
+    ],
+    "no_runaway": [
+     119,
+     120
+    ],
+    "no_unbacked_done": [
+     119,
+     120
+    ],
+    "pack_respected": [
+     120,
+     120
+    ],
+    "parse_ok": [
+     120,
+     120
+    ],
+    "preamble_ok": [
+     120,
+     120
+    ],
+    "redundant_reads": [
+     120,
+     120
+    ],
+    "step_acc": [
+     97,
+     120
+    ],
+    "step_order": [
+     120,
+     120
+    ],
+    "terminates": [
+     119,
+     120
+    ],
+    "wrong_money": [
+     97,
+     120
+    ]
+   },
+   "by_kind": {
+    "withdraw_then": [
+     2,
+     8
+    ],
+    "planning": [
+     7,
+     7
+    ],
+    "bridge_deposit": [
+     6,
+     8
+    ],
+    "swap_send": [
+     4,
+     8
+    ],
+    "partial_close": [
+     3,
+     7
+    ],
+    "funding_annualised": [
+     6,
+     6
+    ],
+    "swap_quote": [
+     2,
+     6
+    ],
+    "long_chain": [
+     5,
+     10
+    ],
+    "sell_send": [
+     7,
+     7
+    ],
+    "redundant_read": [
+     5,
+     5
+    ],
+    "three_steps": [
+     7,
+     7
+    ],
+    "yield_deposit": [
+     5,
+     7
+    ],
+    "independent": [
+     5,
+     7
+    ],
+    "parallel_prices": [
+     5,
+     5
+    ],
+    "risk_trade": [
+     7,
+     8
+    ],
+    "close_withdraw": [
+     6,
+     8
+    ],
+    "balance_changes": [
+     3,
+     6
+    ]
+   },
+   "not_scored": {},
+   "pooled": {
+    "steps": [
+     106,
+     134
+    ]
+   },
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "chain_complete",
+    "exact_digits",
+    "len_ok",
+    "no_early_prepare",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "redundant_reads",
+    "step_acc",
+    "step_order",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 206,
+    "p50": 60,
+    "p95": 98,
+    "max": 512,
+    "hit_cap": 1
+   },
+   "selected": 120,
+   "finished": 120,
+   "sha_mismatch": 0
+  },
+  "followups_stale": {
+   "n": 49,
+   "ok": 33,
+   "checks": {
+    "arg_provenance": [
+     49,
+     49
+    ],
+    "bio_word": [
+     49,
+     49
+    ],
+    "carry_ok": [
+     47,
+     49
+    ],
+    "len_ok": [
+     49,
+     49
+    ],
+    "no_relay": [
+     49,
+     49
+    ],
+    "no_reprepare_unasked": [
+     46,
+     49
+    ],
+    "no_restate_error": [
+     49,
+     49
+    ],
+    "no_runaway": [
+     49,
+     49
+    ],
+    "no_unbacked_done": [
+     49,
+     49
+    ],
+    "pack_respected": [
+     49,
+     49
+    ],
+    "parse_ok": [
+     49,
+     49
+    ],
+    "preamble_ok": [
+     49,
+     49
+    ],
+    "rounded_ok": [
+     46,
+     49
+    ],
+    "score_item": [
+     33,
+     49
+    ],
+    "terminates": [
+     49,
+     49
+    ],
+    "wrong_money": [
+     47,
+     49
+    ]
+   },
+   "by_kind": {
+    "m2_evm_contract_memory": [
+     0,
+     1
+    ],
+    "j3_enough_margin": [
+     1,
+     2
+    ],
+    "d1_undo_swap": [
+     0,
+     1
+    ],
+    "k_bridge_arrived": [
+     2,
+     4
+    ],
+    "b3_change_chain": [
+     1,
+     1
+    ],
+    "e3_address_from_activity": [
+     1,
+     1
+    ],
+    "l1_fee_from_result": [
+     1,
+     1
+    ],
+    "g4_trimmed_cancel_order": [
+     0,
+     1
+    ],
+    "g1_trimmed_address": [
+     0,
+     1
+    ],
+    "a2_same_trade_abs_ask": [
+     0,
+     2
+    ],
+    "d2_undo_trade": [
+     2,
+     2
+    ],
+    "h2_balance_after_swap": [
+     2,
+     2
+    ],
+    "j1_enough_send": [
+     1,
+     1
+    ],
+    "f2_cancel_which_review": [
+     1,
+     1
+    ],
+    "d3_undo_send": [
+     2,
+     2
+    ],
+    "n4_topic_switch_return": [
+     1,
+     1
+    ],
+    "b2_change_size": [
+     1,
+     1
+    ],
+    "h1_balance_after_send": [
+     1,
+     1
+    ],
+    "a3_same_send_new_address": [
+     1,
+     1
+    ],
+    "c2_cancel_open_order": [
+     0,
+     2
+    ],
+    "e1_address_from_history": [
+     1,
+     1
+    ],
+    "e2_own_address_later": [
+     1,
+     1
+    ],
+    "b1_change_leverage": [
+     2,
+     2
+    ],
+    "f3_same_for_which": [
+     1,
+     2
+    ],
+    "n2_answer_then_call": [
+     1,
+     2
+    ],
+    "n1_same_request_twice": [
+     2,
+     3
+    ],
+    "b4_change_swap_amount": [
+     2,
+     2
+    ],
+    "c1_cancel_review": [
+     1,
+     1
+    ],
+    "j2_enough_swap": [
+     0,
+     1
+    ],
+    "c3_cancel_nothing": [
+     1,
+     2
+    ],
+    "m1_solana_mint_lookup": [
+     1,
+     1
+    ],
+    "l3_fee_needs_quote": [
+     1,
+     1
+    ],
+    "l2_fee_send": [
+     1,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {
+    "turns_ok": [
+     97,
+     116
+    ]
+   },
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "carry_ok",
+    "len_ok",
+    "no_relay",
+    "no_reprepare_unasked",
+    "no_restate_error",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "rounded_ok",
+    "score_item",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 116,
+    "p50": 40,
+    "p95": 65,
+    "max": 68,
+    "hit_cap": 0
+   },
+   "selected": 120,
+   "finished": 49,
+   "sha_mismatch": 0
+  }
+ },
+ "legacy": {
+  "notool": {
+   "n": 160,
+   "no_call": 157,
+   "rate": 0.98125,
+   "selected": 160,
+   "finished": 160
+  },
+  "quote": {
+   "quote_only_n": 20,
+   "quote_called": 20,
+   "quote_args_exact": 19,
+   "quote_no_prepare": 20,
+   "swap_n": 12,
+   "swap_prepared": 12,
+   "swap_args_exact": 11,
+   "n": 32,
+   "ok": 0.96875,
+   "selected": 32,
+   "finished": 32
+  },
+  "multiturn": {
+   "convs": 50,
+   "replies": 250,
+   "rep_within_replies": 0,
+   "rep_across_replies": 7,
+   "para_repeats": 0,
+   "empty": 0,
+   "runaway": 0,
+   "convs_clean": 44,
+   "mean_words": 49.504
+  },
+  "chat": {
+   "tone": {
+    "n": 30,
+    "refused": 2,
+    "middle_dot": 0,
+    "boiler": 0,
+    "empty": 0,
+    "hit_max": 0,
+    "mean_words": 60.233333333333334
+   },
+   "hardline": {
+    "n": 6,
+    "refused": 6,
+    "middle_dot": 0,
+    "boiler": 0,
+    "empty": 0,
+    "hit_max": 0,
+    "mean_words": 43.833333333333336
+   },
+   "legit_edge": {
+    "n": 6,
+    "refused": 1,
+    "middle_dot": 0,
+    "boiler": 0,
+    "empty": 0,
+    "hit_max": 0,
+    "mean_words": 94.83333333333333
+   }
+  },
+  "bots": {
+   "pass": 4,
+   "n": 6
+  },
+  "math_v2_agent": {
+   "n": 160,
+   "strict": 158,
+   "lenient": 158,
+   "calc_used": 160,
+   "by_cat": {
+    "fee": [
+     4,
+     4
+    ],
+    "option_payoff": [
+     4,
+     4
+    ],
+    "funding_annual": [
+     5,
+     5
+    ],
+    "slippage_pct": [
+     4,
+     4
+    ],
+    "pred_market_ev": [
+     4,
+     4
+    ],
+    "impermanent_loss": [
+     4,
+     4
+    ],
+    "borrow_capacity": [
+     4,
+     4
+    ],
+    "avg_entry": [
+     4,
+     4
+    ],
+    "liq_mm": [
+     3,
+     4
+    ],
+    "effective_leverage": [
+     3,
+     3
+    ],
+    "basis_annual": [
+     3,
+     3
+    ],
+    "funding_payment": [
+     4,
+     4
+    ],
+    "pnl_long": [
+     6,
+     6
+    ],
+    "pred_implied": [
+     4,
+     4
+    ],
+    "compound_growth": [
+     6,
+     6
+    ],
+    "roe": [
+     3,
+     3
+    ],
+    "aave_liq_price": [
+     6,
+     6
+    ],
+    "drawdown_recover": [
+     6,
+     6
+    ],
+    "dca": [
+     4,
+     4
+    ],
+    "stop_from_risk": [
+     4,
+     4
+    ],
+    "position_size": [
+     5,
+     5
+    ],
+    "liq_price_short": [
+     3,
+     3
+    ],
+    "lp_fees": [
+     6,
+     6
+    ],
+    "rr_ratio": [
+     5,
+     6
+    ],
+    "amm_v2_out": [
+     5,
+     5
+    ],
+    "liq_price_long": [
+     4,
+     4
+    ],
+    "breakeven_fees": [
+     3,
+     3
+    ],
+    "pnl_short": [
+     5,
+     5
+    ],
+    "spread_bps": [
+     3,
+     3
+    ],
+    "r_multiple": [
+     6,
+     6
+    ],
+    "sum_balances": [
+     4,
+     4
+    ],
+    "avg_down": [
+     2,
+     2
+    ],
+    "pct_roundtrip": [
+     3,
+     3
+    ],
+    "apy_to_apr": [
+     2,
+     2
+    ],
+    "margin_required": [
+     2,
+     2
+    ],
+    "depeg_loss": [
+     2,
+     2
+    ],
+    "mcap_price": [
+     3,
+     3
+    ],
+    "gas_cost": [
+     1,
+     1
+    ],
+    "mm_spread_capture": [
+     2,
+     2
+    ],
+    "tp_price": [
+     4,
+     4
+    ],
+    "kelly": [
+     1,
+     1
+    ],
+    "apr_to_apy": [
+     1,
+     1
+    ],
+    "health_factor": [
+     1,
+     1
+    ]
+   },
+   "selected": 160,
+   "finished": 160
+  },
+  "math_legacy_agent": {
+   "n": 160,
+   "strict": 160,
+   "lenient": 160,
+   "calc_used": 160,
+   "by_cat": {
+    "amm_v2_out": [
+     10,
+     10
+    ],
+    "breakeven_fees": [
+     10,
+     10
+    ],
+    "dca": [
+     10,
+     10
+    ],
+    "fee": [
+     10,
+     10
+    ],
+    "funding_annual": [
+     10,
+     10
+    ],
+    "impermanent_loss": [
+     10,
+     10
+    ],
+    "kelly": [
+     10,
+     10
+    ],
+    "liq_price_long": [
+     10,
+     10
+    ],
+    "liq_price_short": [
+     10,
+     10
+    ],
+    "mm_spread_capture": [
+     10,
+     10
+    ],
+    "option_payoff": [
+     10,
+     10
+    ],
+    "pct_roundtrip": [
+     10,
+     10
+    ],
+    "pnl_long": [
+     10,
+     10
+    ],
+    "pnl_short": [
+     10,
+     10
+    ],
+    "position_size": [
+     10,
+     10
+    ],
+    "spread_bps": [
+     10,
+     10
+    ]
+   },
+   "selected": 160,
+   "finished": 160
+  },
+  "math_v2_chat": {
+   "n": 160,
+   "strict": 114,
+   "lenient": 114,
+   "calc_used": 0,
+   "by_cat": {
+    "fee": [
+     4,
+     4
+    ],
+    "option_payoff": [
+     4,
+     4
+    ],
+    "funding_annual": [
+     5,
+     5
+    ],
+    "slippage_pct": [
+     4,
+     4
+    ],
+    "pred_market_ev": [
+     0,
+     4
+    ],
+    "impermanent_loss": [
+     0,
+     4
+    ],
+    "borrow_capacity": [
+     4,
+     4
+    ],
+    "avg_entry": [
+     1,
+     4
+    ],
+    "liq_mm": [
+     1,
+     4
+    ],
+    "effective_leverage": [
+     2,
+     3
+    ],
+    "basis_annual": [
+     0,
+     3
+    ],
+    "funding_payment": [
+     1,
+     4
+    ],
+    "pnl_long": [
+     6,
+     6
+    ],
+    "pred_implied": [
+     4,
+     4
+    ],
+    "compound_growth": [
+     5,
+     6
+    ],
+    "roe": [
+     1,
+     3
+    ],
+    "aave_liq_price": [
+     3,
+     6
+    ],
+    "drawdown_recover": [
+     5,
+     6
+    ],
+    "dca": [
+     4,
+     4
+    ],
+    "stop_from_risk": [
+     4,
+     4
+    ],
+    "position_size": [
+     5,
+     5
+    ],
+    "liq_price_short": [
+     2,
+     3
+    ],
+    "lp_fees": [
+     6,
+     6
+    ],
+    "rr_ratio": [
+     6,
+     6
+    ],
+    "amm_v2_out": [
+     0,
+     5
+    ],
+    "liq_price_long": [
+     4,
+     4
+    ],
+    "breakeven_fees": [
+     2,
+     3
+    ],
+    "pnl_short": [
+     4,
+     5
+    ],
+    "spread_bps": [
+     2,
+     3
+    ],
+    "r_multiple": [
+     5,
+     6
+    ],
+    "sum_balances": [
+     4,
+     4
+    ],
+    "avg_down": [
+     1,
+     2
+    ],
+    "pct_roundtrip": [
+     0,
+     3
+    ],
+    "apy_to_apr": [
+     0,
+     2
+    ],
+    "margin_required": [
+     2,
+     2
+    ],
+    "depeg_loss": [
+     2,
+     2
+    ],
+    "mcap_price": [
+     3,
+     3
+    ],
+    "gas_cost": [
+     1,
+     1
+    ],
+    "mm_spread_capture": [
+     2,
+     2
+    ],
+    "tp_price": [
+     3,
+     4
+    ],
+    "kelly": [
+     0,
+     1
+    ],
+    "apr_to_apy": [
+     1,
+     1
+    ],
+    "health_factor": [
+     1,
+     1
+    ]
+   }
+  },
+  "math_legacy_chat": {
+   "n": 160,
+   "strict": 107,
+   "lenient": 110,
+   "calc_used": 0,
+   "by_cat": {
+    "amm_v2_out": [
+     3,
+     10
+    ],
+    "breakeven_fees": [
+     7,
+     10
+    ],
+    "dca": [
+     10,
+     10
+    ],
+    "fee": [
+     10,
+     10
+    ],
+    "funding_annual": [
+     10,
+     10
+    ],
+    "impermanent_loss": [
+     1,
+     10
+    ],
+    "kelly": [
+     3,
+     10
+    ],
+    "liq_price_long": [
+     8,
+     10
+    ],
+    "liq_price_short": [
+     9,
+     10
+    ],
+    "mm_spread_capture": [
+     9,
+     10
+    ],
+    "option_payoff": [
+     9,
+     10
+    ],
+    "pct_roundtrip": [
+     0,
+     10
+    ],
+    "pnl_long": [
+     6,
+     10
+    ],
+    "pnl_short": [
+     7,
+     10
+    ],
+    "position_size": [
+     9,
+     10
+    ],
+    "spread_bps": [
+     6,
+     10
+    ]
+   }
+  }
+ },
+ "timing": {
+  "chunk_0": 593,
+  "total": 292,
+  "legacy_multiturn": 106,
+  "legacy_chat": 16,
+  "bots": 9,
+  "chunk_5": 166,
+  "legacy_math_v2": 22,
+  "legacy_math_legacy": 20,
+  "chunk_8": 224,
+  "chunk_9": 375,
+  "chunk_10": 305,
+  "chunk_11": 292
+ },
+ "engine": {
+  "prefix_prefill_tokens": 9548,
+  "shared_batches": 15,
+  "suffix_prefill_tokens": 74882,
+  "decode_steps": 1430,
+  "mixed_batches": 6,
+  "mixed_prefill_tokens": 203511
+ },
+ "gen_tokens": 11067,
+ "complete": false
+}

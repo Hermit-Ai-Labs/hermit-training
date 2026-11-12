@@ -1,0 +1,21 @@
+HERMIT APP FACTS (what the app does, Nov 2026). Use only these facts about the app; do not invent features.
+
+Pages: tab bar Chat, Trade, Earn, Payments, Wallets. Sidebar: Projects, Automations, Explore, Calendar. Settings has Profile, Safety, Memory (hermit.md notes), Models.
+Privacy: the AI model runs fully on the device. Nothing typed in chat leaves the phone. No account needed. Wallet, market and swap features do talk to public networks (RPCs, Hyperliquid, Relay, DefiLlama).
+
+Wallet: self-custody. A 12-word seed phrase is created on the device (import accepts 12 to 24 words). One EVM address (same on every EVM chain, like MetaMask) and one Solana address (like Phantom). The seed is sealed with a Secure Enclave key; unlocking needs Face ID, Touch ID or passcode. It never syncs to iCloud and is excluded from backups, so the written-down seed phrase is the ONLY backup. Backup flow: the phrase is shown once, then you confirm two words; it can be shown again behind Face ID.
+Chains: Ethereum, Base, BNB Chain, Arbitrum, Polygon, Monad, Robinhood Chain (EVM) and Solana. Wallet shows stablecoins (USDC, USDT, USDT0, USDC.e) and each chain's native coin.
+Every money move goes through one review sheet: summary, a hazard scan checklist, then Approve with Face ID. Each transaction needs its own Face ID. Plain sends get a simulation and a "first payment to this address" warning. The wallet has a daily limit (default $500 in stablecoins).
+
+Add funds: Wallets > Add funds. Either move from a balance you already have (with a live Relay quote) or Receive: a QR code with EVM and Solana tabs. The same EVM address works on Ethereum, Base, Arbitrum, BNB, Polygon and Monad. Cheapest way in: USDC on Base or Arbitrum costs cents; Ethereum mainnet costs dollars. From an exchange, withdraw on Arbitrum One or Base. Always send on a network the app lists; sending a token on the wrong network can lose it. The app notices the deposit by itself within seconds.
+
+Hyperliquid (perps): fund it from Trade via Deposit, which uses Relay to move USDC from any supported chain or token straight into Hyperliquid. Cheapest: USDC on Arbitrum or Base, usually a few cents. Order ticket: Market or Limit, Long or Short, margin $5 to $5000, leverage from 1x up to the market's max (warning above 10x), optional take-profit and stop-loss (reduce-only triggers). Minimum order is $10 notional. Market orders fill immediately with up to 5% slippage protection; limit orders rest until filled or cancelled. The app uses cross margin (isolated only where a market requires it). Review shows market, side, size, margin, worst or limit price, estimated liquidation price, TP/SL and the taker fee (about 0.045%). Positions tab: account value, available USDC, unrealized PnL, and per position coin, side, leverage, size, entry, liquidation price, PnL and ROE%; Close sends a reduce-only market order; open orders can be cancelled. Orders are signed on the device with the wallet's key. Hermit charges no extra fee.
+Trade also has Spot and Memes price views (watch only, no spot trading there).
+
+Swaps and bridges: Wallets > Swap or Bridge, powered by Relay, across all supported chains including Solana. The review shows the total fees (gas + relayer) in USD. Shown once the wallet holds funds.
+
+Earn: deposits into Aave v3 on Ethereum, Base and Arbitrum, for stablecoins. Deposit = an approval for the exact amount (only if needed) then supply. Withdraw takes out the full position from Earn > Positions. APYs come from DefiLlama and are variable. The DeFi list shows other pools for information only.
+
+Approvals: the app approves only the exact amount for Aave deposits. There is no approvals list or revoke screen yet; use a tool like revoke.cash to check old approvals. No built-in scam database, so check addresses and links yourself.
+
+Hermit (the AI) with tools: it can fetch live prices, read your balances and Hyperliquid account, do position maths, find markets and yields, and PREPARE trades, swaps, sends and deposits. Prepared actions open the review screen; nothing moves until you approve with Face ID. Hermit never asks for your seed phrase and can never see it.

@@ -1,0 +1,32 @@
+[
+ {
+  "id": "grid_levels",
+  "ok": true,
+  "why": "ok"
+ },
+ {
+  "id": "mm_quotes",
+  "ok": false,
+  "why": "long skew not lower: {'bid': 99.92500000000001, 'ask': 100.075, 'bid_size': 1.0, 'ask_size': 1.0} vs {'bid': 99.95, 'ask': 100.05, 'bid_size': 1.0, 'ask_size': 1.0}"
+ },
+ {
+  "id": "position_size",
+  "ok": true,
+  "why": "ok"
+ },
+ {
+  "id": "backtest_sma",
+  "ok": true,
+  "why": "ok"
+ },
+ {
+  "id": "mm_run",
+  "ok": false,
+  "why": "raised: AttributeError(\"'Book' object has no attribute 'bids'\")"
+ },
+ {
+  "id": "funding_arb",
+  "ok": true,
+  "why": "ok"
+ }
+]

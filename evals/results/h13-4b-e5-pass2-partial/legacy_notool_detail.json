@@ -1,0 +1,962 @@
+[
+ {
+  "id": "legacy_notool-0",
+  "kind": "notool_aave",
+  "first": "Not necessarily. Liquidation depends on your position's liquidation price, which is determined by your leverage, entry price, and market conditions.\n\nWith 10k USDC supplied and 5k borrowed, you have 2x leverage.  \nYour liquidation price is calculated based on your position’s PnL and the current market price.\n\nIf the price moves against you and your margin falls below the maintenance threshold, you’ll be liquidated.\n\nBut if the price doesn’t move far enough to trigger that, you won’t be liquidated — even with 2x leverage.\n\nCheck your current liquidation price in the Positions tab. If it’s above the current market price, you’re safe for now.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-1",
+  "kind": "notool_stops",
+  "first": "Stop hunting is when large orders are placed just below key levels to trigger stop-losses, then the price moves back up.  \n\nTo reduce exposure:  \n- Use limit orders instead of market stops.  \n- Set stops away from round numbers and major support/resistance levels.  \n- Monitor your position’s liquidation price and adjust if the market moves against you.  \n- Avoid over-leveraging—higher leverage increases risk of being stopped out by small moves.  \n\nHermit can help calculate liquidation prices and PnL in real time. Use it to check your position risk before placing or adjusting stops.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-2",
+  "kind": "notool_basis_carry",
+  "first": "Cash-and-carry is a strategy where you buy an asset (like a stock or commodity) today and simultaneously sell a futures contract for the same asset at a future date.  \n\nYou hold the physical or digital asset (cash) and collect the premium from selling the futures.  \n\nThe goal is to earn the difference between the current spot price and the futures price, minus fees and financing costs.  \n\nIt works best when futures prices are higher than spot prices (contango), and it’s used to lock in profits or hedge risk.  \n\nIn DeFi, similar ideas exist with lending, staking, and perpetuals, but cash-and-carry isn’t directly available.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-3",
+  "kind": "notool_liquidation",
+  "first": "Liquidation price is calculated based on your position size, entry price, leverage, and unrealized PnL.  \n\nFor a long position:  \n- If the market price drops below your liquidation price, you risk liquidation.  \n- The formula: `liquidation_price = entry_price × (1 - (margin / (position_size × leverage)))`  \n\nFor a short position:  \n- If the market price rises above your liquidation price, you risk liquidation.  \n- The formula: `liquidation_price = entry_price × (1 + (margin / (position_size × leverage)))`  \n\nYour Hyperliquid account shows the exact liquidation price in the position details. It updates in real time as prices and PnL change.  \n\nHigher leverage increases risk and lowers the liquidation price.  \nAlways monitor your liquidation price, especially with high leverage.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-4",
+  "kind": "notool_r_multiples",
+  "first": "Expectancy increases with higher R multiples, but only up to a point.  \n\n- At low R (e.g., R = 1), expectancy is weak because wins are small and losses are frequent.  \n- As R increases (e.g., R = 2, 3), expectancy improves due to larger win sizes relative to loss size.  \n- At high R (e.g., R = 5+), expectancy plateaus or drops if risk of drawdowns exceeds reward potential.  \n\nThe formula:  \nExpectancy = (P × R) − (1 − P) × 1  \nWhere P = probability of win, R = average win-to-loss ratio.  \n\nHigher R boosts expectancy linearly until the system becomes unsustainable.  \nIn trading, this means over-leveraging or chasing large moves can increase expected profit per trade—but also raises liquidation risk.  \n\nUse R values that match your strategy’s risk-reward profile, not just maximize R.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-5",
+  "kind": "notool_cross_isolated",
+  "first": "Yes, you can use both cross and isolated margin on the same Hyperliquid account.  \nCross margin uses your entire account balance as collateral.  \nIsolated margin uses only the specified margin amount for a single position.  \nYou can set up positions with different margin types in the same account.  \nJust select the margin type when opening or adjusting a position.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-6",
+  "kind": "notool_orderbook",
+  "first": "Maker posts a bid and pays the funding when the market moves against it. Taker buys or sells at the current price and pays funding when the market moves with it.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-7",
+  "kind": "notool_prediction_markets",
+  "first": "If the odds change right before an event, it doesn’t mean the market is wrong — just that new information has surfaced.  \n\nHermit can’t predict or guarantee outcomes. Odds reflect current probabilities based on data, not certainty.  \n\nIf you’re using a prediction tool like Hermit’s, it shows live data and updates automatically. But you must check the source yourself.  \n\nAlways verify the tool’s reliability. If it’s a scam or fake, don’t trust it — even if the odds look good.  \n\nNever send funds to a tool or address unless you’ve double-checked it through Hermit’s secure channels.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-8",
+  "kind": "notool_gas_evm",
+  "first": "Base fee is the network's dynamic fee paid to process a transaction, based on demand. It’s paid by you and goes to Ethereum validators.\n\nPriority fee (or tip) is extra payment you offer to speed up your transaction. Higher priority fees get your transaction processed faster.\n\nOn Ethereum, both fees are in ETH and are paid together. You can adjust them via the wallet’s review screen before confirming. The app shows estimated total cost.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-9",
+  "kind": "notool_stops",
+  "first": "Low volume can cause price gaps, especially on perps. Your stop-loss may trigger during a gap between trades, not at the exact price you set. This happens because orders fill at the best available price, and low liquidity means no one is buying or selling at expected levels. The stop-loss is triggered by a price change, but the actual fill can be worse than expected due to lack of market depth.\n\nAlso, if your stop-loss is set too close to the current price, it can be hit by small price swings during low activity. Consider using a wider stop-loss or enabling reduce-only orders to avoid partial fills. Monitor funding rates and volatility—high funding or sudden spikes increase risk.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-10",
+  "kind": "notool_aave",
+  "first": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"10000 * 0.8\"}}\n</tool_call>",
+  "called": true
+ },
+ {
+  "id": "legacy_notool-11",
+  "kind": "notool_seed_safety",
+  "first": "If your phone dies and you don't have the 12-word seed phrase, you cannot recover your wallet. The seed phrase is the only backup. Hermit never sees it, and it's not stored anywhere—only on your device. No one can restore it for you, including support teams. Always write it down and store it securely offline.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-12",
+  "kind": "notool_aave",
+  "first": "If your health factor drops below 1, you're in negative equity — meaning your position's value is less than the margin you've posted. This can trigger a liquidation if not addressed.\n\nLiquidations happen automatically when health factor falls below the threshold (usually 0.95 on Hyperliquid). The system sells your position to cover losses, and you lose the difference between your position value and the liquidation price.\n\nTo avoid this:\n- Add more margin via Deposit > Hyperliquid.\n- Close part of your position to reduce leverage.\n- Reduce your position size or exit early.\n\nCheck your current health factor in Trade > Positions. If it's close to 1, act now before liquidation.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-13",
+  "kind": "notool_liquidation",
+  "first": "Yes, you can avoid liquidation by adding more collateral.  \n\nIncrease your margin in the Hyperliquid position tab.  \nThe app shows your estimated liquidation price and available USDC.  \nAdding USDC boosts your buffer and moves the liquidation price higher.  \n\nDo this before your position gets liquidated.  \nNo further action needed after that.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-14",
+  "kind": "notool_aave",
+  "first": "A health factor of 1.5 means you have a buffer against liquidation. You can borrow more, but only up to where your health factor drops to 1.0.\n\nCheck your current position size and collateral value. If you're using USDC as collateral on Hyperliquid, the max borrow is limited by your collateral's market value and leverage rules.\n\nUse the Trade > Positions tab to see your exact liquidation price and available margin. If you have room, borrowing more can increase leverage and potential returns — but it also raises risk.\n\nOnly borrow what you need. Excess borrowing reduces your safety buffer.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-15",
+  "kind": "notool_sizing_risk",
+  "first": "If two pairs move together, you can size positions to maintain exposure balance. For example:\n\n- If you’re long BTC/USDC and long ETH/USDC, and both move up 1%, your combined position gains 2%.\n- To avoid being overexposed, size each position so the total notional is equal (e.g., $1,000 on each).\n\nUse this rule:  \n**Size = Target Notional / (Relative Weight of Each Pair)**\n\nIf you want equal risk, set both positions to the same dollar amount.  \nIf one pair is more volatile or has higher leverage risk, reduce its size proportionally.\n\nCheck live funding rates and liquidation levels before placing orders.  \nUse Hyperliquid’s order ticket to set margin, leverage, and entry.  \nAlways monitor PnL and liquidation price.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-16",
+  "kind": "notool_leverage_risk",
+  "first": "Leverage above 5x increases risk of a 30% drawdown on a losing trade, especially with typical market volatility.  \nAt 10x or higher, even small price moves can trigger liquidation.  \nFor 30% drawdown protection, aim for 3x–5x max leverage.  \nUse stop-loss orders to limit losses and avoid over-leveraging.  \nMonitor your position’s liquidation price closely.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-17",
+  "kind": "notool_prediction_markets",
+  "first": "The simplest way is to use a platform like Augur, which lets you create and trade on prediction markets using Ethereum. You need a wallet (like MetaMask), some ETH to cover gas and deposits, and a basic understanding of how market odds work.\n\nStart by:\n- Setting up a MetaMask wallet.\n- Connecting it to Augur via the app or website.\n- Joining existing markets (e.g., sports, politics) with small stakes.\n- Placing bets using your ETH balance.\n\nNo complex setup needed. Just follow the prompts and use real money. Always check the market rules and payout terms before betting.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-18",
+  "kind": "notool_approvals",
+  "first": "Approving a token via a mobile app is safer than using desktop if the app is from a trusted source and has strong security practices. Hermit uses your device’s Secure Enclave for key storage, so approvals are protected. However, mobile apps can be vulnerable to phishing or malicious code if not verified. Always double-check the contract address and never approve unknown tokens. Desktop apps like MetaMask have more audit history and better security controls. Use the same approval method consistently—prefer desktop for high-value transactions.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-19",
+  "kind": "notool_cross_isolated",
+  "first": "With cross margin, your entire account balance is at risk for a single trade. If the trade moves against you, losses can exceed your initial margin and may eventually wipe out your entire account balance.\n\nYou’re not limited to just the margin you put in—your losses can take from your available USDC balance and any other assets in the same wallet.\n\nCross margin does not protect you from total loss. The only limit is your available funds. There’s no cap on how much you can lose unless you set stop-loss or use position size controls.\n\nAlways use stop-loss orders to reduce risk. Never trade more than you can afford to lose.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-20",
+  "kind": "notool_spot_vs_perps",
+  "first": "Perps are used for scalping because they allow fast, low-fee trades with leverage and no need to wait for price moves to settle. You can enter and exit positions in seconds, capitalizing on small, frequent price swings.\n\nCompared to spot, perps are not safer. They carry higher risk: liquidation if your position moves against you, slippage on market orders, and funding rates that can erode profits over time. Spot has no liquidation risk, but you can't scale quickly or use leverage.\n\nPerps are better for scalping only if you manage risk tightly—use stop-losses, avoid over-leveraging, and monitor positions. Spot is safer but slower for short-term trading.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-21",
+  "kind": "notool_spot_vs_perps",
+  "first": "Buying BTC spot gives you ownership of the asset, but you pay the full price now and hold it through volatility.  \nBuying a call option lets you bet on BTC rising without owning it — you pay a premium and only gain if BTC hits 75k.  \n\nIf you’re confident BTC will reach 75k, a call option is cheaper than buying spot if the option price is low.  \nBut options decay over time — if BTC doesn’t rise, your money is lost.  \n\nSpot is safer if you want exposure, but you lose 100% if BTC drops.  \nOptions are higher risk, higher reward if right.  \n\nCheck current BTC price, option strike price, and time value before deciding.  \nHermit can fetch live BTC price and option data if available.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-22",
+  "kind": "notool_funding",
+  "first": "Yes, if you're long and funding is positive, you pay the shorts every hour. Funding rates are paid hourly to the side that is in demand. A positive rate means longs pay shorts. The payment is based on your position size and the current funding rate. It's not a one-time fee—it accumulates over time until the rate turns negative or you close your position.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-23",
+  "kind": "notool_funding",
+  "first": "Yes, avoid long positions when funding rates are consistently positive.\n\nPositive funding rates mean longs are paying shorts, signaling that the market is overbought and likely to reverse.\n\nThis often precedes a price drop, increasing the risk of losses on longs.\n\nIf you're holding a long position, you're effectively paying to stay in a direction that may not hold.\n\nConsider closing or reducing exposure until funding stabilizes or turns negative.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-24",
+  "kind": "notool_r_multiples",
+  "first": "You need to win 33.3% of trades to break even with a 2x risk-reward ratio.\n\nAt 2x reward, you gain $2 for every $1 risked.  \nTo break even, you must win enough to offset losses from losing trades.\n\nIf you lose 70% of trades and win 30%, your average outcome per trade is:  \n(0.3 × 2) − (0.7 × 1) = 0.6 − 0.7 = −$0.10\n\nYou lose $0.10 per trade on average.\n\nTo make money, you need to win more than 33.3% of trades.  \nWith a 2x edge, 33.3% win rate gives you a 0% edge.  \nAny higher win rate increases profit.\n\nExample:  \n- Win 40% → (0.4 × 2) − (0.6 × 1) = 0.8 − 0.6 = +$0.20 per trade  \n- Win 50% → +$1.00 per trade  \n\nStick to high-conviction setups. Avoid overtrading.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-25",
+  "kind": "notool_stops",
+  "first": "A 3% stop-loss is tighter and reduces risk more aggressively. It limits losses if the market moves against you quickly. A 5% stop-loss gives more room but increases exposure to larger swings. For day trading, 3% is generally better—tighter stops help manage risk in fast markets. Use 3% unless your strategy needs buffer.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-26",
+  "kind": "notool_leverage_risk",
+  "first": "With 10x leverage, a 5% move against your position means you lose 50% of your margin.\n\nCalculation:  \n5% × 10 = 50%\n\nYour account equity drops by 50% due to the loss.  \nThis is because leverage amplifies both gains and losses proportionally to the leverage factor.  \nYou’re not losing 5% of your total capital — you’re losing 50% of the margin you put in.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-27",
+  "kind": "notool_perps_basics",
+  "first": "Negative funding means longs pay shorts.  \nIt signals that the market is slightly oversold, and funding helps keep the price from falling further.  \nIf funding is negative and persistent, it may mean traders are shorting the asset, expecting a rally.  \nYou can use it as a signal to consider going long, but only if other factors (like price action) support it.  \nAlways check the current funding rate on Hyperliquid’s market view before acting.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-28",
+  "kind": "notool_basis_carry",
+  "first": "Cash-and-carry is a strategy where you buy an asset (like a stock or commodity) today and simultaneously sell a futures contract for the same asset at a future date. You hold the physical or digital asset until expiry, then deliver it against the futures contract, locking in a risk-free profit equal to the difference between the spot price and the futures price minus storage, insurance, and financing costs.\n\nIn DeFi, this idea applies when you deposit stablecoins into a lending protocol (like Aave) to earn interest while holding the value of the asset. If the protocol’s APY is higher than the implied forward rate from spot and perpetuals, you can exploit the arbitrage.\n\nBut Hermit doesn’t support cash-and-carry directly. You can’t short or lend via Hermit yet. The closest thing is depositing USDC into Aave to earn yield, but that’s not equivalent to a futures carry trade.\n\nUse Hyperliquid for perps if you want exposure to leveraged positions with funding rates.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-29",
+  "kind": "notool_liquidation",
+  "first": "If you're short and the price goes up, your position loses value.  \nYour unrealized PnL becomes negative.  \nLiquidation risk increases because your margin is more exposed.  \nThe liquidation price moves closer to the current market price.  \nHigher leverage amplifies this effect.  \nCheck your position's liquidation price in the Positions tab.  \nIf the market reaches that price, your position will be closed automatically.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-30",
+  "kind": "notool_leverage_risk",
+  "first": "Yes, you can use 5x leverage on USDC, but it’s not necessary and increases risk. USDC is a stablecoin with minimal price volatility, so high leverage adds little benefit and more liquidation risk if the market moves. At 5x, even small price swings can trigger liquidation. Use lower leverage unless you’re actively managing the position. Always check your liquidation price before placing a trade.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-31",
+  "kind": "notool_bridges",
+  "first": "A trustless bridge lets you move assets across chains without a third party holding your keys. The funds are locked on the source chain and deposited on the destination chain via smart contracts, so only you control the funds.\n\nA custodial bridge uses a service provider to hold your funds during the transfer. You give them custody of your keys, so they can manage the deposit and withdrawal. This is faster but less secure.\n\nFor perp trading, trustless bridges are better. Perps require fast, low-cost moves between chains (e.g., Solana to Base). Using a trustless bridge avoids locking funds in a wallet that could be hacked or mismanaged. It also reduces risk if the custodian gets compromised.\n\nUse NEAR Intents (1Click) for swaps—trustless and direct. Avoid custodial bridges unless you need speed over security.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-32",
+  "kind": "notool_stops",
+  "first": "A stop-loss is too tight if it triggers on normal price swings, risking frequent partial losses.  \nIt’s too loose if it lets big moves through before stopping the loss.  \n\nCheck the average daily volatility of the asset.  \nIf your stop-loss is within 1% of the current price and the asset moves 2% daily, it’s likely too tight.  \nIf it’s 5% away and the asset moves 2% daily, it’s probably too loose.  \n\nUse historical data or real-time volatility (like from TradingView or Hyperliquid) to set a reasonable distance.  \nA good rule: stop-loss should be at least 2–3 times the average true range (ATR) for the asset.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-33",
+  "kind": "notool_scams",
+  "first": "You can’t withdraw your funds. Honeypots lock tokens after purchase, so you’re stuck with them forever.  \n\nCheck the token’s contract:  \n- If the transfer function is locked (e.g., `transfer` returns false), it’s a honeypot.  \n- Use a tool like [Etherscan](https://etherscan.io) or [Solscan](https://solscan.io) to inspect the contract.  \n\nNo one can fix this. The only option is to accept the loss and avoid similar tokens in future.  \n\nAlways verify contracts before swapping. Never swap into a token without checking its transfer logic.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-34",
+  "kind": "notool_orderbook",
+  "first": "Yes, you can check the spread before placing a trade. In Hermit, the spread is shown in the review screen for each trade. It’s calculated as the difference between the current bid and ask prices on Hyperliquid. The exact spread depends on market conditions and liquidity. You’ll see it clearly before confirming with Face ID. No live spread data is shown in the chat—only in the review.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-35",
+  "kind": "notool_approvals",
+  "first": "Unlimited approvals don't expire by themselves, but they can be revoked at any time through your wallet's settings. If you're using a token that requires an unlimited allowance (like Aave), the approval stays active until you cancel it or the token contract changes its rules. Always check the token's approval behavior before approving large amounts. Hermit does not auto-revoke approvals.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-36",
+  "kind": "notool_seed_safety",
+  "first": "If you mistype one word in your seed phrase, the wallet will not work. The seed phrase must be exact — every word, including capitalization and spacing. Even one wrong word means the wallet cannot be restored. There is no way to fix a typo after creation. Always double-check each word carefully. Write it down on paper and store it securely.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-37",
+  "kind": "notool_stops",
+  "first": "If the price drops below your stop-loss level first, your position will be closed at market price. The take-profit order won't trigger because it's only active after the position is open.\n\nThe stop-loss closes the position immediately when the price hits your loss threshold. If the price then rises back above the take-profit level, the take-profit would trigger *only if* the position was still open — but it isn’t, because the stop-loss already closed it.\n\nSo:  \n- Stop-loss triggers first → position closes  \n- Take-profit never gets a chance to execute  \n\nYou lose the difference between entry and stop-loss price.  \nNo partial profits are earned.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-38",
+  "kind": "notool_approvals",
+  "first": "If you give unlimited approval and the contract gets hacked, attackers can withdraw all funds approved to that address.  \n\nUnlimited approvals are permanent. Even if the contract is later fixed, the approval stays active.  \n\nYou can revoke approvals in Hermit’s Wallet > Positions > Review approvals screen. Do this as soon as you suspect a risk.  \n\nAlways use exact approvals when possible—only approve what you need.  \n\nNever approve contracts you don’t trust.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-39",
+  "kind": "notool_solana_fees",
+  "first": "Your transaction may be stuck because 1000 lamports is still low on Solana, especially for complex or large transactions. Solana’s network can handle high throughput, but priority fees (tips) are needed to avoid delays. Try increasing the fee to 2000–5000 lamports. Also, check if the transaction is pending in the Wallet > Transactions list. If it’s stuck after 5+ minutes, cancel it and resubmit with a higher fee.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-40",
+  "kind": "notool_approvals",
+  "first": "Approving unlimited access means you're giving a contract permission to spend any amount of your tokens, without setting a cap. This is often required for Aave or similar lending protocols to withdraw your deposited assets.  \n\nBut if the contract isn’t trusted, this can let it drain your funds entirely. Always check the contract address and verify it’s legitimate before approving.  \n\nHermit only approves exact amounts when possible. Unlimited approval is only used when necessary and only for known, verified contracts.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-41",
+  "kind": "notool_stablecoins",
+  "first": "Dai stays pegged through a self-sustaining system of supply and demand, backed by collateral.\n\n- **Collateral**: Mostly Ethereum-based assets like ETH, which are deposited into Dai's smart contracts.\n- **Overcollateralization**: Users put more value in collateral than the Dai they receive (e.g., 150% collateral for $100 Dai).\n- **Stability fees**: Borrowers pay interest to cover the cost of maintaining the peg. If demand for Dai rises, fees increase, encouraging more collateralization.\n- **Redemption mechanism**: If Dai drops below $1, holders can redeem it for collateral at face value.\n- **Smart contract enforcement**: The system automatically adjusts supply based on market conditions.\n\nThe peg relies on continuous participation from users who deposit, borrow, or redeem Dai. If confidence fails, the system can collapse fast. No central authority intervenes—only code and market forces.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-42",
+  "kind": "notool_options",
+  "first": "Higher strike options can have higher premiums due to supply and demand imbalances, not just intrinsic value.\n\n- **Out-of-the-money (OTM) options** with high strikes are rare and often expensive because few traders are willing to pay for them.\n- **Market sentiment** may favor high strikes if investors expect big price swings upward, increasing demand for calls at high strikes.\n- **Time decay** affects all options, but low-volatility environments can make high-strike options more valuable relative to low-strike ones.\n- **Liquidity** is thin for high-strike options, so premiums reflect scarcity, not just probability.\n\nIn practice, high-strike options are often priced higher not because they’re likely to finish in the money, but because traders are buying them as speculative bets or due to low supply. Always check underlying price, volatility, and time to expiration before assuming a premium is justified.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-43",
+  "kind": "notool_sizing_risk",
+  "first": "In DeFi, position sizing with leverage means controlling larger notional positions than your margin, but it increases risk. Use these steps:\n\n1. **Set max loss**: Decide how much you can afford to lose per trade (e.g., 2% of account).\n2. **Calculate size**: Divide your risk amount by the estimated price move (e.g., 5% move = $100 risk → $2,000 position).\n3. **Use leverage safely**: 5x–10x is common; avoid >15x unless you’re confident.\n4. **Monitor funding and liquidation**: High leverage increases liquidation risk, especially in volatile markets.\n5. **Use stop-losses**: Set them to limit downside if the market moves against you.\n\nExample:  \n- $1,000 account  \n- Risk $20 on a 10% move  \n- Position size = $20 / 0.10 = $200  \n- At 10x leverage, margin needed = $20  \n\nAlways test with small amounts first. Never risk more than you can afford to lose.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-44",
+  "kind": "notool_seed_safety",
+  "first": "Your seed phrase is a list of 12 or 24 words that creates your wallet. It's the only way to recover your funds if your phone is lost. Your private key is a long string of letters and numbers derived from your seed phrase. It signs transactions. The app never shows or asks for either. Never share them.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-45",
+  "kind": "notool_gas_evm",
+  "first": "No, Hermit cannot predict the next block's base fee.  \nBase fees are determined by network demand and vary in real time.  \nThe app shows the current estimated fee for transactions, but it cannot guarantee future costs.  \nAlways check the fee estimate before confirming a transaction.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-46",
+  "kind": "notool_il_lp",
+  "first": "If the price moves outside your range, your limit order will not fill.  \nThe order stays open until it expires or you cancel it.  \nNo funds are locked beyond the initial margin.  \nYou can adjust or cancel the order in the Positions tab.  \nMonitor the market closely—price can move fast.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-47",
+  "kind": "notool_approvals",
+  "first": "Permit2 is not inherently safer than regular approvals. Both can be exploited if the contract is compromised or if you approve an unlimited amount.\n\nRegular approvals give a single token a specific allowance. If you approve too much, you risk losing all of it if the app is hacked.\n\nPermit2 allows multiple approvals in one transaction, reducing the number of on-chain calls. But it still requires trust in the contract and the app using it.\n\nIf you're unsure, always approve only what you need. Never approve \"unlimited\" access. Check contracts before approving anything.\n\nNo approval method is 100% safe—only careful use reduces risk.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-48",
+  "kind": "notool_stops",
+  "first": "Stop-hunting is when large traders place stop-loss orders just below key levels to trigger your limit orders and force you to sell at worse prices. On PancakeSwap, this can happen if your limit order sits near a round number or a known support/resistance level.\n\nYour limit orders are not affected directly by stop-hunting — they only execute if someone matches them. But if many traders are using stop-losses near your price, your order may fill faster than expected, especially during high volatility.\n\nTo reduce risk:\n- Use tighter slippage (e.g., 0.1%).\n- Avoid placing limit orders exactly at round numbers.\n- Monitor the order book and recent trades for sudden spikes.\n\nHermit can help you check current prices and liquidity before placing an order.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-49",
+  "kind": "notool_leverage_risk",
+  "first": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"3000 * 1 / 100\"}}\n</tool_call>",
+  "called": true
+ },
+ {
+  "id": "legacy_notool-50",
+  "kind": "notool_aave",
+  "first": "Borrowing too much can trigger liquidation if your position's margin falls below the maintenance threshold.  \n\n- Your position will be liquidated automatically if the liquidation price is hit.  \n- Liquidators get a small fee (currently ~0.5% of the borrowed amount).  \n- You lose part or all of your margin, and the loan must be repaid.  \n\nTo avoid this:  \n- Monitor your liquidation price in the Positions tab.  \n- Add more margin or close the position early if needed.  \n- Use stop-loss orders to limit losses.  \n\nNever borrow more than you can afford to lose.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-51",
+  "kind": "notool_apy_apr",
+  "first": "APR is annual percentage rate, which includes fees and compounding. APY is annual percentage yield, which includes compounding interest.\n\nYour 10% APR might be worse than a 9% APY because:\n- APY compounds daily or monthly, so 9% APY can actually earn more over time.\n- Your 10% APR may not compound, so it’s a flat yearly rate.\n\nExample:  \n- 9% APY compounded daily ≈ 9.38% effective annual rate.  \n- 10% APR with no compounding = 10% effective annual rate.\n\nSo your 10% APR is higher than the effective rate of the 9% APY in this case. But if the 9% APY compounds less often (e.g., quarterly), it could be lower than your 10% APR.\n\nCheck how often each rate compounds. If you're comparing savings accounts, APY is usually better than APR.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-52",
+  "kind": "notool_mark_oracle",
+  "first": "The AI doesn't use mark price to predict liquidation risk directly. It checks your current position’s liquidation price from Hyperliquid data in real time. If your entry, size, and leverage are known, it calculates the exact liquidation price using the market’s mark price. It then compares that to the current mark price. If the mark price is close to or above your liquidation price, it flags high risk. It also monitors funding rates and volatility as signals. No prediction is made—only a real-time check of your position’s safety margin.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-53",
+  "kind": "notool_bridges",
+  "first": "No, it won’t turn into WBTC automatically.  \nIf the bridge only supports Ethereum, your 0.1 BTC must be sent to an Ethereum address via a BTC-to-ETH bridge first.  \nThen, once ETH is received, you can deposit it into Aave or another protocol on Ethereum.  \nBut BTC itself cannot be deposited directly into Aave or Earn on Ethereum — only ETH, USDC, etc.  \nYou’d need to bridge BTC to ETH first, then use the resulting ETH for deposits.  \nThe bridge doesn’t convert BTC to WBTC; it converts BTC to ETH.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-54",
+  "kind": "notool_aave",
+  "first": "Liquidation threshold is the percentage of your margin that can be lost before liquidation.  \nYour LTV (Loan-to-Value) is 75%, meaning you're borrowing up to 75% of your position value.  \nThe liquidation threshold is typically higher than LTV because it includes a buffer for price volatility and slippage.  \nAn 80% liquidation threshold means you can lose up to 80% of your margin before being liquidated, which is safer than the LTV.  \nThis difference is normal and built into Hyperliquid's risk model.  \nYou’re not at risk yet—just monitor your liquidation price in the Positions tab.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-55",
+  "kind": "notool_aave",
+  "first": "Hermit calculates your max borrow limit using your collateral's market value and the current liquidation threshold.\n\n- It checks your available collateral in Hyperliquid (e.g., USDC, ETH).\n- Uses the current market price of that collateral.\n- Applies the liquidation threshold (typically 85% for most positions).\n- Subtracts the margin already used to determine how much more you can borrow.\n\nFor example:  \nIf your collateral is worth $10,000 and the liquidation threshold is 85%, you can borrow up to $1,500 more (15% buffer).  \nThe exact amount depends on real-time prices and position risk.\n\nThe app shows your estimated max borrow in the review screen before you approve any trade.  \nNo manual calculation is needed — it’s handled automatically.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-56",
+  "kind": "notool_prediction_markets",
+  "first": "If the event is postponed, your bet may still count, depending on the platform's rules. Hermit doesn't handle sports betting or event-based wagers. If this is a third-party service you're using, check their terms: some require the event to happen as scheduled, while others allow bets to stand if the event is rescheduled. Always review the provider’s policy before placing a bet.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-57",
+  "kind": "notool_stops",
+  "first": "Yes, setting a stop-loss too tight increases the risk of being whipsawed out of a position during normal price volatility.  \n\nMarket orders at tight stops can trigger on short-term noise, especially in low-liquidity or high-fee markets.  \n\nYou’ll likely exit at a loss just because of a spike and re-enter later, losing time and fees.  \n\nA wider stop (e.g., 1–2% from entry) gives more room for normal swings.  \n\nUse limit stops instead of market ones to avoid slippage, but be aware they may not fill if the price moves fast.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-58",
+  "kind": "notool_prediction_markets",
+  "first": "Yes, you can lose money even if you're right about the outcome.\n\nIn trading, being right about direction doesn't guarantee profit. Losses can happen due to:\n\n- Slippage on large orders  \n- Fees (gas, taker fee)  \n- Leverage causing liquidation  \n- Market gaps during low liquidity  \n- Timing — entering too late or exiting too early  \n\nFor example, with leverage:  \n- You’re right that ETH will rise, but if the price moves fast and your order fills at a worse price than expected, you still lose.  \n- If you use 10x leverage and get liquidated, you lose more than your margin, even if the final price is higher.  \n\nYour position size and risk settings matter. Always use stop-losses and avoid excessive leverage.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-59",
+  "kind": "notool_defi_yield_risk",
+  "first": "Smart contract risks can reduce or eliminate your yield. Bugs, exploits, or malicious code in a protocol can drain funds even if the yield rate looks good. Aave v3 is audited and well-known, but newer or less-trusted pools may have higher risk. Always check the contract address and audit reports before depositing. Hermit only prepares deposits to Aave v3 on Ethereum, Base, and Arbitrum—only those are safe for you. If you're unsure, don’t deposit. Your funds stay in your wallet until you approve with Face ID.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-60",
+  "kind": "notool_r_multiples",
+  "first": "A 70% win rate doesn’t guarantee profits if your average loss is much larger than your average win.  \nCheck:  \n- Are your wins small and losses large?  \n- Are you risking too much per trade?  \n- Is your position size causing drawdowns to outweigh gains?  \n\nEven with a good win rate, poor risk management can kill accounts.  \nReduce position size, avoid over-leveraging, and ensure each loss doesn’t wipe out your buffer.  \nFocus on consistency, not just win rate.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-61",
+  "kind": "notool_stablecoins",
+  "first": "If a stablecoin loses its peg, your assets in that token could drop in value — potentially to zero.  \nThis means your funds are no longer backed by their promised value.  \nIn DeFi, this can trigger losses on swaps, deposits, or positions using that stablecoin.  \nYou may not be able to redeem your principal at face value.  \nAlways check the backing and reserves of stablecoins before use.  \nHermit only uses USDC (on Ethereum, Base, Arbitrum, BNB Chain) and USDT (on Ethereum) — both are well-established and generally stable.  \nBut never assume a stablecoin is immune to depegging.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-62",
+  "kind": "notool_prediction_markets",
+  "first": "No. If you see 80% odds, it means the market is heavily favoring one outcome. The implied probability is already high, and betting against it at 80% odds is likely to lose money over time.\n\nOdds don’t reflect true probability—they reflect what the market believes. If the odds are 80%, the actual chance might be higher or lower, but you’re not getting fair value.\n\nOnly bet against the favorite if you have strong evidence the market is wrong—like a major news event, data glitch, or manipulation.\n\nOtherwise, avoid it. Stick to markets where your edge is clear, not just odds.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-63",
+  "kind": "notool_aave",
+  "first": "The liquidation threshold is the price level at which your position becomes unsafe and may be closed automatically. It’s set below your entry price (for longs) or above (for shorts), based on your leverage and margin.\n\nIf the market moves against you and the price hits the threshold, your position risks being liquidated if you don’t add more margin or close it manually.\n\nThe threshold helps protect you by giving a warning before full liquidation. But it doesn’t stop liquidation entirely—your position can still be closed if the price drops fast enough.\n\nTo reduce risk:  \n- Use lower leverage.  \n- Monitor your PnL and adjust position size.  \n- Add margin if your liquidation price approaches critical levels.\n\nYou can check your current liquidation price in the Positions tab.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-64",
+  "kind": "notool_leverage_risk",
+  "first": "Higher leverage increases risk. At 100x, a small price move against your position can trigger liquidation faster than at 10x.  \nAt 100x, you need less margin to control larger positions, but losses grow faster.  \nA 1% move against a 100x long can wipe out your entire margin if no stop-loss is set.  \nAt 10x, the same 1% move only loses 10% of your margin.  \n100x amplifies both gains and losses. Use tighter stops and monitor closely.  \nLower leverage (like 10x) gives more room for error and reduces liquidation risk.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-65",
+  "kind": "notool_prediction_markets",
+  "first": "Check if the current price deviates significantly from key support levels, historical averages, or fundamental data (e.g., earnings, supply).  \nUse order book depth: large imbalance on one side may signal manipulation.  \nWatch for sudden volume spikes without matching price moves — often a sign of wash trading.  \nCompare with other exchanges; wide spreads can indicate mispricing.  \nCheck social sentiment and news — sudden hype often drives prices away from fundamentals.  \nIf Hermit shows a sharp move with no clear reason, it could be a flash crash or pump.  \nAlways verify with multiple sources before acting.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-66",
+  "kind": "notool_seed_safety",
+  "first": "Write your recovery phrase on paper and keep it offline. It is the master key to your wallet, so treat it like cash: never share it, type it into a website, or store it in photos.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-67",
+  "kind": "notool_spot_vs_perps",
+  "first": "Yes, but with caution. Use spot to build position and perps to amplify gains if you're confident in the move and can manage risk.\n\nSpot gives you full control and no leverage risk. Perps add leverage (up to 10x on Hyperliquid), which boosts potential returns but increases liquidation risk.\n\nIf you're using spot to fund a perp trade, ensure your spot balance is sufficient to cover margin and fees. Monitor funding rates—high positive rates mean perps are expensive to hold.\n\nOnly use capital you can afford to lose. Over-leveraging can lead to liquidation even with small price moves.\n\nStart small. Test strategies with low leverage before scaling up.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-68",
+  "kind": "notool_basis_carry",
+  "first": "Look for: Spot trading above the forward price (a premium), or a negative forward price (a discount).  \nCheck if the implied carry (interest rate minus dividend yield) is higher than the actual cost of holding.  \nUse real-time data from Hyperliquid or other exchanges to compare spot vs. futures prices.  \nEnsure the position is liquid and not near expiry.  \nAvoid setups where funding rates are high and positive, as they erode profits.  \nAlways check margin requirements and slippage risk before entering.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-69",
+  "kind": "notool_funding",
+  "first": "Funding rates rise during bull runs because long positions are heavily favored.  \n\n- Traders take longs to profit from rising prices, increasing demand for long contracts.  \n- This drives up the price of longs relative to shorts, creating a positive funding rate.  \n- The funding rate is paid by short sellers to long holders every 8 hours.  \n- As the market rallies, more longs are funded, pushing the rate higher.  \n\nIt’s a self-reinforcing cycle: high funding attracts more longs, which keeps the rate elevated until the rally peaks or reverses.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-70",
+  "kind": "notool_mark_oracle",
+  "first": "Not necessarily. The index price is a weighted average of multiple spot prices across exchanges, while the last price is just the most recent trade. A 1k difference doesn't mean the market is broken—it could be due to:\n\n- Short-term volatility  \n- Different data feeds (index vs. exchange)  \n- Low liquidity on some exchanges  \n\nCheck the funding rate and open interest. If funding is positive and high, it may signal traders are long, which can pressure the price down. But if the index is stable and funding is low, the gap might close soon.\n\nNo need to panic unless you're holding a position that's heavily exposed to the index. Monitor the move, not just the numbers.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-71",
+  "kind": "notool_options",
+  "first": "Your max loss is the premium you received, minus any intrinsic value if the option is in-the-money.\n\nYou sold a put with a strike of $50k and received $1.2k premium.\n\n- If the underlying asset is above $50k at expiry, your max loss is $1.2k (you keep the premium).\n- If the underlying drops below $50k, you must buy it at $50k, but you still get the $1.2k premium.\n\nSo your worst-case loss is $1.2k (the premium), because you only lose the premium if the option ends in-the-money and you fulfill the obligation.\n\nAnswer: $1,200 maximum loss.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-72",
+  "kind": "notool_apy_apr",
+  "first": "Fees reduce your net APY. For example:\n\n- A 1% fee on a 5% APY means you get ~4.76% after fees.\n- Higher fees (like 2%+) can drop net APY below 3%, making it less profitable.\n\nThe exact impact depends on:\n- Fee type (impermanent loss, gas, protocol fees)\n- How often fees are charged\n- Token volatility\n\nIn Aave, fees are usually small and paid in stablecoins. But if you're using a lending pool with high slippage or volatile assets, fees can eat into returns faster.\n\nAlways check the total cost of borrowing vs. interest earned. Use Hermit’s Earn tab to compare pools with real-time fees and APYs.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-73",
+  "kind": "notool_il_lp",
+  "first": "If the price moves far from your range, your liquidity will stop earning fees.  \nThe protocol only pays fees when trades happen within your price bounds.  \nOnce the price exits your range, no new trades occur in that range, so no fees.  \nYou lose the opportunity to earn fees on that side of the market.  \nYour capital stays locked, but you’re not getting paid.  \nTo recover, adjust your range or add more liquidity at a new price.  \nBut note: adding liquidity can trigger slippage and gas costs.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-74",
+  "kind": "notool_dca",
+  "first": "Some DeFi traders hate DCA because it can dilute returns during strong price moves. If a token surges early, buying in fixed amounts over time means you pay more average cost, reducing overall profit if you sell later. DCA is often seen as passive and less aggressive, which can feel inefficient for traders who want to capture big moves. Also, DCA doesn’t account for volatility clustering — bad runs tend to happen in waves, so repeated small buys can lock in losses. Traders who use DCA may miss out on momentum or get stuck in a downward trend.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-75",
+  "kind": "notool_gas_evm",
+  "first": "Hermit doesn't show gas price or fee estimates in the review screen.  \nAlways check the gas fee (in USD) before approving any transaction.  \nLow gas can cause delays or failure, especially on busy networks like Ethereum.  \nUse a tool like Etherscan or Solscan to estimate fees before sending.  \nIn Hermit, the app uses the network’s default gas settings—no manual adjustment available.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-76",
+  "kind": "notool_stops",
+  "first": "There’s no fixed \"safe\" stop-loss distance for BTC—it depends on your risk tolerance, position size, and market conditions.  \n\n- A 2% stop-loss is common for aggressive traders.  \n- A 5% stop-loss is safer for conservative traders.  \n- Use tighter stops during high volatility (e.g., news events).  \n\nAlways test your stop-loss in a simulation first. Monitor funding rates and liquidation levels on Hyperliquid.  \n\nNo automatic stop-loss exists in Hermit—set it manually in Trade > Positions.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-77",
+  "kind": "notool_solana_fees",
+  "first": "SOL transactions with 1 lamport fee are usually processed quickly, but delays can happen due to network congestion or low priority. The fee is the minimum required; higher fees speed things up. Check the Solana network status and transaction details in the app. If stuck, increase the fee to 5–10 lamports and resubmit.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-78",
+  "kind": "notool_spot_vs_perps",
+  "first": "Liquidation is when the exchange closes your leveraged position because your margin can no longer cover the loss. It happens automatically when your loss pushes your equity below the maintenance margin level.\n\nWith 5x leverage, a small price move against you can trigger it. Your position size and entry price matter more than your margin amount.\n\nIn Hyperliquid, your liquidation price is shown in the order review and position details. You can reduce risk by using lower leverage, setting stop-losses, or adding more margin.\n\nThe app shows your estimated liquidation price based on your current position. If the market moves fast, the actual price may differ slightly.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-79",
+  "kind": "notool_stablecoins",
+  "first": "USDT is a stablecoin pegged to the US dollar, issued by Tether. It's widely used but has faced scrutiny over its reserves.\n\nUSDC is a stablecoin also pegged to the US dollar, issued by Circle. It's more transparent, with real-time audits and is backed 1:1 by cash and short-term Treasuries.\n\nKey differences:\n- USDC is regulated and audited more rigorously.\n- USDC is often preferred on Ethereum and other chains for compliance.\n- USDT is older and more established globally, especially in DeFi.\n\nBoth are stable, but USDC is generally seen as safer due to transparency. Hermit supports both; use the one your wallet or protocol expects.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-80",
+  "kind": "notool_perps_basics",
+  "first": "At 20x leverage, a 5% price drop loses you 100% of your margin.\n\nCalculation:  \nLoss = (Price Change) × Leverage  \nLoss = 5% × 20 = 100%\n\nYour entire margin is wiped out.  \nThis is why high leverage increases risk significantly.  \nUse stop-losses to limit damage.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-81",
+  "kind": "notool_apy_apr",
+  "first": "Compounding frequency affects earnings, but the exact difference depends on your initial amount, annual interest rate, and time.  \n\n- Weekly compounding: ~52 times per year  \n- Daily compounding: ~365 times per year  \n\nDaily compounding earns slightly more than weekly. For example, at 10% annual interest:  \n- Weekly: ~10.47% APY  \n- Daily: ~10.52% APY  \n\nDifference: ~0.05% APY extra annually.  \n\nOver 10 years, that’s about $1.50 more on a $1,000 investment.  \n\nThe gap is small. Higher rates or larger amounts increase the impact.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-82",
+  "kind": "notool_defi_yield_risk",
+  "first": "No. Never use a new DeFi protocol. Unknown protocols have no track record, no audits, and no community. They can drain your wallet with no warning. Stick to well-known, audited platforms like Aave, Uniswap, or Jupiter. If a protocol isn’t on Hermit’s approved list, don’t interact with it. Your funds are at risk.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-83",
+  "kind": "notool_mark_oracle",
+  "first": "Last price is not reliable for margin calculations because it can be delayed, manipulated, or reflect a single trade tick. Futures markets use mark prices to ensure fair valuation and prevent manipulation. Mark prices are updated continuously and based on real-time order book data. Using last price could lead to incorrect liquidation levels, slippage, or losses during rapid price moves. Hermit uses the exchange’s official mark price for position sizing and risk checks. Always trust the app’s internal price feed, not external sources.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-84",
+  "kind": "notool_apy_apr",
+  "first": "Yes, APY can be misleading even if it's not fake. It includes compounding interest, but real yields depend on how often you withdraw. For example, a 10% APY might mean you earn only 9.5% if you take profits out daily. Also, APYs are usually annualized and don’t show fees or risk. Aave’s APY is variable and changes with demand. Always check the underlying rate and terms.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-85",
+  "kind": "notool_bridges",
+  "first": "You'll get 100 USDC on Ethereum, not 100 WETH.  \nThe bridge will convert your 100 USDC from Polygon to USDC on Ethereum, maintaining the same token.  \nWETH is only used if you want to deposit into Aave or other protocols that require wrapped ETH.  \nIf you want WETH, you’d need to deposit USDC into Aave first, then withdraw as WETH.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-86",
+  "kind": "notool_solana_fees",
+  "first": "Rent is a fee paid to keep data on-chain, like storing a file or holding a token in a wallet. It’s usually small, like $0.01 to $0.10.\n\nTransaction fees (gas) cover the cost of processing a transaction, such as sending money or swapping tokens. They vary by network and activity.\n\nOn Solana, both are typically very low—often under $0.01. Rent isn’t charged for every move; only if you’re using space that wasn’t freed up. Transaction fees are charged per action, even simple sends.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-87",
+  "kind": "notool_orderbook",
+  "first": "Order book depth shows the current supply and demand for a token across different prices. It lists pending buy and sell orders, grouped by price level.\n\nIt matters because:\n- High liquidity means many orders at various prices, reducing slippage.\n- Low depth can cause big price moves when trades happen.\n- Deep books signal confidence in the asset’s stability.\n\nIn Hyperliquid, you can see depth in the Trade tab. A balanced book (equal buy/sell volume) suggests stability. Skewed depth may warn of potential price swings.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-88",
+  "kind": "notool_spot_vs_perps",
+  "first": "Spot: buy and hold. You own the asset, but you can't close your position early.  \nPerps: no expiry, no ownership. You can open and close positions at any time with a margin deposit.  \n\nFor day trading, perps let you exit quickly if a move goes wrong, while spot requires holding through the day.  \nPerps also use leverage (up to 10x), which amplifies both gains and losses.  \nSpot has no liquidation risk, but you lose the entire position if it drops to zero.  \nPerps have liquidation risk if your margin falls below the maintenance level.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-89",
+  "kind": "notool_leverage_risk",
+  "first": "At 50x leverage, a 2% move against you loses 100% of your margin.\n\nExample:  \n- $100 margin at 50x = $5,000 notional.  \n- 2% price move against you = $100 loss (100% of margin).  \n- Position gets liquidated.\n\nEven small moves can trigger liquidation with high leverage. Use lower leverage unless you're confident in your strategy and risk management.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-90",
+  "kind": "notool_perps_basics",
+  "first": "<tool_call>\n{\"name\": \"open_page\", \"arguments\": {\"page\": \"trade\"}}\n</tool_call>",
+  "called": true
+ },
+ {
+  "id": "legacy_notool-91",
+  "kind": "notool_mark_oracle",
+  "first": "The AI doesn't calculate mark prices in real time. It pulls the current mark price from Hyperliquid's API, which updates every 15 seconds. The data is fetched on demand when you check a position or trade. The AI only uses the live price from Hyperliquid, not its own calculation.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-92",
+  "kind": "notool_r_multiples",
+  "first": "R multiples show how much your position size grows relative to your margin.  \nIf R > 1, your position gains value over time.  \nBut R alone doesn’t tell you if a strategy is profitable — it only shows the price move impact.  \n\nProfitability depends on:  \n- How often your trades go in your direction (win rate)  \n- How much you win vs. lose per trade (risk-reward ratio)  \n- Fees and slippage  \n\nA high R multiple with low win rate can still be losing overall.  \nA low R multiple with high win rate can be profitable.  \n\nUse R multiples with other metrics like win rate and average loss vs. gain.  \nNo single number guarantees profit.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-93",
+  "kind": "notool_scams",
+  "first": "No. No website means no transparency, no roadmap, no team info. Only Telegram is risky—no verifiable records, no audits, no public updates. Legitimate projects have public websites, GitHub repos, socials on multiple platforms, and community engagement beyond just Telegram. If it’s not public, it’s likely hiding something. Avoid.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-94",
+  "kind": "notool_il_lp",
+  "first": "Some pools have higher fees because they offer better rewards, are more popular, or are designed to attract liquidity. Higher fees often come with higher trading volume or greater demand for the asset pair. Fees can also vary based on the protocol’s rules and how it incentivizes participation. In Hermit, you can check current pool fees in the Earn > Positions tab.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-95",
+  "kind": "notool_defi_yield_risk",
+  "first": "Check the APY source: Aave v3 on Ethereum is usually 3-5% stable, Base and Arbitrum 4-6%, Arbitrum 2-4%. High APYs from other pools often come with hidden fees, impermanent loss, or rug risk. If it’s above 10% on a non-stablecoin asset, it’s likely a trap. Look for protocols with low liquidity depth or sudden price swings. Avoid yields that require locking funds for months. Sustainable yields stay steady over time; volatile ones are not. Always check the token contract address and audit reports before trusting a pool.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-96",
+  "kind": "notool_funding",
+  "first": "Funding rates differ between centralized and DeFi perps due to:\n\n- **Market depth and liquidity**: Centralized exchanges (CEX) often have deeper liquidity, leading to more stable funding rates. DeFi perps on chains like Base or Arbitrum may have thinner liquidity, causing higher volatility in funding.\n\n- **Trading volume and participation**: CEXs see high-volume traders, which keeps funding rates closer to zero. DeFi perps rely on smaller, more volatile participants, increasing the chance of negative or positive funding spikes.\n\n- **Fee structures and incentives**: Some DeFi platforms use funding rates as a tool to encourage trading or reward long/short activity. Centralized exchanges may adjust rates based on order book imbalances differently.\n\n- **Settlement timing**: DeFi perps settle faster (e.g., every 8 hours), while CEXs settle hourly. This affects how quickly funding is calculated and paid.\n\n- **Regulatory and risk factors**: CEXs are more regulated, reducing risk and stabilizing rates. DeFi protocols face higher smart contract risk, which can influence rate behavior.\n\nThese differences mean DeFi funding rates can swing more sharply than those on CEXs. Always check the current rate before trading.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-97",
+  "kind": "notool_stops",
+  "first": "Fixed stop-losses are simpler and reduce emotional decision-making. They work well if you have a clear risk tolerance and market view.\n\nDynamic stop-losses (like trailing stops) adapt to price moves, protecting gains during strong trends. They’re better in volatile markets where prices can gap.\n\nFor swing trading—holding positions 1–7 days—dynamic stops often perform better because they avoid being triggered by short-term noise.\n\nBut: dynamic stops can trigger on sudden reversals if not set carefully. Fixed stops give more control over risk per trade.\n\nUse fixed stops if you want consistency. Use dynamic stops if you expect strong directional moves and want to lock in profits automatically.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-98",
+  "kind": "notool_scams",
+  "first": "No. Airdrops that require you to send funds or sign a transaction to claim them are scams. Free Solana airdrops from Hermit are never sent via messages. Never send your seed phrase or sign anything from an unknown message. If it asks for approval, don’t click. Check the official Solana website or announcements for real airdrops.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-99",
+  "kind": "notool_seed_safety",
+  "first": "Your seed phrase is your only backup. If you lose it, you lose access to your wallet.  \n\n- **Safe**: Physical, offline, not connected to internet.  \n- **Safety deposit box**: Also physical, but may require access codes or visits.  \n\nBoth are secure if kept private. No one can recover it for you.  \n\nNever share it. Never type it into a website.  \n\nThe app never sees it—your seed phrase stays on your device.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-100",
+  "kind": "notool_bridges",
+  "first": "Using an unverified bridge, especially one from a random forum, carries high risk. Unknown bridges can be scams, traps, or malicious software that steals your funds. They may not support your token, could drain your balance without moving anything, or redirect you to phishing sites. Even if they claim to be safe, no bridge is truly verified unless it's on a well-known platform like NEAR Intents (used in Hermit). Always use only bridges you've checked on official sources or Hermit's built-in tools. If you're unsure, don't send anything.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-101",
+  "kind": "notool_slippage_mev",
+  "first": "MEV (Miner Extractable Value) is profit miners make by arranging transactions in a way that benefits them, like front-running or sandwiching.\n\nIt hurts your trades when:\n- A bot sees your pending swap and fills it with worse price.\n- Your trade gets pushed to the end of the block, letting others execute first.\n- You pay extra gas fees for delayed execution.\n\nOn Hyperliquid, MEV risk is low because trades are matched instantly on-chain. But if you use other chains or DEXs via NEAR Intents, your swaps can be subject to MEV. Always check the quote and confirm the route before approving.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-102",
+  "kind": "notool_prediction_markets",
+  "first": "Compare two markets by calculating their expected value (EV) using this formula:  \nEV = (Payout × Probability of Winning) - Stake  \n\nSteps:  \n1. Find the implied probability from the odds (e.g., 2-to-1 = 1/3 chance).  \n2. Multiply that by the payout.  \n3. Subtract your stake to get EV.  \n\nExample:  \n- Market A: 2-to-1 odds, $100 payout, $50 stake  \n  EV = (100 × 1/3) - 50 = $16.67  \n\n- Market B: 3-to-1 odds, $150 payout, $50 stake  \n  EV = (150 × 1/4) - 50 = $12.50  \n\nHigher EV means better expected return. If EV is negative, it’s a losing bet on average.  \nUse Hermit to check live odds and payouts if available.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-103",
+  "kind": "notool_funding",
+  "first": "Funding rate is a periodic payment between long and short positions on a perpetual futures contract, settling every 8 hours. It reflects market sentiment: positive when shorts pay longs (bullish), negative when longs pay shorts (bearish).\n\nInterest rate refers to the cost of borrowing money in a traditional loan or deposit. It’s set by central banks or financial institutions and applies to loans, savings accounts, or margin usage.\n\nIn perps, funding rate adjusts based on open interest and market direction. Interest rates are fixed or variable depending on the underlying asset and lending pool.\n\nHermit uses funding rates from Hyperliquid for perp trades. The rate can be zero or small; large rates signal strong bias.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-104",
+  "kind": "notool_seed_safety",
+  "first": "No. Without your 12-word seed phrase, you cannot recover your wallet. The seed phrase is the only backup. If you lost it and don’t have it, your funds are permanently inaccessible. Never share your seed phrase. Hermit does not have a way to restore a wallet without it.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-105",
+  "kind": "notool_basis_carry",
+  "first": "If you don’t rebalance your delta-neutral position daily, your hedge becomes outdated.  \nDelta changes as the underlying asset’s price moves, so your long and short positions may no longer offset each other.  \nThis leaves you exposed to directional risk—your position could gain or lose value even if the underlying asset stays flat.  \nOver time, this drift can lead to significant losses if not corrected.  \nRebalancing ensures your position remains neutral to price movements, minimizing unintended exposure.  \nYou’re responsible for monitoring and adjusting your hedges manually unless using automated tools.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-106",
+  "kind": "notool_slippage_mev",
+  "first": "Yes, use low slippage for stablecoin swaps. Stablecoins like USDC or USDT have tight liquidity on most chains, so high slippage is rare. Setting slippage to 0.1% or 0.5% is safe and prevents accidental overpaying. Higher slippage increases risk of price impact, even if the trade completes. Stick to low settings unless you're swapping large amounts on less liquid pairs.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-107",
+  "kind": "notool_stops",
+  "first": "Hermit can’t set trailing stops on Hyperliquid positions yet.  \nThe app only supports fixed take-profit and stop-loss levels.  \nTo use a trailing stop, manually adjust your take-profit level as price moves.  \nOr, use a third-party tool or exchange that supports trailing stops.  \nMonitor your position closely and update the trigger price when needed.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-108",
+  "kind": "notool_seed_safety",
+  "first": "Write it on paper in front of you, then keep the paper somewhere safe and offline. Do not type it into any app or cloud service. The written phrase is the only way back into your wallet if your phone is lost or damaged.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-109",
+  "kind": "notool_prediction_markets",
+  "first": "Your edge is 15 percentage points (40% - 25%).  \nA 1:1 bet pays 1 unit for every 1 unit wagered.  \nExpected value = (0.4 × 1) - (0.6 × 1) = -0.2 → negative.  \nYou’re losing money on average even with your better view.  \nOnly bet if you can afford the loss and have a reason beyond odds.  \nNo guaranteed profit in markets.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-110",
+  "kind": "notool_liquidation",
+  "first": "During high volatility, your liquidation price moves closer to your entry price.  \n\n- Volatility increases the risk of rapid price swings.  \n- The exchange adjusts your position’s liquidation price in real time based on current market conditions and funding rates.  \n- If the market moves fast, your liquidation price can shift sharply even if your position size and leverage stay the same.  \n- High volatility often triggers wider bid-ask spreads and increased slippage, which can accelerate liquidations.  \n\nYour liquidation price is updated continuously. Check it in the Positions tab. If you're close to liquidation, consider reducing leverage or adding margin.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-111",
+  "kind": "notool_il_lp",
+  "first": "Your LP tokens stay in your wallet. The price range only affects how much you earn from the liquidity pool, not your token holdings. If prices move outside your range, you may stop earning fees temporarily, but your LP tokens are safe and can still be withdrawn or swapped later. No automatic liquidation or loss of tokens occurs.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-112",
+  "kind": "notool_defi_yield_risk",
+  "first": "100% APY is almost certainly hype. Real APYs from Aave v3 on Ethereum, Base, or Arbitrum are usually 3–8%, sometimes higher in volatile markets. 100% usually means:  \n- Compounding rewards from bots or staking pools, not lending.  \n- A token’s price rising fast (e.g., due to hype or pump-and-dump).  \n- The APY is calculated on a short-term basis and resets often.  \n\nCheck the source: if it’s a DeFi protocol with a token you hold, it might be inflated. If it’s a new project with no track record, it’s likely unsustainable. Always verify the APY is from Aave v3 or a similar audited pool. Never trust 100% APYs without checking the chain, protocol, and token.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-113",
+  "kind": "notool_slippage_mev",
+  "first": "Yes, you can set a max slippage of 0.1% for a $50K USDC trade in Hermit.\n\nGo to Trade > Swap, then select \"Limit order\" for more control. Set the slippage tolerance to 0.1% in the order review screen before confirming with Face ID.\n\nHermit uses up to 5% slippage protection by default, but you can reduce it to 0.1% if you want tighter price control. This is only available for limit orders on supported pairs like USDC/ETH or USDC/SOL.\n\nNote: Slippage protection applies to market orders only. Limit orders use your specified price, so no slippage occurs unless the market moves against your order.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-114",
+  "kind": "notool_liquidation",
+  "first": "The AI doesn't handle partial liquidations directly. If your position is large and gets close to liquidation, the system will trigger a full liquidation if the margin falls below the maintenance threshold. There's no option to close part of the position manually through the AI. You must use the app’s order ticket to place a reduce-only order to close part of the position before liquidation occurs. The AI can help calculate the risk and suggest actions, but execution depends on your manual input.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-115",
+  "kind": "notool_prediction_markets",
+  "first": "Expected value = (win chance) x (payout) - (lose chance) x (loss).  \nWith 30% odds and 3:1 payout:  \n(0.3) x 3 - (0.7) x 1 = 0.9 - 0.7 = 0.2.  \n\nYou expect to make 20% of your bet on average per round.  \nThis means the bet is positive expectancy.  \nExample: bet $10 → expect $2 profit over time, assuming no fees.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-116",
+  "kind": "notool_funding",
+  "first": "Perp funding is a periodic payment between longs and shorts to keep the perp price close to the spot price.\n\nWhen the perp price is above spot, longs pay shorts funding.\n\nWhen the perp price is below spot, shorts pay longs funding.\n\nThe rate is posted every 8 hours on Hyperliquid. It’s usually small—fractions of a percent per 8 hours.\n\nFunding resets at midnight UTC each day. If it’s positive, you pay if you’re long. If negative, you pay if you’re short.\n\nIt helps prevent large deviations between the perp and spot prices.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-117",
+  "kind": "notool_leverage_risk",
+  "first": "Leverage depends on the market and your risk tolerance. For day trading, 3x to 5x is common and reasonable. Higher leverage increases risk—especially liquidation risk if prices move against you fast. Use stop-losses and monitor positions closely. Never use more than you can afford to lose.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-118",
+  "kind": "notool_scams",
+  "first": "Yes, it's common for new tokens to have high concentration in one wallet, especially in the first days or weeks. Many tokens are launched with concentrated supply control by the creator or team.\n\nA 99% hold by one address is not unusual at launch. It can be a sign of a strong initial distribution or a potential risk if the holder can influence price or liquidity.\n\nCheck the token’s contract address and use a blockchain explorer (like Solscan for Solana) to verify ownership. If the token has no public sell lock or vesting schedule, it may be more volatile.\n\nIf you're considering buying, ask: Is the token useful? Is there a clear roadmap? Is the team transparent?\n\nHigh concentration alone isn’t proof of fraud — but it increases risk. Never buy a token just because it’s new.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-119",
+  "kind": "notool_seed_safety",
+  "first": "Yes, a hardware wallet is safer than a phone app. It stores your private keys offline, away from devices that can be hacked or lost to malware. Phone apps like Hermit are not hardware wallets—they use encrypted seed phrases stored on the device, which can still be compromised if the phone is stolen or breached.\n\nHardware wallets like Ledger or Trezor are designed specifically for security and are not connected to the internet except to sign transactions. They require physical approval (e.g., using a button) before any move.\n\nHermit does not support hardware wallets yet. If you need maximum security, use a hardware wallet for your funds. For Hermit, your seed phrase must be written down and kept offline—never in the cloud or on your phone.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-120",
+  "kind": "notool_orderbook",
+  "first": "Limit orders only fill at your specified price or better. If the market price moves past your limit but doesn't reach your exact price, it won't fill.  \n\nCheck:  \n- Was your limit price set too high (for a buy) or too low (for a sell)?  \n- Is the order size small compared to market depth?  \n- Are there slippage protections or order book gaps?  \n\nIf the price briefly hit your limit but didn’t stick, the order may have been canceled or filled at a worse price. Use a market order for guaranteed fills when price is uncertain.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-121",
+  "kind": "notool_perps_basics",
+  "first": "Mark price is a calculated price that reflects the fair value of a perpetual contract, adjusted for funding rates and market conditions. It’s used to determine PnL and liquidation prices in Hyperliquid.\n\nIndex price is a weighted average of multiple spot exchange prices (like Coinbase, Binance, etc.) and is updated every 30 seconds. It’s used as a benchmark for the perpetual contract’s price.\n\nThe mark price can differ from the index price due to funding rate adjustments. If the mark price is higher than the index price, longs pay shorts funding. If lower, shorts pay longs.\n\nIn Hyperliquid, the mark price is derived from the index price but adjusted for funding and other factors. The difference helps prevent manipulation and keeps the perpetual contract aligned with spot.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-122",
+  "kind": "notool_scams",
+  "first": "Pig butchering scams use fake crypto projects, fake airdrops, or fake NFT drops to trick people into sending funds. Scammers create fake websites, social media posts, or Discord groups that look real. They ask you to send money to \"verify\" your wallet, \"claim\" rewards, or \"deposit\" to unlock something.  \n\nNever send funds to verify, claim, or deposit unless you’ve confirmed the project on multiple trusted sources. Hermit can’t detect scams — always check addresses and links yourself. If you’re unsure, don’t send anything.  \n\nIf you’ve already sent funds, report it to the chain’s support and check your wallet for losses. Never share your seed phrase.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-123",
+  "kind": "notool_stablecoins",
+  "first": "Yes, there is a risk that DAI could depeg. While DAI is backed by Ethereum value and undergoes regular audits, it’s not 100% immune to depegging. Risks include:\n\n- Smart contract vulnerabilities in the system (e.g., if MakerDAO’s collateralization rules are exploited).\n- A sudden drop in the price of underlying assets (like ETH), which can reduce collateral value.\n- A loss of confidence in MakerDAO or its governance, leading to mass withdrawals.\n- Systemic risks on Ethereum (e.g., a large liquidation event during a market crash).\n\nDAI has historically stayed close to $1, but during extreme stress, it can briefly trade below $1. The risk is higher when leverage is high or market sentiment turns negative. Monitor the DAI price and MakerDAO’s stability fee changes for early warning signs.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-124",
+  "kind": "notool_options",
+  "first": "No, you don’t have to deliver if you write a call option and the price goes up.  \n\nIf you’re the seller (writer) of a call option, you’re obligated to sell the underlying asset only if the buyer exercises the option.  \n\nIf the price goes way up but the buyer doesn’t exercise, you keep the premium and don’t deliver.  \n\nYou only lose money if the option is exercised and the asset price is high enough that your strike price plus fees are worse than the market price.  \n\nIn Hermit, you can’t write options directly—only trade or simulate them via Hyperliquid. So this applies only if you’re using Hyperliquid’s options market.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-125",
+  "kind": "notool_aave",
+  "first": "Yes, you can borrow more by increasing your collateral in Hyperliquid.  \n\nAdd more USDC or another supported asset to your position. The app shows the max borrow amount based on your current collateral and leverage limits.  \n\nHigher collateral increases your available borrow capacity, but borrowing still depends on market conditions and your position's liquidation risk.  \n\nCheck your position tab for real-time borrow limits after adding funds.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-126",
+  "kind": "notool_seed_safety",
+  "first": "Your seed phrase is the only way to recover your wallet. If someone gets it, they own your funds. Writing it on a computer means it can be read by anyone with access to that device—through files, screenshots, or backups. Even encrypted files can be cracked. The safest place is paper, stored offline and away from digital devices. Never store it digitally, even in notes apps or cloud drives.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-127",
+  "kind": "notool_slippage_mev",
+  "first": "Your trade may be filling at a worse price due to:\n\n- Slippage protection kicking in on large orders (above 0.5%).\n- Market volatility causing rapid price moves.\n- Low liquidity in the selected pair or market.\n- The order being filled from a less favorable price level on the order book.\n\nCheck the slippage setting in the review screen—reduce it if you're okay with higher fees. Also, verify the current market depth and recent trades. If the price has moved fast, the market may not have enough depth to fill your exact price.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-128",
+  "kind": "notool_leverage_risk",
+  "first": "Max leverage depends on your risk tolerance and the asset. With a $1k account, avoid leverage above 5x unless you're confident in the trade and have a strict stop-loss.\n\nHigher leverage increases liquidation risk fast. At 10x or more, a small price move can trigger liquidation even with a tight stop.\n\nUse 3x–5x as a safe range for most trades. Only go higher if the asset has low volatility and you’re using a proven strategy.\n\nAlways check the current market’s max allowed leverage in Hyperliquid’s order ticket before placing a trade.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-129",
+  "kind": "notool_stops",
+  "first": "Hermit can't detect stop-hunting patterns on Uniswap V3 pools.  \nIt cannot read or analyze real-time liquidity data, trade history, or position behavior from Uniswap.  \nNo external API access is available for this.  \nYou’ll need to use a dedicated DeFi monitoring tool or blockchain explorer (like Dune Analytics) to track unusual activity.  \nHermit can help you check your own positions, balances, or Hyperliquid trades if needed.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-130",
+  "kind": "notool_options",
+  "first": "Buying calls if you expect price to rise is a direct bet on upside.  \nSelling puts if you’re confident the price won’t drop is a way to earn premium while holding your position.  \n\nBoth strategies have risks:  \n- Calls can expire worthless if the price doesn’t move.  \n- Selling puts means you could be forced to buy at a lower price if the asset drops.  \n\nIf you’re bullish and willing to accept volatility, buying calls is simpler and more straightforward.  \nIf you’re neutral to slightly bullish and want income, selling puts with a low strike can work—just ensure you can cover the obligation if assigned.  \n\nNo need to overcomplicate it. Use Hermit to check current options data (if available) or monitor price moves.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-131",
+  "kind": "notool_funding",
+  "first": "A positive funding rate means longs are paying shorts, indicating market sentiment is bullish. But if prices are falling, this suggests a short squeeze risk: longs are holding despite falling prices, and they may be forced to close positions at a loss when funding costs pile up.\n\nThis can lead to rapid price reversals. The market may be overbought, and the positive funding could be a warning sign of unsustainable bullish pressure.\n\nCheck your position: if you're long, consider reducing exposure. If you're short, the funding cost could be increasing your losses. Monitor the funding rate closely—it can flip quickly.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-132",
+  "kind": "notool_approvals",
+  "first": "Yes, you can revoke approvals from the app. Go to Settings > Wallet > Token Approvals, then select the approval you want to revoke and confirm with Face ID. This removes permission for apps or contracts to spend your tokens.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-133",
+  "kind": "notool_leverage_risk",
+  "first": "No. Use max leverage only if you're confident in the trade and understand the risk. Higher leverage increases liquidation risk fast. Even small price moves can trigger liquidation. Stick to leverage that matches your risk tolerance. For coins you \"really like,\" start with 3x–5x, test, then adjust if needed. Never use max leverage without a stop-loss.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-134",
+  "kind": "notool_cross_isolated",
+  "first": "Cross margin uses your entire account balance as collateral for all positions. If one position liquidates, the loss is drawn from your total USDC balance, not just the margin in that trade. This reduces the risk of cascading liquidations.\n\nYour Hyperliquid account shows how much margin is used and available. If a position moves against you, the app calculates the liquidation price based on your leverage and margin. You can add more margin to avoid liquidation.\n\nBut cross margin doesn’t protect you from losses. If your total account value drops below the margin required, you’ll still get liquidated. High leverage increases risk even with cross margin.\n\nAlways monitor your PnL and liquidation price. Use stop-loss orders to limit damage.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-135",
+  "kind": "notool_perps_basics",
+  "first": "If you don’t close your position before expiry, you won’t be liquidated — but your position will expire and lose its leverage.\n\nOn Hyperliquid, perp positions have expiry dates. If you hold a position past its expiry date without closing it, the position will automatically close at market price. This means:\n\n- You may lose part or all of your margin if the market moves against you.\n- No liquidation price is triggered unless the position is below maintenance margin.\n- The loss is settled in real time when the position expires.\n\nYou can close the position early via the Positions tab before expiry to avoid this. Always check expiry dates in the review screen before opening a trade.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-136",
+  "kind": "notool_aave",
+  "first": "Aave is a lending protocol, not a perp exchange. You can't get liquidated there the way you can on Hyperliquid.\n\nIn Aave, your position is secured by collateral. If your collateral value drops below a threshold (due to price moves or bad debt), your position gets closed automatically by the protocol. This is called a \"liquidation\" in Aave.\n\nThe liquidator pays the shortfall and keeps a small fee (usually 5% of the recovered amount). Your risk is that you lose part or all of your collateral if prices move against you and you don't add more.\n\nLiquidations happen automatically when your loan-to-value (LTV) ratio exceeds the protocol's max allowed level. You can monitor this in the Earn tab under Positions.\n\nNo liquidation fees are charged by Hermit — only the protocol's internal fee.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-137",
+  "kind": "notool_defi_yield_risk",
+  "first": "Smart contract risks can significantly impact your yield farming returns. Bugs, exploits, or malicious code in a protocol can lead to loss of funds—even if the APY seems high.  \n\n- Aave v3 is audited and widely used, but no contract is 100% risk-free.  \n- New or less-known protocols may have untested code.  \n- Impermanent loss risk exists in some strategies, especially with volatile assets.  \n- If a farm pauses or gets hacked, your deposits could be locked or lost.  \n\nYour returns depend on both the APY and the underlying risk. Always check:  \n- Audit reports (e.g., CertiK, OpenZeppelin)  \n- Token contract age and activity  \n- Community trust and liquidity depth  \n\nHigher APYs often come with higher risk. Use only funds you can afford to lose.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-138",
+  "kind": "notool_sizing_risk",
+  "first": "Yes, you're still at risk. The 1% rule limits exposure per trade, but if all your trades are in the same sector (e.g., all AI or crypto), your portfolio is concentrated. A sector-wide downturn can wipe out multiple 1% positions at once. Diversification across sectors reduces risk even with small individual trades. Stick to the 1% rule, but don’t ignore sector concentration.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-139",
+  "kind": "notool_gas_evm",
+  "first": "Gas is paid when a transaction is broadcast to the network, not when it succeeds. If a transaction fails after being included in a block, you still pay the gas fee for that block's processing. The fee covers the computational cost of executing the transaction on-chain, regardless of outcome. Failed transactions are usually due to insufficient funds, invalid data, or contract errors — but the network still consumes resources. You can't recover the gas cost once spent. To avoid this, always check balances and inputs before sending.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-140",
+  "kind": "notool_stablecoins",
+  "first": "USDC can depeg due to sudden changes in demand, regulatory pressure, or issues with the issuing bank. While USDC is backed 1:1 by cash and short-term Treasuries, rare events like a bank crisis (e.g., Silicon Valley Bank) can trigger panic, causing traders to sell USDC for other assets. This selling pressure can temporarily push the price below $1. The peg is designed to hold, but market sentiment and liquidity can cause brief deviations. Hermit’s Hyperliquid account uses USDC as its stablecoin, so large trades can affect its on-chain price.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-141",
+  "kind": "notool_apy_apr",
+  "first": "Some platforms show 50% APY as a promotional rate that includes fees, rewards, or short-term incentives. The actual return you earn is usually lower because:\n\n- APYs are often calculated on a daily compounding basis over a short period.\n- Rewards like staking tokens or bonus deposits are temporary and not sustainable.\n- Fees (like network gas or platform charges) reduce net returns.\n- The 50% rate may be based on a specific pool or token, not your stablecoin deposit.\n\nReal APYs on Aave v3 are typically 2–6%, depending on demand. Always check the current APY on DefiLlama or Aave’s official site for accurate rates. Promotional rates don’t last long.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-142",
+  "kind": "notool_liquidation",
+  "first": "Yes, you can still get liquidated even if the market gaps beyond your liquidation price.\n\nLiquidation is triggered by your position's unrealized PnL falling below the maintenance margin level. If a gap occurs fast enough, it can push your position into liquidation before your stop-loss or take-profit triggers.\n\nGaps don’t change the liquidation rule — they just accelerate how quickly you hit it. Your leverage and margin size determine how close you are to liquidation.\n\nTo reduce risk:  \n- Use lower leverage.  \n- Set stop-losses and take-profits.  \n- Monitor funding rates and volatility.  \n\nIf you're using Hyperliquid, your liquidation price is shown in the review screen before you confirm any trade.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-143",
+  "kind": "notool_approvals",
+  "first": "Yes, revoking an approval removes the permission for a dApp to spend your tokens. After revocation, the dApp can no longer transfer or use your tokens without a new approval. However, any tokens already spent or moved before revocation remain unchanged. Revocation only affects future actions. Use the Wallet > Token Approvals screen to manage or revoke approvals.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-144",
+  "kind": "notool_solana_fees",
+  "first": "Sending SOL to a non-existent token account won't work. Solana requires a token account to hold any native token balance, and creating one requires a transaction fee. If the account doesn’t exist, you’ll need to create it first using a Solana program (like SPL Token or native token creation). You can’t just send SOL to an empty account—it will fail. Use a tool like Solscan or Solflare to check if an address is a valid token account before sending. Always verify addresses and avoid sending to unknown or non-existent accounts.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-145",
+  "kind": "notool_r_multiples",
+  "first": "Risk = 1% per trade.  \nReward-to-risk (R/R) = 2.  \nExpected multiple per trade = Risk / R/R = 1% / 2 = 0.5%.  \n\nYou can expect a 0.5% gain on average per winning trade relative to your risk.  \nBut this assumes you win 50% of trades — real results depend on your win rate.  \nIf your win rate is lower than 50%, your expected multiple drops.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-146",
+  "kind": "notool_gas_evm",
+  "first": "Base network fees are dynamic and depend on congestion. At 10 gwei, your transaction may not have enough priority to be processed quickly during high demand. Higher gas (15 gwei) gives it more priority, so it gets included faster. The fee cap you set in Hermit is the maximum you're willing to pay, but the actual fee paid depends on network conditions. If 10 gwei is below the current average, your tx stalls. Try increasing the fee slightly or wait for lower congestion.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-147",
+  "kind": "notool_cross_isolated",
+  "first": "Yes, with cross margin your entire wallet balance can be used for a single position. If the position hits liquidation, all other open positions and wallet funds are at risk. Your Hyperliquid account uses cross margin by default, so losses can cascade across positions. Always monitor leverage and liquidation prices. Use stop-losses to limit damage.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-148",
+  "kind": "notool_apy_apr",
+  "first": "Withdrawing early breaks compounding.  \nYour funds stop earning interest on the remaining balance.  \nAave v3 rewards are based on time deposited and active staking.  \nEarly withdrawal means you lose out on future APY accrual.  \nIf you need the money, the loss is only on the unearned interest.  \nNo penalty fee from Aave, but no compounding either.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-149",
+  "kind": "notool_aave",
+  "first": "In Aave, liquidation happens when your collateral value drops below the required threshold to cover your borrowed amount plus fees.\n\nYour position uses undercollateralized debt (e.g., 80% of collateral value). If the market moves against you, your collateral loses value.\n\nThe system triggers a liquidation when:\n- Your collateral value falls below the maintenance margin.\n- The liquidator pays off your debt using their own collateral.\n- They earn a fee (usually 5% of the debt value).\n\nLiquidations are automatic and happen via smart contracts. You can reduce risk by:\n- Using higher leverage only in stable assets.\n- Monitoring your APY and position health.\n- Adding more collateral or repaying debt early.\n\nNo manual action needed—just ensure your collateral stays strong.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-150",
+  "kind": "notool_orderbook",
+  "first": "A limit order only fills at your chosen price or better. It can sit in the order book until it matches, or until you cancel it. A market order fills right away at the best available price.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-151",
+  "kind": "notool_r_multiples",
+  "first": "High win rate is safer but often means low risk and modest rewards. High reward:risk trades can have great returns if you manage the risk—don’t over-leverage, use stop-losses, and only risk what you can afford to lose. In trading, both matter, but reward:risk > 2:1 is worth considering. Focus on consistent edge, not just win rate.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-152",
+  "kind": "notool_seed_safety",
+  "first": "No. Your seed phrase is the only way to recover your wallet. If you use it on another app, that app can access your funds. Never share your seed phrase. Only use Hermit for your crypto activities. The app never stores or sees your seed phrase.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-153",
+  "kind": "notool_dca",
+  "first": "DCA (Dollar-Cost Averaging) is used by experienced traders not just for risk control, but to avoid timing the market. Even with 100x gains, they use DCA because:\n\n- Market dips happen even in strong trends. DCA smooths entry over time.\n- High leverage increases liquidation risk. DCA helps manage capital without overexposure.\n- Gains can be short-lived. DCA allows gradual accumulation, reducing reliance on a single trade.\n- It prevents emotional decisions. You don’t have to time a top or bottom.\n\nUsing 100x leverage means small price moves can trigger liquidations. DCA reduces the chance of being wiped out by a sudden drop after a big gain. It’s a conservative strategy that protects capital while still participating in growth.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-154",
+  "kind": "notool_leverage_risk",
+  "first": "Most traders lose with high leverage because:\n\n- A small price move against their position can trigger a loss larger than their margin.\n- Liquidation risk increases: if the market moves fast, your position can be closed automatically with no warning.\n- Emotion-driven decisions worsen: high leverage amplifies both gains and losses, leading to forced exits or revenge trading.\n- Leverage doesn’t create wealth—it magnifies risk. The extra cost of borrowing (interest) eats into profits.\n\nEven with good strategy, high leverage reduces survival time in volatile markets. Most traders don’t manage risk well under stress. Stick to 5x–10x unless you’re confident in your edge and have strict stop-losses.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-155",
+  "kind": "notool_approvals",
+  "first": "Permit2 reduces risk by letting you approve multiple tokens in one transaction, instead of approving each one separately. This avoids the need to approve large amounts of a single token repeatedly, which can be risky if you later don’t use them. It also reduces the chance of accidentally approving too much or the wrong token. With Permit2, you only approve exactly what you need for a swap or send, and it’s signed with your wallet key, so it’s secure. It’s especially useful on chains like Ethereum where approvals are required for swaps.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-156",
+  "kind": "notool_seed_safety",
+  "first": "No. Never store your seed phrase in any app, including your phone's Notes app. The seed phrase is the only way to recover your wallet — if someone gets it, they own your funds. Phone backups, cloud sync, or app data can expose it. Write it down on paper, store it securely offline, and keep it in a safe place. Hermit does not store or back up your seed phrase.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-157",
+  "kind": "notool_options",
+  "first": "A covered call lets you earn premium by selling (writing) a call option on ETH you already hold. You keep the premium if the price doesn’t rise above your strike price, or you sell your ETH at a set price if it does.\n\nWith ETH you already own:\n- You set a strike price (e.g., $3,000).\n- You sell a call option for a premium (e.g., $50 per ETH).\n- If ETH stays below $3,000, you keep the premium and your ETH.\n- If ETH rises above $3,000, the buyer of the call must buy your ETH at $3,000.\n\nIt’s a low-risk way to earn income, but it caps your upside. The premium is usually small—$10–$100 per ETH depending on volatility.\n\nYou can use Hyperliquid to set this up. Check the current ETH options chain for available strikes and premiums. Hermit can help calculate the expected profit vs. risk.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-158",
+  "kind": "notool_liquidation",
+  "first": "The Hermit app doesn’t show maintenance margin directly in the Positions tab.  \nMaintenance margin is calculated by the exchange (Hyperliquid) based on your position size and liquidation price.  \nYou can see it in the Trade > Positions view:  \n- The \"Liquidation Price\" and \"Entry Price\" help estimate risk.  \n- Your current PnL and leverage affect your buffer.  \n- If your position value drops below the maintenance margin threshold, you’ll be liquidated.  \nCheck your position’s liquidation price and compare it to your current market price.  \nNo live maintenance margin number is shown in the app.",
+  "called": false
+ },
+ {
+  "id": "legacy_notool-159",
+  "kind": "notool_liquidation",
+  "first": "Maintenance margin is the minimum equity required to keep a leveraged position open. It’s calculated as:\n\n**Maintenance margin = (Position size × Leverage) / (1 + Leverage)**\n\nFor example, with $10,000 at 5x leverage:\n- Maintenance margin = (10,000 × 5) / (1 + 5) = 50,000 / 6 ≈ $8,333.33\n\nIf your account value drops below this level, you’ll get liquidated.\n\nThe exact amount depends on the market and exchange (e.g., Hyperliquid). Check the current maintenance margin requirement in the order ticket or position details.",
+  "called": false
+ }
+]

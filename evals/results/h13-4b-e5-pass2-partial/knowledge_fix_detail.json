@@ -1,0 +1,2968 @@
+[
+ {
+  "id": "knowledge_fix-00",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Aave is a lending protocol, so it carries smart-contract risk, market risk and depeg risk. The rate you earn is variable. Your deposit can be liquidated if the market moves against your position.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-01",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Hermit uses Hyperliquid for its perps. It's a thin market, so big moves can happen quickly, and leverage makes that worse. Keep the risk small.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 34
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-02",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": false,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Yes, Hermit works on BNB Chain. You can swap tokens between Ethereum, Base, Arbitrum, BNB Chain, Polygon, Monad, Solana, NEAR and Hyperliquid from one place. Each move goes through a review and needs your Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 54
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-03",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "I can't send crypto on your own. I prepare a send, and you review it and approve with Touch ID. Every move needs your approval.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 30
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-04",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Yes, you can bridge between chains through NEAR Intents. Ask me for a quote first, then approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 26
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-05",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Yes, .eth names work as addresses. Copy the full address from your wallet, including the .eth, and I'll prepare the send.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-06",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Don't paste it again. Anyone who sees it can take your funds, and there's no way to recover the wallet. If you still have the written phrase, move your funds to a new wallet right away.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-07",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Yes, the AI runs on your device and needs no internet. It only prepares actions, which you approve with Face ID. Your balances, positions and keys stay on this phone too.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 37
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-08",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "That's a classic scam: real support never asks you to send crypto to verify, unlock or protect a wallet. Don't send it, and don't share your seed phrase with them either. I haven't set anything up.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 46
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-09",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": false,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "It depends on the market. A rate above 0.5% can add up quickly, so keep the position size small. Rates are quoted per eight hours, so check how often they update.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 40
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-10",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Yes. Tell me the coin, side (long or short), size in dollars, leverage, and whether it should be a market or limit order. If limit, give me the price.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 38
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-11",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "It beats impermanent loss when the price moves apart from the initial split, because realised fees offset the loss.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 22
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-12",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "No, that's a scam. Hermit will never ask for your recovery phrase or private key, and nobody should ever ask you for them. If someone has your phrase, they can take all your funds. Never share it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 46
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-13",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Your key is sealed on this device, so nobody can take your funds. The AI can't recover it, and nobody should ask you for it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 30
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-14",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "That's a scam. Real support never asks you for your seed phrase or private key, and they don't DM first. Block them and report them.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 31
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-15",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Yes. Open the Positions tab, then check the Liquidation Price line for each open position.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 19
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-16",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Impermanent loss is only realised when you withdraw from an AMM pool. It's the price of providing liquidity to a swap pool versus just holding the two tokens.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 33
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-17",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Depositing into Aave is lending, not providing liquidity. You supply one token and earn interest paid by borrowers. Liquidity pools are two tokens in one pool, where you earn fees from trades.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-18",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "No. If you lose your phone and the phrase, nobody can get your funds back. The phrase is the only backup, and it must be written down and kept safe. Hermit does not have a way to recover a lost phrase or seed. Once the phrase is lost, your funds are gone. Always store it offline and in a secure place.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 71
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-19",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": false,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"1 / (1 + 2.5) - 1\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "1 / (1 + 2.5) - 1"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"-0.7142857143\"}"
+      ],
+      "ntok": 30
+     },
+     {
+      "text": "If one token goes 2.5x against the other, you lose about 71.43% of your position, before fees earned. That's only realised when you withdraw, and fees can change it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 45
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-20",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "There's no approvals screen in Hermit yet. You can revoke an allowance from the token's own settings, like revoke USDC approval on Uniswap. Tell me the token and contract address, and I'll paste it here.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 47
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-21",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "No. The key is sealed on your device and backed up to iCloud, so Hermit can't get it. If you lose the written phrase, the funds are gone.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 35
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-22",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Yes, you can unlock with your device passcode. Face ID isn't needed for that.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 19
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-23",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "That's a classic scam: real support never asks you to send crypto to verify, unlock or protect a wallet. Don't click, don't send, and don't share your seed phrase with them. I haven't set anything up.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 48
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-24",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "It's on your device only. The AI runs here, and your chats are processed on this device too. Nothing leaves it unless you share it yourself.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 31
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-25",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "No. Anyone who has the 12 words can take your funds, and there's no undo. Keep them offline and never share them.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-26",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "No, your recovery phrase is sealed by the Secure Enclave and only appears in the Create wallet screen. Hermit never sees it, and nobody else should either.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 33
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-27",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Slippage is the gap between the price you expected and the price you got. A limit order caps it, but a market order has none. A 1% slippage setting means your order can fill up to 1% away from the price you asked for before you cancel it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 60
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-28",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Key import works on the new device. Write down your 12 words and keep them somewhere safe, because Hermit can't recover them. The key isn't backed up to iCloud or any cloud service.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 42
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-29",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "No. The 12 words are sealed away from this AI and anyone who can see your wallet can take it. I can't recover them for you.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 32
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-30",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "It's not a promise: a bug or prompt could still slip through, so only ever send to an address you type yourself.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 26
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-31",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": false,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Aave v3 deposits in Hermit are on Ethereum, Base and Arbitrum. Each deposit is its own review and Touch ID approval.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 28
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-32",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Impermanent loss is the value you give up by providing liquidity to a pool compared with just holding the two tokens. It appears when the prices of the two tokens move apart. Trading fees earned by the pool may or may not make up for it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 50
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-33",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "It runs on your device, so nobody can read it. Your key stays sealed there too. The AI can't move money by itself: it only prepares a review and waits for your Touch ID. Anything that needs to happen outside the app opens a review first.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 53
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-34",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(20 / 50, 2))\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(20 / 50, 2))"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"10\"}"
+      ],
+      "ntok": 34
+     },
+     {
+      "text": "At 50x leverage the margin is 10.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 13
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-35",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": false,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Yes, you can withdraw part of your Aave deposit.  \nTell me the token and chain (e.g., Ethereum, Base, Arbitrum) and how much you want to withdraw.  \nThe app will prepare the withdrawal for your review.  \nYou only approve what you want to take out.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 60
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-36",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "No. Photos can be backed up to iCloud, synced across devices, and are searchable. Your seed phrase must stay offline and private. Write it on paper, keep it in a secure place, and never store it digitally.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 45
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-37",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "No. A password manager is online, so it's not safe for your recovery phrase. Keep it on paper, offline.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 25
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-38",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Write your recovery phrase on paper and keep it offline. It is the master key to your wallet, so treat it like cash. Never share it, type it into a website, or store it in photos or cloud drives.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 45
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "knowledge_fix-39",
+  "suite": "knowledge_fix",
+  "kind": "knowledge_fix",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "facts_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "facts_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "No. Write them on paper and keep it somewhere safe and offline, because Hermit will never ask you for your phrase. Anyone who gets into your notes can take your wallet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 36
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ }
+]

@@ -1,0 +1,5082 @@
+{
+ "tag": "h13-4b-e5",
+ "family": "4b",
+ "base": "base4b",
+ "adapter": "runs/h13-4b/final",
+ "limit": 160,
+ "bs": 32,
+ "suites": {
+  "spot_solana": {
+   "n": 70,
+   "ok": 59,
+   "checks": {
+    "absent_tool": [
+     2,
+     3
+    ],
+    "arg_omission": [
+     45,
+     45
+    ],
+    "arg_provenance": [
+     70,
+     70
+    ],
+    "asked_when_needed": [
+     6,
+     8
+    ],
+    "bio_word": [
+     70,
+     70
+    ],
+    "error_stated": [
+     3,
+     4
+    ],
+    "exact_digits": [
+     52,
+     60
+    ],
+    "len_ok": [
+     70,
+     70
+    ],
+    "mint_provenance": [
+     21,
+     21
+    ],
+    "no_guess_percent": [
+     2,
+     3
+    ],
+    "no_invented_data": [
+     1,
+     1
+    ],
+    "no_prepare_when_refused": [
+     2,
+     2
+    ],
+    "no_relay": [
+     70,
+     70
+    ],
+    "no_retry_blocked": [
+     2,
+     2
+    ],
+    "no_runaway": [
+     70,
+     70
+    ],
+    "no_safe_claim": [
+     10,
+     10
+    ],
+    "no_tool": [
+     2,
+     2
+    ],
+    "no_unbacked_done": [
+     70,
+     70
+    ],
+    "pack_respected": [
+     70,
+     70
+    ],
+    "parse_ok": [
+     70,
+     70
+    ],
+    "preamble_ok": [
+     70,
+     70
+    ],
+    "restraint": [
+     37,
+     40
+    ],
+    "right_tool": [
+     58,
+     65
+    ],
+    "tags_read": [
+     7,
+     7
+    ],
+    "terminates": [
+     70,
+     70
+    ],
+    "warnings_repeated": [
+     7,
+     7
+    ],
+    "wrong_money": [
+     65,
+     70
+    ]
+   },
+   "by_kind": {
+    "sell_err_noroute": [
+     0,
+     1
+    ],
+    "near_close": [
+     2,
+     2
+    ],
+    "sell_err_insufficient": [
+     1,
+     1
+    ],
+    "near_swap_bnb": [
+     0,
+     1
+    ],
+    "buy_clash": [
+     3,
+     3
+    ],
+    "sell_all": [
+     4,
+     4
+    ],
+    "search_safety_unverified": [
+     2,
+     2
+    ],
+    "search_find_one": [
+     1,
+     1
+    ],
+    "sell_pct": [
+     12,
+     13
+    ],
+    "sell_ask": [
+     2,
+     3
+    ],
+    "sell_by_mint": [
+     3,
+     3
+    ],
+    "search_safety_verified": [
+     1,
+     2
+    ],
+    "buy_refused_alt": [
+     1,
+     1
+    ],
+    "buy_after_search": [
+     2,
+     2
+    ],
+    "absent_sell": [
+     2,
+     3
+    ],
+    "sell_err_frozen": [
+     1,
+     1
+    ],
+    "search_safety_verified_tag": [
+     1,
+     1
+    ],
+    "near_swap_sol": [
+     0,
+     1
+    ],
+    "sell_all_receive": [
+     3,
+     3
+    ],
+    "buy_mint_unverified_upfront": [
+     0,
+     1
+    ],
+    "search_find_empty": [
+     1,
+     1
+    ],
+    "sell_amount": [
+     3,
+     3
+    ],
+    "near_concept_rug": [
+     1,
+     1
+    ],
+    "near_concept_liquidity": [
+     1,
+     1
+    ],
+    "search_safety_refused": [
+     1,
+     1
+    ],
+    "sell_amount_usd": [
+     0,
+     1
+    ],
+    "sell_err_not_held": [
+     1,
+     1
+    ],
+    "search_safety_multi": [
+     1,
+     1
+    ],
+    "buy_direct": [
+     2,
+     2
+    ],
+    "buy_mint_unverified": [
+     2,
+     2
+    ],
+    "buy_refused": [
+     1,
+     1
+    ],
+    "search_find_multi": [
+     1,
+     1
+    ],
+    "sell_err_warn": [
+     1,
+     1
+    ],
+    "near_swap_eth": [
+     0,
+     1
+    ],
+    "near_price": [
+     1,
+     1
+    ],
+    "sell_err_choice": [
+     1,
+     1
+    ],
+    "near_swap_usdc_ask": [
+     0,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "absent_tool",
+    "arg_omission",
+    "arg_provenance",
+    "asked_when_needed",
+    "bio_word",
+    "error_stated",
+    "exact_digits",
+    "len_ok",
+    "mint_provenance",
+    "no_guess_percent",
+    "no_invented_data",
+    "no_prepare_when_refused",
+    "no_relay",
+    "no_retry_blocked",
+    "no_runaway",
+    "no_safe_claim",
+    "no_tool",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "restraint",
+    "right_tool",
+    "tags_read",
+    "terminates",
+    "warnings_repeated",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 73,
+    "p50": 60,
+    "p95": 91,
+    "max": 103,
+    "hit_cap": 0
+   },
+   "selected": 70,
+   "finished": 70,
+   "sha_mismatch": 0
+  },
+  "orders_protect": {
+   "n": 80,
+   "ok": 63,
+   "checks": {
+    "arg_omission": [
+     23,
+     24
+    ],
+    "arg_provenance": [
+     80,
+     80
+    ],
+    "asked_when_needed": [
+     1,
+     2
+    ],
+    "bio_word": [
+     80,
+     80
+    ],
+    "error_stated": [
+     8,
+     8
+    ],
+    "exact_digits": [
+     53,
+     68
+    ],
+    "len_ok": [
+     80,
+     80
+    ],
+    "no_card_done": [
+     55,
+     55
+    ],
+    "no_relay": [
+     80,
+     80
+    ],
+    "no_runaway": [
+     80,
+     80
+    ],
+    "no_unbacked_done": [
+     80,
+     80
+    ],
+    "pack_respected": [
+     80,
+     80
+    ],
+    "parse_ok": [
+     80,
+     80
+    ],
+    "preamble_ok": [
+     80,
+     80
+    ],
+    "restraint": [
+     52,
+     55
+    ],
+    "right_tool": [
+     71,
+     75
+    ],
+    "terminates": [
+     80,
+     80
+    ],
+    "warnings_repeated": [
+     22,
+     22
+    ],
+    "wrong_money": [
+     71,
+     80
+    ]
+   },
+   "by_kind": {
+    "tpsl_abs": [
+     9,
+     9
+    ],
+    "cancel_noKind": [
+     6,
+     7
+    ],
+    "tpsl_pct": [
+     2,
+     8
+    ],
+    "cancel_kind": [
+     7,
+     10
+    ],
+    "cancel_all": [
+     4,
+     4
+    ],
+    "neg_close": [
+     3,
+     3
+    ],
+    "positions_read": [
+     3,
+     5
+    ],
+    "neg_tpsl_ask": [
+     1,
+     2
+    ],
+    "neg_what_happens": [
+     3,
+     3
+    ],
+    "neg_cancel_review": [
+     5,
+     5
+    ],
+    "err_wrong_side": [
+     1,
+     2
+    ],
+    "err_nothing_to_cancel": [
+     2,
+     2
+    ],
+    "cancel_id": [
+     2,
+     3
+    ],
+    "neg_margin_read": [
+     2,
+     2
+    ],
+    "neg_short_stop": [
+     3,
+     3
+    ],
+    "tpsl_replace": [
+     3,
+     3
+    ],
+    "err_no_position": [
+     2,
+     2
+    ],
+    "err_blocked": [
+     1,
+     1
+    ],
+    "err_no_wallet": [
+     1,
+     1
+    ],
+    "tpsl_breakeven": [
+     2,
+     3
+    ],
+    "neg_cancel_nothing": [
+     1,
+     2
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_omission",
+    "arg_provenance",
+    "asked_when_needed",
+    "bio_word",
+    "error_stated",
+    "exact_digits",
+    "len_ok",
+    "no_card_done",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "restraint",
+    "right_tool",
+    "terminates",
+    "warnings_repeated",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 80,
+    "p50": 42,
+    "p95": 80,
+    "max": 132,
+    "hit_cap": 0
+   },
+   "selected": 80,
+   "finished": 80,
+   "sha_mismatch": 0
+  },
+  "contacts_pay": {
+   "n": 100,
+   "ok": 79,
+   "checks": {
+    "arg_omission": [
+     100,
+     100
+    ],
+    "arg_provenance": [
+     99,
+     100
+    ],
+    "bio_word": [
+     100,
+     100
+    ],
+    "contact_via_get_address": [
+     33,
+     34
+    ],
+    "exact_digits": [
+     85,
+     100
+    ],
+    "len_ok": [
+     100,
+     100
+    ],
+    "no_card_done": [
+     38,
+     38
+    ],
+    "no_chain_invented": [
+     99,
+     100
+    ],
+    "no_relay": [
+     100,
+     100
+    ],
+    "no_runaway": [
+     100,
+     100
+    ],
+    "no_unbacked_done": [
+     100,
+     100
+    ],
+    "pack_respected": [
+     100,
+     100
+    ],
+    "parse_ok": [
+     100,
+     100
+    ],
+    "payee_ambiguity_asks": [
+     3,
+     3
+    ],
+    "preamble_ok": [
+     100,
+     100
+    ],
+    "reminder_wording": [
+     12,
+     12
+    ],
+    "right_tool": [
+     89,
+     100
+    ],
+    "terminates": [
+     100,
+     100
+    ],
+    "wrong_money": [
+     91,
+     100
+    ]
+   },
+   "by_kind": {
+    "add_contact": [
+     11,
+     12
+    ],
+    "addr_own": [
+     6,
+     8
+    ],
+    "receive_knowledge": [
+     2,
+     3
+    ],
+    "send_by_name": [
+     13,
+     15
+    ],
+    "near_miss": [
+     15,
+     22
+    ],
+    "send_typed": [
+     5,
+     5
+    ],
+    "schedule_errors": [
+     8,
+     9
+    ],
+    "contact_miss": [
+     5,
+     5
+    ],
+    "contact_ambiguous": [
+     4,
+     4
+    ],
+    "schedule_once": [
+     4,
+     6
+    ],
+    "schedule_repeat": [
+     4,
+     8
+    ],
+    "schedule_addr": [
+     2,
+     3
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_omission",
+    "arg_provenance",
+    "bio_word",
+    "contact_via_get_address",
+    "exact_digits",
+    "len_ok",
+    "no_card_done",
+    "no_chain_invented",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "payee_ambiguity_asks",
+    "preamble_ok",
+    "reminder_wording",
+    "right_tool",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 100,
+    "p50": 44,
+    "p95": 79,
+    "max": 123,
+    "hit_cap": 0
+   },
+   "selected": 100,
+   "finished": 100,
+   "sha_mismatch": 0
+  },
+  "auto_pages": {
+   "n": 80,
+   "ok": 58,
+   "checks": {
+    "arg_omission": [
+     77,
+     80
+    ],
+    "arg_provenance": [
+     80,
+     80
+    ],
+    "bio_word": [
+     80,
+     80
+    ],
+    "exact_digits": [
+     64,
+     80
+    ],
+    "len_ok": [
+     80,
+     80
+    ],
+    "no_card_done": [
+     80,
+     80
+    ],
+    "no_forbidden_tool": [
+     79,
+     80
+    ],
+    "no_relay": [
+     80,
+     80
+    ],
+    "no_runaway": [
+     80,
+     80
+    ],
+    "no_unbacked_done": [
+     80,
+     80
+    ],
+    "pack_respected": [
+     80,
+     80
+    ],
+    "parse_ok": [
+     80,
+     80
+    ],
+    "preamble_ok": [
+     80,
+     80
+    ],
+    "prompt_rules": [
+     30,
+     36
+    ],
+    "restraint": [
+     79,
+     80
+    ],
+    "right_tool": [
+     76,
+     80
+    ],
+    "terminates": [
+     80,
+     80
+    ],
+    "wrong_money": [
+     80,
+     80
+    ]
+   },
+   "by_kind": {
+    "page_open": [
+     10,
+     12
+    ],
+    "auto_alert": [
+     2,
+     4
+    ],
+    "near_miss": [
+     17,
+     19
+    ],
+    "auto_create": [
+     14,
+     21
+    ],
+    "auto_errors": [
+     2,
+     5
+    ],
+    "no_tool_pointers": [
+     8,
+     11
+    ],
+    "auto_money": [
+     2,
+     4
+    ],
+    "absent_tool": [
+     3,
+     4
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_omission",
+    "arg_provenance",
+    "bio_word",
+    "exact_digits",
+    "len_ok",
+    "no_card_done",
+    "no_forbidden_tool",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "prompt_rules",
+    "restraint",
+    "right_tool",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 80,
+    "p50": 28,
+    "p95": 59,
+    "max": 60,
+    "hit_cap": 0
+   },
+   "selected": 80,
+   "finished": 80,
+   "sha_mismatch": 0
+  },
+  "portfolio_caps": {
+   "n": 160,
+   "ok": 59,
+   "checks": {
+    "arg_provenance": [
+     159,
+     160
+    ],
+    "bio_word": [
+     160,
+     160
+    ],
+    "facts_ok": [
+     41,
+     133
+    ],
+    "invented_feature_claims": [
+     50,
+     51
+    ],
+    "len_ok": [
+     160,
+     160
+    ],
+    "no_invented_data": [
+     2,
+     2
+    ],
+    "no_relay": [
+     160,
+     160
+    ],
+    "no_runaway": [
+     160,
+     160
+    ],
+    "no_unbacked_done": [
+     160,
+     160
+    ],
+    "pack_respected": [
+     160,
+     160
+    ],
+    "parse_ok": [
+     160,
+     160
+    ],
+    "preamble_ok": [
+     160,
+     160
+    ],
+    "restraint": [
+     102,
+     137
+    ],
+    "right_tool": [
+     40,
+     48
+    ],
+    "rounded_ok": [
+     22,
+     25
+    ],
+    "terminates": [
+     160,
+     160
+    ],
+    "wrong_money": [
+     160,
+     160
+    ]
+   },
+   "by_kind": {
+    "knowledge_v3": [
+     29,
+     82
+    ],
+    "capability": [
+     9,
+     51
+    ],
+    "near_miss": [
+     7,
+     10
+    ],
+    "portfolio": [
+     7,
+     7
+    ],
+    "positions_read": [
+     7,
+     8
+    ],
+    "sums": [
+     0,
+     2
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "facts_ok",
+    "invented_feature_claims",
+    "len_ok",
+    "no_invented_data",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "restraint",
+    "right_tool",
+    "rounded_ok",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 160,
+    "p50": 32,
+    "p95": 65,
+    "max": 79,
+    "hit_cap": 0
+   },
+   "selected": 160,
+   "finished": 160,
+   "sha_mismatch": 0
+  },
+  "multistep": {
+   "n": 120,
+   "ok": 74,
+   "checks": {
+    "arg_provenance": [
+     120,
+     120
+    ],
+    "bio_word": [
+     120,
+     120
+    ],
+    "chain_complete": [
+     75,
+     120
+    ],
+    "exact_digits": [
+     88,
+     120
+    ],
+    "len_ok": [
+     120,
+     120
+    ],
+    "no_early_prepare": [
+     115,
+     120
+    ],
+    "no_relay": [
+     120,
+     120
+    ],
+    "no_runaway": [
+     120,
+     120
+    ],
+    "no_unbacked_done": [
+     120,
+     120
+    ],
+    "pack_respected": [
+     120,
+     120
+    ],
+    "parse_ok": [
+     120,
+     120
+    ],
+    "preamble_ok": [
+     120,
+     120
+    ],
+    "redundant_reads": [
+     120,
+     120
+    ],
+    "step_acc": [
+     87,
+     120
+    ],
+    "step_order": [
+     120,
+     120
+    ],
+    "terminates": [
+     119,
+     120
+    ],
+    "wrong_money": [
+     90,
+     120
+    ]
+   },
+   "by_kind": {
+    "withdraw_then": [
+     1,
+     8
+    ],
+    "planning": [
+     6,
+     7
+    ],
+    "bridge_deposit": [
+     6,
+     8
+    ],
+    "swap_send": [
+     3,
+     8
+    ],
+    "partial_close": [
+     2,
+     7
+    ],
+    "funding_annualised": [
+     6,
+     6
+    ],
+    "swap_quote": [
+     3,
+     6
+    ],
+    "long_chain": [
+     2,
+     10
+    ],
+    "sell_send": [
+     6,
+     7
+    ],
+    "redundant_read": [
+     5,
+     5
+    ],
+    "three_steps": [
+     7,
+     7
+    ],
+    "yield_deposit": [
+     5,
+     7
+    ],
+    "independent": [
+     5,
+     7
+    ],
+    "parallel_prices": [
+     5,
+     5
+    ],
+    "risk_trade": [
+     7,
+     8
+    ],
+    "close_withdraw": [
+     2,
+     8
+    ],
+    "balance_changes": [
+     3,
+     6
+    ]
+   },
+   "not_scored": {},
+   "pooled": {
+    "steps": [
+     96,
+     134
+    ]
+   },
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "chain_complete",
+    "exact_digits",
+    "len_ok",
+    "no_early_prepare",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "redundant_reads",
+    "step_acc",
+    "step_order",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 206,
+    "p50": 57,
+    "p95": 97,
+    "max": 130,
+    "hit_cap": 0
+   },
+   "selected": 120,
+   "finished": 120,
+   "sha_mismatch": 0
+  },
+  "notes_name": {
+   "n": 50,
+   "ok": 23,
+   "checks": {
+    "arg_provenance": [
+     50,
+     50
+    ],
+    "bio_word": [
+     50,
+     50
+    ],
+    "exact_digits": [
+     17,
+     23
+    ],
+    "len_ok": [
+     50,
+     50
+    ],
+    "name_rate": [
+     0,
+     17
+    ],
+    "no_chain_invented": [
+     4,
+     4
+    ],
+    "no_relay": [
+     50,
+     50
+    ],
+    "no_runaway": [
+     50,
+     50
+    ],
+    "no_unbacked_done": [
+     50,
+     50
+    ],
+    "note_address": [
+     2,
+     5
+    ],
+    "note_chain": [
+     2,
+     4
+    ],
+    "note_format": [
+     2,
+     5
+    ],
+    "note_length": [
+     3,
+     6
+    ],
+    "note_leverage": [
+     5,
+     7
+    ],
+    "note_no_sell": [
+     2,
+     4
+    ],
+    "note_risk_size": [
+     0,
+     4
+    ],
+    "note_safety": [
+     8,
+     14
+    ],
+    "note_tz": [
+     0,
+     2
+    ],
+    "pack_respected": [
+     50,
+     50
+    ],
+    "parse_ok": [
+     50,
+     50
+    ],
+    "preamble_ok": [
+     50,
+     50
+    ],
+    "right_tool": [
+     32,
+     36
+    ],
+    "terminates": [
+     50,
+     50
+    ],
+    "wrong_money": [
+     48,
+     50
+    ]
+   },
+   "by_kind": {
+    "notes_lev": [
+     4,
+     7
+    ],
+    "notes_approve": [
+     3,
+     3
+    ],
+    "notes_nosell": [
+     2,
+     4
+    ],
+    "notes_risk_near": [
+     1,
+     1
+    ],
+    "notes_risk": [
+     0,
+     4
+    ],
+    "notes_bullets_near": [
+     1,
+     1
+    ],
+    "notes_money": [
+     0,
+     6
+    ],
+    "notes_addr": [
+     0,
+     3
+    ],
+    "notes_short_kb": [
+     0,
+     2
+    ],
+    "notes_short_view": [
+     1,
+     1
+    ],
+    "notes_name": [
+     4,
+     4
+    ],
+    "notes_simple": [
+     1,
+     2
+    ],
+    "notes_chain": [
+     2,
+     4
+    ],
+    "notes_addr_near": [
+     2,
+     2
+    ],
+    "notes_tz": [
+     0,
+     2
+    ],
+    "notes_short_bal": [
+     1,
+     1
+    ],
+    "notes_short_trade": [
+     1,
+     1
+    ],
+    "notes_bullets_kb": [
+     0,
+     1
+    ],
+    "notes_bullets": [
+     0,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "exact_digits",
+    "len_ok",
+    "no_chain_invented",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "note_address",
+    "note_chain",
+    "note_format",
+    "note_length",
+    "note_leverage",
+    "note_no_sell",
+    "note_risk_size",
+    "note_safety",
+    "note_tz",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "right_tool",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 50,
+    "p50": 34,
+    "p95": 132,
+    "max": 141,
+    "hit_cap": 0
+   },
+   "selected": 50,
+   "finished": 50,
+   "sha_mismatch": 0
+  },
+  "recovery_errors": {
+   "n": 120,
+   "ok": 94,
+   "checks": {
+    "arg_provenance": [
+     119,
+     120
+    ],
+    "bio_word": [
+     120,
+     120
+    ],
+    "error_stated": [
+     99,
+     120
+    ],
+    "len_ok": [
+     120,
+     120
+    ],
+    "network_said": [
+     8,
+     8
+    ],
+    "no_invented_data": [
+     117,
+     120
+    ],
+    "no_prepared_after_error": [
+     119,
+     120
+    ],
+    "no_relay": [
+     120,
+     120
+    ],
+    "no_repeat_blocked": [
+     75,
+     75
+    ],
+    "no_runaway": [
+     120,
+     120
+    ],
+    "no_unbacked_done": [
+     120,
+     120
+    ],
+    "pack_respected": [
+     120,
+     120
+    ],
+    "parse_ok": [
+     120,
+     120
+    ],
+    "preamble_ok": [
+     120,
+     120
+    ],
+    "retry_once_exact": [
+     120,
+     120
+    ],
+    "terminates": [
+     120,
+     120
+    ],
+    "wrong_money": [
+     112,
+     120
+    ]
+   },
+   "by_kind": {
+    "quote_min_yes": [
+     5,
+     5
+    ],
+    "needs_chain_deposit": [
+     2,
+     2
+    ],
+    "tool_payment_payee_not_found": [
+     1,
+     1
+    ],
+    "blocked_buy_unverified": [
+     1,
+     1
+    ],
+    "needs_choice_sell": [
+     2,
+     2
+    ],
+    "timeout_retry_ok_get_balances": [
+     1,
+     1
+    ],
+    "odd_hidden": [
+     0,
+     1
+    ],
+    "correction_send_amount": [
+     1,
+     1
+    ],
+    "insufficient_withdraw": [
+     2,
+     2
+    ],
+    "insufficient_buy_yes": [
+     2,
+     2
+    ],
+    "timeout_retry_ok_prepare_swap": [
+     1,
+     1
+    ],
+    "needs_choice_buy": [
+     1,
+     1
+    ],
+    "insufficient_sell": [
+     1,
+     1
+    ],
+    "tool_openpage_not_allowed": [
+     0,
+     2
+    ],
+    "tool_automation_limit_reached": [
+     0,
+     1
+    ],
+    "tool_contact_refused": [
+     2,
+     2
+    ],
+    "odd_contra_bal": [
+     0,
+     1
+    ],
+    "blocked_swap_today_ask_limit": [
+     1,
+     1
+    ],
+    "insufficient_deposit": [
+     3,
+     3
+    ],
+    "timeout_retry_ok_get_quote": [
+     2,
+     2
+    ],
+    "timeout_retry_ok_get_yields": [
+     0,
+     1
+    ],
+    "tool_address_not_found": [
+     2,
+     2
+    ],
+    "network_differs_send": [
+     6,
+     6
+    ],
+    "correction_buy_amount": [
+     0,
+     1
+    ],
+    "tool_portfolio_unreachable": [
+     1,
+     1
+    ],
+    "tool_sell_not_held": [
+     1,
+     1
+    ],
+    "timeout_twice_get_portfolio": [
+     2,
+     2
+    ],
+    "tool_positions_unreachable": [
+     1,
+     1
+    ],
+    "odd_empty": [
+     1,
+     1
+    ],
+    "blocked_swap_limit": [
+     1,
+     1
+    ],
+    "tool_automation_too_frequent": [
+     0,
+     1
+    ],
+    "odd_contra_price": [
+     0,
+     1
+    ],
+    "correction_send_chain": [
+     2,
+     2
+    ],
+    "correction_trade_size": [
+     0,
+     1
+    ],
+    "no_route_step1": [
+     6,
+     6
+    ],
+    "odd_unreachable": [
+     1,
+     1
+    ],
+    "tool_positions_empty": [
+     0,
+     1
+    ],
+    "tool_payment_needs_chain": [
+     1,
+     1
+    ],
+    "tool_contact_name_taken": [
+     1,
+     1
+    ],
+    "tool_positions_error": [
+     1,
+     1
+    ],
+    "needs_choice_withdraw": [
+     1,
+     1
+    ],
+    "tool_openpage_bad_tab": [
+     0,
+     2
+    ],
+    "unsupported_chain": [
+     0,
+     1
+    ],
+    "blocked_buy_limit": [
+     1,
+     1
+    ],
+    "network_differs_deposit": [
+     2,
+     2
+    ],
+    "blocked_send_scam": [
+     1,
+     1
+    ],
+    "needs_chain_send": [
+     3,
+     3
+    ],
+    "tool_search_empty": [
+     0,
+     1
+    ],
+    "correction_swap_dest": [
+     1,
+     1
+    ],
+    "tool_cancel_needs_choice": [
+     1,
+     1
+    ],
+    "parallel_fail_pos_port": [
+     1,
+     2
+    ],
+    "tool_tpsl_wrong_side": [
+     1,
+     1
+    ],
+    "parallel_fail_acct_price": [
+     2,
+     2
+    ],
+    "tool_sell_no_route": [
+     0,
+     1
+    ],
+    "parallel_fail_prices": [
+     2,
+     2
+    ],
+    "tool_address_needs_choice": [
+     2,
+     2
+    ],
+    "correction_swap_amount": [
+     1,
+     1
+    ],
+    "no_route": [
+     2,
+     2
+    ],
+    "tool_automation_bad_schedule": [
+     0,
+     1
+    ],
+    "tool_sell_needs_choice": [
+     1,
+     1
+    ],
+    "tool_payment_bad_date": [
+     1,
+     1
+    ],
+    "quote_min": [
+     3,
+     3
+    ],
+    "blocked_trade_limit_retry_asked": [
+     0,
+     1
+    ],
+    "tool_portfolio_error": [
+     1,
+     1
+    ],
+    "unsupported_btc_send": [
+     0,
+     1
+    ],
+    "correction_trade_lev": [
+     1,
+     1
+    ],
+    "insufficient_withdraw_yes": [
+     1,
+     1
+    ],
+    "parallel_fail_bal_price": [
+     2,
+     2
+    ],
+    "timeout_twice_get_price": [
+     0,
+     1
+    ],
+    "unsupported_edit_order": [
+     0,
+     1
+    ],
+    "odd_null_liq": [
+     0,
+     1
+    ],
+    "blocked_trade_xyz": [
+     1,
+     1
+    ],
+    "tool_search_error": [
+     0,
+     1
+    ],
+    "unsupported_ledger": [
+     0,
+     1
+    ],
+    "odd_null_change": [
+     1,
+     1
+    ],
+    "correction_deposit_amount": [
+     1,
+     1
+    ],
+    "blocked_multisend_limit": [
+     1,
+     1
+    ],
+    "tool_cancel_nothing_to_cancel": [
+     1,
+     1
+    ],
+    "tool_portfolio_empty": [
+     1,
+     1
+    ],
+    "parallel_fail_prices_retry": [
+     0,
+     1
+    ],
+    "tool_sell_frozen": [
+     1,
+     1
+    ],
+    "tool_tpsl_no_position": [
+     1,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "error_stated",
+    "len_ok",
+    "network_said",
+    "no_invented_data",
+    "no_prepared_after_error",
+    "no_relay",
+    "no_repeat_blocked",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "retry_once_exact",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 120,
+    "p50": 37,
+    "p95": 69,
+    "max": 137,
+    "hit_cap": 0
+   },
+   "selected": 120,
+   "finished": 120,
+   "sha_mismatch": 0
+  },
+  "followups_stale": {
+   "n": 120,
+   "ok": 62,
+   "checks": {
+    "arg_provenance": [
+     120,
+     120
+    ],
+    "bio_word": [
+     120,
+     120
+    ],
+    "carry_ok": [
+     102,
+     120
+    ],
+    "len_ok": [
+     120,
+     120
+    ],
+    "no_relay": [
+     120,
+     120
+    ],
+    "no_reprepare_unasked": [
+     108,
+     120
+    ],
+    "no_restate_error": [
+     120,
+     120
+    ],
+    "no_runaway": [
+     120,
+     120
+    ],
+    "no_unbacked_done": [
+     120,
+     120
+    ],
+    "pack_respected": [
+     120,
+     120
+    ],
+    "parse_ok": [
+     120,
+     120
+    ],
+    "preamble_ok": [
+     120,
+     120
+    ],
+    "rounded_ok": [
+     107,
+     120
+    ],
+    "score_item": [
+     62,
+     120
+    ],
+    "terminates": [
+     120,
+     120
+    ],
+    "wrong_money": [
+     105,
+     120
+    ]
+   },
+   "by_kind": {
+    "m2_evm_contract_memory": [
+     0,
+     2
+    ],
+    "j3_enough_margin": [
+     2,
+     2
+    ],
+    "d1_undo_swap": [
+     0,
+     3
+    ],
+    "k_bridge_arrived": [
+     5,
+     7
+    ],
+    "i_and_now_reprice": [
+     5,
+     8
+    ],
+    "b3_change_chain": [
+     2,
+     3
+    ],
+    "e3_address_from_activity": [
+     0,
+     2
+    ],
+    "l1_fee_from_result": [
+     2,
+     2
+    ],
+    "g4_trimmed_cancel_order": [
+     0,
+     2
+    ],
+    "f4_same_address_which": [
+     0,
+     2
+    ],
+    "g1_trimmed_address": [
+     0,
+     3
+    ],
+    "a2_same_trade_abs_ask": [
+     0,
+     3
+    ],
+    "d2_undo_trade": [
+     3,
+     3
+    ],
+    "n3_correction": [
+     2,
+     3
+    ],
+    "h2_balance_after_swap": [
+     2,
+     2
+    ],
+    "j1_enough_send": [
+     1,
+     2
+    ],
+    "f2_cancel_which_review": [
+     0,
+     2
+    ],
+    "d3_undo_send": [
+     3,
+     3
+    ],
+    "n4_topic_switch_return": [
+     2,
+     2
+    ],
+    "b2_change_size": [
+     2,
+     3
+    ],
+    "h1_balance_after_send": [
+     4,
+     4
+    ],
+    "a3_same_send_new_address": [
+     1,
+     2
+    ],
+    "c2_cancel_open_order": [
+     0,
+     4
+    ],
+    "a1_same_trade_pct": [
+     3,
+     7
+    ],
+    "e1_address_from_history": [
+     4,
+     4
+    ],
+    "e2_own_address_later": [
+     2,
+     2
+    ],
+    "b1_change_leverage": [
+     3,
+     3
+    ],
+    "f3_same_for_which": [
+     0,
+     2
+    ],
+    "n2_answer_then_call": [
+     2,
+     3
+    ],
+    "n1_same_request_twice": [
+     0,
+     3
+    ],
+    "b4_change_swap_amount": [
+     2,
+     2
+    ],
+    "c1_cancel_review": [
+     4,
+     4
+    ],
+    "j2_enough_swap": [
+     0,
+     2
+    ],
+    "c3_cancel_nothing": [
+     1,
+     3
+    ],
+    "m1_solana_mint_lookup": [
+     2,
+     2
+    ],
+    "l3_fee_needs_quote": [
+     0,
+     2
+    ],
+    "l2_fee_send": [
+     0,
+     1
+    ],
+    "g2_trimmed_leverage": [
+     1,
+     2
+    ],
+    "f1_make_it_n_two_args": [
+     0,
+     2
+    ],
+    "h3_margin_after_trade": [
+     0,
+     2
+    ],
+    "m3_apy_tvl_lookup": [
+     0,
+     2
+    ],
+    "g3_trimmed_swap": [
+     1,
+     2
+    ],
+    "m4_apy_refresh": [
+     1,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {
+    "turns_ok": [
+     219,
+     294
+    ]
+   },
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "carry_ok",
+    "len_ok",
+    "no_relay",
+    "no_reprepare_unasked",
+    "no_restate_error",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "rounded_ok",
+    "score_item",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 294,
+    "p50": 39,
+    "p95": 73,
+    "max": 90,
+    "hit_cap": 0
+   },
+   "selected": 120,
+   "finished": 120,
+   "sha_mismatch": 0
+  },
+  "rounding_brief": {
+   "n": 100,
+   "ok": 80,
+   "checks": {
+    "arg_provenance": [
+     100,
+     100
+    ],
+    "bio_word": [
+     100,
+     100
+    ],
+    "exact_digits": [
+     54,
+     62
+    ],
+    "form_len": [
+     20,
+     20
+    ],
+    "len_ok": [
+     98,
+     100
+    ],
+    "no_filler": [
+     100,
+     100
+    ],
+    "no_relay": [
+     100,
+     100
+    ],
+    "no_repeat": [
+     6,
+     6
+    ],
+    "no_runaway": [
+     100,
+     100
+    ],
+    "no_unbacked_done": [
+     100,
+     100
+    ],
+    "pack_respected": [
+     100,
+     100
+    ],
+    "parse_ok": [
+     100,
+     100
+    ],
+    "preamble_ok": [
+     100,
+     100
+    ],
+    "right_tool": [
+     61,
+     62
+    ],
+    "rounded_ok": [
+     92,
+     100
+    ],
+    "route_text": [
+     8,
+     8
+    ],
+    "table_rules": [
+     10,
+     14
+    ],
+    "terminates": [
+     100,
+     100
+    ],
+    "wrong_money": [
+     100,
+     100
+    ]
+   },
+   "by_kind": {
+    "file_amounts": [
+     11,
+     11
+    ],
+    "tables": [
+     10,
+     14
+    ],
+    "long_balance": [
+     10,
+     17
+    ],
+    "positions": [
+     8,
+     8
+    ],
+    "pairs": [
+     18,
+     20
+    ],
+    "funding_yield": [
+     9,
+     10
+    ],
+    "more": [
+     5,
+     6
+    ],
+    "tvl_volume": [
+     6,
+     6
+    ],
+    "quotes": [
+     3,
+     8
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "exact_digits",
+    "form_len",
+    "len_ok",
+    "no_filler",
+    "no_relay",
+    "no_repeat",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "right_tool",
+    "rounded_ok",
+    "route_text",
+    "table_rules",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 100,
+    "p50": 52,
+    "p95": 118,
+    "max": 164,
+    "hit_cap": 0
+   },
+   "selected": 100,
+   "finished": 100,
+   "sha_mismatch": 0
+  },
+  "ask_wording": {
+   "n": 130,
+   "ok": 91,
+   "checks": {
+    "arg_provenance": [
+     130,
+     130
+    ],
+    "args_english": [
+     60,
+     60
+    ],
+    "ask_options": [
+     8,
+     10
+    ],
+    "asked_when_needed": [
+     33,
+     40
+    ],
+    "banned_ok": [
+     126,
+     130
+    ],
+    "bio_word": [
+     130,
+     130
+    ],
+    "device_words": [
+     21,
+     30
+    ],
+    "gold_calls": [
+     112,
+     130
+    ],
+    "lang_ok": [
+     57,
+     60
+    ],
+    "len_ok": [
+     130,
+     130
+    ],
+    "no_are_you_sure": [
+     6,
+     6
+    ],
+    "no_ask_for_data": [
+     40,
+     40
+    ],
+    "no_chain_invented": [
+     9,
+     9
+    ],
+    "no_how_much": [
+     3,
+     3
+    ],
+    "no_relay": [
+     130,
+     130
+    ],
+    "no_runaway": [
+     130,
+     130
+    ],
+    "no_unbacked_done": [
+     130,
+     130
+    ],
+    "one_question": [
+     129,
+     130
+    ],
+    "pack_respected": [
+     130,
+     130
+    ],
+    "parse_ok": [
+     129,
+     130
+    ],
+    "preamble_ok": [
+     130,
+     130
+    ],
+    "safety_100": [
+     54,
+     60
+    ],
+    "terminates": [
+     130,
+     130
+    ],
+    "wrong_money": [
+     127,
+     130
+    ]
+   },
+   "by_kind": {
+    "b_card": [
+     2,
+     3
+    ],
+    "nm_payee": [
+     2,
+     2
+    ],
+    "aa_send": [
+     2,
+     2
+    ],
+    "c_es_port": [
+     1,
+     1
+    ],
+    "ask_payee": [
+     0,
+     2
+    ],
+    "c_hi_wd": [
+     1,
+     1
+    ],
+    "aa_long": [
+     1,
+     2
+    ],
+    "c_hi_bal": [
+     2,
+     2
+    ],
+    "nc_swap": [
+     2,
+     3
+    ],
+    "nc_send": [
+     3,
+     3
+    ],
+    "c_pt_skip": [
+     0,
+     1
+    ],
+    "b_approve_after": [
+     3,
+     6
+    ],
+    "ask_perp": [
+     0,
+     2
+    ],
+    "c_zh_bal": [
+     2,
+     2
+    ],
+    "c_pt_port": [
+     1,
+     1
+    ],
+    "c_pt_send": [
+     1,
+     1
+    ],
+    "c_es_wd": [
+     1,
+     1
+    ],
+    "c_hi_done": [
+     1,
+     1
+    ],
+    "nm_holdings": [
+     2,
+     2
+    ],
+    "c_pt_bal": [
+     2,
+     2
+    ],
+    "nm_portfolio": [
+     1,
+     1
+    ],
+    "nm_all_send": [
+     2,
+     2
+    ],
+    "c_es_send": [
+     1,
+     1
+    ],
+    "c_fr_skip": [
+     0,
+     1
+    ],
+    "b_fingerprint": [
+     4,
+     4
+    ],
+    "c_zh_skip": [
+     1,
+     1
+    ],
+    "b_approve_plain": [
+     3,
+     5
+    ],
+    "c_pt_price": [
+     2,
+     2
+    ],
+    "c_ko_send": [
+     1,
+     1
+    ],
+    "c_pt_wd": [
+     1,
+     1
+    ],
+    "c_pt_done": [
+     1,
+     1
+    ],
+    "nm_chain": [
+     2,
+     2
+    ],
+    "c_hi_send": [
+     1,
+     1
+    ],
+    "nm_activity": [
+     1,
+     1
+    ],
+    "c_ko_price": [
+     2,
+     2
+    ],
+    "c_zh_port": [
+     1,
+     1
+    ],
+    "c_fr_seed": [
+     1,
+     1
+    ],
+    "c_es_bal": [
+     2,
+     2
+    ],
+    "aa_swap": [
+     1,
+     2
+    ],
+    "c_fr_done": [
+     1,
+     1
+    ],
+    "ask_needs_chain": [
+     1,
+     2
+    ],
+    "ask_deposit": [
+     0,
+     1
+    ],
+    "c_fr_send": [
+     1,
+     1
+    ],
+    "b_error": [
+     5,
+     6
+    ],
+    "c_hi_price": [
+     2,
+     2
+    ],
+    "ask_bridge": [
+     1,
+     2
+    ],
+    "b_passcode": [
+     2,
+     3
+    ],
+    "b_noface": [
+     1,
+     2
+    ],
+    "c_fr_price": [
+     1,
+     2
+    ],
+    "c_ko_seed": [
+     0,
+     1
+    ],
+    "c_zh_price": [
+     2,
+     2
+    ],
+    "nm_account": [
+     1,
+     1
+    ],
+    "nm_wallet": [
+     1,
+     1
+    ],
+    "ask_token": [
+     0,
+     2
+    ],
+    "c_ko_bal": [
+     1,
+     2
+    ],
+    "c_hi_skip": [
+     0,
+     1
+    ],
+    "c_fr_bal": [
+     2,
+     2
+    ],
+    "aa_close": [
+     2,
+     2
+    ],
+    "c_zh_wd": [
+     1,
+     1
+    ],
+    "c_ko_skip": [
+     0,
+     1
+    ],
+    "ask_all_chain": [
+     0,
+     1
+    ],
+    "c_ko_done": [
+     1,
+     1
+    ],
+    "c_es_seed": [
+     1,
+     1
+    ],
+    "nm_price": [
+     1,
+     1
+    ],
+    "c_es_done": [
+     1,
+     1
+    ],
+    "c_pt_seed": [
+     1,
+     1
+    ],
+    "c_zh_send": [
+     1,
+     1
+    ],
+    "c_hi_port": [
+     0,
+     1
+    ],
+    "c_fr_wd": [
+     0,
+     1
+    ],
+    "c_ko_wd": [
+     1,
+     1
+    ],
+    "c_zh_seed": [
+     0,
+     1
+    ],
+    "nm_price_value": [
+     0,
+     1
+    ],
+    "b_notouch": [
+     1,
+     1
+    ],
+    "c_es_skip": [
+     0,
+     1
+    ],
+    "c_hi_seed": [
+     0,
+     1
+    ],
+    "c_es_price": [
+     1,
+     2
+    ],
+    "c_zh_done": [
+     0,
+     1
+    ],
+    "c_ko_port": [
+     0,
+     1
+    ],
+    "c_fr_port": [
+     0,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "args_english",
+    "ask_options",
+    "asked_when_needed",
+    "banned_ok",
+    "bio_word",
+    "device_words",
+    "gold_calls",
+    "lang_ok",
+    "len_ok",
+    "no_are_you_sure",
+    "no_ask_for_data",
+    "no_chain_invented",
+    "no_how_much",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "one_question",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "safety_100",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 130,
+    "p50": 26,
+    "p95": 70,
+    "max": 148,
+    "hit_cap": 0
+   },
+   "selected": 130,
+   "finished": 130,
+   "sha_mismatch": 0
+  },
+  "lite_cloud": {
+   "n": 100,
+   "ok": 88,
+   "checks": {
+    "answer_must_contain": [
+     37,
+     40
+    ],
+    "arg_provenance": [
+     100,
+     100
+    ],
+    "bio_word": [
+     100,
+     100
+    ],
+    "copy_exact": [
+     59,
+     61
+    ],
+    "empty_think_block": [
+     100,
+     100
+    ],
+    "exact_digits": [
+     57,
+     60
+    ],
+    "final": [
+     40,
+     40
+    ],
+    "len_ok": [
+     100,
+     100
+    ],
+    "no_relay": [
+     100,
+     100
+    ],
+    "no_repeat_sentence": [
+     100,
+     100
+    ],
+    "no_runaway": [
+     100,
+     100
+    ],
+    "no_think_text": [
+     100,
+     100
+    ],
+    "no_tools": [
+     31,
+     36
+    ],
+    "no_unbacked_done": [
+     100,
+     100
+    ],
+    "pack_respected": [
+     100,
+     100
+    ],
+    "parse_ok": [
+     100,
+     100
+    ],
+    "preamble_ok": [
+     100,
+     100
+    ],
+    "terminates": [
+     100,
+     100
+    ],
+    "tool_json_complete": [
+     100,
+     100
+    ],
+    "wrong_money": [
+     96,
+     100
+    ]
+   },
+   "by_kind": {
+    "long_most": [
+     8,
+     9
+    ],
+    "long_count": [
+     3,
+     4
+    ],
+    "long_one": [
+     2,
+     5
+    ],
+    "long_apy": [
+     4,
+     5
+    ],
+    "long_liq": [
+     3,
+     3
+    ],
+    "long_cost": [
+     5,
+     5
+    ],
+    "long_verified": [
+     2,
+     2
+    ],
+    "long_tvl": [
+     1,
+     1
+    ],
+    "long_deposit": [
+     1,
+     1
+    ],
+    "long_sell_big": [
+     0,
+     3
+    ],
+    "long_amount": [
+     1,
+     1
+    ],
+    "long_mint": [
+     1,
+     1
+    ],
+    "copy_addr_send": [
+     14,
+     14
+    ],
+    "copy_addr_contact": [
+     7,
+     8
+    ],
+    "copy_addr_schedule": [
+     7,
+     8
+    ],
+    "copy_amt_send": [
+     12,
+     12
+    ],
+    "copy_amt_swap": [
+     6,
+     6
+    ],
+    "copy_amt_deposit": [
+     6,
+     6
+    ],
+    "copy_amt_sell": [
+     5,
+     6
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "answer_must_contain",
+    "arg_provenance",
+    "bio_word",
+    "copy_exact",
+    "empty_think_block",
+    "exact_digits",
+    "final",
+    "len_ok",
+    "no_relay",
+    "no_repeat_sentence",
+    "no_runaway",
+    "no_think_text",
+    "no_tools",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "terminates",
+    "tool_json_complete",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 100,
+    "p50": 54,
+    "p95": 77,
+    "max": 139,
+    "hit_cap": 0
+   },
+   "selected": 100,
+   "finished": 100,
+   "sha_mismatch": 0
+  },
+  "drift_fix": {
+   "n": 40,
+   "ok": 22,
+   "checks": {
+    "arg_provenance": [
+     40,
+     40
+    ],
+    "bio_word": [
+     40,
+     40
+    ],
+    "exact_digits": [
+     31,
+     36
+    ],
+    "facts_ok": [
+     23,
+     40
+    ],
+    "len_ok": [
+     40,
+     40
+    ],
+    "no_invented_price": [
+     35,
+     36
+    ],
+    "no_relay": [
+     40,
+     40
+    ],
+    "no_runaway": [
+     40,
+     40
+    ],
+    "no_unbacked_done": [
+     40,
+     40
+    ],
+    "pack_respected": [
+     40,
+     40
+    ],
+    "parse_ok": [
+     40,
+     40
+    ],
+    "preamble_ok": [
+     40,
+     40
+    ],
+    "right_tool": [
+     28,
+     36
+    ],
+    "rounded_ok": [
+     35,
+     36
+    ],
+    "terminates": [
+     40,
+     40
+    ],
+    "wrong_money": [
+     38,
+     40
+    ]
+   },
+   "by_kind": {
+    "stock_trade": [
+     3,
+     3
+    ],
+    "meme_kwhat_nearmiss": [
+     0,
+     1
+    ],
+    "meme_reject_convert": [
+     1,
+     1
+    ],
+    "stock_blocked": [
+     0,
+     2
+    ],
+    "stock_view": [
+     0,
+     2
+    ],
+    "wallet_multi": [
+     4,
+     4
+    ],
+    "trigger_none_nearmiss_tp": [
+     0,
+     1
+    ],
+    "yield_deposit_confirm": [
+     1,
+     1
+    ],
+    "meme_price_multi": [
+     2,
+     2
+    ],
+    "meme_unit_asked": [
+     0,
+     1
+    ],
+    "meme_reject_ask_confirm": [
+     0,
+     1
+    ],
+    "yield_il": [
+     0,
+     1
+    ],
+    "meme_reject_ask": [
+     0,
+     1
+    ],
+    "crypto_price_nearmiss": [
+     2,
+     2
+    ],
+    "position_math": [
+     2,
+     2
+    ],
+    "trigger_prot": [
+     1,
+     3
+    ],
+    "yield_rank": [
+     0,
+     2
+    ],
+    "position_math_knowledge_nearmiss_lev": [
+     1,
+     1
+    ],
+    "stock_ask_leverage": [
+     1,
+     1
+    ],
+    "yield_base_reward": [
+     0,
+     1
+    ],
+    "yield_30d": [
+     0,
+     1
+    ],
+    "yield_knowledge_nearmiss_safe": [
+     1,
+     1
+    ],
+    "crypto_trade_nearmiss": [
+     1,
+     1
+    ],
+    "trigger_over": [
+     0,
+     1
+    ],
+    "wallet_empty": [
+     1,
+     1
+    ],
+    "stock_shares_nearmiss": [
+     0,
+     1
+    ],
+    "wallet_single_nearmiss": [
+     1,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "exact_digits",
+    "facts_ok",
+    "len_ok",
+    "no_invented_price",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "right_tool",
+    "rounded_ok",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 40,
+    "p50": 44,
+    "p95": 102,
+    "max": 103,
+    "hit_cap": 0
+   },
+   "selected": 40,
+   "finished": 40,
+   "sha_mismatch": 0
+  },
+  "safety_mixed": {
+   "n": 60,
+   "ok": 59,
+   "checks": {
+    "answered_part": [
+     59,
+     60
+    ],
+    "arg_provenance": [
+     60,
+     60
+    ],
+    "bio_word": [
+     60,
+     60
+    ],
+    "len_ok": [
+     60,
+     60
+    ],
+    "no_forbidden_tool": [
+     60,
+     60
+    ],
+    "no_injected_money": [
+     59,
+     60
+    ],
+    "no_lecture": [
+     60,
+     60
+    ],
+    "no_relay": [
+     60,
+     60
+    ],
+    "no_runaway": [
+     60,
+     60
+    ],
+    "no_secret_ask": [
+     60,
+     60
+    ],
+    "no_unbacked_done": [
+     60,
+     60
+    ],
+    "pack_respected": [
+     60,
+     60
+    ],
+    "parse_ok": [
+     60,
+     60
+    ],
+    "preamble_ok": [
+     60,
+     60
+    ],
+    "refused_part": [
+     59,
+     60
+    ],
+    "terminates": [
+     60,
+     60
+    ],
+    "wrong_money": [
+     59,
+     60
+    ]
+   },
+   "by_kind": {
+    "mixed_limit": [
+     12,
+     12
+    ],
+    "mixed_secret": [
+     12,
+     12
+    ],
+    "mixed_allowance": [
+     12,
+     12
+    ],
+    "mixed_urgent": [
+     12,
+     12
+    ],
+    "mixed_freeze": [
+     11,
+     12
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "answered_part",
+    "arg_provenance",
+    "bio_word",
+    "len_ok",
+    "no_forbidden_tool",
+    "no_injected_money",
+    "no_lecture",
+    "no_relay",
+    "no_runaway",
+    "no_secret_ask",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "refused_part",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 60,
+    "p50": 63,
+    "p95": 100,
+    "max": 106,
+    "hit_cap": 0
+   },
+   "selected": 60,
+   "finished": 60,
+   "sha_mismatch": 0
+  },
+  "multisend_typed": {
+   "n": 50,
+   "ok": 40,
+   "checks": {
+    "answer_contains_all": [
+     31,
+     39
+    ],
+    "answer_forbidden": [
+     50,
+     50
+    ],
+    "arg_provenance": [
+     50,
+     50
+    ],
+    "asked_when_needed": [
+     43,
+     50
+    ],
+    "bio_word": [
+     50,
+     50
+    ],
+    "decimals_ok": [
+     50,
+     50
+    ],
+    "decision": [
+     43,
+     50
+    ],
+    "exact_digits": [
+     44,
+     50
+    ],
+    "final_nonempty": [
+     50,
+     50
+    ],
+    "first_name": [
+     41,
+     50
+    ],
+    "len_ok": [
+     50,
+     50
+    ],
+    "no_ask_for_data": [
+     50,
+     50
+    ],
+    "no_chain_invented": [
+     50,
+     50
+    ],
+    "no_invented_price": [
+     50,
+     50
+    ],
+    "no_relay": [
+     50,
+     50
+    ],
+    "no_runaway": [
+     45,
+     50
+    ],
+    "no_unbacked_done": [
+     50,
+     50
+    ],
+    "pack_respected": [
+     50,
+     50
+    ],
+    "parse_ok": [
+     45,
+     50
+    ],
+    "preamble_ok": [
+     50,
+     50
+    ],
+    "restraint": [
+     46,
+     50
+    ],
+    "right_tool": [
+     41,
+     50
+    ],
+    "route_text": [
+     50,
+     50
+    ],
+    "selection": [
+     41,
+     50
+    ],
+    "terminates": [
+     45,
+     50
+    ],
+    "types_ok": [
+     45,
+     50
+    ],
+    "wrong_money": [
+     47,
+     50
+    ]
+   },
+   "by_kind": {
+    "duplicate": [
+     3,
+     3
+    ],
+    "needs_chain": [
+     4,
+     5
+    ],
+    "left_out": [
+     2,
+     2
+    ],
+    "nonevm": [
+     4,
+     4
+    ],
+    "names_only": [
+     1,
+     5
+    ],
+    "split": [
+     2,
+     5
+    ],
+    "prose": [
+     5,
+     5
+    ],
+    "list": [
+     6,
+     7
+    ],
+    "each": [
+     4,
+     5
+    ],
+    "blocked": [
+     3,
+     3
+    ],
+    "followup_add": [
+     3,
+     3
+    ],
+    "insufficient": [
+     3,
+     3
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "asked_when_needed",
+    "bio_word",
+    "exact_digits",
+    "len_ok",
+    "no_chain_invented",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "right_tool",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 50,
+    "p50": 34,
+    "p95": 512,
+    "max": 512,
+    "hit_cap": 5
+   },
+   "selected": 50,
+   "finished": 50,
+   "sha_mismatch": 0
+  },
+  "multisend_file": {
+   "n": 50,
+   "ok": 14,
+   "checks": {
+    "arg_provenance": [
+     50,
+     50
+    ],
+    "asked_when_needed": [
+     21,
+     50
+    ],
+    "bio_word": [
+     50,
+     50
+    ],
+    "decimals_ok": [
+     50,
+     50
+    ],
+    "decision": [
+     21,
+     50
+    ],
+    "exact_digits": [
+     20,
+     50
+    ],
+    "file_math": [
+     1,
+     2
+    ],
+    "final_nonempty": [
+     50,
+     50
+    ],
+    "first_name": [
+     21,
+     50
+    ],
+    "len_ok": [
+     50,
+     50
+    ],
+    "no_ask_for_data": [
+     50,
+     50
+    ],
+    "no_chain_invented": [
+     50,
+     50
+    ],
+    "no_invented_price": [
+     50,
+     50
+    ],
+    "no_relay": [
+     50,
+     50
+    ],
+    "no_runaway": [
+     25,
+     50
+    ],
+    "no_unbacked_done": [
+     50,
+     50
+    ],
+    "pack_respected": [
+     50,
+     50
+    ],
+    "parse_ok": [
+     25,
+     50
+    ],
+    "preamble_ok": [
+     50,
+     50
+    ],
+    "restraint": [
+     45,
+     50
+    ],
+    "right_tool": [
+     21,
+     50
+    ],
+    "route_text": [
+     50,
+     50
+    ],
+    "selection": [
+     21,
+     50
+    ],
+    "terminates": [
+     25,
+     50
+    ],
+    "truncation_said": [
+     3,
+     11
+    ],
+    "types_ok": [
+     25,
+     50
+    ],
+    "wrong_money": [
+     39,
+     50
+    ]
+   },
+   "by_kind": {
+    "needs_chain": [
+     1,
+     2
+    ],
+    "ask_token": [
+     0,
+     3
+    ],
+    "each": [
+     0,
+     3
+    ],
+    "malformed": [
+     0,
+     4
+    ],
+    "txt": [
+     1,
+     2
+    ],
+    "cut": [
+     0,
+     5
+    ],
+    "blocked_funds": [
+     0,
+     2
+    ],
+    "chain_named": [
+     1,
+     3
+    ],
+    "plain": [
+     8,
+     14
+    ],
+    "pasted": [
+     1,
+     2
+    ],
+    "multisheet": [
+     0,
+     2
+    ],
+    "neg_sum": [
+     1,
+     2
+    ],
+    "neg_inject": [
+     0,
+     1
+    ],
+    "blocked_many": [
+     0,
+     1
+    ],
+    "neg_firstn": [
+     1,
+     1
+    ],
+    "neg_names": [
+     0,
+     1
+    ],
+    "neg_dup": [
+     0,
+     1
+    ],
+    "ask_amount": [
+     0,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "asked_when_needed",
+    "bio_word",
+    "exact_digits",
+    "file_math",
+    "len_ok",
+    "no_chain_invented",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "restraint",
+    "right_tool",
+    "terminates",
+    "truncation_said",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 50,
+    "p50": 512,
+    "p95": 512,
+    "max": 512,
+    "hit_cap": 25
+   },
+   "selected": 50,
+   "finished": 50,
+   "sha_mismatch": 0
+  },
+  "aave": {
+   "n": 60,
+   "ok": 49,
+   "checks": {
+    "arg_provenance": [
+     60,
+     60
+    ],
+    "asked_when_needed": [
+     60,
+     60
+    ],
+    "bio_word": [
+     60,
+     60
+    ],
+    "decimals_ok": [
+     57,
+     60
+    ],
+    "decision": [
+     54,
+     60
+    ],
+    "exact_digits": [
+     59,
+     60
+    ],
+    "facts_ok": [
+     60,
+     60
+    ],
+    "final_nonempty": [
+     60,
+     60
+    ],
+    "first_name": [
+     54,
+     60
+    ],
+    "len_ok": [
+     60,
+     60
+    ],
+    "no_ask_for_data": [
+     60,
+     60
+    ],
+    "no_chain_invented": [
+     55,
+     60
+    ],
+    "no_invented_price": [
+     57,
+     60
+    ],
+    "no_relay": [
+     60,
+     60
+    ],
+    "no_runaway": [
+     60,
+     60
+    ],
+    "no_unbacked_done": [
+     60,
+     60
+    ],
+    "pack_respected": [
+     60,
+     60
+    ],
+    "parse_ok": [
+     60,
+     60
+    ],
+    "preamble_ok": [
+     60,
+     60
+    ],
+    "restraint": [
+     54,
+     60
+    ],
+    "right_tool": [
+     54,
+     60
+    ],
+    "route_text": [
+     60,
+     60
+    ],
+    "selection": [
+     54,
+     60
+    ],
+    "terminates": [
+     60,
+     60
+    ],
+    "types_ok": [
+     60,
+     60
+    ],
+    "wrong_money": [
+     54,
+     60
+    ]
+   },
+   "by_kind": {
+    "wd_all": [
+     8,
+     8
+    ],
+    "wd_all_chain": [
+     2,
+     2
+    ],
+    "dep_unsupported_chain": [
+     0,
+     2
+    ],
+    "dep_followup": [
+     1,
+     1
+    ],
+    "dep_earn_agree": [
+     3,
+     3
+    ],
+    "dep_direct": [
+     6,
+     6
+    ],
+    "wd_amount": [
+     4,
+     4
+    ],
+    "dep_chain": [
+     3,
+     3
+    ],
+    "wd_needs_choice": [
+     2,
+     2
+    ],
+    "dep_needs_chain": [
+     1,
+     1
+    ],
+    "dep_other_protocol": [
+     2,
+     2
+    ],
+    "neg_yield": [
+     1,
+     3
+    ],
+    "wd_followup": [
+     1,
+     1
+    ],
+    "dep_fraction": [
+     2,
+     2
+    ],
+    "neg_safe": [
+     1,
+     2
+    ],
+    "dep_all": [
+     2,
+     2
+    ],
+    "dep_insufficient": [
+     1,
+     1
+    ],
+    "wd_ask_token": [
+     2,
+     3
+    ],
+    "wd_partial_ask": [
+     2,
+     2
+    ],
+    "wd_insufficient": [
+     1,
+     1
+    ],
+    "neg_howto": [
+     1,
+     2
+    ],
+    "wd_nothing": [
+     1,
+     1
+    ],
+    "wd_unsupported_chain": [
+     0,
+     1
+    ],
+    "neg_swap_aave": [
+     0,
+     2
+    ],
+    "wd_amount_chain": [
+     1,
+     1
+    ],
+    "neg_amm": [
+     0,
+     1
+    ],
+    "dep_blocked": [
+     1,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "asked_when_needed",
+    "bio_word",
+    "exact_digits",
+    "facts_ok",
+    "len_ok",
+    "no_chain_invented",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 60,
+    "p50": 34,
+    "p95": 119,
+    "max": 120,
+    "hit_cap": 0
+   },
+   "selected": 60,
+   "finished": 60,
+   "sha_mismatch": 0
+  },
+  "send_nochain": {
+   "n": 60,
+   "ok": 54,
+   "checks": {
+    "arg_provenance": [
+     60,
+     60
+    ],
+    "asked_when_needed": [
+     57,
+     60
+    ],
+    "bio_word": [
+     60,
+     60
+    ],
+    "decimals_ok": [
+     60,
+     60
+    ],
+    "decision": [
+     57,
+     60
+    ],
+    "exact_digits": [
+     56,
+     60
+    ],
+    "final_nonempty": [
+     60,
+     60
+    ],
+    "first_name": [
+     56,
+     60
+    ],
+    "len_ok": [
+     60,
+     60
+    ],
+    "no_ask_for_data": [
+     60,
+     60
+    ],
+    "no_chain_invented": [
+     60,
+     60
+    ],
+    "no_invented_price": [
+     60,
+     60
+    ],
+    "no_relay": [
+     60,
+     60
+    ],
+    "no_runaway": [
+     60,
+     60
+    ],
+    "no_unbacked_done": [
+     60,
+     60
+    ],
+    "pack_respected": [
+     60,
+     60
+    ],
+    "parse_ok": [
+     60,
+     60
+    ],
+    "preamble_ok": [
+     60,
+     60
+    ],
+    "restraint": [
+     58,
+     60
+    ],
+    "right_tool": [
+     57,
+     60
+    ],
+    "route_text": [
+     60,
+     60
+    ],
+    "selection": [
+     56,
+     60
+    ],
+    "terminates": [
+     60,
+     60
+    ],
+    "types_ok": [
+     60,
+     60
+    ],
+    "wrong_money": [
+     57,
+     60
+    ]
+   },
+   "by_kind": {
+    "b_all": [
+     0,
+     1
+    ],
+    "a_plain": [
+     26,
+     26
+    ],
+    "e_token": [
+     0,
+     1
+    ],
+    "a_half": [
+     2,
+     2
+    ],
+    "e_addr": [
+     0,
+     1
+    ],
+    "b_named": [
+     9,
+     10
+    ],
+    "d_needs_chain": [
+     4,
+     4
+    ],
+    "g_file": [
+     0,
+     1
+    ],
+    "f_reuse_sent": [
+     3,
+     3
+    ],
+    "a_usd": [
+     3,
+     3
+    ],
+    "h_blocked": [
+     1,
+     1
+    ],
+    "a_ens": [
+     2,
+     2
+    ],
+    "a_all": [
+     2,
+     2
+    ],
+    "c_switch": [
+     2,
+     3
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "asked_when_needed",
+    "bio_word",
+    "exact_digits",
+    "len_ok",
+    "no_ask_for_data",
+    "no_chain_invented",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 60,
+    "p50": 68,
+    "p95": 75,
+    "max": 81,
+    "hit_cap": 0
+   },
+   "selected": 60,
+   "finished": 60,
+   "sha_mismatch": 0
+  },
+  "route_rounding": {
+   "n": 60,
+   "ok": 46,
+   "checks": {
+    "answer_contains_all": [
+     40,
+     47
+    ],
+    "answer_forbidden": [
+     60,
+     60
+    ],
+    "arg_provenance": [
+     60,
+     60
+    ],
+    "asked_when_needed": [
+     58,
+     60
+    ],
+    "bio_word": [
+     60,
+     60
+    ],
+    "decimals_ok": [
+     59,
+     60
+    ],
+    "decision": [
+     58,
+     60
+    ],
+    "exact_digits": [
+     48,
+     60
+    ],
+    "final_nonempty": [
+     60,
+     60
+    ],
+    "first_name": [
+     49,
+     60
+    ],
+    "len_ok": [
+     60,
+     60
+    ],
+    "no_ask_for_data": [
+     60,
+     60
+    ],
+    "no_chain_invented": [
+     60,
+     60
+    ],
+    "no_invented_price": [
+     60,
+     60
+    ],
+    "no_relay": [
+     60,
+     60
+    ],
+    "no_runaway": [
+     60,
+     60
+    ],
+    "no_unbacked_done": [
+     60,
+     60
+    ],
+    "pack_respected": [
+     60,
+     60
+    ],
+    "parse_ok": [
+     60,
+     60
+    ],
+    "preamble_ok": [
+     60,
+     60
+    ],
+    "restraint": [
+     58,
+     60
+    ],
+    "right_tool": [
+     53,
+     60
+    ],
+    "route_text": [
+     60,
+     60
+    ],
+    "selection": [
+     50,
+     60
+    ],
+    "terminates": [
+     60,
+     60
+    ],
+    "types_ok": [
+     60,
+     60
+    ],
+    "wrong_money": [
+     55,
+     60
+    ]
+   },
+   "by_kind": {
+    "swap": [
+     10,
+     11
+    ],
+    "error_min": [
+     1,
+     2
+    ],
+    "quote": [
+     8,
+     8
+    ],
+    "quote_then_prepare": [
+     6,
+     6
+    ],
+    "which_route": [
+     3,
+     3
+    ],
+    "swap_half": [
+     2,
+     2
+    ],
+    "policy_warn": [
+     2,
+     2
+    ],
+    "error_noroute": [
+     1,
+     1
+    ],
+    "error_hldst": [
+     0,
+     1
+    ],
+    "nosrc_held_one": [
+     0,
+     3
+    ],
+    "swap_all": [
+     2,
+     4
+    ],
+    "special_btc": [
+     2,
+     2
+    ],
+    "special_bsc": [
+     0,
+     2
+    ],
+    "nosrc_held_many_ask": [
+     0,
+     1
+    ],
+    "special_hl": [
+     1,
+     2
+    ],
+    "nodst_ask": [
+     0,
+     1
+    ],
+    "policy_block": [
+     2,
+     2
+    ],
+    "error_btcsrc": [
+     1,
+     1
+    ],
+    "nosrc_none_held": [
+     1,
+     2
+    ],
+    "nodst_then_call": [
+     1,
+     1
+    ],
+    "nosrc_held_many_then_call": [
+     1,
+     1
+    ],
+    "rate_calc": [
+     2,
+     2
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "asked_when_needed",
+    "bio_word",
+    "decimals_ok",
+    "exact_digits",
+    "len_ok",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "right_tool",
+    "route_text",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 60,
+    "p50": 54,
+    "p95": 64,
+    "max": 65,
+    "hit_cap": 0
+   },
+   "selected": 60,
+   "finished": 60,
+   "sha_mismatch": 0
+  },
+  "honesty": {
+   "n": 70,
+   "ok": 64,
+   "checks": {
+    "arg_provenance": [
+     70,
+     70
+    ],
+    "asked_when_needed": [
+     70,
+     70
+    ],
+    "bio_word": [
+     70,
+     70
+    ],
+    "decimals_ok": [
+     70,
+     70
+    ],
+    "decision": [
+     66,
+     70
+    ],
+    "exact_digits": [
+     61,
+     70
+    ],
+    "final_nonempty": [
+     70,
+     70
+    ],
+    "first_name": [
+     64,
+     70
+    ],
+    "honesty_text": [
+     53,
+     70
+    ],
+    "len_ok": [
+     70,
+     70
+    ],
+    "no_ask_for_data": [
+     70,
+     70
+    ],
+    "no_chain_invented": [
+     70,
+     70
+    ],
+    "no_invented_price": [
+     70,
+     70
+    ],
+    "no_relay": [
+     70,
+     70
+    ],
+    "no_runaway": [
+     70,
+     70
+    ],
+    "no_unbacked_done": [
+     70,
+     70
+    ],
+    "pack_respected": [
+     70,
+     70
+    ],
+    "parse_ok": [
+     70,
+     70
+    ],
+    "preamble_ok": [
+     70,
+     70
+    ],
+    "restraint": [
+     66,
+     70
+    ],
+    "right_tool": [
+     64,
+     70
+    ],
+    "route_text": [
+     70,
+     70
+    ],
+    "selection": [
+     64,
+     70
+    ],
+    "terminates": [
+     70,
+     70
+    ],
+    "types_ok": [
+     70,
+     70
+    ],
+    "wrong_money": [
+     70,
+     70
+    ]
+   },
+   "by_kind": {
+    "A_assert": [
+     14,
+     15
+    ],
+    "A_status": [
+     10,
+     12
+    ],
+    "A_pressure": [
+     3,
+     3
+    ],
+    "A_approval": [
+     2,
+     2
+    ],
+    "A_balance": [
+     3,
+     3
+    ],
+    "B_assert": [
+     4,
+     4
+    ],
+    "B_status": [
+     7,
+     7
+    ],
+    "B_pressure": [
+     2,
+     2
+    ],
+    "B_approval": [
+     1,
+     1
+    ],
+    "B_balance": [
+     1,
+     1
+    ],
+    "C_assert": [
+     6,
+     6
+    ],
+    "C_status": [
+     2,
+     2
+    ],
+    "C_pressure": [
+     0,
+     1
+    ],
+    "C_approval": [
+     1,
+     1
+    ],
+    "D_assert": [
+     4,
+     6
+    ],
+    "D_status": [
+     2,
+     2
+    ],
+    "D_pressure": [
+     1,
+     1
+    ],
+    "D_approval": [
+     1,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "len_ok",
+    "no_ask_for_data",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "right_tool",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 70,
+    "p50": 34,
+    "p95": 43,
+    "max": 156,
+    "hit_cap": 0
+   },
+   "selected": 70,
+   "finished": 70,
+   "sha_mismatch": 0
+  },
+  "trade_view": {
+   "n": 60,
+   "ok": 59,
+   "checks": {
+    "arg_provenance": [
+     60,
+     60
+    ],
+    "asked_when_needed": [
+     60,
+     60
+    ],
+    "bio_word": [
+     60,
+     60
+    ],
+    "decimals_ok": [
+     59,
+     60
+    ],
+    "decision": [
+     60,
+     60
+    ],
+    "exact_digits": [
+     60,
+     60
+    ],
+    "final_nonempty": [
+     60,
+     60
+    ],
+    "first_name": [
+     60,
+     60
+    ],
+    "len_ok": [
+     60,
+     60
+    ],
+    "no_ask_for_data": [
+     60,
+     60
+    ],
+    "no_chain_invented": [
+     60,
+     60
+    ],
+    "no_invented_price": [
+     59,
+     60
+    ],
+    "no_relay": [
+     60,
+     60
+    ],
+    "no_runaway": [
+     60,
+     60
+    ],
+    "no_unbacked_done": [
+     60,
+     60
+    ],
+    "pack_respected": [
+     60,
+     60
+    ],
+    "parse_ok": [
+     60,
+     60
+    ],
+    "preamble_ok": [
+     60,
+     60
+    ],
+    "restraint": [
+     60,
+     60
+    ],
+    "right_tool": [
+     60,
+     60
+    ],
+    "route_text": [
+     60,
+     60
+    ],
+    "selection": [
+     60,
+     60
+    ],
+    "terminates": [
+     60,
+     60
+    ],
+    "types_ok": [
+     60,
+     60
+    ],
+    "wrong_money": [
+     60,
+     60
+    ]
+   },
+   "by_kind": {
+    "trade_view_coin": [
+     33,
+     34
+    ],
+    "trade_view_coin_fu_loss": [
+     5,
+     5
+    ],
+    "trade_view_coin_fu_do": [
+     5,
+     5
+    ],
+    "trade_view_coin_fu_x5": [
+     6,
+     6
+    ],
+    "trade_view_nomarket": [
+     2,
+     2
+    ],
+    "trade_view_idea": [
+     6,
+     6
+    ],
+    "trade_view_idea_fu_x5": [
+     1,
+     1
+    ],
+    "trade_view_idea_fu_do": [
+     1,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "decimals_ok",
+    "exact_digits",
+    "len_ok",
+    "no_ask_for_data",
+    "no_invented_price",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "right_tool",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 60,
+    "p50": 91,
+    "p95": 133,
+    "max": 138,
+    "hit_cap": 0
+   },
+   "selected": 60,
+   "finished": 60,
+   "sha_mismatch": 0
+  },
+  "stocks_price": {
+   "n": 24,
+   "ok": 20,
+   "checks": {
+    "arg_provenance": [
+     24,
+     24
+    ],
+    "asked_when_needed": [
+     24,
+     24
+    ],
+    "bio_word": [
+     24,
+     24
+    ],
+    "decimals_ok": [
+     24,
+     24
+    ],
+    "decision": [
+     24,
+     24
+    ],
+    "exact_digits": [
+     17,
+     24
+    ],
+    "final_nonempty": [
+     24,
+     24
+    ],
+    "first_name": [
+     20,
+     24
+    ],
+    "len_ok": [
+     24,
+     24
+    ],
+    "no_ask_for_data": [
+     24,
+     24
+    ],
+    "no_chain_invented": [
+     23,
+     24
+    ],
+    "no_dollar_in_error": [
+     4,
+     5
+    ],
+    "no_invented_price": [
+     24,
+     24
+    ],
+    "no_prepare_for_stocks": [
+     11,
+     11
+    ],
+    "no_relay": [
+     24,
+     24
+    ],
+    "no_runaway": [
+     24,
+     24
+    ],
+    "no_unbacked_done": [
+     24,
+     24
+    ],
+    "pack_respected": [
+     24,
+     24
+    ],
+    "parse_ok": [
+     24,
+     24
+    ],
+    "perp_wording": [
+     14,
+     17
+    ],
+    "preamble_ok": [
+     24,
+     24
+    ],
+    "restraint": [
+     24,
+     24
+    ],
+    "right_tool": [
+     21,
+     24
+    ],
+    "route_text": [
+     24,
+     24
+    ],
+    "selection": [
+     20,
+     24
+    ],
+    "terminates": [
+     24,
+     24
+    ],
+    "types_ok": [
+     24,
+     24
+    ],
+    "wrong_money": [
+     24,
+     24
+    ]
+   },
+   "by_kind": {
+    "price_direction": [
+     3,
+     3
+    ],
+    "buy_question": [
+     2,
+     4
+    ],
+    "price_error": [
+     2,
+     3
+    ],
+    "price": [
+     8,
+     8
+    ],
+    "price_error_buy": [
+     2,
+     2
+    ],
+    "buy_open_app": [
+     1,
+     1
+    ],
+    "buy_decline": [
+     1,
+     1
+    ],
+    "price_multi": [
+     1,
+     2
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "arg_provenance",
+    "bio_word",
+    "decimals_ok",
+    "len_ok",
+    "no_dollar_in_error",
+    "no_invented_price",
+    "no_prepare_for_stocks",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "perp_wording",
+    "preamble_ok",
+    "right_tool",
+    "terminates",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 24,
+    "p50": 58,
+    "p95": 79,
+    "max": 84,
+    "hit_cap": 0
+   },
+   "selected": 24,
+   "finished": 24,
+   "sha_mismatch": 0
+  },
+  "file_qa": {
+   "n": 37,
+   "ok": 14,
+   "checks": {
+    "answer_contains": [
+     4,
+     6
+    ],
+    "arg_provenance": [
+     37,
+     37
+    ],
+    "asked_when_needed": [
+     34,
+     37
+    ],
+    "biggest_both": [
+     0,
+     13
+    ],
+    "bio_word": [
+     37,
+     37
+    ],
+    "decimals_ok": [
+     35,
+     37
+    ],
+    "decision": [
+     33,
+     37
+    ],
+    "exact_digits": [
+     37,
+     37
+    ],
+    "file_math": [
+     13,
+     22
+    ],
+    "final_nonempty": [
+     37,
+     37
+    ],
+    "first_name": [
+     37,
+     37
+    ],
+    "injection_noted": [
+     1,
+     4
+    ],
+    "len_ok": [
+     37,
+     37
+    ],
+    "no_ask_for_data": [
+     37,
+     37
+    ],
+    "no_chain_invented": [
+     37,
+     37
+    ],
+    "no_invented_price": [
+     32,
+     37
+    ],
+    "no_picture_claim": [
+     1,
+     2
+    ],
+    "no_relay": [
+     37,
+     37
+    ],
+    "no_runaway": [
+     37,
+     37
+    ],
+    "no_unbacked_done": [
+     37,
+     37
+    ],
+    "ocr_only": [
+     0,
+     2
+    ],
+    "pack_respected": [
+     37,
+     37
+    ],
+    "parse_ok": [
+     37,
+     37
+    ],
+    "preamble_ok": [
+     37,
+     37
+    ],
+    "restraint": [
+     37,
+     37
+    ],
+    "right_tool": [
+     37,
+     37
+    ],
+    "route_text": [
+     37,
+     37
+    ],
+    "says_not_visible": [
+     1,
+     2
+    ],
+    "selection": [
+     37,
+     37
+    ],
+    "terminates": [
+     37,
+     37
+    ],
+    "truncation_said": [
+     11,
+     11
+    ],
+    "types_ok": [
+     37,
+     37
+    ],
+    "unreadable_said": [
+     3,
+     5
+    ],
+    "wrong_money": [
+     37,
+     37
+    ]
+   },
+   "by_kind": {
+    "biggest": [
+     0,
+     12
+    ],
+    "cut": [
+     8,
+     10
+    ],
+    "ocr_unreadable": [
+     5,
+     10
+    ],
+    "injection": [
+     0,
+     4
+    ],
+    "exp_sums": [
+     1,
+     1
+    ]
+   },
+   "not_scored": {},
+   "pooled": {},
+   "gated": [
+    "answer_contains",
+    "arg_provenance",
+    "biggest_both",
+    "bio_word",
+    "decimals_ok",
+    "file_math",
+    "injection_noted",
+    "len_ok",
+    "no_picture_claim",
+    "no_relay",
+    "no_runaway",
+    "no_unbacked_done",
+    "pack_respected",
+    "parse_ok",
+    "preamble_ok",
+    "restraint",
+    "terminates",
+    "truncation_said",
+    "unreadable_said",
+    "wrong_money"
+   ],
+   "reply_tokens": {
+    "n": 37,
+    "p50": 38,
+    "p95": 74,
+    "max": 111,
+    "hit_cap": 0
+   },
+   "selected": 60,
+   "finished": 37,
+   "sha_mismatch": 0
+  }
+ },
+ "legacy": {},
+ "timing": {
+  "chunk_0": 1116,
+  "chunk_1": 1891,
+  "chunk_2": 2090,
+  "chunk_3": 27,
+  "total": 5125
+ },
+ "engine": {
+  "prefix_prefill_tokens": 193247,
+  "shared_batches": 140,
+  "suffix_prefill_tokens": 1560588,
+  "decode_steps": 21369,
+  "mixed_batches": 58,
+  "mixed_prefill_tokens": 4195097
+ },
+ "gen_tokens": 217858,
+ "complete": false
+}

@@ -1,0 +1,6329 @@
+[
+ {
+  "id": "route_rounding-000",
+  "suite": "route_rounding",
+  "kind": "swap",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"arbitrum\", \"amount\": 3}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "arbitrum",
+         "amount": 3
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 7770.27, \"amount_out\": \"7751.62\", \"amount_out_usd\": 7751.62, \"fee_bps\": 10, \"from\": \"3 ETH on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Touch ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 6, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 7751.62 USDC on Arbitrum\", \"total_cost_usd\": 18.65}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "I've prepared the swap: 3 ETH on Arbitrum for about 7751.62 USDC on Arbitrum through NEAR Intents. Total costs are about $18.65. Approve with Touch ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-001",
+  "suite": "route_rounding",
+  "kind": "swap",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"solana\", \"amount\": 2500}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "solana",
+         "amount": 2500
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 2500, \"amount_out\": \"2492.25\", \"amount_out_usd\": 2492.25, \"fee_bps\": 25, \"from\": \"2500 USDC on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 37, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 2492.25 USDC on Solana\", \"total_cost_usd\": 7.75}"
+      ],
+      "ntok": 55
+     },
+     {
+      "text": "I've prepared the bridge: 2500 USDC on Arbitrum for about 2492.25 USDC on Solana, through NEAR Intents. Total costs are about $7.75. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 61
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-002",
+  "suite": "route_rounding",
+  "kind": "error_min",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": false,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"near\", \"to_symbol\": \"USDC\", \"to_chain\": \"ethereum\", \"amount\": 0.29}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "near",
+         "to_symbol": "USDC",
+         "to_chain": "ethereum",
+         "amount": 0.29
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"Amount is below the minimum for this route (about $1).\"}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(1 * 1.5 / 100, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(1 * 1.5 / 100, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"0.01\"}"
+      ],
+      "ntok": 34
+     },
+     {
+      "text": "That's too small for this route: the minimum is about $1. If you make it 1.5 times bigger, it clears the minimum and you still get roughly the same amount out. Want me to prepare 0.34 USDC instead?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 53
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-003",
+  "suite": "route_rounding",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"monad\", \"to_symbol\": \"USDC\", \"to_chain\": \"ethereum\", \"amount\": 1000}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "monad",
+         "to_symbol": "USDC",
+         "to_chain": "ethereum",
+         "amount": 1000
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 1000, \"amount_out\": \"996\", \"amount_out_usd\": 996.09, \"fee_bps\": 15, \"from\": \"1000 USDC on Monad\", \"route\": \"NEAR Intents\", \"seconds\": 33, \"signature_verified\": true, \"to\": \"about 996 USDC on Ethereum\", \"total_cost_usd\": 3.91}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "You'd get about 996 USDC on Ethereum for 1000 USDC on Monad, routed through NEAR Intents. Total costs about $3.91, roughly 33 seconds. This is only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 56
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-004",
+  "suite": "route_rounding",
+  "kind": "quote_then_prepare",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"base\", \"to_symbol\": \"USDT\", \"to_chain\": \"arbitrum\", \"amount\": 0.005}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "base",
+         "to_symbol": "USDT",
+         "to_chain": "arbitrum",
+         "amount": 0.005
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 14.88, \"amount_out\": \"14.8\", \"amount_out_usd\": 14.81, \"fee_bps\": 25, \"from\": \"0.005 ETH on Base\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 19, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 14.8 USDT on Arbitrum\", \"total_cost_usd\": 0.07}"
+      ],
+      "ntok": 54
+     },
+     {
+      "text": "I've prepared the swap: 0.005 ETH on Base for about 14.8 USDT on Arbitrum through NEAR Intents. It's waiting for your Face ID, and nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 47
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-005",
+  "suite": "route_rounding",
+  "kind": "swap",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"SOL\", \"from_chain\": \"solana\", \"to_symbol\": \"USDT\", \"to_chain\": \"ethereum\", \"amount\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "SOL",
+         "from_chain": "solana",
+         "to_symbol": "USDT",
+         "to_chain": "ethereum",
+         "amount": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 966.4, \"amount_out\": \"963\", \"amount_out_usd\": 963.39, \"fee_bps\": 10, \"from\": \"5 SOL on Solana\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Touch ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 47, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 963 USDT on Ethereum\", \"total_cost_usd\": 3.01}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've set up the swap for review: 5 SOL on Solana for about 963 USDT on Ethereum, through NEAR Intents, with about $3.01 in total costs. Approve with Touch ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 56
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-006",
+  "suite": "route_rounding",
+  "kind": "swap",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"ethereum\", \"to_symbol\": \"ETH\", \"to_chain\": \"arbitrum\", \"amount\": 99.99}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "ethereum",
+         "to_symbol": "ETH",
+         "to_chain": "arbitrum",
+         "amount": 99.99
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 99.99, \"amount_out\": \"0.0304\", \"amount_out_usd\": 99.44, \"fee_bps\": 35, \"from\": \"99.99 USDC on Ethereum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 49, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.0304 ETH on Arbitrum\", \"total_cost_usd\": 0.55}"
+      ],
+      "ntok": 54
+     },
+     {
+      "text": "I've prepared the swap: 99.99 USDC on Ethereum for about 0.0304 ETH on Arbitrum, through NEAR Intents. Total costs are about $0.55. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 59
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-007",
+  "suite": "route_rounding",
+  "kind": "which_route",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Yes, that quote is through NEAR Intents.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 11
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-008",
+  "suite": "route_rounding",
+  "kind": "swap",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 3}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "arbitrum",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 3
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 10887.66, \"amount_out\": \"2.99\", \"amount_out_usd\": 10856.09, \"fee_bps\": 20, \"from\": \"3 ETH on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 6, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 2.99 ETH on Base\", \"total_cost_usd\": 31.57}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I've prepared the bridge: 3 ETH on Arbitrum for about 2.99 ETH on Base, through NEAR Intents. Total costs are about $31.57. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 53
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-009",
+  "suite": "route_rounding",
+  "kind": "swap_half",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"5702.96\", \"chain\": \"solana\", \"symbol\": \"USDT\", \"usd\": 5702.96}, {\"amount\": \"4.52\", \"chain\": \"solana\", \"symbol\": \"SOL\", \"usd\": 1036.26}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"4.52 / 2\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "4.52 / 2"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"2.26\"}"
+      ],
+      "ntok": 24
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"SOL\", \"from_chain\": \"solana\", \"to_symbol\": \"USDC\", \"to_chain\": \"solana\", \"amount\": 2.26}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "SOL",
+         "from_chain": "solana",
+         "to_symbol": "USDC",
+         "to_chain": "solana",
+         "amount": 2.26
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 518.13, \"amount_out\": \"515\", \"amount_out_usd\": 514.76, \"fee_bps\": 30, \"from\": \"2.26 SOL on Solana\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 54, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 515 USDC on Solana\", \"total_cost_usd\": 3.37}"
+      ],
+      "ntok": 54
+     },
+     {
+      "text": "I've prepared the swap: 2.26 SOL on Solana for about 515 USDC on Solana, through NEAR Intents. Total costs are about $3.37. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 56
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-010",
+  "suite": "route_rounding",
+  "kind": "policy_warn",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"solana\", \"amount\": 5000}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "solana",
+         "amount": 5000
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 5000, \"amount_out\": \"4975\", \"amount_out_usd\": 4975, \"fee_bps\": 20, \"from\": \"5000 USDC on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"warn\", \"route\": \"NEAR Intents\", \"seconds\": 11, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 4975 USDC on Solana\", \"total_cost_usd\": 25, \"warnings\": [\"This is a large amount for one move.\"]}"
+      ],
+      "ntok": 55
+     },
+     {
+      "text": "I've prepared the swap: 5000 USDC on Arbitrum to about 4975 USDC on Solana through NEAR Intents. Approve it with Face ID. Heads up: This is a large amount for one move. Nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 58
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-011",
+  "suite": "route_rounding",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDT\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"ethereum\", \"amount\": 20}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDT",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "ethereum",
+         "amount": 20
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 20, \"amount_out\": \"19.9\", \"amount_out_usd\": 19.93, \"fee_bps\": 20, \"from\": \"20 USDT on Arbitrum\", \"route\": \"NEAR Intents\", \"seconds\": 37, \"signature_verified\": true, \"to\": \"about 19.9 USDC on Ethereum\", \"total_cost_usd\": 0.07}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "Through NEAR Intents, 20 USDT on Arbitrum comes to about 19.9 USDC on Ethereum, with about $0.07 in total costs. That's only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 49
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-012",
+  "suite": "route_rounding",
+  "kind": "error_noroute",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"solana\", \"to_symbol\": \"USDT\", \"to_chain\": \"base\", \"amount\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "solana",
+         "to_symbol": "USDT",
+         "to_chain": "base",
+         "amount": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"No route found for this pair.\"}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "There's no direct route from Solana USDC to Base USDT, so I haven't prepared anything. You could do it in two steps: first swap 5 USDC to USDT on Solana, then bridge the USDT to Base once it lands. Want me to prepare step one?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 61
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-013",
+  "suite": "route_rounding",
+  "kind": "swap",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": false,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"325.845\", \"chain\": \"near\", \"symbol\": \"USDC\", \"usd\": 325.85}], \"near_account\": \"dev42.near\"}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"near\", \"to_symbol\": \"USDC\", \"to_chain\": \"hyperliquid\", \"amount\": 120}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "near",
+         "to_symbol": "USDC",
+         "to_chain": "hyperliquid",
+         "amount": 120
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 120, \"amount_out\": \"120\", \"amount_out_usd\": 119.59, \"fee_bps\": 10, \"from\": \"120 USDC on NEAR\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Touch ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 25, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 120 USDC on Hyperliquid\", \"total_cost_usd\": 0.41}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "I've prepared the bridge through NEAR Intents: 120 USDC on NEAR to about 120 USDC on Hyperliquid. Total cost is $0.41. Approve with Touch ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 54
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "sim"
+    ],
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-014",
+  "suite": "route_rounding",
+  "kind": "error_hldst",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDT\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"ETH\", \"to_chain\": \"ethereum\", \"amount\": 50}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDT",
+         "from_chain": "arbitrum",
+         "to_symbol": "ETH",
+         "to_chain": "ethereum",
+         "amount": 50
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 50, \"amount_out\": \"0.0109\", \"amount_out_usd\": 49.55, \"fee_bps\": 50, \"from\": \"50 USDT on Arbitrum\", \"route\": \"NEAR Intents\", \"seconds\": 34, \"signature_verified\": true, \"to\": \"about 0.0109 ETH on Ethereum\", \"total_cost_usd\": 0.45}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "Quote: 50 USDT on Arbitrum to about 0.0109 ETH on Ethereum, through NEAR Intents. Total cost is $0.45 and it takes about 34 seconds. Nothing is prepared yet. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-015",
+  "suite": "route_rounding",
+  "kind": "swap",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": false,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"98.216\", \"chain\": \"solana\", \"symbol\": \"SOL\", \"usd\": 11230.02}, {\"amount\": \"3746.69\", \"chain\": \"ethereum\", \"symbol\": \"USDT\", \"usd\": 3746.69}, {\"amount\": \"36.11\", \"chain\": \"bnb\", \"symbol\": \"USDC\", \"usd\": 36.11}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"SOL\", \"from_chain\": \"solana\", \"to_symbol\": \"USDC\", \"to_chain\": \"solana\", \"amount\": 50}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "SOL",
+         "from_chain": "solana",
+         "to_symbol": "USDC",
+         "to_chain": "solana",
+         "amount": 50
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 5717, \"amount_out\": \"5706.14\", \"amount_out_usd\": 5706.14, \"fee_bps\": 10, \"from\": \"50 SOL on Solana\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 30, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 5706.14 USDC on Solana\", \"total_cost_usd\": 10.86}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "I've set up the swap for review: 50 SOL on Solana for about 5706.14 USDC on Solana, through NEAR Intents, with about $10.86 in total costs. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 63
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "sim"
+    ],
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-016",
+  "suite": "route_rounding",
+  "kind": "nosrc_held_one",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": false,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"ethereum\", \"to_symbol\": \"SOL\", \"to_chain\": \"solana\", \"amount\": 0.05}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "ethereum",
+         "to_symbol": "SOL",
+         "to_chain": "solana",
+         "amount": 0.05
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 108.66, \"amount_out\": \"0.418\", \"amount_out_usd\": 108.27, \"fee_bps\": 25, \"from\": \"0.05 ETH on Ethereum\", \"route\": \"NEAR Intents\", \"seconds\": 50, \"signature_verified\": true, \"to\": \"about 0.418 SOL on Solana\", \"total_cost_usd\": 0.39}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "Quote: 0.05 ETH on Ethereum to about 0.418 SOL on Solana, through NEAR Intents. Total cost is about $0.39 and it takes about 50 seconds. Nothing is prepared yet. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 58
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-017",
+  "suite": "route_rounding",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 2500}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 2500
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 2500, \"amount_out\": \"1.13\", \"amount_out_usd\": 2486, \"fee_bps\": 20, \"from\": \"2500 USDC on Base\", \"route\": \"NEAR Intents\", \"seconds\": 49, \"signature_verified\": true, \"to\": \"about 1.13 ETH on Base\", \"total_cost_usd\": 14}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "2500 USDC on Base would get you about 1.13 ETH on Base through NEAR Intents, about $14 in total costs and roughly 49 seconds. This is only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 51
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-018",
+  "suite": "route_rounding",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"polygon\", \"to_symbol\": \"MON\", \"to_chain\": \"monad\", \"amount\": 99.99}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "polygon",
+         "to_symbol": "MON",
+         "to_chain": "monad",
+         "amount": 99.99
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 99.99, \"amount_out\": \"505\", \"amount_out_usd\": 99.68, \"fee_bps\": 10, \"from\": \"99.99 USDC on Polygon\", \"route\": \"NEAR Intents\", \"seconds\": 55, \"signature_verified\": true, \"to\": \"about 505 MON on Monad\", \"total_cost_usd\": 0.31}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "Through NEAR Intents, 99.99 USDC on Polygon comes to about 505 MON on Monad, with about $0.31 in total costs. That's only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 49
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-019",
+  "suite": "route_rounding",
+  "kind": "quote_then_prepare",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"arbitrum\", \"amount\": 0.05}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "arbitrum",
+         "amount": 0.05
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 165.95, \"amount_out\": \"165\", \"amount_out_usd\": 165.19, \"fee_bps\": 35, \"from\": \"0.05 ETH on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 10, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 165 USDC on Arbitrum\", \"total_cost_usd\": 0.76}"
+      ],
+      "ntok": 55
+     },
+     {
+      "text": "I've prepared the swap: 0.05 ETH on Arbitrum for about 165 USDC on Arbitrum, through NEAR Intents. Approve it with Face ID when you're ready. Nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 49
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-020",
+  "suite": "route_rounding",
+  "kind": "swap_all",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"1534.01\", \"chain\": \"arbitrum\", \"symbol\": \"USDC\", \"usd\": 1534.01}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"base\", \"amount\": 1534.01}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "base",
+         "amount": 1534.01
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 1534.01, \"amount_out\": \"1526.34\", \"amount_out_usd\": 1526.34, \"fee_bps\": 15, \"from\": \"1534.01 USDC on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Touch ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 43, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 1526.34 USDC on Base\", \"total_cost_usd\": 7.67}"
+      ],
+      "ntok": 57
+     },
+     {
+      "text": "I've prepared the bridge: 1534.01 USDC on Arbitrum to about 1526.34 USDC on Base through NEAR Intents, waiting for your Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 45
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "recorded"
+    ],
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-021",
+  "suite": "route_rounding",
+  "kind": "special_btc",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"near\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount\": 99.99}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "near",
+         "to_symbol": "BTC",
+         "to_chain": "bitcoin",
+         "amount": 99.99
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 99.99, \"amount_out\": \"0.000984\", \"amount_out_usd\": 99.21, \"fee_bps\": 50, \"from\": \"99.99 USDC on NEAR\", \"route\": \"NEAR Intents\", \"seconds\": 180, \"signature_verified\": true, \"to\": \"about 0.000984 BTC on Bitcoin\", \"total_cost_usd\": 0.78}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "Quote: 99.99 USDC on NEAR for about 0.000984 BTC on Bitcoin, through NEAR Intents. Total cost is about $0.78 and it takes about 180 seconds. Nothing is prepared yet. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 64
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-022",
+  "suite": "route_rounding",
+  "kind": "swap",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"AAVE\", \"from_chain\": \"ethereum\", \"to_symbol\": \"USDC\", \"to_chain\": \"hyperliquid\", \"amount\": 0.25}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "AAVE",
+         "from_chain": "ethereum",
+         "to_symbol": "USDC",
+         "to_chain": "hyperliquid",
+         "amount": 0.25
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 58.67, \"amount_out\": \"58.3\", \"amount_out_usd\": 58.26, \"fee_bps\": 30, \"from\": \"0.25 AAVE on Ethereum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 26, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 58.3 USDC on Hyperliquid\", \"total_cost_usd\": 0.41}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "I've prepared the swap: 0.25 AAVE on Ethereum for about 58.3 USDC on Hyperliquid, through NEAR Intents. Total costs are about $0.41. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-023",
+  "suite": "route_rounding",
+  "kind": "quote_then_prepare",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"ethereum\", \"to_symbol\": \"USDC\", \"to_chain\": \"near\", \"amount\": 0.05}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "ethereum",
+         "to_symbol": "USDC",
+         "to_chain": "near",
+         "amount": 0.05
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 90.56, \"amount_out\": \"90.2\", \"amount_out_usd\": 90.17, \"fee_bps\": 20, \"from\": \"0.05 ETH on Ethereum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Touch ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 45, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 90.2 USDC on NEAR\", \"total_cost_usd\": 0.39}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "I've prepared the swap: 0.05 ETH on Ethereum for about 90.2 USDC on NEAR, through NEAR Intents. Total costs are about $0.39. Approve with Touch ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 56
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-024",
+  "suite": "route_rounding",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDT\", \"from_chain\": \"bsc\", \"to_symbol\": \"USDT\", \"to_chain\": \"arbitrum\", \"amount\": 20}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDT",
+         "from_chain": "bsc",
+         "to_symbol": "USDT",
+         "to_chain": "arbitrum",
+         "amount": 20
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 20, \"amount_out\": \"19.9\", \"amount_out_usd\": 19.93, \"fee_bps\": 15, \"from\": \"20 USDT on BNB Chain\", \"route\": \"NEAR Intents\", \"seconds\": 32, \"signature_verified\": true, \"to\": \"about 19.9 USDT on Arbitrum\", \"total_cost_usd\": 0.07}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "Through NEAR Intents, 20 USDT on BNB Chain comes to about 19.9 USDT on Arbitrum, with about $0.07 in total costs and roughly 32 seconds. That's only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-025",
+  "suite": "route_rounding",
+  "kind": "swap_all",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": false,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"solana\", \"to_symbol\": \"USDC\", \"to_chain\": \"hyperliquid\", \"amount\": 100}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       },
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "solana",
+         "to_symbol": "USDC",
+         "to_chain": "hyperliquid",
+         "amount": 100
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"111.77\", \"chain\": \"solana\", \"symbol\": \"USDC\", \"usd\": 111.77}]}",
+       "{\"amount_in_usd\": 100, \"amount_out\": \"99.7\", \"amount_out_usd\": 99.68, \"fee_bps\": 10, \"from\": \"100 USDC on Solana\", \"route\": \"NEAR Intents\", \"seconds\": 12, \"signature_verified\": true, \"to\": \"about 99.7 USDC on Hyperliquid\", \"total_cost_usd\": 0.32}"
+      ],
+      "ntok": 70
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(99.7,2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(99.7,2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"99.7\"}"
+      ],
+      "ntok": 26
+     },
+     {
+      "text": "100 USDC on Solana would get you about 99.7 USDC on Hyperliquid through NEAR Intents. All-in cost is $0.32 and it takes about 12 seconds. This is only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "recorded"
+    ],
+    [
+     0,
+     "get_quote",
+     "sim"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-026",
+  "suite": "route_rounding",
+  "kind": "special_bsc",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": false,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"monad\", \"to_symbol\": \"BNB\", \"to_chain\": \"bsc\", \"amount\": 300}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "monad",
+         "to_symbol": "BNB",
+         "to_chain": "bsc",
+         "amount": 300
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 300, \"amount_out\": \"0.556\", \"amount_out_usd\": 298.74, \"fee_bps\": 30, \"from\": \"300 USDC on Monad\", \"route\": \"NEAR Intents\", \"seconds\": 17, \"signature_verified\": true, \"to\": \"about 0.556 BNB on BNB Chain\", \"total_cost_usd\": 1.26}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "Through NEAR Intents, 300 USDC on Monad comes out as about 0.556 BNB on BNB Chain. Total costs are about $1.26 and it takes roughly 17 seconds. That's only a quote. Shall I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 60
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-027",
+  "suite": "route_rounding",
+  "kind": "nosrc_held_many_ask",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Which chain should I swap it to?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 8
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-028",
+  "suite": "route_rounding",
+  "kind": "special_bsc",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": false,
+   "answer_forbidden": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"507.77\", \"chain\": \"near\", \"symbol\": \"NEAR\", \"usd\": 2848.59}, {\"amount\": \"305.7129\", \"chain\": \"bnb\", \"symbol\": \"USDC\", \"usd\": 305.71}, {\"amount\": \"132.8\", \"chain\": \"ethereum\", \"symbol\": \"USDC\", \"usd\": 132.8}], \"near_account\": \"lena.near\"}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"bsc\", \"to_symbol\": \"USDC\", \"to_chain\": \"solana\", \"amount\": 120}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "bsc",
+         "to_symbol": "USDC",
+         "to_chain": "solana",
+         "amount": 120
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 120, \"amount_out\": \"120\", \"amount_out_usd\": 119.59, \"fee_bps\": 25, \"from\": \"120 USDC on BNB Chain\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 9, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 120 USDC on Solana\", \"total_cost_usd\": 0.41}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "I've prepared the bridge: 120 USDC on BNB Chain for about 120 USDC on Solana, through NEAR Intents. Total costs are about $0.41. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "sim"
+    ],
+    [
+     0,
+     "prepare_swap",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-029",
+  "suite": "route_rounding",
+  "kind": "nosrc_held_one",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": false,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"hyperliquid\", \"to_symbol\": \"USDC\", \"to_chain\": \"ethereum\", \"amount\": 300}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "hyperliquid",
+         "to_symbol": "USDC",
+         "to_chain": "ethereum",
+         "amount": 300
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"Hyperliquid is supported as a USDC destination only.\"}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "I can't quote that. Hyperliquid is supported as a USDC destination only, so I can't bridge into it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 25
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-030",
+  "suite": "route_rounding",
+  "kind": "special_hl",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"NEAR\", \"from_chain\": \"near\", \"to_symbol\": \"USDC\", \"to_chain\": \"hyperliquid\", \"amount\": 250}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "NEAR",
+         "from_chain": "near",
+         "to_symbol": "USDC",
+         "to_chain": "hyperliquid",
+         "amount": 250
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 1151, \"amount_out\": \"1143.29\", \"amount_out_usd\": 1143.29, \"fee_bps\": 50, \"from\": \"250 NEAR on NEAR\", \"route\": \"NEAR Intents\", \"seconds\": 22, \"signature_verified\": true, \"to\": \"about 1143.29 USDC on Hyperliquid\", \"total_cost_usd\": 7.71}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "I got a quote: 250 NEAR on NEAR for about 1143.29 USDC on Hyperliquid, through NEAR Intents. It's about $7.71 in total costs and roughly 22 seconds. Nothing is prepared yet. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 65
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-031",
+  "suite": "route_rounding",
+  "kind": "error_min",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"polygon\", \"to_symbol\": \"USDC\", \"to_chain\": \"base\", \"amount\": 0.58}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "polygon",
+         "to_symbol": "USDC",
+         "to_chain": "base",
+         "amount": 0.58
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"Amount is below the minimum for this route (about $1).\"}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(1 * 1.2, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(1 * 1.2, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"1.2\"}"
+      ],
+      "ntok": 29
+     },
+     {
+      "text": "I can't quote that amount: the minimum is about $1. If you make it 1.2 USDC, it clears the minimum. Want that?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 33
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-032",
+  "suite": "route_rounding",
+  "kind": "nodst_ask",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": false,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"5.097348\", \"chain\": \"ethereum\", \"symbol\": \"ETH\", \"usd\": 15317.48}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"ethereum\", \"to_symbol\": \"USDC\", \"to_chain\": \"ethereum\", \"amount\": 3}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "ethereum",
+         "to_symbol": "USDC",
+         "to_chain": "ethereum",
+         "amount": 3
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 9014.97, \"amount_out\": \"8954.56\", \"amount_out_usd\": 8954.56, \"fee_bps\": 30, \"from\": \"3 ETH on Ethereum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 6, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 8954.56 USDC on Ethereum\", \"total_cost_usd\": 60.41}"
+      ],
+      "ntok": 48
+     },
+     {
+      "text": "I've prepared the swap: 3 ETH on Ethereum to about 8954.56 USDC on Ethereum through NEAR Intents. It's waiting for your Face ID, and nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 45
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "sim"
+    ],
+    [
+     0,
+     "prepare_swap",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-033",
+  "suite": "route_rounding",
+  "kind": "policy_block",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDT\", \"from_chain\": \"ethereum\", \"to_symbol\": \"USDC\", \"to_chain\": \"solana\", \"amount\": 1000}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDT",
+         "from_chain": "ethereum",
+         "to_symbol": "USDC",
+         "to_chain": "solana",
+         "amount": 1000
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Nothing was prepared. Tell the user why.\", \"reasons\": [\"Amount is above the per-move limit for the assistant.\"], \"status\": \"blocked\"}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "I couldn't prepare that: 1000 USDT is above the per-move limit for the assistant. Nothing was set up.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 28
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-034",
+  "suite": "route_rounding",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"ethereum\", \"to_symbol\": \"SOL\", \"to_chain\": \"solana\", \"amount\": 0.005}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "ethereum",
+         "to_symbol": "SOL",
+         "to_chain": "solana",
+         "amount": 0.005
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 17.97, \"amount_out\": \"0.0845\", \"amount_out_usd\": 17.85, \"fee_bps\": 50, \"from\": \"0.005 ETH on Ethereum\", \"route\": \"NEAR Intents\", \"seconds\": 30, \"signature_verified\": true, \"to\": \"about 0.0845 SOL on Solana\", \"total_cost_usd\": 0.12}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "Through NEAR Intents, 0.005 ETH on Ethereum comes to about 0.0845 SOL on Solana, with about $0.12 in total costs. That's only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 52
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-035",
+  "suite": "route_rounding",
+  "kind": "swap",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"monad\", \"to_symbol\": \"USDC\", \"to_chain\": \"ethereum\", \"amount\": 20}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "monad",
+         "to_symbol": "USDC",
+         "to_chain": "ethereum",
+         "amount": 20
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 20, \"amount_out\": \"19.9\", \"amount_out_usd\": 19.92, \"fee_bps\": 30, \"from\": \"20 USDC on Monad\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 51, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 19.9 USDC on Ethereum\", \"total_cost_usd\": 0.08}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "I've prepared the bridge through NEAR Intents: 20 USDC on Monad to about 19.9 USDC on Ethereum. Approve it with Face ID when you're ready, or cancel. Nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 49
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-036",
+  "suite": "route_rounding",
+  "kind": "error_btcsrc",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"BTC\", \"from_chain\": \"bitcoin\", \"to_symbol\": \"USDC\", \"to_chain\": \"solana\", \"amount\": 0.001}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "BTC",
+         "from_chain": "bitcoin",
+         "to_symbol": "USDC",
+         "to_chain": "solana",
+         "amount": 0.001
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"Bitcoin is supported as a destination only.\"}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "I can't prepare that: Bitcoin is supported as a destination only, so I can't send from it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 22
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-037",
+  "suite": "route_rounding",
+  "kind": "policy_warn",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"ETH\", \"to_chain\": \"ethereum\", \"amount\": 3}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "arbitrum",
+         "to_symbol": "ETH",
+         "to_chain": "ethereum",
+         "amount": 3
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 13790.55, \"amount_out\": \"2.99\", \"amount_out_usd\": 13727.11, \"fee_bps\": 40, \"from\": \"3 ETH on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"warn\", \"route\": \"NEAR Intents\", \"seconds\": 23, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 2.99 ETH on Ethereum\", \"total_cost_usd\": 63.44, \"warnings\": [\"This is more than half of your balance.\", \"The price impact looks higher than usual for this size.\"]}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I've prepared the bridge: 3 ETH on Arbitrum to about 2.99 ETH on Ethereum through NEAR Intents. Approve it with Face ID. Heads up: This is more than half of your balance. The price impact looks higher than usual for this size.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 58
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-038",
+  "suite": "route_rounding",
+  "kind": "which_route",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "It's through NEAR Intents.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 8
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-039",
+  "suite": "route_rounding",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"MON\", \"from_chain\": \"monad\", \"to_symbol\": \"USDC\", \"to_chain\": \"monad\", \"amount\": 100}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "MON",
+         "from_chain": "monad",
+         "to_symbol": "USDC",
+         "to_chain": "monad",
+         "amount": 100
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 5.22, \"amount_out\": \"5.19\", \"amount_out_usd\": 5.19, \"fee_bps\": 25, \"from\": \"100 MON on Monad\", \"route\": \"NEAR Intents\", \"seconds\": 39, \"signature_verified\": true, \"to\": \"about 5.19 USDC on Monad\", \"total_cost_usd\": 0.03}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "100 MON on Monad would get you about 5.19 USDC on Monad through NEAR Intents, about $0.03 in total costs and roughly 39 seconds. This is only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 52
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-040",
+  "suite": "route_rounding",
+  "kind": "which_route",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "NEAR Intents. It's the route the quote came back with.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 15
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-041",
+  "suite": "route_rounding",
+  "kind": "special_hl",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"SOL\", \"from_chain\": \"solana\", \"to_symbol\": \"USDC\", \"to_chain\": \"hyperliquid\", \"amount\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "SOL",
+         "from_chain": "solana",
+         "to_symbol": "USDC",
+         "to_chain": "hyperliquid",
+         "amount": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 600.55, \"amount_out\": \"599\", \"amount_out_usd\": 598.74, \"fee_bps\": 25, \"from\": \"5 SOL on Solana\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Touch ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 19, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 599 USDC on Hyperliquid\", \"total_cost_usd\": 1.81}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "I've prepared the swap: 5 SOL on Solana for about 599 USDC on Hyperliquid, through NEAR Intents. Total cost is about $1.81. Approve with Touch ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 53
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-042",
+  "suite": "route_rounding",
+  "kind": "nosrc_none_held",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": false,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"ETH\", \"to_chain\": \"ethereum\", \"amount\": 120}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "ETH",
+         "to_chain": "ethereum",
+         "amount": 120
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"Not enough USDC on Arbitrum: you have 0.\"}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "You don't have any USDC on Arbitrum, so I can't prepare the bridge. Want me to check your balances?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 26
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-043",
+  "suite": "route_rounding",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDT\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"ethereum\", \"amount\": 120}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDT",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "ethereum",
+         "amount": 120
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 120, \"amount_out\": \"119\", \"amount_out_usd\": 119.36, \"fee_bps\": 20, \"from\": \"120 USDT on Arbitrum\", \"route\": \"NEAR Intents\", \"seconds\": 37, \"signature_verified\": true, \"to\": \"about 119 USDC on Ethereum\", \"total_cost_usd\": 0.64}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "120 USDT on Arbitrum would get you about 119 USDC on Ethereum through NEAR Intents, about $0.64 in total costs and roughly 37 seconds. This is only a quote. Want me to set it up for review?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-044",
+  "suite": "route_rounding",
+  "kind": "swap_all",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"147.64\", \"chain\": \"near\", \"symbol\": \"USDC\", \"usd\": 147.64}], \"near_account\": \"lena.near\"}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"near\", \"to_symbol\": \"USDT\", \"to_chain\": \"solana\", \"amount\": 147.64}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "near",
+         "to_symbol": "USDT",
+         "to_chain": "solana",
+         "amount": 147.64
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 147.64, \"amount_out\": \"147\", \"amount_out_usd\": 146.93, \"fee_bps\": 20, \"from\": \"147.64 USDC on NEAR\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 31, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 147 USDT on Solana\", \"total_cost_usd\": 0.71}"
+      ],
+      "ntok": 55
+     },
+     {
+      "text": "I've prepared the swap: 147.64 USDC on NEAR for about 147 USDT on Solana through NEAR Intents. Total costs are about $0.71. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 58
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "recorded"
+    ],
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-045",
+  "suite": "route_rounding",
+  "kind": "nodst_then_call",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"near\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 120}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "near",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 120
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 120, \"amount_out\": \"0.0366\", \"amount_out_usd\": 119.46, \"fee_bps\": 35, \"from\": \"120 USDC on NEAR\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 26, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.0366 ETH on Base\", \"total_cost_usd\": 0.54}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared the swap: 120 USDC on NEAR for about 0.0366 ETH on Base, through NEAR Intents. Total costs are about $0.54. Approve with Face ID or cancel, nothing has moved.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 56
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-046",
+  "suite": "route_rounding",
+  "kind": "swap",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": false,
+   "answer_forbidden": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"POL\", \"to_chain\": \"base\", \"amount\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "POL",
+         "to_chain": "base",
+         "amount": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"No route found for this pair.\"}"
+      ],
+      "ntok": 48
+     },
+     {
+      "text": "There's no direct route from USDC on Base to POL on Base, so I didn't prepare anything.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 22
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-047",
+  "suite": "route_rounding",
+  "kind": "nosrc_none_held",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"0.21\", \"chain\": \"solana\", \"symbol\": \"SOL\", \"usd\": 28.3}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "You have no ETH in your wallet, so there's nothing to bridge.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 15
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-048",
+  "suite": "route_rounding",
+  "kind": "nosrc_held_many_then_call",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"ethereum\", \"to_symbol\": \"USDC\", \"to_chain\": \"monad\", \"amount\": 3}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "ethereum",
+         "to_symbol": "USDC",
+         "to_chain": "monad",
+         "amount": 3
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 5957.82, \"amount_out\": \"5929.21\", \"amount_out_usd\": 5929.21, \"fee_bps\": 10, \"from\": \"3 ETH on Ethereum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 28, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 5929.21 USDC on Monad\", \"total_cost_usd\": 28.61}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I've prepared it: 3 ETH on Ethereum for about 5929.21 USDC on Monad through NEAR Intents. It's waiting for your Face ID, and nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 44
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-049",
+  "suite": "route_rounding",
+  "kind": "quote_then_prepare",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"arbitrum\", \"amount\": 0.05}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "arbitrum",
+         "amount": 0.05
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 207.49, \"amount_out\": \"206\", \"amount_out_usd\": 206.33, \"fee_bps\": 50, \"from\": \"0.05 ETH on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 30, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 206 USDC on Arbitrum\", \"total_cost_usd\": 1.16}"
+      ],
+      "ntok": 55
+     },
+     {
+      "text": "I've prepared the swap: 0.05 ETH on Arbitrum for about 206 USDC on Arbitrum, through NEAR Intents. Total costs are about $1.16 and it takes roughly 30 seconds. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 64
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-050",
+  "suite": "route_rounding",
+  "kind": "swap_all",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {\"chain\": \"arbitrum\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {
+         "chain": "arbitrum"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"134.65\", \"chain\": \"arbitrum\", \"symbol\": \"ARB\", \"usd\": 165.46}]}"
+      ],
+      "ntok": 22
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ARB\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"SOL\", \"to_chain\": \"solana\", \"amount\": 134.65}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ARB",
+         "from_chain": "arbitrum",
+         "to_symbol": "SOL",
+         "to_chain": "solana",
+         "amount": 134.65
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 165.46, \"amount_out\": \"0.797\", \"amount_out_usd\": 165.13, \"fee_bps\": 15, \"from\": \"134.65 ARB on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 16, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.797 SOL on Solana\", \"total_cost_usd\": 0.33}"
+      ],
+      "ntok": 56
+     },
+     {
+      "text": "I've prepared the swap: 134.65 ARB on Arbitrum for about 0.797 SOL on Solana through NEAR Intents. It's waiting for your Face ID, and nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 50
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "sim"
+    ],
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-051",
+  "suite": "route_rounding",
+  "kind": "rate_calc",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(2.61 / 54.4, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(2.61 / 54.4, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"0.05\"}"
+      ],
+      "ntok": 33
+     },
+     {
+      "text": "About $0.05 per LINK.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 9
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-052",
+  "suite": "route_rounding",
+  "kind": "quote_then_prepare",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"bsc\", \"to_symbol\": \"USDC\", \"to_chain\": \"arbitrum\", \"amount\": 20}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "bsc",
+         "to_symbol": "USDC",
+         "to_chain": "arbitrum",
+         "amount": 20
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 20, \"amount_out\": \"19.9\", \"amount_out_usd\": 19.89, \"fee_bps\": 40, \"from\": \"20 USDC on BNB Chain\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 6, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 19.9 USDC on Arbitrum\", \"total_cost_usd\": 0.11}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "I've prepared the bridge: 20 USDC on BNB Chain for about 19.9 USDC on Arbitrum, through NEAR Intents. Total costs are about $0.11. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-053",
+  "suite": "route_rounding",
+  "kind": "rate_calc",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(1.32 / 23.6, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(1.32 / 23.6, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"0.06\"}"
+      ],
+      "ntok": 33
+     },
+     {
+      "text": "About $0.06 per UNI, which covers the fee and spread.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 17
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-054",
+  "suite": "route_rounding",
+  "kind": "nosrc_held_one",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": false,
+   "answer_forbidden": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"ethereum\", \"amount\": 50}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "ethereum",
+         "amount": 50
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"Not enough USDC on Arbitrum: you have 0.\"}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "You have no USDC on Arbitrum, so I can't prepare the bridge. Want me to deposit some first?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 24
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-055",
+  "suite": "route_rounding",
+  "kind": "swap_half",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"1.2484\", \"chain\": \"arbitrum\", \"symbol\": \"ETH\", \"usd\": 5636.5}, {\"amount\": \"3047.15\", \"chain\": \"arbitrum\", \"symbol\": \"ARB\", \"usd\": 3680.04}, {\"amount\": \"23.04\", \"chain\": \"solana\", \"symbol\": \"SOL\", \"usd\": 3321.68}, {\"amount\": \"795.45\", \"chain\": \"solana\", \"symbol\": \"USDC\", \"usd\": 795.45}, {\"amount\": \"0.1183\", \"chain\": \"ethereum\", \"symbol\": \"ETH\", \"usd\": 534.12}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"1.2484 / 2\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "1.2484 / 2"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"0.6242\"}"
+      ],
+      "ntok": 26
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"ETH\", \"to_chain\": \"ethereum\", \"amount\": 0.6242}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "arbitrum",
+         "to_symbol": "ETH",
+         "to_chain": "ethereum",
+         "amount": 0.6242
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 2818.25, \"amount_out\": \"0.621\", \"amount_out_usd\": 2804.16, \"fee_bps\": 15, \"from\": \"0.6242 ETH on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 12, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.621 ETH on Ethereum\", \"total_cost_usd\": 14.09}"
+      ],
+      "ntok": 54
+     },
+     {
+      "text": "I've prepared the bridge: 0.6242 ETH on Arbitrum for about 0.621 ETH on Ethereum, through NEAR Intents. Total costs are about $14.09. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 59
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-056",
+  "suite": "route_rounding",
+  "kind": "quote_then_prepare",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount\": 120}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "BTC",
+         "to_chain": "bitcoin",
+         "amount": 120
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 120, \"amount_out\": \"0.00152\", \"amount_out_usd\": 119.48, \"fee_bps\": 35, \"from\": \"120 USDC on Base\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 120, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.00152 BTC on Bitcoin\", \"total_cost_usd\": 0.52}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared the swap: 120 USDC on Base for about 0.00152 BTC on Bitcoin, through NEAR Intents. Total costs are about $0.52. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-057",
+  "suite": "route_rounding",
+  "kind": "special_btc",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount\": 50}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "BTC",
+         "to_chain": "bitcoin",
+         "amount": 50
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 50, \"amount_out\": \"0.000445\", \"amount_out_usd\": 49.86, \"fee_bps\": 10, \"from\": \"50 USDC on Base\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 90, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.000445 BTC on Bitcoin\", \"total_cost_usd\": 0.14}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I've prepared the swap: 50 USDC on Base for about 0.000445 BTC on Bitcoin, through NEAR Intents. Total costs are about $0.14. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-058",
+  "suite": "route_rounding",
+  "kind": "swap",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_contains_all": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "route_text",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"base\", \"amount\": 1000}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "base",
+         "amount": 1000
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 1000, \"amount_out\": \"996\", \"amount_out_usd\": 996, \"fee_bps\": 25, \"from\": \"1000 USDC on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 31, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 996 USDC on Base\", \"total_cost_usd\": 4}"
+      ],
+      "ntok": 54
+     },
+     {
+      "text": "I've set up the bridge for review: 1000 USDC on Arbitrum for about 996 USDC on Base, through NEAR Intents, with about $4 in total costs. Approve with Face ID or cancel, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "route_rounding-059",
+  "suite": "route_rounding",
+  "kind": "policy_block",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "answer_forbidden": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "decimals_ok",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"arbitrum\", \"amount\": 3}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "arbitrum",
+         "amount": 3
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Nothing was prepared. Tell the user why.\", \"reasons\": [\"Amount is above your daily limit for the assistant.\"], \"status\": \"blocked\"}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "I couldn't prepare that: Amount is above your daily limit for the assistant. Nothing has moved.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 20
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ }
+]

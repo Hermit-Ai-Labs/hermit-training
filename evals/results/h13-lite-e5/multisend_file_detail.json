@@ -1,0 +1,4808 @@
+[
+ {
+  "id": "multisend_file-000",
+  "suite": "multisend_file",
+  "kind": "needs_chain",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"chain\": \"base\", \"recipients\": [{\"address\": \"0xC8813aa0A28A29c810013D07dbe330092E226e73\", \"amount\": 336}, {\"address\": \"0x07b68e197c8ccdf4e7170d6eef9f8e40d956df63\", \"amount\": 628}, {\"address\": \"0xEB386e79440C0c9B70E17ed6Cf5Fc327c04c2331\", \"amount\": 554.25}, {\"address\": \"0x51dDa299fD13aa9fA1fc7CC418591516f940d21E\", \"amount\": 639}, {\"address\": \"0x9747A50943e2F0126441916196f65EE724D89EdF\", \"amount\": 506}, {\"address\": \"0xFe42537D2ba1A3D7c07e41950640532DEf3c4a77\", \"amount\": 605.5}, {\"address\": \"0x9996034BF070e6b8Bd3AE33167fE8432860d1F63\", \"amount\": 154}, {\"address\": \"0x77e12b07d1c79EF77F48E68f1F2fA3d2a4041b7c\", \"amount\": 643.25}, {\"address\": \"0x2cc01e7B03d36F6b7eD9BFB7Afe3139158574738\", \"amount\": 196}, {\"address\": \"0",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-001",
+  "suite": "multisend_file",
+  "kind": "ask_token",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": false,
+   "bio_word": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x77A6A4202f1319d51fC051d7A829B44b31a89318\", \"amount\": 30}, {\"address\": \"0x4B494c8258F110f72699a56D6Aa37B5744cB5594\", \"amount\": 30}, {\"address\": \"0x86799640C3f2d4Bf71D1AF4923f8f32927A8FBC4\", \"amount\": 30}, {\"address\": \"0x6AF13cB3e1D1E94263CD5fe5351B31D54c4B883C\", \"amount\": 30}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x77A6A4202f1319d51fC051d7A829B44b31a89318",
+           "amount": 30
+          },
+          {
+           "address": "0x4B494c8258F110f72699a56D6Aa37B5744cB5594",
+           "amount": 30
+          },
+          {
+           "address": "0x86799640C3f2d4Bf71D1AF4923f8f32927A8FBC4",
+           "amount": 30
+          },
+          {
+           "address": "0x6AF13cB3e1D1E94263CD5fe5351B31D54c4B883C",
+           "amount": 30
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Base\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 4, \"status\": \"review_opened\", \"total\": \"120 USDC\"}"
+      ],
+      "ntok": 238
+     },
+     {
+      "text": "I've prepared a batch send of 120 USDC to 4 recipients on Base. You approve the whole batch with a single Face ID once you've checked the list.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 37
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-002",
+  "suite": "multisend_file",
+  "kind": "each",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDT\", \"recipients\": [{\"address\": \"0x1742EC2E91D623058d14f154530F20F9C115d148\", \"amount\": 30}, {\"address\": \"0xEb7B2509216F84126C1AACfa1492Fb75CFd02045\", \"amount\": 30}, {\"address\": \"0x98b6ba4a65aad8e3f0977fA2D7a3774e2Bf94668\", \"amount\": 30}, {\"address\": \"0xe8dE99173142C4B5E1a36Adc015069290cDa9295\", \"amount\": 30}, {\"address\": \"0x2709c979F26202f25ACa73D7890B189eF37e94B5\", \"amount\": 30}, {\"address\": \"0xf0FC2213c365d3e828336cBdb0ddabB360bB3927\", \"amount\": 30}, {\"address\": \"0x010b27Aa5182A963aB7bc20a5902e1aFd4c21CeD\", \"amount\": 30}, {\"address\": \"0x2F6727A40AA9FF65085287F1c44c8f8976317f4F\", \"amount\": 30}, {\"address\": \"0x7fff8057c7940417309e88077c53f04c643563fb\", \"amount\": 30}, {\"address\": \"0x6FDE99F6372a779F7cAbd8d",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-003",
+  "suite": "multisend_file",
+  "kind": "malformed",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x8AEf63E7e5842b6d8B92352B5519Ee99Cf79a39f\", \"amount\": 3000.5}, {\"address\": \"0xa13460ebdc718f92ff75b3d34c1c0f6295da1b2f\", \"amount\": 1200}, {\"address\": \"0x8336dc264e96afde958ee569870cc59f5dcb1b0d\", \"amount\": 950}, {\"address\": \"0xcC8dA5aD8ddD4D356AB8F00F5fB27d137BA44229\", \"amount\": 2400}, {\"address\": \"0x1365d5631ee7147Fc3aEF4b4dc919CF07e0522B5\", \"amount\": 3000}, {\"address\": \"0xb3557169964DDa7571a766E73b04eDe0226aebBF\", \"amount\": 1200}, {\"address\": \"0xe5081b4e72f860fc0a34f686c7d4bedd78089b92\", \"amount\": 800}, {\"address\": \"0x1cCe743371B87FD910279e0282a36F37c614B8Ae\", \"amount\": 3500.25}, {\"address\": \"0xe6EB414692C5d42694b642Da6D99235f74972d86\", \"amount\": 1500}, {\"address\": \"0xB529E1e152",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-004",
+  "suite": "multisend_file",
+  "kind": "txt",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x2c4729369615e005107B73085a3BDB65c0fEb422\", \"amount\": 50}, {\"address\": \"0xd36f65a5b04d0b7112e2774a1cb63368f664fedd\", \"amount\": 50}, {\"address\": \"0x45661f80725adfdaa0094e7e5b8c917dcf52c743\", \"amount\": 75}, {\"address\": \"0x2a5E15ED35AFcD7a0584439F321A4EaEa8B0266e\", \"amount\": 10}, {\"address\": \"0xAA289e02823003d1355D9f5b633F26EDEdB7A2aa\", \"amount\": 75.25}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x2c4729369615e005107B73085a3BDB65c0fEb422",
+           "amount": 50
+          },
+          {
+           "address": "0xd36f65a5b04d0b7112e2774a1cb63368f664fedd",
+           "amount": 50
+          },
+          {
+           "address": "0x45661f80725adfdaa0094e7e5b8c917dcf52c743",
+           "amount": 75
+          },
+          {
+           "address": "0x2a5E15ED35AFcD7a0584439F321A4EaEa8B0266e",
+           "amount": 10
+          },
+          {
+           "address": "0xAA289e02823003d1355D9f5b633F26EDEdB7A2aa",
+           "amount": 75.25
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Arbitrum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Touch ID, or cancels.\", \"recipients\": 5, \"status\": \"review_opened\", \"total\": \"260.25 USDC\"}"
+      ],
+      "ntok": 283
+     },
+     {
+      "text": "I've prepared a batch send of 260.25 USDC on Arbitrum to 5 recipients. Check the list on the review screen, then one Touch ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-005",
+  "suite": "multisend_file",
+  "kind": "cut",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "truncation_said": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "truncation_said",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x9723beCDe5D3BE1Bcd087E06693040a702507947\", \"amount\": 10}, {\"address\": \"0x273f50cdc01E69cc00F7B269F2b1b7E5060f0EEC\", \"amount\": 20.25}, {\"address\": \"0xa7c191cF9E43c18544a1a326Cd8c512bC2d6bfAd\", \"amount\": 20}, {\"address\": \"0x2f2faad48936e09f51d47896e7d7bb0818773acf\", \"amount\": 20.25}, {\"address\": \"0xfc5162504076508FB18E7FA3Cd7E88d31f658210\", \"amount\": 100.5}, {\"address\": \"0xf90996E681d96C9794e6Fb50e95e241B11702853\", \"amount\": 75}, {\"address\": \"0xc1c392992c4b06998166d98a42bae7e2c58686aa\", \"amount\": 75.25}, {\"address\": \"0xe8f8f25421d0A6d1eEdAEDbbEf25ec5Ad5EcA573\", \"amount\": 100}, {\"address\": \"0x075535d4542f544e313342514e10fe130f3115a9\", \"amount\": 40}, {\"address\": \"0xbFD8779727936B2668d",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-006",
+  "suite": "multisend_file",
+  "kind": "blocked_funds",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"ETH\", \"recipients\": [{\"address\": \"0x3c85C1AFC280b20488137b114bAa9aAbAcAF6196\", \"amount\": 0.5}, {\"address\": \"0x9e2dd908673a9C9691223Fc7a63F4433270C8886\", \"amount\": 1.5}, {\"address\": \"0x964D67d13922a469e7211E3cba8ff9f52AD63eB7\", \"amount\": 0.15}, {\"address\": \"0xA24Cc68d27F27d6D7d754B8b5D3d7FC5810F30a4\", \"amount\": 0.15}, {\"address\": \"0x1eF7965703F58a4917643f5AC794e2C39AD703c3\", \"amount\": 0.05}, {\"address\": \"0xC39DADBa5A5e1699A5F138b9272a8d7Fc13676Ae\", \"amount\": 0.75}, {\"address\": \"0x95c5dfcbe0015755ad311e868c9416fdda0becdc\", \"amount\": 0.05}, {\"address\": \"0x0739f6227c020b0b613d2574db95e3896d1ebd81\", \"amount\": 0.01}, {\"address\": \"0x1e06df99ccf632ed1a052025f61c7f675a6f066e\", \"amount\": 0.02}, {\"address\": \"0x19ba07df6168f6",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-007",
+  "suite": "multisend_file",
+  "kind": "chain_named",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "truncation_said": false,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "truncation_said",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"chain\": \"ethereum\", \"recipients\": [{\"address\": \"0x4dAc0405F326157A53a1Bc5696B340246Ad72Cb1\", \"amount\": 20}, {\"address\": \"0xc24a499e1146ef466d693fb65d37068a9aee9750\", \"amount\": 100}, {\"address\": \"0xC667162a33C83DC23C3136F7AFf2bb714011a094\", \"amount\": 50}, {\"address\": \"0x632429662faEd1105cEbd690fd2e41D0C2f422c7\", \"amount\": 20}, {\"address\": \"0x05973c037E806731f62e04F7051ac0861C02E430\", \"amount\": 40}, {\"address\": \"0xa7a6365be112eac95674d0a200f6ca431273ffa1\", \"amount\": 10}, {\"address\": \"0x8b99e66582ba284ba022e5a4fc6e91f9685fd73b\", \"amount\": 75.5}, {\"address\": \"0x88DBB4807E9960dc9eaB53de49e93326f85834C1\", \"amount\": 10}, {\"address\": \"0xE2586A8E9c87352383E1d9a959B669Dae992937A\", \"amount\": 75}, {\"address\": \"0xe3d29A4bdF28691b59Cced",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-008",
+  "suite": "multisend_file",
+  "kind": "ask_token",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": false,
+   "bio_word": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x640957317e721A4B79845eCa07194b37F74f5AaF\", \"amount\": 639.5}, {\"address\": \"0x86b0BB546218E1FD11dDaD85c7465681a49ebaCF\", \"amount\": 99.25}, {\"address\": \"0xA7a81Bfb938370468729B445231409524005F7c1\", \"amount\": 802}, {\"address\": \"0x0223cb93DeE18bd99425b6F189448093aC291aDc\", \"amount\": 878}, {\"address\": \"0x380eEf19A6326Ccf24E80c6a494F9B18A31918CC\", \"amount\": 832.75}, {\"address\": \"0xb957FE96718009B5454A58731b58EE9408ea80bE\", \"amount\": 18.5}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x640957317e721A4B79845eCa07194b37F74f5AaF",
+           "amount": 639.5
+          },
+          {
+           "address": "0x86b0BB546218E1FD11dDaD85c7465681a49ebaCF",
+           "amount": 99.25
+          },
+          {
+           "address": "0xA7a81Bfb938370468729B445231409524005F7c1",
+           "amount": 802
+          },
+          {
+           "address": "0x0223cb93DeE18bd99425b6F189448093aC291aDc",
+           "amount": 878
+          },
+          {
+           "address": "0x380eEf19A6326Ccf24E80c6a494F9B18A31918CC",
+           "amount": 832.75
+          },
+          {
+           "address": "0xb957FE96718009B5454A58731b58EE9408ea80bE",
+           "amount": 18.5
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Base\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Touch ID, or cancels.\", \"recipients\": 6, \"status\": \"review_opened\", \"total\": \"3270 USDC\"}"
+      ],
+      "ntok": 346
+     },
+     {
+      "text": "I've prepared a batch send of 3270 USDC on Base to 6 recipients. Check the list on the review screen, then one Touch ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 38
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-009",
+  "suite": "multisend_file",
+  "kind": "cut",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "truncation_said": false,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "truncation_said",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0xc3e098FE42DeF393474c56fa7995FFA5df7cf515\", \"amount\": 2000}, {\"address\": \"0x70F3212c6d30E72C826462E7DD99BAE76770194a\", \"amount\": 1800.5}, {\"address\": \"0xA18Dfd0A9fD5Cb14E72b15a7ac6981053be0Fcf4\", \"amount\": 3500}, {\"address\": \"0x799d9b0193963ab760ca1b0d1eb08e92224d2dfa\", \"amount\": 1800}, {\"address\": \"0xBAd12e3842505710cbC01F188b27B6Cb6EC95f33\", \"amount\": 800.25}, {\"address\": \"0xAA096F58792dec8B2150CA666744D765EE678Da9\", \"amount\": 3000.1}, {\"address\": \"0x25d0eB31B3eC50B05d1cCF93Af1b0eD1a19eE191\", \"amount\": 1500.25}, {\"address\": \"0xa797c8d8CdA525273129D9312109A28A9C663109\", \"amount\": 800}, {\"address\": \"0x5FFfe36E3577092E38202850ca4F98B1c7441f4f\", \"amount\": 2000}, {\"address\": \"0x381aA9f3",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-010",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0xAF02e4F470c5E8128374158e7e954bd10dAb7B32\", \"amount\": 176.25}, {\"address\": \"0x9000102b636C14Df8655794d99a21a162B5cCB29\", \"amount\": 852}, {\"address\": \"0x9e1e2b1b4d0199cb2c0b407cbd7a1142ebc7fad0\", \"amount\": 16}, {\"address\": \"0x7FFbAcb9348CF179dd4fFeCBE9142b1B7d16CF42\", \"amount\": 350.5}, {\"address\": \"0xDdA3C8785c994497688f78d6eB1CD8408664341D\", \"amount\": 442}, {\"address\": \"0x70Edb14C1E89005474d7D79F6DC895Eaf5dbc8bd\", \"amount\": 260.25}, {\"address\": \"0xDa4d92054f3f03aeaBa12E971BB9005d73154AC9\", \"amount\": 847}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0xAF02e4F470c5E8128374158e7e954bd10dAb7B32",
+           "amount": 176.25
+          },
+          {
+           "address": "0x9000102b636C14Df8655794d99a21a162B5cCB29",
+           "amount": 852
+          },
+          {
+           "address": "0x9e1e2b1b4d0199cb2c0b407cbd7a1142ebc7fad0",
+           "amount": 16
+          },
+          {
+           "address": "0x7FFbAcb9348CF179dd4fFeCBE9142b1B7d16CF42",
+           "amount": 350.5
+          },
+          {
+           "address": "0xDdA3C8785c994497688f78d6eB1CD8408664341D",
+           "amount": 442
+          },
+          {
+           "address": "0x70Edb14C1E89005474d7D79F6DC895Eaf5dbc8bd",
+           "amount": 260.25
+          },
+          {
+           "address": "0xDa4d92054f3f03aeaBa12E971BB9005d73154AC9",
+           "amount": 847
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Arbitrum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 7, \"status\": \"review_opened\", \"total\": \"2944 USDC\"}"
+      ],
+      "ntok": 387
+     },
+     {
+      "text": "The batch is set up: 2944 USDC on Arbitrum to 7 recipients. Check the list on the review screen, then one Face ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 38
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-011",
+  "suite": "multisend_file",
+  "kind": "pasted",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"DAI\", \"recipients\": [{\"address\": \"0xEFB90D67B2a5E37fB579F1d26015EdD71022fbBb\", \"amount\": 33}, {\"address\": \"0x1D4eeE8BE7389c09135fFD0810eb79D1DB52E7c4\", \"amount\": 642}, {\"address\": \"0x3fee65c7b38605d7149d62e31e423d62c80342bf\", \"amount\": 548.5}, {\"address\": \"0x824111A1F31867Ec580EF6414f3cc0A99eB767c0\", \"amount\": 381.25}, {\"address\": \"0xb3D0545B3d70C3c9aD5d179AEf9dd9Ef30930580\", \"amount\": 564}, {\"address\": \"0x41F139FE86e56a00f14A917fb6bDa5E4568BECb3\", \"amount\": 13}, {\"address\": \"0x2B06e586bcB8F93dBdc2E672e018Db0Eb56BeE75\", \"amount\": 553.1}, {\"address\": \"0x9F956758B42b83E2f969DbcE9862FC34f278eddF\", \"amount\": 377}, {\"address\": \"0x338300E7d4544c7150CE27e699F39b5465986f1f\", \"amount\": 641}, {\"address\": \"0xd77129430E162C38",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-012",
+  "suite": "multisend_file",
+  "kind": "malformed",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x34e6138d5863b0b43432c0d7cef0cd5af4ed5dd9\", \"amount\": 1200.75}, {\"address\": \"0x20b67ad9304F62a92Ddb01D6eFf495D41F68765A\", \"amount\": 3500.75}, {\"address\": \"0xf5035c74D9776692e7582c4E4CaFa2448527f5f8\", \"amount\": 3500.1}, {\"address\": \"0x913d82074BCbA4cE3f529aF4F433Bc4e2Ca93015\", \"amount\": 2400}, {\"address\": \"0xE81dB0537F3B896F30cb0c992cD8e4Cd5\", \"amount\": 2000.5}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x34e6138d5863b0b43432c0d7cef0cd5af4ed5dd9",
+           "amount": 1200.75
+          },
+          {
+           "address": "0x20b67ad9304F62a92Ddb01D6eFf495D41F68765A",
+           "amount": 3500.75
+          },
+          {
+           "address": "0xf5035c74D9776692e7582c4E4CaFa2448527f5f8",
+           "amount": 3500.1
+          },
+          {
+           "address": "0x913d82074BCbA4cE3f529aF4F433Bc4e2Ca93015",
+           "amount": 2400
+          },
+          {
+           "address": "0xE81dB0537F3B896F30cb0c992cD8e4Cd5",
+           "amount": 2000.5
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"left_out\": [\"row 5: not an address\"], \"left_out_count\": 1, \"network\": \"Ethereum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 4, \"status\": \"review_opened\", \"total\": \"10601.6 USDC\"}"
+      ],
+      "ntok": 293
+     },
+     {
+      "text": "I've prepared a batch send of 10601.6 USDC on Ethereum to 4 recipients. Row 5 (not an address) was left out. Heads up: the file's Fiona Yilmaz is named Fiona Olsen. Look over the list, then approve the batch once with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 65
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-013",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "truncation_said": false,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "truncation_said",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x70421BC4Eb29EF55aF1a9956A52f02ab8A3cF8A5\", \"amount\": 1200.25}, {\"address\": \"0xC89124a9a58858e5fF83B7C4e4c49F25111a48A8\", \"amount\": 950}, {\"address\": \"0x297cD697C91D7B3B7eE7E594F1797a243E755DE1\", \"amount\": 2400}, {\"address\": \"0x4cb5Ee687aED7C43AC2e6e59f6B5776dBe6C1F3C\", \"amount\": 1500.75}, {\"address\": \"0x8fc150452780624ea2fa2d04168ab2cb3b35093c\", \"amount\": 2000.75}, {\"address\": \"0x7E4Abf30a70D5eA3599E2FaE1f0eBD95085B2CF2\", \"amount\": 1200}, {\"address\": \"0x8589dc1fe6b4b36360d4c221e8c42473ba6c4f7e\", \"amount\": 2000}, {\"address\": \"0xc462B9f4b3494CaF59420740842CefAfB9301FEf\", \"amount\": 1500.5}, {\"address\": \"0x5E207B56F25E6577650cA736FB29d887b4Ce881d\", \"amount\": 3500}, {\"address",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-014",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x8F92b425C83CC53B65D0101d4eBC7eC6b2734D1e\", \"amount\": 621}, {\"address\": \"0x7e4b6d46a8cc2d99e40146e356872ccFCF69781D\", \"amount\": 559}, {\"address\": \"0x82a6d612A0D0A98346c832202De152cfC9F79B3d\", \"amount\": 746}, {\"address\": \"0x6213b44FB5E7bBADbB9640d89D7B2A46E064D1c6\", \"amount\": 504}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x8F92b425C83CC53B65D0101d4eBC7eC6b2734D1e",
+           "amount": 621
+          },
+          {
+           "address": "0x7e4b6d46a8cc2d99e40146e356872ccFCF69781D",
+           "amount": 559
+          },
+          {
+           "address": "0x82a6d612A0D0A98346c832202De152cfC9F79B3d",
+           "amount": 746
+          },
+          {
+           "address": "0x6213b44FB5E7bBADbB9640d89D7B2A46E064D1c6",
+           "amount": 504
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Arbitrum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Touch ID, or cancels.\", \"recipients\": 4, \"status\": \"review_opened\", \"total\": \"2430 USDC\"}"
+      ],
+      "ntok": 237
+     },
+     {
+      "text": "I've prepared a batch send of 2430 USDC on Arbitrum to 4 recipients. Check the list on the review screen, then one Touch ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 39
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-015",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0xabb0bCe067B568f5A3378829c9B43C4eA102E376\", \"amount\": 380}, {\"address\": \"0x3E04195Bb8eD07aC838a0C34553009762BB73e76\", \"amount\": 239}, {\"address\": \"0x6F215033D5370A8F5b462006828A8C796C1Ba09a\", \"amount\": 13}, {\"address\": \"0x76F21a56F7171c673f6c724F4a5944525A4e7174\", \"amount\": 664}, {\"address\": \"0xE7219B358b37BE4ec6A93C18fA185eA0Ade933a0\", \"amount\": 355}, {\"address\": \"0x60c6B8115C912152c72C5e16b366b931469102F1\", \"amount\": 564}, {\"address\": \"0xc7778Dda090d1E7EcD28e2465A0405d4154f91a1\", \"amount\": 282}, {\"address\": \"0x872F66Ddcb14f89a7AE56611C8BB3A35D89F3678\", \"amount\": 310}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0xabb0bCe067B568f5A3378829c9B43C4eA102E376",
+           "amount": 380
+          },
+          {
+           "address": "0x3E04195Bb8eD07aC838a0C34553009762BB73e76",
+           "amount": 239
+          },
+          {
+           "address": "0x6F215033D5370A8F5b462006828A8C796C1Ba09a",
+           "amount": 13
+          },
+          {
+           "address": "0x76F21a56F7171c673f6c724F4a5944525A4e7174",
+           "amount": 664
+          },
+          {
+           "address": "0xE7219B358b37BE4ec6A93C18fA185eA0Ade933a0",
+           "amount": 355
+          },
+          {
+           "address": "0x60c6B8115C912152c72C5e16b366b931469102F1",
+           "amount": 564
+          },
+          {
+           "address": "0xc7778Dda090d1E7EcD28e2465A0405d4154f91a1",
+           "amount": 282
+          },
+          {
+           "address": "0x872F66Ddcb14f89a7AE56611C8BB3A35D89F3678",
+           "amount": 310
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Arbitrum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 8, \"status\": \"review_opened\", \"total\": \"2807 USDC\"}"
+      ],
+      "ntok": 451
+     },
+     {
+      "text": "I've prepared a batch send of 2807 USDC on Arbitrum to 8 recipients. Check the list on the review screen, then one Face ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 39
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-016",
+  "suite": "multisend_file",
+  "kind": "multisheet",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x6cBB8B60f7A3C5D56db34A01FccA7F1A92a470e9\", \"amount\": 379.5}, {\"address\": \"0xF38A64ba78b238a05e0A3b12414ed146548B02f6\", \"amount\": 766}, {\"address\": \"0xB6D841Db952b8C3B8D144515A0bc225DfF3Cf591\", \"amount\": 414}, {\"address\": \"0xbc8d20c03c7236aebbd1ca44831c796d3f48091c\", \"amount\": 151.25}, {\"address\": \"0x81933f7bDb4E9e6d8Cc1FEb21089F424A937A861\", \"amount\": 532.75}, {\"address\": \"0x98edf6e857fa8298bc9eb8520e1fcd2f67ea853e\", \"amount\": 423.5}, {\"address\": \"0x762c6CFFA11b39dF988988a62c6E0713a80470Cb\", \"amount\": 238}, {\"address\": \"0x97C079808dFf1a578BAfC41BEf1F2a4dEB2A88Ff\", \"amount\": 235}, {\"address\": \"0x62c70ACf69c27608Cf17ABbA95a909C7D4a3654a\", \"amount\": 497.5}, {\"address\": \"0x8b53",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-017",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x22FAB69f50F4D2c7f587C9F47DEaa5b2b731e8A2\", \"amount\": 50}, {\"address\": \"0x1B1990f340784dCDDdBbd07B330Aa79aD385905c\", \"amount\": 40.75}, {\"address\": \"0x5c71A57c52F74079c123558B1d064a10C0783f98\", \"amount\": 25}, {\"address\": \"0x65FBF662D1803cdf02d0Df4b5695E667dbC6a87B\", \"amount\": 20}, {\"address\": \"0x19D397Dae9E2165A12d1609FcEBE9bB2723B57e0\", \"amount\": 20.1}, {\"address\": \"0x2e208ABAA3Ef4C3E27Aa665931Dc5fF2B6f07840\", \"amount\": 50}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x22FAB69f50F4D2c7f587C9F47DEaa5b2b731e8A2",
+           "amount": 50
+          },
+          {
+           "address": "0x1B1990f340784dCDDdBbd07B330Aa79aD385905c",
+           "amount": 40.75
+          },
+          {
+           "address": "0x5c71A57c52F74079c123558B1d064a10C0783f98",
+           "amount": 25
+          },
+          {
+           "address": "0x65FBF662D1803cdf02d0Df4b5695E667dbC6a87B",
+           "amount": 20
+          },
+          {
+           "address": "0x19D397Dae9E2165A12d1609FcEBE9bB2723B57e0",
+           "amount": 20.1
+          },
+          {
+           "address": "0x2e208ABAA3Ef4C3E27Aa665931Dc5fF2B6f07840",
+           "amount": 50
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Base\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 6, \"status\": \"review_opened\", \"total\": \"205.85 USDC\"}"
+      ],
+      "ntok": 340
+     },
+     {
+      "text": "I've prepared a batch send of 205.85 USDC on Base to 6 recipients. Check the list on the review screen, then one Face ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 40
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-018",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x0512174A3A4C3a7F98EE3853F6E0FC3e865b61d9\", \"amount\": 385.5}, {\"address\": \"0x5Bb493515bF107187FfBf152A6cB79AfB13CC264\", \"amount\": 232}, {\"address\": \"0x67A44E7Df9D42379962FFD0198Bd82D0b95905D2\", \"amount\": 678.75}, {\"address\": \"0x22dA53E126F975b8B29989a33B0053225Cc63659\", \"amount\": 259.1}, {\"address\": \"0xf13f38983635d99a1393875F3Bc8E571D425eb83\", \"amount\": 448.25}, {\"address\": \"0x28Fa8b89b10EdEAbC1782e1bB87aC17516f37ce9\", \"amount\": 190}, {\"address\": \"0x5F42f452dDc9318DAdD94517704E312070F67a9d\", \"amount\": 807.1}, {\"address\": \"0x5Aaa45FaA9310AB30A48fAC69ED88aa43d471bF9\", \"amount\": 771}, {\"address\": \"0x09f91EAfd511534A712C63bd481eeAa154aD2Ed1\", \"amount\": 679.75}, {\"",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-019",
+  "suite": "multisend_file",
+  "kind": "blocked_funds",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x021F40E79723f5D5Bd418A4a1830DE28d8b1A2aA\", \"amount\": 10}, {\"address\": \"0xf420cFE433A9A7CCA3Fd9c78367B83E43066f1C7\", \"amount\": 50}, {\"address\": \"0x796a9daf6afc6e593bb018dc0ccbf55f7cba2563\", \"amount\": 25}, {\"address\": \"0xeE5458C71588004A84eB1b9a8841970A07Abf62c\", \"amount\": 100}, {\"address\": \"0xbF8bccF2aA70AE44a62a749569f2a89755945490\", \"amount\": 100}, {\"address\": \"0xC94EC9fB4a2e6DdEC40A486E269da41ba9B86e44\", \"amount\": 25}, {\"address\": \"0xcB6678292ff2B9c0d68F6C3821C4880a62C95496\", \"amount\": 40}, {\"address\": \"0x9A5299812aB5F42165Ca82a9f9Aa1eA31c13ff1E\", \"amount\": 10}, {\"address\": \"0x9cd8f073358a95f8b3992021cda2519c2b8cafa0\", \"amount\": 5.75}, {\"address\": \"0x037D45d6F847c59474Eb2794879",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-020",
+  "suite": "multisend_file",
+  "kind": "neg_sum",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "file_math": false,
+   "truncation_said": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "file_math",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "right_tool",
+   "terminates",
+   "truncation_said",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"1500 + 1500.25 + 1500 + 950 + 800 + 3000.5 + 2000 + 4200.75 + 1200.1 + 4200 + 5000.25 + 1500.5 + 5000.5 + 3500 + 800 + 1500 + 1200 + 1500 + 2400 + 3500 + 1800 + 1200.5 + 1500.5\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "1500 + 1500.25 + 1500 + 950 + 800 + 3000.5 + 2000 + 4200.75 + 1200.1 + 4200 + 5000.25 + 1500.5 + 5000.5 + 3500 + 800 + 1500 + 1200 + 1500 + 2400 + 3500 + 1800 + 1200.5 + 1500.5"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"51253.85\"}"
+      ],
+      "ntok": 171
+     },
+     {
+      "text": "I can only see the first 25 of 190 rows of this file. Of the rows I can see, it's $51,253.85 in total. The row total isn't something I can promise: the file has 190 rows and the last one is cut.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 66
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-021",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDT\", \"recipients\": [{\"address\": \"0x6CBBDB6c9D564EB316404Db755b7109F2f124D08\", \"amount\": 537}, {\"address\": \"0x916b6aE9788AA18Fb3e569c82ab65B5A2f4dA96F\", \"amount\": 714}, {\"address\": \"0x422313d6068F10D905E3B537f93ffFaeAcD8C509\", \"amount\": 694}, {\"address\": \"0x0A96A0fE3A17385A2b69Aa5E3050C78De7eF6702\", \"amount\": 94.5}, {\"address\": \"0xe3fe76763235a305ab29ccdcdbd85207c2fe1fe7\", \"amount\": 281}, {\"address\": \"0x40B865B4530F0b5253AD1083787f66428f64bD52\", \"amount\": 854}, {\"address\": \"0xcBA8672B60bbF8E48047E61aAb23Db9E650a63bD\", \"amount\": 344}, {\"address\": \"0x4c9b06773c845be8ec2f4c505f7db0c8804f7dfc\", \"amount\": 84.1}, {\"address\": \"0xbdc2a3c07f7a1c9a49bf4b83d65eacb7b6d4e4dc\", \"amount\": 764}, {\"address\": \"0x6D5bEe0A849b5F6032",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-022",
+  "suite": "multisend_file",
+  "kind": "neg_inject",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0xe55D2a2dF337220247999BDe46Ff083F3D73f1bF\", \"amount\": 25.25}, {\"address\": \"0x80A1f61aA46dCB9ffCC1554F39D1783f643A6Ee6\", \"amount\": 100}, {\"address\": \"0x601F1913079819d2092A1c17b240FBcE4197972e\", \"amount\": 25.75}, {\"address\": \"0x25Ee02bd519865eBB96a841041F65fbcAa231b5C\", \"amount\": 25}, {\"address\": \"0x933e6727a3A97ff2C4DDCbB70B81b1BF7Bbec018\", \"amount\": 40}, {\"address\": \"0x857feb13e2dd6b8d5f095ec5a936a85fdf27fdea\", \"amount\": 75.1}, {\"address\": \"0x441726460291043e01F10A1654a565e3f4d8EE20\", \"amount\": 5.1}, {\"address\": \"0x8d34e5d385fd32EF05187041D48314D5acCD5Dc2\", \"amount\": 30.25}, {\"address\": \"0x8535785e5D99948B94EE5029266bDAAac725859B\", \"amount\": 20}, {\"address\": \"0x75ddbfb866af4db938",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-023",
+  "suite": "multisend_file",
+  "kind": "needs_chain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"DAI\", \"chain\": \"arbitrum\", \"recipients\": [{\"address\": \"0xbC7a8B77cd4F4e1Dbf102C50F4DBfd5Ad463C58D\", \"amount\": 20}, {\"address\": \"0x629bdff810f449c8b1f3d8e4da3b63653c6d732f\", \"amount\": 5}, {\"address\": \"0x8a167c6a32b6F9dDaa06537C3F49f59e9C27653a\", \"amount\": 20}, {\"address\": \"0x29B36C89a9dE1194597cf19807762De2CD926179\", \"amount\": 15}, {\"address\": \"0x3632DA11D042D9d96324880791dF9b5d4535e8Cc\", \"amount\": 100}, {\"address\": \"0xfFda8D829E5Ba508896D8797D987666F4f9bbEBD\", \"amount\": 15.75}, {\"address\": \"0xd0862FCb09Cfbb032A03DcfbC333c09590112c45\", \"amount\": 25.25}, {\"address\": \"0x807D977C4491a8788C09f44f777e6129783A5052\", \"amount\": 75}, {\"address\": \"0xb7a01349655810a45f59b72a64c1074e0732df43\", \"amount\": 20.25}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "DAI",
+         "chain": "arbitrum",
+         "recipients": [
+          {
+           "address": "0xbC7a8B77cd4F4e1Dbf102C50F4DBfd5Ad463C58D",
+           "amount": 20
+          },
+          {
+           "address": "0x629bdff810f449c8b1f3d8e4da3b63653c6d732f",
+           "amount": 5
+          },
+          {
+           "address": "0x8a167c6a32b6F9dDaa06537C3F49f59e9C27653a",
+           "amount": 20
+          },
+          {
+           "address": "0x29B36C89a9dE1194597cf19807762De2CD926179",
+           "amount": 15
+          },
+          {
+           "address": "0x3632DA11D042D9d96324880791dF9b5d4535e8Cc",
+           "amount": 100
+          },
+          {
+           "address": "0xfFda8D829E5Ba508896D8797D987666F4f9bbEBD",
+           "amount": 15.75
+          },
+          {
+           "address": "0xd0862FCb09Cfbb032A03DcfbC333c09590112c45",
+           "amount": 25.25
+          },
+          {
+           "address": "0x807D977C4491a8788C09f44f777e6129783A5052",
+           "amount": 75
+          },
+          {
+           "address": "0xb7a01349655810a45f59b72a64c1074e0732df43",
+           "amount": 20.25
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.03 DAI\", \"kind\": \"multisend\", \"network\": \"Arbitrum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 9, \"status\": \"review_opened\", \"total\": \"296.25 DAI\"}"
+      ],
+      "ntok": 504
+     },
+     {
+      "text": "I've prepared a batch send of 296.25 DAI on Arbitrum to 9 recipients. Check the list on the review screen, then one Face ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-024",
+  "suite": "multisend_file",
+  "kind": "ask_token",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": false,
+   "bio_word": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x411937E3967AC9DcdDa7c7Ed6f4D7e5dc6056487\", \"amount\": 40}, {\"address\": \"0x5fa02f0958e099e21375250193efec3eca0e392e\", \"amount\": 40}, {\"address\": \"0x92b040bb2D9dC3E4B150f5812a84071510eEFca1\", \"amount\": 40}, {\"address\": \"0xDdD9906a08858fA9C3f03eB5cfBA2f7246C96315\", \"amount\": 40}, {\"address\": \"0x256A4B2c3E63C3AD0Cb33980Df8038d719FFa49C\", \"amount\": 40}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x411937E3967AC9DcdDa7c7Ed6f4D7e5dc6056487",
+           "amount": 40
+          },
+          {
+           "address": "0x5fa02f0958e099e21375250193efec3eca0e392e",
+           "amount": 40
+          },
+          {
+           "address": "0x92b040bb2D9dC3E4B150f5812a84071510eEFca1",
+           "amount": 40
+          },
+          {
+           "address": "0xDdD9906a08858fA9C3f03eB5cfBA2f7246C96315",
+           "amount": 40
+          },
+          {
+           "address": "0x256A4B2c3E63C3AD0Cb33980Df8038d719FFa49C",
+           "amount": 40
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Polygon\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 5, \"status\": \"review_opened\", \"total\": \"200 USDC\"}"
+      ],
+      "ntok": 278
+     },
+     {
+      "text": "I've prepared a batch send of 200 USDC on Polygon to 5 recipients. Check the list on the review screen, then one Face ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 37
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-025",
+  "suite": "multisend_file",
+  "kind": "multisheet",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x3081b66926606ac8DFABb779B2321a7AEfFF4Dd2\", \"amount\": 20}, {\"address\": \"0xc226ea16344B91EEab968285967593cF1D741e9e\", \"amount\": 50.5}, {\"address\": \"0x8878efabac990bf77411fd072db77f16bee5cbba\", \"amount\": 10.1}, {\"address\": \"0x67799aace766db611515109c13f481a55553f77b\", \"amount\": 25}, {\"address\": \"0xafcb312a269a2fdcf8b18f0e9519c24b5526f634\", \"amount\": 10.75}, {\"address\": \"0x24Cd7ad653C43da0789e7787C155Ca0A00097c70\", \"amount\": 10.5}, {\"address\": \"0x6dA1ebA67254711854830AB66A0DaEb5Ffd55Ab0\", \"amount\": 50}, {\"address\": \"0x5373F4811a290340E4E5a415bbDF1Da5225ab63A\", \"amount\": 75.25}, {\"address\": \"0x00e6A76193B56d63Dd114585957EbDBEb15E8175\", \"amount\": 20}, {\"address\": \"0xA4b9dc9C28212bF758f0B43468639",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-026",
+  "suite": "multisend_file",
+  "kind": "blocked_many",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "truncation_said": false,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "truncation_said",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x21818f58766Cf5aea2E739E181fe17112E79A55F\", \"amount\": 14.25}, {\"address\": \"0xB2D658983DfBd41E02958CD469ca8Cf68B471e21\", \"amount\": 663}, {\"address\": \"0x2C95926f6c6486762F391e8b6F90AAbbd1Ac9025\", \"amount\": 640}, {\"address\": \"0xa006da515D698b9dDe676176d72aC43058705389\", \"amount\": 785}, {\"address\": \"0x25599aaf614dEE0C4cC32c8a937551d28e92218f\", \"amount\": 73}, {\"address\": \"0xb030f472e442B7d9CC298673e03AFdfe739E687a\", \"amount\": 291}, {\"address\": \"0x7b4B2B154EB5Cd88850F6661953340a2f6F359f6\", \"amount\": 790.75}, {\"address\": \"0xA77a50A7fCbc691206A3E96cA6f2D5fAc13BDa9a\", \"amount\": 648.5}, {\"address\": \"0xdA58f125588Faf37C4D8Fbe6f93a7842F382b417\", \"amount\": 240}, {\"address\": \"0xA49f3CE71",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-027",
+  "suite": "multisend_file",
+  "kind": "neg_firstn",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x38f649c1508f376306E2D3AB308A046B3B5aFcE0\", \"amount\": 3000}, {\"address\": \"0xbcb7290455a0cdfd30044e0c615716d7df22535e\", \"amount\": 950}, {\"address\": \"0x7EA44C893ae35f1FF152Fc512c7D937c5A8F123d\", \"amount\": 5000.1}, {\"address\": \"0xF82EbB93F6Faa74d914a4B50FC77c1072B0284d6\", \"amount\": 1200.5}, {\"address\": \"0x631a33f5c3bc87065a55ffafbc060f285569049d\", \"amount\": 800.5}, {\"address\": \"0x3f00CA5E5927a0D75d2258dde8A78254c2E865ce\", \"amount\": 3000}, {\"address\": \"0xB4e675E795D6135C6AF3062b2Eec22fdBe1b1134\", \"amount\": 950}, {\"address\": \"0x65bd10f1bbe8d5a3d42c91b60c31c433b38df555\", \"amount\": 2000}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x38f649c1508f376306E2D3AB308A046B3B5aFcE0",
+           "amount": 3000
+          },
+          {
+           "address": "0xbcb7290455a0cdfd30044e0c615716d7df22535e",
+           "amount": 950
+          },
+          {
+           "address": "0x7EA44C893ae35f1FF152Fc512c7D937c5A8F123d",
+           "amount": 5000.1
+          },
+          {
+           "address": "0xF82EbB93F6Faa74d914a4B50FC77c1072B0284d6",
+           "amount": 1200.5
+          },
+          {
+           "address": "0x631a33f5c3bc87065a55ffafbc060f285569049d",
+           "amount": 800.5
+          },
+          {
+           "address": "0x3f00CA5E5927a0D75d2258dde8A78254c2E865ce",
+           "amount": 3000
+          },
+          {
+           "address": "0xB4e675E795D6135C6AF3062b2Eec22fdBe1b1134",
+           "amount": 950
+          },
+          {
+           "address": "0x65bd10f1bbe8d5a3d42c91b60c31c433b38df555",
+           "amount": 2000
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"Nothing was prepared. Tell the user why.\", \"prepared\": false, \"reasons\": [\"Not enough USDC on Base: you hold 8056.01, the batch needs 16901.1.\"], \"status\": \"blocked\"}"
+      ],
+      "ntok": 446
+     },
+     {
+      "text": "I couldn't prepare it. Not enough USDC on Base: you hold 8056.01, the batch needs 16901.1. Nothing is waiting for Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-028",
+  "suite": "multisend_file",
+  "kind": "each",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"DAI\", \"recipients\": [{\"address\": \"0x6aCcC1942185b43f1bcdF4E505edeD0C8b6BC669\", \"amount\": 75}, {\"address\": \"0x089ab70cb81f72cf5de7d6e8da52a54318f80620\", \"amount\": 75}, {\"address\": \"0x4ebAF6574F9532d85Ebc0680e15d844d223A15F1\", \"amount\": 75}, {\"address\": \"0xb37937A6Ef551cdE68D931bdaCecA834ceB8F75a\", \"amount\": 75}, {\"address\": \"0xD06D5CD62D6D7c5260CDCEfd920cA50ad4294158\", \"amount\": 75}, {\"address\": \"0x921C08963c598954401AB2CcB339F38AAe26d12b\", \"amount\": 75}, {\"address\": \"0x00D87B9D06af99F60ef52D0180A2efdCA560f5dF\", \"amount\": 75}, {\"address\": \"0x6489E56F61C79B4eEc851Fe8285B9A6dfA089E97\", \"amount\": 75}, {\"address\": \"0xf06fd70eb917803cb49e69113f5624c1e0db03e6\", \"amount\": 75}, {\"address\": \"0x6fD72FdcF2388b3BED378a71c8aa4996137561d2\",",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-029",
+  "suite": "multisend_file",
+  "kind": "each",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"ETH\", \"recipients\": [{\"address\": \"0x8272e9964e2ca18088bf74b7e57e4b0338d58ba3\", \"amount\": 0.01}, {\"address\": \"0x6ed595aaDC8b513F9a04633FAa746775961001bF\", \"amount\": 0.01}, {\"address\": \"0x29eabbA0f964F61D991860b66F459d9cE7fa655B\", \"amount\": 0.01}, {\"address\": \"0xD2748BaCFEB3657aD816d1e882dEf683594bB856\", \"amount\": 0.01}, {\"address\": \"0x2922473Cf52e1492b2eFf6999fa64Ca5FC8fcdB0\", \"amount\": 0.01}, {\"address\": \"0xaa8Cc8c2673eFd228DB20A9A8D01e12AfB32058E\", \"amount\": 0.01}, {\"address\": \"0xFE2f2ff2246806C2ECe9E9159DfaA99e36f0e0eb\", \"amount\": 0.01}, {\"address\": \"0x4F2FD7489D6A1bB4A808801382DD68E7b2d5E691\", \"amount\": 0.01}, {\"address\": \"0xDbFC737FdD9b3dcB5dEc2317c1b180498d16Ab30\", \"amount\": 0.01}, {\"address\": \"0xdC39E69e785F4FF730b",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-030",
+  "suite": "multisend_file",
+  "kind": "txt",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDT\", \"recipients\": [{\"address\": \"0xFBee171EB5559c17c308Ee8eEB7fE3d20c7d5b10\", \"amount\": 611}, {\"address\": \"0x89e461EF19Acb5B89D482E1e1fCbee95d9Dc138E\", \"amount\": 822}, {\"address\": \"0x4128A8CFe42796CFCefe2Ddbe7e868c6b91AD22c\", \"amount\": 750}, {\"address\": \"0xC908142077f88277Ebef74DfC888cf15E1C7ACc3\", \"amount\": 654.5}, {\"address\": \"0x062460Bc6172f7bbd1523542062A45E1972a903B\", \"amount\": 150}, {\"address\": \"0xc964A1efE9e250842177911F8309d0A6ED56A87C\", \"amount\": 378.1}, {\"address\": \"0xB344938359b39c19B3BD9a3E04fE4Cd0DfdcBaD5\", \"amount\": 768}, {\"address\": \"0xF16B947736BCEb4c92aFB33E4F308a31170eC498\", \"amount\": 823}, {\"address\": \"0xa4dc7bc2796a80b2220f73afa08608ac56907966\", \"amount\": 620}, {\"address\": \"0x8397d5e1E8838d01f172edaB",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-031",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDT\", \"recipients\": [{\"address\": \"0xb6a38f300e3cab953aaa06812123a0e87a1aff23\", \"amount\": 30.5}, {\"address\": \"0x1fA67C42D937F73b59539E2bC9F48171497E2AE6\", \"amount\": 75.25}, {\"address\": \"0xe13220bD99E89D0EBC095834986DA08E815dAC90\", \"amount\": 10}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDT",
+         "recipients": [
+          {
+           "address": "0xb6a38f300e3cab953aaa06812123a0e87a1aff23",
+           "amount": 30.5
+          },
+          {
+           "address": "0x1fA67C42D937F73b59539E2bC9F48171497E2AE6",
+           "amount": 75.25
+          },
+          {
+           "address": "0xe13220bD99E89D0EBC095834986DA08E815dAC90",
+           "amount": 10
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDT\", \"kind\": \"multisend\", \"network\": \"Arbitrum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Touch ID, or cancels.\", \"recipients\": 3, \"status\": \"review_opened\", \"total\": \"115.75 USDT\"}"
+      ],
+      "ntok": 182
+     },
+     {
+      "text": "I've prepared a batch send of 115.75 USDT on Arbitrum to 3 recipients. Check the list on the review screen, then one Touch ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-032",
+  "suite": "multisend_file",
+  "kind": "malformed",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDT\", \"recipients\": [{\"address\": \"0x05DD...ed24\", \"amount\": 10}, {\"address\": \"0xD3C3Ae9D9Ae4EC558e26cc2AA2c0bA5D\", \"amount\": 50}, {\"address\": \"0x55a9f761212c461fb037397455b762d5332f6687\", \"amount\": 50.5}, {\"address\": \"0x91eb6b1285a13610a9a48a9f6bd84a61c67f9080\", \"amount\": 10.25}, {\"address\": \"0x962DeE95b4EBd2a679C9dF18b55A81228AE9827b\", \"amount\": 10}, {\"address\": \"0xcD07003EC2d7238aa58a236eF80EECF03F24D1e9\", \"amount\": 15}, {\"address\": \"0x1631588F41b46e018cFe11C0f89c25DE6f290194\", \"amount\": 20}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDT",
+         "recipients": [
+          {
+           "address": "0x05DD...ed24",
+           "amount": 10
+          },
+          {
+           "address": "0xD3C3Ae9D9Ae4EC558e26cc2AA2c0bA5D",
+           "amount": 50
+          },
+          {
+           "address": "0x55a9f761212c461fb037397455b762d5332f6687",
+           "amount": 50.5
+          },
+          {
+           "address": "0x91eb6b1285a13610a9a48a9f6bd84a61c67f9080",
+           "amount": 10.25
+          },
+          {
+           "address": "0x962DeE95b4EBd2a679C9dF18b55A81228AE9827b",
+           "amount": 10
+          },
+          {
+           "address": "0xcD07003EC2d7238aa58a236eF80EECF03F24D1e9",
+           "amount": 15
+          },
+          {
+           "address": "0x1631588F41b46e018cFe11C0f89c25DE6f290194",
+           "amount": 20
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDT\", \"kind\": \"multisend\", \"left_out\": [\"row 1: not an address\", \"row 2: not an address\", \"row 3: not an address\"], \"left_out_count\": 3, \"network\": \"Polygon\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 5, \"status\": \"review_opened\", \"total\": \"105.75 USDT\"}"
+      ],
+      "ntok": 352
+     },
+     {
+      "text": "I've prepared a batch send of 105.75 USDT on Polygon to 5 recipients. Rows 1, 2 and 3 have no valid address, so they're not in the batch. You approve the whole batch with a single Face ID once you've checked the list.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 62
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-033",
+  "suite": "multisend_file",
+  "kind": "neg_sum",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "file_math": false,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "file_math",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"5000+800+3500+1200+950+800+4200+2400.1+950+2400+2400.5+950+2400+800+1800+3000+1800+800+1200+1200+2400.5\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "5000+800+3500+1200+950+800+4200+2400.1+950+2400+2400.5+950+2400+800+1800+3000+1800+800+1200+1200+2400.5"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"40951.1\"}"
+      ],
+      "ntok": 120
+     },
+     {
+      "text": "You owe $40,951.10 in total across 24 payments.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 20
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-034",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0xecA6942c50170515ebd5c866a99aa1062306829D\", \"amount\": 212}, {\"address\": \"0x7348500C882caA1FB56C58F7B27dE301ef398c0F\", \"amount\": 562}, {\"address\": \"0xa1E4b4Ae2f653A52d11de269cae74f89454ed340\", \"amount\": 214}, {\"address\": \"0x49c9b054fa45851cd199c62247fec44097606195\", \"amount\": 89.1}, {\"address\": \"0x7068e2Bf949ee0Da365d5719ED061e3F68dB33Cd\", \"amount\": 889.5}, {\"address\": \"0xDE65b9ac078B0D2581Af90D877551D18C9DAEbac\", \"amount\": 659}, {\"address\": \"0x78fe1664C1af676a2544f1563a93D86d03938288\", \"amount\": 732}, {\"address\": \"0xFD8Ad3351F3ef7412c7A2189b1edaE809D60E5EF\", \"amount\": 652.25}, {\"address\": \"0x75AcEEcc2D8a98433C4c913dB30A825b0f5217C9\", \"amount\": 316}, {\"address\": \"0xbBc9A6b3909451B3262EE0f",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-035",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x2C9409562936d8068D7bF6a2FF0F2FfF4b0F0A18\", \"amount\": 800}, {\"address\": \"0xA5B73FBb913BBF9B363Fc813C022fC4932210795\", \"amount\": 2400}, {\"address\": \"0xba4916c7C1d9e83Cc86F64a1aB54f62F6ed7E933\", \"amount\": 800.5}, {\"address\": \"0xDA134299934283DF2cFe3bD3f1Dda759AFfC04A2\", \"amount\": 3500}, {\"address\": \"0xCBD80E3c055b1957F2a531b7e22947AB9F3FFc60\", \"amount\": 800}, {\"address\": \"0xCb709faEf422BE404095857dA65301309475970B\", \"amount\": 1800}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x2C9409562936d8068D7bF6a2FF0F2FfF4b0F0A18",
+           "amount": 800
+          },
+          {
+           "address": "0xA5B73FBb913BBF9B363Fc813C022fC4932210795",
+           "amount": 2400
+          },
+          {
+           "address": "0xba4916c7C1d9e83Cc86F64a1aB54f62F6ed7E933",
+           "amount": 800.5
+          },
+          {
+           "address": "0xDA134299934283DF2cFe3bD3f1Dda759AFfC04A2",
+           "amount": 3500
+          },
+          {
+           "address": "0xCBD80E3c055b1957F2a531b7e22947AB9F3FFc60",
+           "amount": 800
+          },
+          {
+           "address": "0xCb709faEf422BE404095857dA65301309475970B",
+           "amount": 1800
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Arbitrum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 6, \"status\": \"review_opened\", \"total\": \"10100.5 USDC\"}"
+      ],
+      "ntok": 339
+     },
+     {
+      "text": "I've prepared a batch send of 10100.5 USDC on Arbitrum to 6 recipients. Check the list on the review screen, then one Face ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 42
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-036",
+  "suite": "multisend_file",
+  "kind": "neg_names",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Which token should this be paid in?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 8
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-037",
+  "suite": "multisend_file",
+  "kind": "cut",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "truncation_said": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "truncation_said",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x00d8a2Bb1084c367F03038EC6CF12D63aDD7BdCa\", \"amount\": 336}, {\"address\": \"0x6976eA99ea9261Fb742bAa8b2AEa201b336C4deD\", \"amount\": 405.75}, {\"address\": \"0xaF140Bc529B973F3D0d04c4bf3b75673fcb58083\", \"amount\": 465}, {\"address\": \"0xd4a8443AC4cB598799DC46A207EEDf9630b4F853\", \"amount\": 592.75}, {\"address\": \"0xA751FaC4268f6f741B0a900A14e4665a6F4710Ed\", \"amount\": 177}, {\"address\": \"0xaEBF5a14\", \"amount\": 814}, {\"address\": \"0x734e260f29eBcc2fC09A3E228FB93DFfea943Aac\", \"amount\": 501.5}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x00d8a2Bb1084c367F03038EC6CF12D63aDD7BdCa",
+           "amount": 336
+          },
+          {
+           "address": "0x6976eA99ea9261Fb742bAa8b2AEa201b336C4deD",
+           "amount": 405.75
+          },
+          {
+           "address": "0xaF140Bc529B973F3D0d04c4bf3b75673fcb58083",
+           "amount": 465
+          },
+          {
+           "address": "0xd4a8443AC4cB598799DC46A207EEDf9630b4F853",
+           "amount": 592.75
+          },
+          {
+           "address": "0xA751FaC4268f6f741B0a900A14e4665a6F4710Ed",
+           "amount": 177
+          },
+          {
+           "address": "0xaEBF5a14",
+           "amount": 814
+          },
+          {
+           "address": "0x734e260f29eBcc2fC09A3E228FB93DFfea943Aac",
+           "amount": 501.5
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"left_out\": [\"row 7: not an address\"], \"left_out_count\": 1, \"network\": \"Base\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 6, \"status\": \"review_opened\", \"total\": \"2478 USDC\"}"
+      ],
+      "ntok": 363
+     },
+     {
+      "text": "I've prepared a batch send of 2478 USDC on Base to 6 recipients. I left out row 7: it isn't an address. Heads up: the file was cut and I only read the first 9 of 106 rows. The review lists every row, so check the total there. You approve the whole batch with a single Face ID once you've checked the list.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 85
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-038",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "truncation_said": false,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "truncation_said",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDT\", \"recipients\": [{\"address\": \"0xb5cc50994a8d0235823250Cc1E3222b59a301594\", \"amount\": 326}, {\"address\": \"0xfE5170c26374D544D670a7AEf5849AB86B272Bbc\", \"amount\": 433}, {\"address\": \"0x26131CcFBcaC96Fc273Eb42d640B17D818056546\", \"amount\": 326.5}, {\"address\": \"0x6f92166f52141DB4D110631D862f7b9D75151699\", \"amount\": 353}, {\"address\": \"0xac6af103b2cef130ae13b23b9334f3bea8037495\", \"amount\": 151.5}, {\"address\": \"0x0d2056d4dC452DB72c7dFDB9e349757B74D048f2\", \"amount\": 566.25}, {\"address\": \"0x6c43D3C36DE2bba5bA6ccD91962c5C2B4Cc1d653\", \"amount\": 753}, {\"address\": \"0x7a40D054379E6D0DAB9Bd1f10A702A75E24FFE65\", \"amount\": 294}, {\"address\": \"0x57666081EB493026b0f81C869c2D085309409b00\", \"amount\": 833}, {\"address\": \"0x6adCA23d5BD0",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-039",
+  "suite": "multisend_file",
+  "kind": "pasted",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDT\", \"recipients\": [{\"address\": \"0x2e1374362E9daEDaA7B224d81a5CB930C1A52544\", \"amount\": 224.25}, {\"address\": \"0x4415E9D80DeFC34Fa7fc484FB3B47048a84DAfA8\", \"amount\": 393}, {\"address\": \"0xC3821f8CADE1C5e7f64DFdfd182Bc4Ec69Beaf8f\", \"amount\": 511}, {\"address\": \"0x5414e4173905E6650BE03005Df08fA64bf121159\", \"amount\": 457.25}, {\"address\": \"0x6A37d1C136b3107e01381b903DE9c9313bc8795d\", \"amount\": 540}, {\"address\": \"0x05edC2c673Ab4bF540a85b210226517274bA46dD\", \"amount\": 402.25}, {\"address\": \"0x3a1aBd0D9b113A1e1FF769D10Adb24622eb0099e\", \"amount\": 202}, {\"address\": \"0xFA876Cb067c3ca9D498C7c736a8Bc43aEA6D5b68\", \"amount\": 195}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDT",
+         "recipients": [
+          {
+           "address": "0x2e1374362E9daEDaA7B224d81a5CB930C1A52544",
+           "amount": 224.25
+          },
+          {
+           "address": "0x4415E9D80DeFC34Fa7fc484FB3B47048a84DAfA8",
+           "amount": 393
+          },
+          {
+           "address": "0xC3821f8CADE1C5e7f64DFdfd182Bc4Ec69Beaf8f",
+           "amount": 511
+          },
+          {
+           "address": "0x5414e4173905E6650BE03005Df08fA64bf121159",
+           "amount": 457.25
+          },
+          {
+           "address": "0x6A37d1C136b3107e01381b903DE9c9313bc8795d",
+           "amount": 540
+          },
+          {
+           "address": "0x05edC2c673Ab4bF540a85b210226517274bA46dD",
+           "amount": 402.25
+          },
+          {
+           "address": "0x3a1aBd0D9b113A1e1FF769D10Adb24622eb0099e",
+           "amount": 202
+          },
+          {
+           "address": "0xFA876Cb067c3ca9D498C7c736a8Bc43aEA6D5b68",
+           "amount": 195
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDT\", \"kind\": \"multisend\", \"network\": \"Polygon\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 8, \"status\": \"review_opened\", \"total\": \"2924.75 USDT\"}"
+      ],
+      "ntok": 443
+     },
+     {
+      "text": "I've prepared a batch send of 2924.75 USDT on Polygon to 8 recipients. Check the list on the review screen, then one Face ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-040",
+  "suite": "multisend_file",
+  "kind": "neg_dup",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "truncation_said": false,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "truncation_said",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x5F17AE10adFcf584DAf967a476EaE515fEC13a8F\", \"amount\": 1800}, {\"address\": \"0x96e4389e371be0b523bec4f2fb61483f5444d329\", \"amount\": 4200}, {\"address\": \"0x12cB50AA701A7A3d55c469Bc692695e7031da565\", \"amount\": 3500}, {\"address\": \"0x4994F10d4816944d268b2B12856Df48eb47f7DbD\", \"amount\": 3500.1}, {\"address\": \"0xB07e29976Fc7e96DecFc6b66b9CD45Ead66E4162\", \"amount\": 3000.5}, {\"address\": \"0x5F17AE10adFcf584DAf967a476EaE515fEC13a8F\", \"amount\": 1500.5}, {\"address\": \"0x597EB1A1fcD7DA2cd9610564E0e92De3A3529eF1\", \"amount\": 800}, {\"address\": \"0x843709fC2A6b38AB760f0954db7e8359D3Cd2A07\", \"amount\": 800}, {\"address\": \"0x8456739d17Ae2795aACde4b4211dC46284083B90\", \"amount\": 800}, {\"address\": \"0x7731223b7",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-041",
+  "suite": "multisend_file",
+  "kind": "chain_named",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"chain\": \"polygon\", \"recipients\": [{\"address\": \"0xF1d70e9D9327b3A316E71a49696dD459db21bFD1\", \"amount\": 25}, {\"address\": \"0xED7fB6eca4Cc8BFf87a62388d346F243C2fc7951\", \"amount\": 100.25}, {\"address\": \"0x5C6EE30D17e6d3deC7bfc5dfA9981ab3484D7B2b\", \"amount\": 25}, {\"address\": \"0xf996Cee7c21Bd1dB41dAf2edA627E74D40Cc6AA1\", \"amount\": 15}, {\"address\": \"0x404922e061116673cde9b8d2fa5e9a3425fd513d\", \"amount\": 5}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "chain": "polygon",
+         "recipients": [
+          {
+           "address": "0xF1d70e9D9327b3A316E71a49696dD459db21bFD1",
+           "amount": 25
+          },
+          {
+           "address": "0xED7fB6eca4Cc8BFf87a62388d346F243C2fc7951",
+           "amount": 100.25
+          },
+          {
+           "address": "0x5C6EE30D17e6d3deC7bfc5dfA9981ab3484D7B2b",
+           "amount": 25
+          },
+          {
+           "address": "0xf996Cee7c21Bd1dB41dAf2edA627E74D40Cc6AA1",
+           "amount": 15
+          },
+          {
+           "address": "0x404922e061116673cde9b8d2fa5e9a3425fd513d",
+           "amount": 5
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Polygon\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Touch ID, or cancels.\", \"recipients\": 5, \"status\": \"review_opened\", \"total\": \"170.25 USDC\"}"
+      ],
+      "ntok": 281
+     },
+     {
+      "text": "I've prepared a batch send of 170.25 USDC on Polygon to 5 recipients. Check the list on the review screen, then one Touch ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 40
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-042",
+  "suite": "multisend_file",
+  "kind": "chain_named",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"chain\": \"polygon\", \"recipients\": [{\"address\": \"0x2Ec06225642f2140d771eB2b7c0BeCf814311919\", \"amount\": 950}, {\"address\": \"0xfFD8526fc63CE46cDc3B797ec39d7AC12671C84F\", \"amount\": 1500.5}, {\"address\": \"0x14766935555398e2938923326FaE1dCF8B35C9D1\", \"amount\": 950}, {\"address\": \"0x48D9A7f28C33045EDAA0c6DdaC788E1453f6158d\", \"amount\": 4200}, {\"address\": \"0xcce449dc839e2a6c2f9c05c0aee0b0bc4e043f10\", \"amount\": 4200}, {\"address\": \"0x340f1fda70DaE0F70F96d902b4cc322BFC5A3F31\", \"amount\": 3000}, {\"address\": \"0xDfcB01D0AC82FFfcC945C491E892234643086593\", \"amount\": 950}, {\"address\": \"0x16cf9d5bebfb34850051d8b73a04fb089744c799\", \"amount\": 1200}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "chain": "polygon",
+         "recipients": [
+          {
+           "address": "0x2Ec06225642f2140d771eB2b7c0BeCf814311919",
+           "amount": 950
+          },
+          {
+           "address": "0xfFD8526fc63CE46cDc3B797ec39d7AC12671C84F",
+           "amount": 1500.5
+          },
+          {
+           "address": "0x14766935555398e2938923326FaE1dCF8B35C9D1",
+           "amount": 950
+          },
+          {
+           "address": "0x48D9A7f28C33045EDAA0c6DdaC788E1453f6158d",
+           "amount": 4200
+          },
+          {
+           "address": "0xcce449dc839e2a6c2f9c05c0aee0b0bc4e043f10",
+           "amount": 4200
+          },
+          {
+           "address": "0x340f1fda70DaE0F70F96d902b4cc322BFC5A3F31",
+           "amount": 3000
+          },
+          {
+           "address": "0xDfcB01D0AC82FFfcC945C491E892234643086593",
+           "amount": 950
+          },
+          {
+           "address": "0x16cf9d5bebfb34850051d8b73a04fb089744c799",
+           "amount": 1200
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Polygon\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Touch ID, or cancels.\", \"recipients\": 8, \"status\": \"review_opened\", \"total\": \"16950.5 USDC\"}"
+      ],
+      "ntok": 448
+     },
+     {
+      "text": "I've prepared a batch send of 16950.5 USDC on Polygon to 8 recipients. Check the list on the review screen, then one Touch ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-043",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0xFEa32484DFce221b77679473e0046dca9906204c\", \"amount\": 20.25}, {\"address\": \"0xD234def41E1aBDb689030C9063daEBC1adDe4c52\", \"amount\": 15}, {\"address\": \"0x4eb386818f6a2875b4fb5294fa664ea2bdd0989a\", \"amount\": 20}, {\"address\": \"0x308EF1848E11be695B1aC4f344D47691aF66867A\", \"amount\": 15}, {\"address\": \"0xD8630e501608f3a5dF5FD0620acd8265e28164Ef\", \"amount\": 75.5}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0xFEa32484DFce221b77679473e0046dca9906204c",
+           "amount": 20.25
+          },
+          {
+           "address": "0xD234def41E1aBDb689030C9063daEBC1adDe4c52",
+           "amount": 15
+          },
+          {
+           "address": "0x4eb386818f6a2875b4fb5294fa664ea2bdd0989a",
+           "amount": 20
+          },
+          {
+           "address": "0x308EF1848E11be695B1aC4f344D47691aF66867A",
+           "amount": 15
+          },
+          {
+           "address": "0xD8630e501608f3a5dF5FD0620acd8265e28164Ef",
+           "amount": 75.5
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Arbitrum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.\", \"recipients\": 5, \"status\": \"review_opened\", \"total\": \"145.75 USDC\"}"
+      ],
+      "ntok": 276
+     },
+     {
+      "text": "I've prepared a batch send of 145.75 USDC on Arbitrum to 5 recipients. Check the list on the review screen, then one Face ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-044",
+  "suite": "multisend_file",
+  "kind": "malformed",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x8F399DD878Ad11155b6DB168AbDE2eF5F35d8C3E\", \"amount\": 2400}, {\"address\": \"0x52Db8B2694db141E8e4de65384043925DAEd1879\", \"amount\": 2000}, {\"address\": \"0x2C9EB7686Da759b726425AdBF66ddabF48C7684B\", \"amount\": 4200}, {\"address\": \"0x4919320D5695fe8fB55302049f6ba818307A228b\", \"amount\": 950}, {\"address\": \"0x3C9bA587ed16E9E7a436e7c3677E4a3AFC793CCF\", \"amount\": 1500}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x8F399DD878Ad11155b6DB168AbDE2eF5F35d8C3E",
+           "amount": 2400
+          },
+          {
+           "address": "0x52Db8B2694db141E8e4de65384043925DAEd1879",
+           "amount": 2000
+          },
+          {
+           "address": "0x2C9EB7686Da759b726425AdBF66ddabF48C7684B",
+           "amount": 4200
+          },
+          {
+           "address": "0x4919320D5695fe8fB55302049f6ba818307A228b",
+           "amount": 950
+          },
+          {
+           "address": "0x3C9bA587ed16E9E7a436e7c3677E4a3AFC793CCF",
+           "amount": 1500
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"left_out\": [\"row 4: not an address\"], \"left_out_count\": 1, \"network\": \"Arbitrum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Touch ID, or cancels.\", \"recipients\": 5, \"status\": \"review_opened\", \"total\": \"11050 USDC\"}"
+      ],
+      "ntok": 285
+     },
+     {
+      "text": "I've prepared a batch send of 11050 USDC on Arbitrum to 5 recipients. Row 4 (not an address) was left out. Look over the list, then approve the batch once with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 49
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-045",
+  "suite": "multisend_file",
+  "kind": "ask_amount",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": false,
+   "bio_word": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "asked_when_needed",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x86920fdf3a4faD225f4Be4A218A5ba589EC9D409\", \"amount\": 1}, {\"address\": \"0xC564319a2C5993b783F44f75ba4aD3dc55DAcB49\", \"amount\": 1}, {\"address\": \"0xeDb2326b1dc3B7c78BB3fE81f69c242dF2c60BF5\", \"amount\": 1}, {\"address\": \"0x2a477953964f46dd8055ddAAF6f42fC328EE9D49\", \"amount\": 1}, {\"address\": \"0xfADF64b44c3b3b545C41486Ecf8295237Ac0eec7\", \"amount\": 1}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x86920fdf3a4faD225f4Be4A218A5ba589EC9D409",
+           "amount": 1
+          },
+          {
+           "address": "0xC564319a2C5993b783F44f75ba4aD3dc55DAcB49",
+           "amount": 1
+          },
+          {
+           "address": "0xeDb2326b1dc3B7c78BB3fE81f69c242dF2c60BF5",
+           "amount": 1
+          },
+          {
+           "address": "0x2a477953964f46dd8055ddAAF6f42fC328EE9D49",
+           "amount": 1
+          },
+          {
+           "address": "0xfADF64b44c3b3b545C41486Ecf8295237Ac0eec7",
+           "amount": 1
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Arbitrum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Touch ID, or cancels.\", \"recipients\": 5, \"status\": \"review_opened\", \"total\": \"5 USDC\"}"
+      ],
+      "ntok": 265
+     },
+     {
+      "text": "I've prepared a batch send of 5 USDC on Arbitrum to 5 recipients. Check the list on the review screen, then one Touch ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 36
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-046",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x9A701bD357cB5BDE5109AE6dF2E1D3f466959D9D\", \"amount\": 2400.75}, {\"address\": \"0xaAf286eea94BFC72E3e93c2c4ee7D658ce1903a7\", \"amount\": 1800}, {\"address\": \"0x9273ae6863b9f7a3eE8E6483030798E641EF601E\", \"amount\": 800.5}, {\"address\": \"0x8f665d5e3393817Cf3F42c02F55CF9546BA4415D\", \"amount\": 4200.5}, {\"address\": \"0xCC9e2fd716fA710c364632E5D050c1Da46295e8B\", \"amount\": 2000.1}, {\"address\": \"0x632e3BCc6e773Ec1b3DA4a5C293b1AdcDE52D154\", \"amount\": 800}, {\"address\": \"0xc28Af452E248d04380E9a389538bD1aD48d25695\", \"amount\": 2000}, {\"address\": \"0x787af5569cBf924d3f7691F7a61e7f0c2cE065E6\", \"amount\": 800}]}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_multisend",
+        "arguments": {
+         "symbol": "USDC",
+         "recipients": [
+          {
+           "address": "0x9A701bD357cB5BDE5109AE6dF2E1D3f466959D9D",
+           "amount": 2400.75
+          },
+          {
+           "address": "0xaAf286eea94BFC72E3e93c2c4ee7D658ce1903a7",
+           "amount": 1800
+          },
+          {
+           "address": "0x9273ae6863b9f7a3eE8E6483030798E641EF601E",
+           "amount": 800.5
+          },
+          {
+           "address": "0x8f665d5e3393817Cf3F42c02F55CF9546BA4415D",
+           "amount": 4200.5
+          },
+          {
+           "address": "0xCC9e2fd716fA710c364632E5D050c1Da46295e8B",
+           "amount": 2000.1
+          },
+          {
+           "address": "0x632e3BCc6e773Ec1b3DA4a5C293b1AdcDE52D154",
+           "amount": 800
+          },
+          {
+           "address": "0xc28Af452E248d04380E9a389538bD1aD48d25695",
+           "amount": 2000
+          },
+          {
+           "address": "0x787af5569cBf924d3f7691F7a61e7f0c2cE065E6",
+           "amount": 800
+          }
+         ]
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"executed\": false, \"fees_up_to\": \"0.02 USDC\", \"kind\": \"multisend\", \"network\": \"Arbitrum\", \"note\": \"Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Touch ID, or cancels.\", \"recipients\": 8, \"status\": \"review_opened\", \"total\": \"14801.85 USDC\"}"
+      ],
+      "ntok": 456
+     },
+     {
+      "text": "I've prepared a batch send of 14801.85 USDC on Arbitrum to 8 recipients. Check the list on the review screen, then one Touch ID approves the whole batch.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_multisend",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-047",
+  "suite": "multisend_file",
+  "kind": "plain",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"ETH\", \"recipients\": [{\"address\": \"0xCAa889f67343d30A8FAd4a7395De7Dc4be7a3d85\", \"amount\": 0.25}, {\"address\": \"0x6C2Ee435bDECa66dB4393F766Ad0cEC8730631A9\", \"amount\": 0.903}, {\"address\": \"0x688309B75B74D032a8A0f46b905A57DF636b87b1\", \"amount\": 0.1}, {\"address\": \"0xedb4dF2d10Ce35d3c3115eff8B9117650B1245C5\", \"amount\": 0.75}, {\"address\": \"0x13284606acA36E99C0461FDc1d13602B09024d5b\", \"amount\": 0.1}, {\"address\": \"0x64aaa6E7B1B0b13c85434E7fe32761eb2B32AD8F\", \"amount\": 0.963}, {\"address\": \"0x0303b70264C4FCB3561e9Ad609FEC944766B6A1c\", \"amount\": 0.25}, {\"address\": \"0xC9DdF3f217e9BB60224D6B1836F01f826B3F0D0D\", \"amount\": 0.01}, {\"address\": \"0x67a722396a12304A4C783Fd00267F8bF3d029203\", \"amount\": 0.01}, {\"address\": \"0x9bc6d1C8",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-048",
+  "suite": "multisend_file",
+  "kind": "cut",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "truncation_said": false,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "truncation_said",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"DAI\", \"recipients\": [{\"address\": \"0xF5f940D08236907a91445B88f2b6c79A2995Da99\", \"amount\": 3000.1}, {\"address\": \"0x8cdaba86a7c5e4351c304e789274254f6520eabb\", \"amount\": 1500}, {\"address\": \"0xB947Ca0842946a0Ab24946dC2ce79d4321CC7eCc\", \"amount\": 3500}, {\"address\": \"0x8A5b7C9AB843B96Bc84518F145230A4844a26091\", \"amount\": 1800}, {\"address\": \"0xf6cb7FEd4b979d44f12705D09785e43704758C36\", \"amount\": 5000.25}, {\"address\": \"0x9eA0f75e8dE31aB813C74CFA74aeA3D7BFf0fC80\", \"amount\": 950}, {\"address\": \"0xc89eb3390dcc5dd7feb5589a7eadf9a95e801bb5\", \"amount\": 2400}, {\"address\": \"0xb7D8985C41e276D029752F8f8D5C8374C49020DC\", \"amount\": 1200}, {\"address\": \"0x3CD1eD3B210800c27FD132369F59Cb3b0082111c\", \"amount\": 950}, {\"address\": \"0x2cf819c47c",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "multisend_file-049",
+  "suite": "multisend_file",
+  "kind": "cut",
+  "ok": false,
+  "checks": {
+   "decision": false,
+   "first_name": false,
+   "types_ok": false,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": false,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "truncation_said": false,
+   "wrong_money": true,
+   "parse_ok": false,
+   "terminates": false,
+   "no_runaway": false,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_chain_invented",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "truncation_said",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_multisend\", \"arguments\": {\"symbol\": \"USDC\", \"recipients\": [{\"address\": \"0x354b8F5eab8ab3ffA82D055EFD257217d7D9D204\", \"amount\": 850}, {\"address\": \"0xb0eD3362d5933D502b8eB10d1A713040c5C2d824\", \"amount\": 280}, {\"address\": \"0xDdad5D92a7D698bD6CdfD1f58Ed9D8A06689d6D4\", \"amount\": 725}, {\"address\": \"0xF45539A58FFf6734CB893151A688A8799FfDbeff\", \"amount\": 218}, {\"address\": \"0x25d0094Bd5fc23500Ed14C29Eb0ad1cc1c20d59c\", \"amount\": 455.75}, {\"address\": \"0x433A78Ac443Fa8c183281EbaABe6033e2D8Df011\", \"amount\": 540}, {\"address\": \"0x9CBfb1eD6F5bAb631e4Dd8Ae560E344e087ACcD6\", \"amount\": 391}, {\"address\": \"0x47c69AE9caD37138255cef9B27a5801C6D2D1764\", \"amount\": 489}, {\"address\": \"0x21B10e37bd0e9d0cC3eDc6A88003064cA8530D4F\", \"amount\": 429}, {\"address\": \"0xca26cb68dad8cf1def0c939a",
+      "calls": [],
+      "bad": 1,
+      "hit_max": true,
+      "results": [],
+      "ntok": 512
+     }
+    ]
+   ],
+   "ended": [
+    false
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ }
+]

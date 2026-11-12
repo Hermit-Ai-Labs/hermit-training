@@ -1,0 +1,1282 @@
+[
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 500 ETH and 1,250,000 USDC. With the 0.3% fee, how much USDC do I get for 1.5 ETH? Round to 2dp, just the number.",
+  "answer": 3727.600746,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 3,727.6 USDC."
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 2000 ETH and 3,600,000 USDC. With the 0.3% fee, how much USDC do I get for 10 ETH? Round to 2dp, just the number.",
+  "answer": 17856.98294,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 17,856.98 USDC."
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 200 ETH and 600,000 USDC. With the 0.3% fee, how much USDC do I get for 10 ETH? Round to 2dp, just the number.",
+  "answer": 28489.784255,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 28,489.78 USDC."
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 2000 ETH and 3,000,000 USDC. With the 0.3% fee, how much USDC do I get for 15 ETH? Round to 2dp, just the number.",
+  "answer": 22266.005941,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 22,266.01 USDC."
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 500 ETH and 1,100,000 USDC. With the 0.3% fee, how much USDC do I get for 3 ETH? Round to 2dp, just the number.",
+  "answer": 6541.071311,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 6,541.07 USDC."
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 2000 ETH and 3,600,000 USDC. With the 0.3% fee, how much USDC do I get for 1 ETH? Round to 2dp, just the number.",
+  "answer": 1793.705838,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 1,793.71 USDC."
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 2000 ETH and 3,600,000 USDC. With the 0.3% fee, how much USDC do I get for 3 ETH? Round to 2dp, just the number.",
+  "answer": 5375.76055,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 5,375.76 USDC."
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 300 ETH and 450,000 USDC. With the 0.3% fee, how much USDC do I get for 0.5 ETH? Round to 2dp, just the number.",
+  "answer": 746.50955,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 746.51 USDC."
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 1000 ETH and 2,200,000 USDC. With the 0.3% fee, how much USDC do I get for 5 ETH? Round to 2dp, just the number.",
+  "answer": 10912.600686,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 10,912.6 USDC."
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 750 ETH and 1,650,000 USDC. With the 0.3% fee, how much USDC do I get for 0.5 ETH? Round to 2dp, just the number.",
+  "answer": 1095.971544,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 1,095.97 USDC."
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $52657.0. Round-trip fees total 4 bps. At what sell price do I break even? Just the number.",
+  "answer": 52678.0628,
+  "ok": true,
+  "used_calc": true,
+  "text": "$52,678.06"
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $3881.0. Round-trip fees total 40 bps. At what sell price do I break even? Just the number.",
+  "answer": 3896.524,
+  "ok": true,
+  "used_calc": true,
+  "text": "$3,896.52"
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $65377.0. Round-trip fees total 10 bps. At what sell price do I break even? Just the number.",
+  "answer": 65442.377,
+  "ok": true,
+  "used_calc": true,
+  "text": "$65,442.38"
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $30.45. Round-trip fees total 40 bps. At what sell price do I break even? Just the number.",
+  "answer": 30.5718,
+  "ok": true,
+  "used_calc": true,
+  "text": "$30.57"
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $457.54. Round-trip fees total 15 bps. At what sell price do I break even? Just the number.",
+  "answer": 458.22631,
+  "ok": true,
+  "used_calc": true,
+  "text": "$458.23"
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $57393.0. Round-trip fees total 4 bps. At what sell price do I break even? Just the number.",
+  "answer": 57415.9572,
+  "ok": true,
+  "used_calc": true,
+  "text": "$57,415.96"
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $684.44. Round-trip fees total 12 bps. At what sell price do I break even? Just the number.",
+  "answer": 685.261328,
+  "ok": true,
+  "used_calc": true,
+  "text": "$685.26"
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $3558.0. Round-trip fees total 10 bps. At what sell price do I break even? Just the number.",
+  "answer": 3561.558,
+  "ok": true,
+  "used_calc": true,
+  "text": "$3,561.56"
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $11.69. Round-trip fees total 4 bps. At what sell price do I break even? Just the number.",
+  "answer": 11.694676,
+  "ok": true,
+  "used_calc": true,
+  "text": "$11.6947"
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $1.15. Round-trip fees total 30 bps. At what sell price do I break even? Just the number.",
+  "answer": 1.15345,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1.1535"
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $100.00 every week for 26 weeks, how much do I invest in total? Just the number.",
+  "answer": 2600,
+  "ok": true,
+  "used_calc": true,
+  "text": "Total invested: $2,600.00."
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $75.00 every week for 104 weeks, how much do I invest in total? Just the number.",
+  "answer": 7800,
+  "ok": true,
+  "used_calc": true,
+  "text": "$7,800.00"
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $20.00 every week for 52 weeks, how much do I invest in total? Just the number.",
+  "answer": 1040,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1,040.00"
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $30.00 every week for 13 weeks, how much do I invest in total? Just the number.",
+  "answer": 390,
+  "ok": true,
+  "used_calc": true,
+  "text": "$390.00"
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $300.00 every week for 26 weeks, how much do I invest in total? Just the number.",
+  "answer": 7800,
+  "ok": true,
+  "used_calc": true,
+  "text": "$7,800.00"
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $25.00 every week for 12 weeks, how much do I invest in total? Just the number.",
+  "answer": 300,
+  "ok": true,
+  "used_calc": true,
+  "text": "$300.00"
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $100.00 every week for 8 weeks, how much do I invest in total? Just the number.",
+  "answer": 800,
+  "ok": true,
+  "used_calc": true,
+  "text": "$800.00"
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $30.00 every week for 26 weeks, how much do I invest in total? Just the number.",
+  "answer": 780,
+  "ok": true,
+  "used_calc": true,
+  "text": "$780.00"
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $25.00 every week for 52 weeks, how much do I invest in total? Just the number.",
+  "answer": 1300,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1,300.00"
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $10.00 every week for 13 weeks, how much do I invest in total? Just the number.",
+  "answer": 130,
+  "ok": true,
+  "used_calc": true,
+  "text": "$130.00"
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 10 bps applies to a $9,633.05 order. Fee in dollars? Just the number.",
+  "answer": 9.63305,
+  "ok": true,
+  "used_calc": true,
+  "text": "Fee: $9.63."
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 2.5 bps applies to a $99,243.35 order. Fee in dollars? Just the number.",
+  "answer": 24.810838,
+  "ok": true,
+  "used_calc": true,
+  "text": "$24.81"
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 2 bps applies to a $157,403.45 order. Fee in dollars? Just the number.",
+  "answer": 31.48069,
+  "ok": true,
+  "used_calc": true,
+  "text": "$31.48"
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 25 bps applies to a $70,588.14 order. Fee in dollars? Just the number.",
+  "answer": 176.47035,
+  "ok": true,
+  "used_calc": true,
+  "text": "$176.47"
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 50 bps applies to a $133,998.90 order. Fee in dollars? Just the number.",
+  "answer": 669.9945,
+  "ok": true,
+  "used_calc": true,
+  "text": "Fee: $669.99."
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 1 bps applies to a $54,197.70 order. Fee in dollars? Just the number.",
+  "answer": 5.41977,
+  "ok": true,
+  "used_calc": true,
+  "text": "Fee: $5.4198."
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 30 bps applies to a $192,519.52 order. Fee in dollars? Just the number.",
+  "answer": 577.55856,
+  "ok": true,
+  "used_calc": true,
+  "text": "$577.56"
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 7.5 bps applies to a $72,197.26 order. Fee in dollars? Just the number.",
+  "answer": 54.147945,
+  "ok": true,
+  "used_calc": true,
+  "text": "$54.15"
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 5 bps applies to a $164,512.07 order. Fee in dollars? Just the number.",
+  "answer": 82.256035,
+  "ok": true,
+  "used_calc": true,
+  "text": "$82.26"
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 2.5 bps applies to a $98,704.05 order. Fee in dollars? Just the number.",
+  "answer": 24.676012,
+  "ok": true,
+  "used_calc": true,
+  "text": "$24.68"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is -0.0398% every 8 hours. Annualised simply (no compounding), what percent per year? Just the number.",
+  "answer": -43.581,
+  "ok": true,
+  "used_calc": true,
+  "text": "-43.58%"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is -0.0372% every 8 hours. Annualised simply (no compounding), what percent per year? Just the number.",
+  "answer": -40.734,
+  "ok": true,
+  "used_calc": true,
+  "text": "-40.73%"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is 0.0631% every 8 hours. Annualised simply (no compounding), what percent per year? Just the number.",
+  "answer": 69.0945,
+  "ok": true,
+  "used_calc": true,
+  "text": "69.1%"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is -0.0194% every 8 hours. Annualised simply (no compounding), what percent per year? Just the number.",
+  "answer": -21.243,
+  "ok": true,
+  "used_calc": true,
+  "text": "-21.24%"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is 0.1043% every 8 hours. Annualised simply (no compounding), what percent per year? Just the number.",
+  "answer": 114.2085,
+  "ok": true,
+  "used_calc": true,
+  "text": "114.21%"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is 0.1267% every 8 hours. Annualised simply (no compounding), what percent per year? Just the number.",
+  "answer": 138.7365,
+  "ok": true,
+  "used_calc": true,
+  "text": "138.74%"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is 0.1458% every 8 hours. Annualised simply (no compounding), what percent per year? Just the number.",
+  "answer": 159.651,
+  "ok": true,
+  "used_calc": true,
+  "text": "159.65%"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is -0.0884% every 8 hours. Annualised simply (no compounding), what percent per year? Just the number.",
+  "answer": -96.798,
+  "ok": true,
+  "used_calc": true,
+  "text": "-96.8%"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is -0.0702% every 8 hours. Annualised simply (no compounding), what percent per year? Just the number.",
+  "answer": -76.869,
+  "ok": true,
+  "used_calc": true,
+  "text": "-76.87%"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is -0.0498% every 8 hours. Annualised simply (no compounding), what percent per year? Just the number.",
+  "answer": -54.531,
+  "ok": true,
+  "used_calc": true,
+  "text": "-54.53%"
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "A token in a 50/50 LP moves 4.9x against the other. What is the impermanent loss as a percent (magnitude)? Round to 2dp, just the number.",
+  "answer": 24.962903,
+  "ok": true,
+  "used_calc": true,
+  "text": "Impermanent loss: 24.96%. That's versus just holding, before fees earned."
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "A token in a 50/50 LP moves 3.46x against the other. What is the impermanent loss as a percent (magnitude)? Round to 2dp, just the number.",
+  "answer": 16.587107,
+  "ok": true,
+  "used_calc": true,
+  "text": "Impermanent loss: 16.59%. That's versus just holding, before fees earned."
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "A token in a 50/50 LP moves 3.14x against the other. What is the impermanent loss as a percent (magnitude)? Round to 2dp, just the number.",
+  "answer": 14.395917,
+  "ok": true,
+  "used_calc": true,
+  "text": "Impermanent loss: 14.4%. That's versus just holding, before fees earned."
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "A token in a 50/50 LP moves 1.65x against the other. What is the impermanent loss as a percent (magnitude)? Round to 2dp, just the number.",
+  "answer": 3.054848,
+  "ok": true,
+  "used_calc": true,
+  "text": "3.05%"
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "A token in a 50/50 LP moves 2.6x against the other. What is the impermanent loss as a percent (magnitude)? Round to 2dp, just the number.",
+  "answer": 10.419358,
+  "ok": true,
+  "used_calc": true,
+  "text": "Impermanent loss: 10.42%. That's versus just holding, before fees earned."
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "A token in a 50/50 LP moves 2.32x against the other. What is the impermanent loss as a percent (magnitude)? Round to 2dp, just the number.",
+  "answer": 8.243698,
+  "ok": true,
+  "used_calc": true,
+  "text": "8.24%"
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "A token in a 50/50 LP moves 4.0x against the other. What is the impermanent loss as a percent (magnitude)? Round to 2dp, just the number.",
+  "answer": 20.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Impermanent loss: 20%. That's versus just holding, before fees earned."
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "A token in a 50/50 LP moves 3.44x against the other. What is the impermanent loss as a percent (magnitude)? Round to 2dp, just the number.",
+  "answer": 16.453887,
+  "ok": true,
+  "used_calc": true,
+  "text": "Impermanent loss: 16.45%. That's versus just holding, before fees earned."
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "A token in a 50/50 LP moves 4.53x against the other. What is the impermanent loss as a percent (magnitude)? Round to 2dp, just the number.",
+  "answer": 23.024244,
+  "ok": true,
+  "used_calc": true,
+  "text": "23.02%"
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "A token in a 50/50 LP moves 2.96x against the other. What is the impermanent loss as a percent (magnitude)? Round to 2dp, just the number.",
+  "answer": 13.107826,
+  "ok": true,
+  "used_calc": true,
+  "text": "Impermanent loss: 13.11%. That's versus just holding, before fees earned."
+ },
+ {
+  "category": "kelly",
+  "q": "A strategy wins 47% of the time, paying 5:1 (win 5 units, lose 1). What fraction of the bankroll does the Kelly criterion suggest, as a percent? Round to 2dp, just the number.",
+  "answer": 36.4,
+  "ok": true,
+  "used_calc": true,
+  "text": "36.4%"
+ },
+ {
+  "category": "kelly",
+  "q": "A strategy wins 76% of the time, paying 0.5:1 (win 0.5 units, lose 1). What fraction of the bankroll does the Kelly criterion suggest, as a percent? Round to 2dp, just the number.",
+  "answer": 28.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "28%"
+ },
+ {
+  "category": "kelly",
+  "q": "A strategy wins 46% of the time, paying 2.5:1 (win 2.5 units, lose 1). What fraction of the bankroll does the Kelly criterion suggest, as a percent? Round to 2dp, just the number.",
+  "answer": 24.4,
+  "ok": true,
+  "used_calc": true,
+  "text": "24.4%"
+ },
+ {
+  "category": "kelly",
+  "q": "A strategy wins 48% of the time, paying 0.5:1 (win 0.5 units, lose 1). What fraction of the bankroll does the Kelly criterion suggest, as a percent? Round to 2dp, just the number.",
+  "answer": -56.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "-56%"
+ },
+ {
+  "category": "kelly",
+  "q": "A strategy wins 61% of the time, paying 4:1 (win 4 units, lose 1). What fraction of the bankroll does the Kelly criterion suggest, as a percent? Round to 2dp, just the number.",
+  "answer": 51.25,
+  "ok": true,
+  "used_calc": true,
+  "text": "51.25%"
+ },
+ {
+  "category": "kelly",
+  "q": "A strategy wins 77% of the time, paying 1.5:1 (win 1.5 units, lose 1). What fraction of the bankroll does the Kelly criterion suggest, as a percent? Round to 2dp, just the number.",
+  "answer": 61.66666667,
+  "ok": true,
+  "used_calc": true,
+  "text": "61.67%"
+ },
+ {
+  "category": "kelly",
+  "q": "A strategy wins 52% of the time, paying 3:1 (win 3 units, lose 1). What fraction of the bankroll does the Kelly criterion suggest, as a percent? Round to 2dp, just the number.",
+  "answer": 36.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "36%"
+ },
+ {
+  "category": "kelly",
+  "q": "A strategy wins 70% of the time, paying 1:1 (win 1 units, lose 1). What fraction of the bankroll does the Kelly criterion suggest, as a percent? Round to 2dp, just the number.",
+  "answer": 40.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "40%"
+ },
+ {
+  "category": "kelly",
+  "q": "A strategy wins 55% of the time, paying 1:1 (win 1 units, lose 1). What fraction of the bankroll does the Kelly criterion suggest, as a percent? Round to 2dp, just the number.",
+  "answer": 10.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "10%"
+ },
+ {
+  "category": "kelly",
+  "q": "A strategy wins 80% of the time, paying 1:1 (win 1 units, lose 1). What fraction of the bankroll does the Kelly criterion suggest, as a percent? Round to 2dp, just the number.",
+  "answer": 60.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "60%"
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 2x with entry at $387.93. Ignoring fees and maintenance margin, at what price am I liquidated? Just the number.",
+  "answer": 193.965,
+  "ok": true,
+  "used_calc": true,
+  "text": "$193.97"
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 3x with entry at $58074.0. Ignoring fees and maintenance margin, at what price am I liquidated? Just the number.",
+  "answer": 38716.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$38,716.00"
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 50x with entry at $28748.0. Ignoring fees and maintenance margin, at what price am I liquidated? Just the number.",
+  "answer": 28173.04,
+  "ok": true,
+  "used_calc": true,
+  "text": "$28,173.04"
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 10x with entry at $4004.0. Ignoring fees and maintenance margin, at what price am I liquidated? Just the number.",
+  "answer": 3603.6,
+  "ok": true,
+  "used_calc": true,
+  "text": "$3,603.60"
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 8x with entry at $230.73. Ignoring fees and maintenance margin, at what price am I liquidated? Just the number.",
+  "answer": 201.88875,
+  "ok": true,
+  "used_calc": true,
+  "text": "$201.89"
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 15x with entry at $4659.0. Ignoring fees and maintenance margin, at what price am I liquidated? Just the number.",
+  "answer": 4348.4,
+  "ok": true,
+  "used_calc": true,
+  "text": "$4,348.40"
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 5x with entry at $3581.0. Ignoring fees and maintenance margin, at what price am I liquidated? Just the number.",
+  "answer": 2864.8,
+  "ok": true,
+  "used_calc": true,
+  "text": "$2,864.80"
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 4x with entry at $3.55. Ignoring fees and maintenance margin, at what price am I liquidated? Just the number.",
+  "answer": 2.6625,
+  "ok": true,
+  "used_calc": true,
+  "text": "$2.6625"
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 100x with entry at $386.67. Ignoring fees and maintenance margin, at what price am I liquidated? Just the number.",
+  "answer": 382.8033,
+  "ok": true,
+  "used_calc": true,
+  "text": "$382.80"
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 50x with entry at $44.98. Ignoring fees and maintenance margin, at what price am I liquidated? Just the number.",
+  "answer": 44.0804,
+  "ok": true,
+  "used_calc": true,
+  "text": "$44.08"
+ },
+ {
+  "category": "liq_price_short",
+  "q": "I am short 4x with entry at $65594.0. Ignoring fees and maintenance, at what price am I liquidated? Just the number.",
+  "answer": 81992.5,
+  "ok": true,
+  "used_calc": true,
+  "text": "$81,992.50"
+ },
+ {
+  "category": "liq_price_short",
+  "q": "I am short 5x with entry at $4.17. Ignoring fees and maintenance, at what price am I liquidated? Just the number.",
+  "answer": 5.004,
+  "ok": true,
+  "used_calc": true,
+  "text": "$5.00"
+ },
+ {
+  "category": "liq_price_short",
+  "q": "I am short 8x with entry at $872.52. Ignoring fees and maintenance, at what price am I liquidated? Just the number.",
+  "answer": 981.585,
+  "ok": true,
+  "used_calc": true,
+  "text": "$981.58"
+ },
+ {
+  "category": "liq_price_short",
+  "q": "I am short 50x with entry at $11912.0. Ignoring fees and maintenance, at what price am I liquidated? Just the number.",
+  "answer": 12150.24,
+  "ok": true,
+  "used_calc": true,
+  "text": "$12,150.24"
+ },
+ {
+  "category": "liq_price_short",
+  "q": "I am short 10x with entry at $29391.0. Ignoring fees and maintenance, at what price am I liquidated? Just the number.",
+  "answer": 32330.1,
+  "ok": true,
+  "used_calc": true,
+  "text": "$32,330.10"
+ },
+ {
+  "category": "liq_price_short",
+  "q": "I am short 4x with entry at $2752.0. Ignoring fees and maintenance, at what price am I liquidated? Just the number.",
+  "answer": 3440.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$3,440.00"
+ },
+ {
+  "category": "liq_price_short",
+  "q": "I am short 15x with entry at $2335.0. Ignoring fees and maintenance, at what price am I liquidated? Just the number.",
+  "answer": 2490.666667,
+  "ok": true,
+  "used_calc": true,
+  "text": "$2,490.67"
+ },
+ {
+  "category": "liq_price_short",
+  "q": "I am short 50x with entry at $240.98. Ignoring fees and maintenance, at what price am I liquidated? Just the number.",
+  "answer": 245.7996,
+  "ok": true,
+  "used_calc": true,
+  "text": "$245.80"
+ },
+ {
+  "category": "liq_price_short",
+  "q": "I am short 25x with entry at $58399.0. Ignoring fees and maintenance, at what price am I liquidated? Just the number.",
+  "answer": 60734.96,
+  "ok": true,
+  "used_calc": true,
+  "text": "$60,734.96"
+ },
+ {
+  "category": "liq_price_short",
+  "q": "I am short 50x with entry at $1.04. Ignoring fees and maintenance, at what price am I liquidated? Just the number.",
+  "answer": 1.0608,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1.0608"
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "I make markets quoting 8 bps wide and capture the full spread on 50 round trips of $10,000.00 each. Gross profit in dollars? Just the number.",
+  "answer": 400.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$400.00"
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "I make markets quoting 5 bps wide and capture the full spread on 20 round trips of $10,000.00 each. Gross profit in dollars? Just the number.",
+  "answer": 100.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$100.00"
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "I make markets quoting 8 bps wide and capture the full spread on 500 round trips of $2,500.00 each. Gross profit in dollars? Just the number.",
+  "answer": 1000.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1,000.00"
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "I make markets quoting 30 bps wide and capture the full spread on 100 round trips of $20,000.00 each. Gross profit in dollars? Just the number.",
+  "answer": 6000.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$6,000.00"
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "I make markets quoting 10 bps wide and capture the full spread on 300 round trips of $2,500.00 each. Gross profit in dollars? Just the number.",
+  "answer": 750.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$750.00"
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "I make markets quoting 5 bps wide and capture the full spread on 500 round trips of $100,000.00 each. Gross profit in dollars? Just the number.",
+  "answer": 25000.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$25,000.00"
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "I make markets quoting 30 bps wide and capture the full spread on 75 round trips of $1,000.00 each. Gross profit in dollars? Just the number.",
+  "answer": 225.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$225.00"
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "I make markets quoting 1 bps wide and capture the full spread on 50 round trips of $20,000.00 each. Gross profit in dollars? Just the number.",
+  "answer": 100.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$100.00"
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "I make markets quoting 5 bps wide and capture the full spread on 1000 round trips of $5,000.00 each. Gross profit in dollars? Just the number.",
+  "answer": 2500.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$2,500.00"
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "I make markets quoting 3 bps wide and capture the full spread on 75 round trips of $500.00 each. Gross profit in dollars? Just the number.",
+  "answer": 11.25,
+  "ok": true,
+  "used_calc": true,
+  "text": "$11.25"
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $926.95 put for a premium of $37.41. At expiry the spot is $1001.11. Profit per contract in dollars (negative if a loss)? Just the number.",
+  "answer": -37.41,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$37.41"
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $68111.0 call for a premium of $1382.96. At expiry the spot is $62662.12. Profit per contract in dollars (negative if a loss)? Just the number.",
+  "answer": -1382.96,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$1,382.96"
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $30.87 call for a premium of $0.64. At expiry the spot is $37.04. Profit per contract in dollars (negative if a loss)? Just the number.",
+  "answer": 5.53,
+  "ok": true,
+  "used_calc": true,
+  "text": "$5.53"
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $3.85 put for a premium of $0.18. At expiry the spot is $3.66. Profit per contract in dollars (negative if a loss)? Just the number.",
+  "answer": 0.01,
+  "ok": true,
+  "used_calc": true,
+  "text": "$0.01"
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $2.58 call for a premium of $0.13. At expiry the spot is $2.5. Profit per contract in dollars (negative if a loss)? Just the number.",
+  "answer": -0.13,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$0.13"
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $9872.0 call for a premium of $295.6. At expiry the spot is $11846.4. Profit per contract in dollars (negative if a loss)? Just the number.",
+  "answer": 1678.8,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1,678.80"
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $472.31 call for a premium of $10.46. At expiry the spot is $519.54. Profit per contract in dollars (negative if a loss)? Just the number.",
+  "answer": 36.77,
+  "ok": true,
+  "used_calc": true,
+  "text": "$36.77"
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $4187.0 put for a premium of $140.23. At expiry the spot is $3852.04. Profit per contract in dollars (negative if a loss)? Just the number.",
+  "answer": 194.73,
+  "ok": false,
+  "used_calc": true,
+  "text": "$4,046.77"
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $9.45 call for a premium of $0.47. At expiry the spot is $10.21. Profit per contract in dollars (negative if a loss)? Just the number.",
+  "answer": 0.29,
+  "ok": true,
+  "used_calc": true,
+  "text": "$0.29"
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $1.68 put for a premium of $0.06. At expiry the spot is $1.73. Profit per contract in dollars (negative if a loss)? Just the number.",
+  "answer": -0.06,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$0.06"
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "A token drops 12% then rises 108%. Overall, what percent is it up from the start? Just the magnitude as a number.",
+  "answer": 83.04,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 83.04%."
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "A token drops 81% then rises 115%. Overall, what percent is it down from the start? Just the magnitude as a number.",
+  "answer": 59.15,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 59.15%."
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "A token drops 55% then rises 79%. Overall, what percent is it down from the start? Just the magnitude as a number.",
+  "answer": 19.45,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 19.45%."
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "A token drops 88% then rises 121%. Overall, what percent is it down from the start? Just the magnitude as a number.",
+  "answer": 73.48,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 73.48%."
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "A token drops 7% then rises 9%. Overall, what percent is it up from the start? Just the magnitude as a number.",
+  "answer": 1.37,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 1.37%."
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "A token drops 86% then rises 121%. Overall, what percent is it down from the start? Just the magnitude as a number.",
+  "answer": 69.06,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 69.06%."
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "A token drops 60% then rises 76%. Overall, what percent is it down from the start? Just the magnitude as a number.",
+  "answer": 29.6,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 29.6%."
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "A token drops 85% then rises 114%. Overall, what percent is it down from the start? Just the magnitude as a number.",
+  "answer": 67.9,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 67.9%."
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "A token drops 64% then rises 150%. Overall, what percent is it down from the start? Just the magnitude as a number.",
+  "answer": 10.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 10%."
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "A token drops 32% then rises 42%. Overall, what percent is it down from the start? Just the magnitude as a number.",
+  "answer": 3.44,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 3.44%."
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 0.25 units at $4110.0 and closed at $3370.2. What is my profit in dollars? Answer with just the number.",
+  "answer": -184.95,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$184.95"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 1 units at $60528.0 and closed at $67791.36. What is my profit in dollars? Answer with just the number.",
+  "answer": 7263.36,
+  "ok": true,
+  "used_calc": true,
+  "text": "$7,263.36"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 1 units at $0.98 and closed at $0.91. What is my profit in dollars? Answer with just the number.",
+  "answer": -0.07,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$0.07"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 5 units at $49.68 and closed at $53.65. What is my profit in dollars? Answer with just the number.",
+  "answer": 19.85,
+  "ok": true,
+  "used_calc": true,
+  "text": "$19.85"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 0.1 units at $35938.0 and closed at $32344.2. What is my profit in dollars? Answer with just the number.",
+  "answer": -359.38,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$359.38"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 100 units at $279.55 and closed at $139.78. What is my profit in dollars? Answer with just the number.",
+  "answer": -13977.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$13,977.00"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 2.5 units at $151.14 and closed at $211.6. What is my profit in dollars? Answer with just the number.",
+  "answer": 151.15,
+  "ok": true,
+  "used_calc": true,
+  "text": "$151.15"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 100 units at $18947.0 and closed at $21220.64. What is my profit in dollars? Answer with just the number.",
+  "answer": 227364.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$227,364.00"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 0.5 units at $4354.0 and closed at $4484.62. What is my profit in dollars? Answer with just the number.",
+  "answer": 65.31,
+  "ok": true,
+  "used_calc": true,
+  "text": "$65.31"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 0.5 units at $4107.0 and closed at $4312.35. What is my profit in dollars? Answer with just the number.",
+  "answer": 102.675,
+  "ok": true,
+  "used_calc": true,
+  "text": "$102.68"
+ },
+ {
+  "category": "pnl_short",
+  "q": "I shorted 2 units at $2944.0 and covered at $2060.8. Profit in dollars (negative if a loss)? Just the number.",
+  "answer": 1766.4,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1,766.40"
+ },
+ {
+  "category": "pnl_short",
+  "q": "I shorted 0.1 units at $2.93 and covered at $2.34. Profit in dollars (negative if a loss)? Just the number.",
+  "answer": 0.059,
+  "ok": true,
+  "used_calc": true,
+  "text": "$0.059"
+ },
+ {
+  "category": "pnl_short",
+  "q": "I shorted 0.1 units at $3.77 and covered at $4.22. Profit in dollars (negative if a loss)? Just the number.",
+  "answer": -0.045,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$0.045"
+ },
+ {
+  "category": "pnl_short",
+  "q": "I shorted 1 units at $13392.0 and covered at $11383.2. Profit in dollars (negative if a loss)? Just the number.",
+  "answer": 2008.8,
+  "ok": true,
+  "used_calc": true,
+  "text": "$2,008.80"
+ },
+ {
+  "category": "pnl_short",
+  "q": "I shorted 0.1 units at $17.11 and covered at $15.74. Profit in dollars (negative if a loss)? Just the number.",
+  "answer": 0.137,
+  "ok": true,
+  "used_calc": true,
+  "text": "$0.137"
+ },
+ {
+  "category": "pnl_short",
+  "q": "I shorted 3 units at $11811.0 and covered at $12637.77. Profit in dollars (negative if a loss)? Just the number.",
+  "answer": -2480.31,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$2,480.31"
+ },
+ {
+  "category": "pnl_short",
+  "q": "I shorted 50 units at $1117.0 and covered at $1161.68. Profit in dollars (negative if a loss)? Just the number.",
+  "answer": -2234.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$2,234.00"
+ },
+ {
+  "category": "pnl_short",
+  "q": "I shorted 3 units at $3.24 and covered at $3.11. Profit in dollars (negative if a loss)? Just the number.",
+  "answer": 0.39,
+  "ok": true,
+  "used_calc": true,
+  "text": "$0.39"
+ },
+ {
+  "category": "pnl_short",
+  "q": "I shorted 5 units at $2.66 and covered at $3.06. Profit in dollars (negative if a loss)? Just the number.",
+  "answer": -2.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$2.00"
+ },
+ {
+  "category": "pnl_short",
+  "q": "I shorted 0.1 units at $40171.0 and covered at $44991.52. Profit in dollars (negative if a loss)? Just the number.",
+  "answer": -482.052,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$482.05"
+ },
+ {
+  "category": "position_size",
+  "q": "My account is $10,000.00. I risk 3% per trade. Entry $1.0, stop 2% away. How many units should I buy so the stop loses exactly my risk? Round to 4dp, just the number.",
+  "answer": 15000.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 15,000."
+ },
+ {
+  "category": "position_size",
+  "q": "My account is $50,000.00. I risk 2% per trade. Entry $926.68, stop 4% away. How many units should I buy so the stop loses exactly my risk? Round to 4dp, just the number.",
+  "answer": 26.978029,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 26.978."
+ },
+ {
+  "category": "position_size",
+  "q": "My account is $5,000.00. I risk 2.5% per trade. Entry $335.11, stop 15% away. How many units should I buy so the stop loses exactly my risk? Round to 4dp, just the number.",
+  "answer": 2.486746,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 2.4867."
+ },
+ {
+  "category": "position_size",
+  "q": "My account is $2,500.00. I risk 2.5% per trade. Entry $4532.0, stop 7% away. How many units should I buy so the stop loses exactly my risk? Round to 4dp, just the number.",
+  "answer": 0.197012,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 0.197."
+ },
+ {
+  "category": "position_size",
+  "q": "My account is $25,000.00. I risk 2% per trade. Entry $116.36, stop 2% away. How many units should I buy so the stop loses exactly my risk? Round to 4dp, just the number.",
+  "answer": 214.850464,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 214.8505."
+ },
+ {
+  "category": "position_size",
+  "q": "My account is $2,500.00. I risk 2.5% per trade. Entry $40.55, stop 5% away. How many units should I buy so the stop loses exactly my risk? Round to 4dp, just the number.",
+  "answer": 30.826141,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 30.8261."
+ },
+ {
+  "category": "position_size",
+  "q": "My account is $10,000.00. I risk 5% per trade. Entry $32.54, stop 4% away. How many units should I buy so the stop loses exactly my risk? Round to 4dp, just the number.",
+  "answer": 384.142594,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 384.1426."
+ },
+ {
+  "category": "position_size",
+  "q": "My account is $50,000.00. I risk 2% per trade. Entry $57006.0, stop 2% away. How many units should I buy so the stop loses exactly my risk? Round to 4dp, just the number.",
+  "answer": 0.877101,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 0.8771."
+ },
+ {
+  "category": "position_size",
+  "q": "My account is $500.00. I risk 5% per trade. Entry $409.65, stop 4% away. How many units should I buy so the stop loses exactly my risk? Round to 4dp, just the number.",
+  "answer": 1.525693,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 1.5257."
+ },
+ {
+  "category": "position_size",
+  "q": "My account is $1,000.00. I risk 1% per trade. Entry $7.08, stop 15% away. How many units should I buy so the stop loses exactly my risk? Round to 4dp, just the number.",
+  "answer": 9.416196,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 9.4162."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Bid is 160.25, ask is 160.57. What is the spread in basis points off the mid of 160.41? Just the number.",
+  "answer": 19.94888099,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 19.95 bps."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Bid is 41.58, ask is 41.66. What is the spread in basis points off the mid of 41.62? Just the number.",
+  "answer": 19.22152811,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 19.22 bps."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Bid is 43137.23, ask is 43570.77. What is the spread in basis points off the mid of 43354.0? Just the number.",
+  "answer": 100.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 100 bps."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Bid is 42.38, ask is 42.38. What is the spread in basis points off the mid of 42.38? Just the number.",
+  "answer": 0.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 0 bps."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Bid is 2.23, ask is 2.23. What is the spread in basis points off the mid of 2.23? Just the number.",
+  "answer": 0.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 0 bps."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Bid is 66474.35, ask is 66487.65. What is the spread in basis points off the mid of 66481.0? Just the number.",
+  "answer": 2.00057159,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 2.0 bps."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Bid is 19.57, ask is 19.59. What is the spread in basis points off the mid of 19.58? Just the number.",
+  "answer": 10.2145046,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 10.21 bps."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Bid is 15888.82, ask is 15895.18. What is the spread in basis points off the mid of 15892.0? Just the number.",
+  "answer": 4.00201359,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 4.0 bps."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Bid is 38.09, ask is 38.11. What is the spread in basis points off the mid of 38.1? Just the number.",
+  "answer": 5.24934383,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 5.25 bps."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Bid is 17987.92, ask is 18078.08. What is the spread in basis points off the mid of 18033.0? Just the number.",
+  "answer": 49.99722731,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 49.99 bps."
+ }
+]

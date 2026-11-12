@@ -1,0 +1,1202 @@
+[
+ {
+  "id": "mt0",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   44,
+   52,
+   63,
+   54,
+   45
+  ],
+  "replies": [
+   "Funding is a periodic payment between long and short traders on a perpetual future, paid when the perpetual price differs from the spot price. It keeps the perpetual price close to the spot price. Funding can be positive or negative depending on market direction.",
+   "When funding is positive, shorts pay longs. This happens when the perpetual price is above the spot price, which usually means the market is bullish. The funding rate is calculated based on the difference between the perpetual price and the spot price, and the payment is made every 8 hours on Hyperliquid.",
+   "Yes, you can profit from funding rates. If you're confident the funding rate will turn negative (e.g., during a strong bull run), go long and collect the positive funding payments. If you expect the rate to turn positive (e.g., during a strong bear run), go short and collect those payments. Timing is key—funding rates are volatile and depend on market sentiment and liquidity.",
+   "The main risk: funding rates can reverse quickly. If your position gets liquidated due to poor risk management, you lose your margin and any funding payments earned. High leverage amplifies both gains and losses. You also pay funding if you're wrong on the trend. Always check the current funding rate before opening a position.",
+   "Yes, start small. Use $2k to test the strategy without risking much. Monitor the funding rate closely—don’t hold positions longer than needed. Use stop-losses and avoid over-leveraging. If the rate stays positive for several cycles, consider scaling up. But never let emotion drive your decisions."
+  ]
+ },
+ {
+  "id": "mt1",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   25,
+   21,
+   17,
+   34,
+   32
+  ],
+  "replies": [
+   "Liquidation is when a bot closes your leveraged position because your margin isn't enough to keep it open. Lower leverage means less chance of this.",
+   "Keep your leverage low, add more margin as the market moves against you, and use stop-losses to close losing positions early.",
+   "Start with 5x or 10x leverage. If you're unsure, stick to 5x. Higher leverage increases risk fast.",
+   "A stop-loss closes your position if the price hits your set level. It helps limit losses but can trigger at a worse price in fast moves. Use it with lower leverage for better control.",
+   "- Keep leverage low: start with 5x or 10x, don’t go higher.  \n- Use stop-losses to close losing trades before they get worse.  \n- Add margin manually if your position gets squeezed."
+  ]
+ },
+ {
+  "id": "mt2",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   41,
+   44,
+   47,
+   52,
+   57
+  ],
+  "replies": [
+   "Memecoins are very volatile and can drop fast. Without a clear reason to hold, don't trade them unless you're prepared to lose the whole amount. Keep fees and slippage in mind too. If you're unsure, stick to stablecoins or well-established tokens.",
+   "Most people lose because they don’t understand risk. They use leverage beyond their ability to handle a loss. They chase trends instead of doing research. They don’t set stop-losses. They trade with money they can’t afford to lose. And they think hype is safety.",
+   "Use only money you’re willing to lose. Never trade with funds you need for living expenses. Keep leverage low—1x is safest. Set stop-losses before entering trades. Check the token’s fundamentals, not just its hype. Avoid FOMO-driven entries. Use Pools or Aave to earn yield on stablecoins instead.",
+   "Check your Wallets page for balances and positions. Review your top 5 tokens and their prices. Reduce leverage to 1x on any leveraged position. Close any open trades with no clear edge. Move funds to Aave if you have idle USDC or USDT. No memecoin trading unless you’re confident in the project.",
+   "Only use a small amount—no more than 1% of your total wallet balance. Stick to 1x leverage. Set a strict stop-loss: 20% below entry. Only enter if you understand the project’s real value, not just the hype. Avoid tokens with no clear utility or team. Monitor them daily. If the price drops past your stop-loss, close immediately."
+  ]
+ },
+ {
+  "id": "mt3",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   45,
+   51,
+   46,
+   38,
+   45
+  ],
+  "replies": [
+   "Impermanent loss is the value you give up by providing liquidity to a pool compared with just holding the two tokens. It appears when the prices of the two tokens move apart. Trading fees earned by the pool can offset it, but they may not.",
+   "Example: You supply 10 ETH and 100 USDC to a pool, which holds ETH/USDC at $2,000. The price moves so that ETH is $3,000 and USDC is $1,500. If the pool splits evenly, you'd hold 6.67 ETH and 50 USDC. That's worth $20,010 versus your $20,000 in. The loss is $90.",
+   "If prices return to their original level, you still hold less than you started with. Impermanent loss means you end up with fewer dollars than if you had just held the two tokens. Trading fees can help, but they won't fully make up for the loss.",
+   "LPing is worth it when trading fees earned by the pool exceed the impermanent loss. That usually happens with high trading volume and large price swings, because fees keep coming in. Low volume pools rarely make it worthwhile.",
+   "Staking pays a fixed yield to you for locking up your own tokens. LPing rewards are variable and depend on trading activity. Staking is simpler: you don't need to manage pools or worry about price swings. LPing can earn more but carries impermanent loss risk."
+  ]
+ },
+ {
+  "id": "mt4",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   65,
+   67,
+   56,
+   63,
+   58
+  ],
+  "replies": [
+   "Deposit a token into an Aave pool to earn interest. You can borrow other tokens against your deposit, using the deposited token as collateral. The borrowed amount is usually lower than your deposit due to a buffer (a few percent). Interest rates are variable and depend on supply and demand for each asset. Borrowing is limited by the collateral value and the protocol's risk controls.",
+   "Health factor measures how much more collateral you can add before your position becomes unsafe. It’s calculated as:  \n(Your collateral value) / (Your borrowed amount × LTV multiplier)  \n\nIf health factor drops to 1 or below, you risk liquidation. Higher health factor means safer leverage.  \nIn Hermit, you can check it in the Positions tab under each loan.  \nLiquidations happen automatically when health factor falls too low.",
+   "If your health factor drops below 1, your position becomes unsafe.  \nThe protocol will trigger an automatic liquidation to recover losses.  \nA liquidator pays off your debt using your collateral, minus fees.  \nYou lose part of your collateral to cover the shortfall.  \nThis protects lenders from further loss.  \nAlways monitor your health factor—keep it above 1.",
+   "Keep your health factor above 1 by:  \n- Avoid borrowing more than your collateral can support.  \n- Add more collateral if needed (via Deposit > Deposit).  \n- Reduce borrowed amount if your health factor is near 1.  \n- Use lower leverage—don’t over-borrow relative to your deposit.  \n- Monitor positions regularly in the Positions tab.  \n- Avoid sudden price swings that hurt collateral value.",
+   "Borrowing against ETH depends on your goals and risk tolerance.  \n\nETH is stable as collateral—low risk of depegging.  \nBut it’s volatile as a borrow asset—borrowing ETH can cost higher interest.  \nUse only what you can afford to lose.  \nCheck current rates in the Positions tab.  \nIf rates are high, consider other options like Aave v3 or stablecoin loans."
+  ]
+ },
+ {
+  "id": "mt5",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   38,
+   21,
+   35,
+   23,
+   26
+  ],
+  "replies": [
+   "From the app: select a token, then send a native or wrapped USDC amount from your wallet. The native token and USDC you send are locked by the protocol and earn a yield of about 4% per year.",
+   "Hermit only works on Ethereum and Base right now. If you want to deposit from Coinbase, use one of those networks.",
+   "If you send to the wrong network, your funds may be stuck. Only Ethereum and Base work with Hermit. Sending to the wrong chain can result in permanent loss. Always check the network before sending.",
+   "Deposits on Ethereum and Base take about 5 to 15 minutes. Network congestion can make them longer. Withdrawals take 5 to 20 minutes.",
+   "You can't trade perps in Hermit yet. The app only supports lending with Aave V3. Perps are not available. Check the main menu for what's supported."
+  ]
+ },
+ {
+  "id": "mt6",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   49,
+   42,
+   33,
+   36,
+   27
+  ],
+  "replies": [
+   "A seed phrase, or recovery phrase, is a list of words that can rebuild your wallet and every key in it. Anyone who has it can take your funds. Treat it like a password: keep it offline, never share it, and if you lose it you lose the wallet.",
+   "No. I run on your phone or Mac, and none of what you type leaves the device. There is no cloud, no server, and I cannot see your wallets or keys. I cannot even list what files you have on this chat.",
+   "Keep it offline, written down on paper or printed out, and stored somewhere safe. Never type it into a website or email it to yourself. If you lose it, you lose the wallet.",
+   "If your phone dies, you still need the 12-word phrase. It's the only backup. Without it, there is no way to restore the wallet, because Hermit has no cloud backup. Keep it written down and safe.",
+   "Never give it out. No one can fix your wallet with it, because they would take your funds. If someone asks for it, that is a scam."
+  ]
+ },
+ {
+  "id": "mt7",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   37,
+   35,
+   42,
+   46,
+   54
+  ],
+  "replies": [
+   "APR is the yearly rate without compounding. APY is the yearly rate with compounding included. For example, 10% APR compounded monthly gives about 10.47% APY. APY is what you get when interest is paid on the interest.",
+   "DeFi sites usually show APY. It reflects the real annual return including compounding, which is what you actually earn. APR is less common and not used in DeFi lending. Always check how often it compounds.",
+   "Because APY includes compounding, so it shows a higher return than APR. For example, 10% APR compounded daily gives more than 10% simple interest. The difference grows with longer periods and higher rates. Always compare APYs to know the true yearly return.",
+   "40% APY means you earn 40% per year with compounding included. It’s higher than APR because it accounts for reinvested rewards. But it depends on the protocol: some use AAVE-style yields, others use staking rewards. Check if it’s APY or APR, and confirm the compounding period.",
+   "Ask:  \n- Is this APY or APR?  \n- How often does it compound?  \n- What’s the underlying asset (e.g., USDC)?  \n- Is it a lending pool (AAVE) or staking reward?  \n- Are there fees, slippage, or exit delays?  \n- Is it a verified protocol or a new one?  \n\nAvoid deposits without answers to these."
+  ]
+ },
+ {
+  "id": "mt8",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   33,
+   42,
+   55,
+   50,
+   69
+  ],
+  "replies": [
+   "I can't trade for you. You hold your own funds and decide each move. Hermit can help you plan trades, check the market, and calculate risks and sizes. Want me to do that?",
+   "Risk 1% to 2% of your account balance per trade.  \nWith $500, that’s $5 to $10 per trade.  \nUse a smaller size if the price moves fast or the liquidation price is close.  \nNever risk more than you can afford to lose.",
+   "Set your stop-loss below the current price, where it makes sense for your strategy.  \nFor longs: stop-loss below support levels.  \nFor shorts: stop-loss above resistance levels.  \nIf no clear level, use a tight stop near the current price.  \nAvoid stops too close—market noise can trigger them.  \nCheck the chart for recent swings and key levels.",
+   "Use the lowest leverage that fits your strategy.  \nStart with 3x–5x unless you have a strong reason for higher.  \nHigher leverage increases risk and liquidation chance.  \nUse 10x only if you’re confident in the move and have a tight stop.  \nAlways check your estimated liquidation price before placing a trade.",
+   "Trade BTC perps with $500 at 3x–5x leverage. Use a stop-loss at 2% below entry for longs and 2% above for shorts. Risk $5 to $10 per trade. Wait for a clear signal: a bounce above support (for longs) or drop through resistance (for shorts). Enter only after confirmation, not a random move. Close the trade on the first wick against your position. Keep trades small and avoid over-leveraging."
+  ]
+ },
+ {
+  "id": "mt9",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 1,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   32,
+   38,
+   21,
+   27,
+   34
+  ],
+  "replies": [
+   "Hi there, I'm writing to say the rent is 3 days past due. I'm sorting it now and will send an updated payment as soon as I can. Sorry for the inconvenience.",
+   "Dear Mr. Smith,\n\nI am writing to inform you that the rent for this month is 3 days overdue. I apologise for the delay and will send an updated payment as soon as possible.\n\nKind regards,  \nYour name",
+   "Dear Mr. Smith,\n\nThe rent is 3 days overdue. I'll send an updated payment as soon as possible.\n\nRegards,  \nYour name",
+   "Dear Mr. Smith,\n\nThe rent is 3 days overdue. I'll send an updated payment as soon as possible. I promise it won't happen again.\n\nRegards,  \nYour name",
+   "Sure. Here's a short one:\n\nHi there, I wanted to tell you the meeting you asked me to join didn't go ahead, so nothing was decided. I'll check in with you when I can."
+  ]
+ },
+ {
+  "id": "mt10",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   119,
+   58,
+   80,
+   80,
+   74
+  ],
+  "replies": [
+   "USDC is a stablecoin pegged to the US dollar, issued by Coinbase and Circle. It’s backed 1:1 by real US dollars held in reserve.\n\nUSDT is another stablecoin pegged to the US dollar, issued by Tether. It’s also supposed to be 1:1 backed by USD, but its reserves have been subject to scrutiny.\n\nKey differences:\n- USDC is more transparent and has undergone audits by well-known firms.\n- USDT has faced criticism over reserve disclosure.\n- USDC is widely used on Ethereum, BNB Chain, and other chains.\n- USDT is dominant on Bitcoin and some older chains.\n\nBoth are stablecoins, meaning they aim to hold a value of $1 each. Use either based on where you're trading or depositing.",
+   "USDC is generally considered safer due to greater transparency, regular audits, and clearer reserve reporting.\n\nUSDT has faced questions about its reserve backing, though it remains functional and widely used.\n\nFor maximum safety, USDC is the better choice—especially if you're holding funds long-term or in high-value accounts.\n\nAlways check the chain (Ethereum, Arbitrum, etc.) when using either token.",
+   "USDe is a stablecoin issued by EigenLayer, running on Ethereum. It’s backed 1:1 by ETH, not US dollars.\n\nUnlike USDC or USDT, which are dollar-backed, USDe uses ETH as collateral. This makes it less stable during ETH price drops.\n\nIt’s designed to be a yield-bearing stablecoin, earning interest from EigenLayer’s staking rewards.\n\nUse USDe only if you’re okay with holding ETH as collateral and want exposure to staking yields.\n\nNot suitable for risk-averse users or those needing a dollar-pegged stablecoin.",
+   "Yes, stablecoins can depeg.\n\nUSDC and USDT have both experienced brief depegs during market stress — usually lasting minutes to hours.\n\nA depeg happens when the token's price diverges from $1 due to loss of confidence, liquidity issues, or reserve problems.\n\nUSDe, being backed by ETH, is more volatile — it can depeg if ETH drops sharply.\n\nNo stablecoin is completely immune. Monitor news and token prices during crises.\n\nAlways assume a stablecoin could lose its peg in extreme conditions.",
+   "Split $10k across 3 stablecoins:\n\n- $6,000: USDC (Ethereum) — safest, most transparent, widely supported.\n- $2,500: USDT (Ethereum) — established, but less audit transparency.\n- $1,500: USDe (Ethereum) — only if you want yield via EigenLayer staking; higher risk.\n\nKeep USDC as primary holding. Use USDT for existing chains where it’s required. Only use USDe if you’re okay with ETH backing and are earning yield.\n\nCheck current ETH price before allocating to USDe."
+  ]
+ },
+ {
+  "id": "mt11",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   55,
+   53,
+   41,
+   36,
+   77
+  ],
+  "replies": [
+   "A token approval lets a contract spend a set amount of one of your tokens. Hermit can approve tokens for you when you connect your wallet, but only for the exact amount you ask for, and only for the specific contract you're using. You can revoke an approval at any time in the Wallets page.",
+   "Unlimited approvals let a contract spend as much of your token as it wants, with no cap. If that contract is hacked or misused, attackers can drain your entire balance. Even if the contract is safe now, future bugs or malicious upgrades could exploit the unlimited access. Always use exact approvals when possible.",
+   "Open the Wallets page in Hermit, select your wallet, then go to the \"Approvals\" section. Review each approval, and tap \"Revoke\" next to any you no longer need. Confirm with your signature. Only revoke approvals for contracts you don’t use anymore.",
+   "Yes. In the Wallets page, Hermit shows a list of all active token approvals for your connected wallet. Each approval includes the contract address, token symbol, and the amount approved. You can revoke any approval there.",
+   "A permit signature scam tricks users into signing a malicious permit that lets a contract spend their tokens. The scammer sends a fake transaction that looks legitimate, but the permit is designed to transfer large amounts or all of a token type. If you sign it, your tokens leave your wallet. Always verify the contract address and token before approving. Hermit does not approve on your behalf — only for the exact amount and contract you choose."
+  ]
+ },
+ {
+  "id": "mt12",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 1,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   43,
+   32,
+   45,
+   41,
+   34
+  ],
+  "replies": [
+   "A bridge moves your tokens from one blockchain to another. You send tokens on the source chain, and the bridge locks them, then sends you the same value on the destination chain. It usually takes a few minutes. Hermit can't handle bridges yet.",
+   "Bridges are not risk-free. They can be hacked, have bugs, or be used for scams. Always check the bridge address on the official site before using it. Hermit doesn’t support bridges yet.",
+   "The cheapest way is to use a bridge that supports direct ETH to Base transfers via Arbitrum or Optimism. Check the official Base bridge (base.xyz) or Arbitrum’s bridge. Fees are usually under $1. Use only approved addresses to avoid scams. Hermit doesn’t support bridges yet.",
+   "Relay is a decentralized identity system that lets you sign messages with your own key instead of sharing your seed phrase. It’s used by apps like Self Key and is part of the Future ID project. Hermit doesn’t use Relay directly.",
+   "Fees vary by bridge and network. For ETH to Base via Arbitrum or Optimism, expect $0.50 to $2.00. Always check the current rate on the official bridge site. Hermit doesn’t show live fees yet."
+  ]
+ },
+ {
+  "id": "mt13",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   73,
+   99,
+   88,
+   82,
+   74
+  ],
+  "replies": [
+   "Think of it this way: your position size is the amount of money you're willing to lose on one trade, not the profit you expect.  \nIf you risk 1% of your account on a trade, and your account is $10,000, you're risking $100.  \nThat means if the trade goes wrong, your loss won't wipe out your capital.  \nUse stop-losses to protect that risk.  \nDon’t size based on greed or hype—stick to your plan.",
+   "R multiple is how many times your average entry price is above or below your average exit price.  \nFor example:  \n- If you enter at $50 and exit at $60, that’s a +2R (since $60 / $50 = 1.2, minus 1 = 0.2, so 1R).  \n- If you enter at $50 and exit at $70, that’s a +4R (since $70 / $50 = 1.4, minus 1 = 0.4, so 4R).  \nIt measures reward relative to risk.  \nHigher R multiples mean better risk-reward.  \nA 1R risk with a 3R reward is better than a 1R risk with a 1R reward.",
+   "For 2R risk-reward, you need a win rate of at least 33% to break even.  \nThat means:  \n- 33% winning trades → 2R profit per win  \n- 67% losing trades → 1R loss per loss  \nNet result: 0.67 × (-1R) + 0.33 × (+2R) = -0.67 + 0.66 = -0.01R (slightly negative)  \nTo be profitable, you need a win rate above 34%.  \nAt 40% win rate: 0.4 × 2R − 0.6 × 1R = 0.8R − 0.6R = +0.2R (profitable)  \nSo: higher win rates make 2R more sustainable.",
+   "For 1R risk-reward, you need a win rate of at least 50% to break even.  \n- 50% wins → 1R profit per win  \n- 50% losses → 1R loss per loss  \nNet result: 0.5 × 1R − 0.5 × 1R = 0R (break even)  \nTo be profitable, you need a win rate above 50%.  \nAt 55% win rate: 0.55 × 1R − 0.45 × 1R = 0.1R (profitable)  \nSo: 1R is less efficient than 2R.  \nHigher win rates are needed to profit.",
+   "Risk-reward (R) matters more than win rate.  \nA high R with a low win rate can still be profitable.  \nA low R with a high win rate may not compensate for poor reward.  \nExample:  \n- 50% win rate, 1R → needs 50%+ to break even  \n- 33% win rate, 2R → profitable if consistent  \nR multiplies your edge.  \nFocus on high R trades, then manage win rate.  \nBetter risk-reward beats higher win rate alone."
+  ]
+ },
+ {
+  "id": "mt14",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   24,
+   16,
+   24,
+   18,
+   22
+  ],
+  "replies": [
+   "$3,000.00 a month is $250.00 a week. That's the total you can spend each week. How much do you want to save each week?",
+   "$250.00 x 20% = $50.00 saved per week. You'd have $200.00 left for spending each week.",
+   "Put it in a US Treasury bond, or a similar safe account. It won't make you rich, but it won't hurt your goals either.",
+   "I'd keep it out of crypto. It can lose its value fast and Hermit can't hold crypto here.",
+   "| Item | Amount |\n|---|---|\n| Weekly income | $250.00 |\n| Savings | $50.00 |\n| Spending | $200.00 |"
+  ]
+ },
+ {
+  "id": "mt15",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   112,
+   78,
+   104,
+   78,
+   74
+  ],
+  "replies": [
+   "Cross margin uses your entire account balance as collateral for all positions. If one position loses, funds from other positions can cover the loss. Isolated margin assigns a fixed amount of margin to each position. Losses are limited to that amount; if it's wiped out, you lose that money and can't use it elsewhere.\n\nIn Hyperliquid:  \n- Cross margin is the default.  \n- Isolated margin is only available for perps (perpetual futures) on the Hyperliquid exchange.  \n- Use isolated margin when you want to limit risk to a single trade.  \n- Use cross margin for more flexibility and lower liquidation risk across trades.\n\nAlways check the margin type before opening a position.",
+   "Hermit uses cross margin by default for all trades on Hyperliquid. It’s the standard setting unless you switch to isolated margin manually.  \n\nTo use isolated margin:  \n- Open a new order.  \n- Select \"Isolated\" in the order ticket.  \n- Enter the exact margin amount you want to allocate to that position.  \n\nNote: Isolated margin is only available for perps on Hyperliquid.  \nCross margin uses your full account balance as collateral, while isolated limits risk to the chosen margin.",
+   "If one trade goes bad:  \n- In cross margin, losses from that trade can be covered by funds in other positions. You keep using your full account balance as collateral.  \n- In isolated margin, the loss is limited to the margin you assigned to that one trade. If it’s wiped out, you lose that money and can’t use it elsewhere.\n\nCross margin gives more flexibility but increases risk if multiple trades go wrong.  \nIsolated margin protects your other funds but requires more careful capital management.\n\nUse isolated margin when you’re testing strategies or want to limit downside. Use cross margin for larger, diversified positions.",
+   "Protect your other positions by:  \n- Using isolated margin for high-risk trades.  \n- Avoiding over-leveraging on any single trade.  \n- Monitoring liquidation prices and PnL regularly.  \n- Using stop-loss orders to close losing positions before they drain capital.  \n- Keeping cross margin trades below 5% of your total account value unless you’re confident in your strategy.\n\nHermit doesn’t auto-protect your account — you must manage risk manually.  \nNo alerts or automated safeguards exist beyond what you set yourself.",
+   "Cross margin uses your full account balance as collateral. If one trade loses, other positions can cover the loss. Isolated margin limits risk to a fixed amount per trade.  \n\nIn Hyperliquid, cross is default. Isolated is only for perps and lets you cap risk to one trade.  \n\nUse cross margin for diversified, flexible trading. Use isolated for high-risk, low-capital trades.  \n\nYou control the risk — no automatic protection exists. Monitor positions and use stop-losses."
+  ]
+ },
+ {
+  "id": "mt16",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   57,
+   45,
+   38,
+   43,
+   43
+  ],
+  "replies": [
+   "MEV is extra profit that block builders or bots earn by choosing the order of transactions. A common form is a sandwich attack, where a bot trades just before and after your swap to push your price worse. It mostly hits large swaps in concentrated positions. Hermit can't avoid it completely, but smaller swaps lower the risk.",
+   "A bot trades right before your swap (to see the price) and right after (to push the price down). If your position is concentrated around that price, you get a worse fill. Bigger swaps are more likely to be targeted. Smaller swaps reduce the impact.",
+   "Keep your swap small. Use a thin AMM liquidity pool instead of concentrated one. Avoid trading during high volume spikes. Monitor your swap size relative to the pool’s depth. The app shows your estimated slippage before you confirm.",
+   "Yes. Solana has fast finality and low fees, so bots can act quickly. Large swaps still trigger sandwich attacks. Use thin pools or split big trades into smaller ones. Check slippage estimates before confirming. The app shows your swap impact in real time.",
+   "Set slippage at 0.5% for most trades. Higher slippage increases risk of being sandwiched, especially on large swaps. Keep it low unless you're trading a very deep pool where higher slippage is expected. The app shows your exact slippage estimate before you confirm."
+  ]
+ },
+ {
+  "id": "mt17",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   37,
+   37,
+   46,
+   40,
+   40
+  ],
+  "replies": [
+   "I can't predict prices. What I can tell you: a sharp rise can come quickly, and a drop can follow fast too. If you're thinking of buying, start small. Check the current price in the Trade page.",
+   "I don't have a clear view at the moment. I can't predict where Bitcoin goes next. If you want to try it, start with a small amount. You can trade BTC on Hyperliquid from the Trade page.",
+   "More bullish if: A strong rise in demand, BTC trading above key levels, or a clear reason to buy. For example, a major company adopting BTC could be a sign. But remember, I can't see live data or news. Check the Trade page for real-time prices.",
+   "Start small. Use only money you can afford to lose. A long-term position should not strain your budget. Keep your risk low—don’t overexpose one asset. If you’re unsure, begin with $10 to $50. Monitor your position and exit if needed.",
+   "Sell if: You hit your target profit, or if the market shows clear signs of a downturn. Keep your stop-loss below 5% from entry. If you’re holding too long, selling helps avoid losses. Always check the current price before deciding."
+  ]
+ },
+ {
+  "id": "mt18",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   67,
+   71,
+   73,
+   63,
+   57
+  ],
+  "replies": [
+   "A market maker provides liquidity by quoting both a buy and a sell price for an asset, holding inventory. They profit from the bid-ask spread and aim to make small, consistent profits over time, even if they don't change their inventory much. In perps, they often use leverage to increase exposure without needing to deposit full value. Their role is to keep prices stable and reduce volatility.",
+   "Market makers profit primarily from the bid-ask spread — the difference between the price they quote to buy (bid) and sell (ask). They also earn from funding rates in perpetual futures when their position is funded. If they hold inventory, they may lose on price moves, but their main income comes from spread and funding. In perps, they can scale exposure with leverage while managing risk through margin and liquidation thresholds.",
+   "Inventory risk is the risk that a market maker’s held position will lose value due to adverse price movements. If they are long and prices fall, or short and prices rise, they must close positions at a loss to avoid liquidation. This risk increases with higher leverage and low capital buffers. To manage it, they may reduce exposure, widen spreads, or adjust positions. It’s why market makers need strong capital and risk controls.",
+   "You can’t run a market-making bot on Hermit. The app doesn’t support automated order placement, liquidity provision, or inventory management. You’d need a self-custody wallet with a custom bot, but that carries high risk: slippage, liquidation, and no oversight. Hermit can’t execute trades or manage capital outside of your approved actions. Stick to manual trading or use a regulated platform for market-making-like strategies.",
+   "First risks: Liquidation if your position moves against you and you don’t add margin. Slippage on large orders in fast markets. Spread widening if low volume or high volatility. Funding rate losses if you’re funded on the wrong side. Your capital is tied up — no withdrawal until you close. No AI help if things go wrong."
+  ]
+ },
+ {
+  "id": "mt19",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   40,
+   24,
+   27,
+   22,
+   45
+  ],
+  "replies": [
+   "I can chat, write notes and stories, explain ideas, plan your day or a project, and help with files on this device. That's it. I can't browse the web, buy you stuff, move money, or read your email or wallets.",
+   "No, I can't place trades from chat. Money only moves when you approve it yourself in the Wallets page. I can't trade for you.",
+   "It runs on your phone, so it is yours alone. What you type stays there, and nothing leaves your device. There is no cloud and no server.",
+   "Yes, everything runs on your phone, so you don't need internet for chats or files. You can still use the AI offline.",
+   "You can't see your own wallets or balances from chat, move money, trade, browse the web or read email. I can't tell you what your real money does either, because that's on your phone. Point me to the Wallets page if you want those things."
+  ]
+ },
+ {
+  "id": "mt20",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   61,
+   54,
+   66,
+   64,
+   69
+  ],
+  "replies": [
+   "Airdrops are free tokens given out by new projects to early users. They're usually distributed in a fair way, but they can be scams or mistakes. Check the token's contract address and verify it on a chain explorer like Etherscan. If it looks suspicious, don't interact with it. Never send funds to a wallet just because you got an airdrop message.",
+   "Only if you need the money and the token is stable. Airdropped tokens often have no value, or they may never be used. Selling locks in a loss if the token drops. If it’s a real project, check its activity on Etherscan and socials. If it’s fake or dead, selling is safer than holding.",
+   "No. Never connect your wallet to a site just to claim anything. Scammers use fake claims to steal your seed phrase or sign transactions. If the site asks for your wallet, it’s likely a trap. Always verify the official source through trusted channels — not links in tweets or DMs. If you already connected, stop using that wallet on any site until you confirm it’s safe.",
+   "Yes, that’s a scam. Legitimate projects never ask you to sign a message to claim tokens. Signing a message gives them control over your wallet. If they ask for your seed phrase, private key, or any approval, walk away. No project will ever ask for those. If you already signed, check your wallet for unauthorized transactions and move funds to a new wallet immediately.",
+   "Stop using that wallet on any site. Check your wallet for any unauthorized transactions — look for approvals or token sends you didn’t make. Move your funds to a new, clean wallet (create one in Hermit). Do not interact with the airdrop site again. Verify the project’s official socials and website — only use verified sources. If you’re unsure, check the contract address on Etherscan before interacting with anything."
+  ]
+ },
+ {
+  "id": "mt21",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   115,
+   87,
+   87,
+   96,
+   92
+  ],
+  "replies": [
+   "An order book lists the current buy and sell orders for a token. The left side is sells, the right is buys. Each row shows a price and the amount at that price. Bids are offers to buy, asks are offers to sell.\n\nThe best bid is the highest price someone is willing to buy at. The best ask is the lowest price someone is willing to sell at. If the best bid is above the best ask, there is no trade. A wide spread means low liquidity.\n\nYou can see the total size of all bids and asks in the order book. Large orders may be split across many rows to avoid moving prices.",
+   "A wall is a large order placed by one person that moves the price. It can push the market price away from its normal level. For example, if a big sell order hits the market, it can cause the price to drop sharply even if no one else wants to sell.\n\nWalls are often used to manipulate prices or test market reactions. They can be hard to detect unless you see the order book. If you're trading on a thin market, a wall can cause sudden losses.",
+   "Spoofing is when someone places fake orders to trick traders into thinking the market is moving. These orders are usually quickly canceled before they get filled.\n\nFor example, you might see a large buy order appear, then disappear fast. This creates the illusion of strong demand, pushing other traders to buy. Spoofing is illegal in many markets and can distort prices.\n\nIt’s often used to manipulate the order book and trigger automatic trades. Hermit cannot detect or prevent spoofing. Always check the order book for unusual patterns.",
+   "Depth shows how much of each price is available to trade. If your order fills at the best price, it uses only part of the available depth.\n\nIf the depth runs out, your order may not fill as much as expected. For example, if you want to buy $100 at $5.00 but only $30 is available at that price, your order fills $30 and waits for the rest.\n\nIn a shallow market, even small orders can move prices. Deep markets have more liquidity, so your order is more likely to fill fully at the expected price.",
+   "Use a limit order if you're confident about the price. A market order guarantees fill but risks slippage. A limit order gives you control over price but may not fill at all.\n\nFor $5k, a limit order avoids paying a higher price than expected. If the market moves quickly, a limit order may not fill. A market order fills fast but could cost more than you expect.\n\nIn volatile markets, a limit order reduces risk. In stable markets, a market order is faster. Use your judgment based on the current price action."
+  ]
+ },
+ {
+  "id": "mt22",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   51,
+   56,
+   42,
+   45,
+   23
+  ],
+  "replies": [
+   "Bitcoin's supply is capped at 21 million coins. Every four years, the reward for mining a block is cut in half. The last halving was in May 2024, when the reward dropped from 3.75 to 3 BTC. Each halving makes Bitcoin harder to mine and puts further pressure on the price.",
+   "It doesn't always pump the price. Some people buy right before each one, pushing prices up, but others sell off because they think the reward drop will hurt adoption. In 2019, the price fell after the first halving of that cycle. What matters more than timing is how much you hold, not how much you buy.",
+   "The main difference is that Bitcoin's reward has already dropped to 3 BTC per block. That means miners get less money every 4 years. The next halving is expected in 2028. There's also more competition among miners now, which can affect profitability.",
+   "Yes, if you're trading Bitcoin. The reward drop makes mining less profitable, which can cause miners to shut down or switch to other coins. This increases supply pressure, which can push prices lower. But the real effect depends on how much demand is out there.",
+   "Bitcoin's reward cut in half every four years. It lowers incentives for mining, puts downward pressure on price, and usually happens around 2028."
+  ]
+ },
+ {
+  "id": "mt23",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 1,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   58,
+   63,
+   69,
+   143,
+   73
+  ],
+  "replies": [
+   "```python\ndef liquidation_price(margin, entry_price, leverage):\n    # Liquidation price = entry price * (1 - 1/leverage)\n    return entry_price * (1 - 1 / leverage)\n```\n\nUse: Call `liquidation_price(margin, entry_price, leverage)` with your margin amount, entry price, and leverage.  \nExample: `liquidation_price(1000, 50000, 5)` returns 49000.0.  \nNote: This assumes cross margin and no fees. Margin is not used in the formula.",
+   "```python\ndef liquidation_price(margin, entry_price, leverage, maintenance_margin=0.02):\n    # Maintenance margin as fraction of position value\n    # Liquidation price = entry price * (1 - maintenance_margin / leverage)\n    return entry_price * (1 - maintenance_margin / leverage)\n```\n\nUse: Pass `maintenance_margin` as decimal (e.g., 0.02 for 2%). Default is 2%.  \nExample: `liquidation_price(1000, 50000, 5, 0.03)` returns 49333.33.  \nThis accounts for maintenance margin requirements in perpetual futures.",
+   "```python\ndef liquidation_price(margin, entry_price, leverage, is_short=True, maintenance_margin=0.02):\n    # For shorts: liquidation price is below entry\n    # For longs: above entry\n    multiplier = -1 if is_short else 1\n    return entry_price + multiplier * entry_price * (1 - maintenance_margin / leverage)\n```\n\nUse: `is_short=False` for longs, `True` for shorts.  \nExample: `liquidation_price(1000, 50000, 5, True, 0.02)` returns ~49000.0 (short).  \nExample: `liquidation_price(1000, 50000, 5, False, 0.02)` returns ~50980.0 (long).  \nAdjust `maintenance_margin` as needed.",
+   "```python\ndef liquidation_price(margin, entry_price, leverage, is_short=True, maintenance_margin=0.02):\n    \"\"\"\n    Calculate liquidation price for a perpetual futures position.\n    \n    Args:\n        margin (float): Position margin in USD.\n        entry_price (float): Entry price of the asset.\n        leverage (int or float): Leverage used (e.g., 5 for 5x).\n        is_short (bool): True for short position, False for long.\n        maintenance_margin (float): Maintenance margin as decimal (e.g., 0.02 for 2%).\n\n    Returns:\n        float: Liquidation price in USD.\n\n    Notes:\n        - For shorts: liquidation price is below entry.\n        - For longs: liquidation price is above entry.\n        - Maintenance margin affects how much margin is required to stay open.\n        - Margin input is not used in calculation; only leverage and maintenance matter.\n    \"\"\"\n    multiplier = -1 if is_short else 1\n    return entry_price + multiplier * entry_price * (1 - maintenance_margin / leverage)\n```\n\nUse: Pass values like `liquidation_price(1000, 50000, 5, True, 0.03)` for a 3% maintenance margin short.",
+   "Quick test in Python:\n\n```python\n# Test with a 5x short at $50k entry, 2% maintenance margin\nprint(liquidation_price(1000, 50000, 5, True, 0.02))  # Expected: ~49,000.00\n\n# Test with a 5x long at $50k entry, 2% maintenance margin\nprint(liquidation_price(1000, 50000, 5, False, 0.02))  # Expected: ~50,980.00\n\n# Test with higher maintenance margin\nprint(liquidation_price(1000, 50000, 5, True, 0.05))  # Expected: ~47,619.05\n```\n\nRun in any Python environment (Replit, VS Code, etc.). No external libraries needed."
+  ]
+ },
+ {
+  "id": "mt24",
+  "seed": 0,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   20,
+   41,
+   41,
+   30,
+   42
+  ],
+  "replies": [
+   "Take a break. Stress makes bad decisions. Close the position now and return when you're calm, then ask me again.",
+   "At 5x leverage a 30% move is 150% of your margin. If the liquidation price is close, closing now prevents loss of more than your margin. Check the liquidation price in the Positions tab. If it's within 1-2 ticks, close immediately.",
+   "No. Adding to a losing position increases risk without improving odds. At 5x leverage, each tick against you costs 0.25% of your margin. You're already risking most of your capital. Wait for a pullback to a better entry point before adding.",
+   "Close the position. Your liquidation price is likely very close — if not inside the current market. Adding more risk means losing everything faster. Let the trade run its course.",
+   "In Hermit, open the Positions tab, select the trade, then use the order ticket to place a reduce-only order. Set the size to half your original margin. Choose a limit price below the current market to avoid slippage. Confirm with your passcode."
+  ]
+ },
+ {
+  "id": "mt0",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   107,
+   67,
+   94,
+   93,
+   88
+  ],
+  "replies": [
+   "Funding is a periodic payment between long and short traders to keep the perpetual contract close to the spot price. It's paid when the funding rate is positive or negative, based on market conditions. In Hyperliquid, funding is calculated every 8 hours. If you're holding a position, you may earn or pay funding depending on your side and the current rate.\n\n- Longs pay if the funding rate is positive.\n- Shorts pay if the funding rate is negative.\n\nThe funding rate adjusts to prevent the perp price from deviating too far from the spot price. It’s usually small, but it can change rapidly during high volatility.",
+   "When the funding rate is positive:  \n- Longs pay funding to shorts.  \n\nThis happens because the market is trading above the fair value (spot), so shorts are earning more by being short. The system charges longs to keep the perp price aligned with spot.\n\nIf the funding rate is negative:  \n- Shorts pay funding to longs.\n\nSo, positive funding = longs pay; negative funding = shorts pay.",
+   "Yes, you can make money from funding payments — but only if you correctly predict the direction of the funding rate.\n\n- If you're long and the funding rate turns positive, you pay funding — not profitable.\n- If you're long and the rate turns negative, you earn funding — potentially profitable.\n- Same logic applies in reverse for shorts.\n\nFunding can be a small, regular income if you hold positions through funding periods. But it’s not guaranteed. High volatility can cause large swings. Use Hyperliquid’s funding rate data to time entries and exits.",
+   "The main risks:\n\n- You pay funding even if your trade loses money — funding is a separate cost.\n- Funding rates can swing fast during high volatility or news events.\n- You must stay open through the funding period to earn or pay.\n- Holding a losing position just to collect funding is risky and bad strategy.\n\nFunding is not free money. It’s a market mechanism to keep perps near spot. If you’re wrong on the direction, you lose both price movement and funding. Always check the current funding rate before entering.",
+   "Yes, $2k is enough to start funding trading.\n\n- You can earn or pay up to ~$0.50–$1.00 per 8-hour funding period, depending on the rate.\n- Small size keeps risk low.\n- Use limit orders to avoid slippage on close.\n\nBut:  \n- Only trade if you expect the funding rate to turn negative (for longs) or positive (for shorts).  \n- Don’t hold losing positions just for funding.  \n- Monitor the rate every 8 hours — it changes fast.\n\nStart small, test the idea, then scale if it works."
+  ]
+ },
+ {
+  "id": "mt1",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   28,
+   24,
+   17,
+   30,
+   25
+  ],
+  "replies": [
+   "Your position is closed at a loss when your margin can't cover the losses. Lower leverage means less risk, but it also limits how much you can trade.",
+   "Reduce leverage, monitor funding rates and market moves, and add margin before liquidation. Keep your account size small enough to survive a sharp move.",
+   "Start with 5x or lower. Higher leverage increases risk fast. Use stop-losses and set tight margin levels.",
+   "A stop-loss closes your position if the price moves against you. It helps avoid liquidation, but it may trigger early in fast markets. Test it on a small trade first.",
+   "- Keep leverage low: start with 5x or less.  \n- Use stop-losses to close positions before liquidation.  \n- Monitor funding rates and market direction closely."
+  ]
+ },
+ {
+  "id": "mt2",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   42,
+   43,
+   44,
+   39,
+   40
+  ],
+  "replies": [
+   "Memecoins are very volatile and can drop fast. If you're losing money, check your fees and slippage on the trade. You can review past trades in Trade > History. Consider using a limit order instead of market orders to avoid bad fills.",
+   "Most people lose because they don’t understand how leverage works. Using too much margin can lead to liquidation even if the price moves slightly against them. Also, many don’t check real-time liquidation prices before entering a trade. Always use stop-losses and avoid over-leveraging.",
+   "Use up to 10x leverage, not more. Set a stop-loss at least 5% below entry for longs and 5% above for shorts. Avoid trading during high volatility spikes. Only risk what you can afford to lose. Check the liquidation price before confirming any trade.",
+   "Start with 10x leverage. Use limit orders only. Set stop-losses 5% from entry. Watch the liquidation price in the review screen. Avoid trading during news events or pump-and-dumps. Keep losses small—no more than $5 per trade until you’re confident.",
+   "Use a small amount of capital. Focus on coins with strong community support and clear utility. Avoid anything hype-driven. Monitor liquidity and slippage closely. Never use more than 5% of your account balance. If the price moves fast, exit early."
+  ]
+ },
+ {
+  "id": "mt3",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   47,
+   52,
+   43,
+   26,
+   26
+  ],
+  "replies": [
+   "Impermanent loss is the value you give up by providing liquidity to an AMM pool compared with just holding the two tokens. It appears when the prices of the two tokens move apart. Trading fees earned by the pool may or may not make up for it.",
+   "Example: You put in 10 ETH and 10 USDC into a 1:1 pool. If the price moves so that ETH is worth 2x more, you'd have 20 ETH and 10 USDC. That's worth about 40 ETH now, versus 20 ETH and 10 USDC before. The loss is 20 ETH, minus trading fees.",
+   "Yes, it can be a loss even if prices come back. You lose the difference between what you'd have if you had just held the tokens and what you get back after the price moves. Fees earned may or may not offset it.",
+   "LPing works best in: Pools where trading fees are high. Pools that keep rebalancing while prices move apart. Volatile pairs that swing hard and stay apart.",
+   "Liquidity providing has lower fees than staking, but higher risk. Staking pays a fixed yield over time. LPing pays variable fees that depend on trading activity."
+  ]
+ },
+ {
+  "id": "mt4",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   75,
+   74,
+   71,
+   77,
+   89
+  ],
+  "replies": [
+   "Deposit stablecoins into an Aave pool to earn interest. You can borrow other tokens against your deposited collateral, which also earns interest. The borrowed amount is usually a multiple of the collateral value, depending on the pool's health factor.\n\nYour position is secured by the collateral, and if you borrow too much, the system may liquidate you to protect the lender. Interest rates are variable and depend on demand. Aave supports multiple chains and tokens.",
+   "Health factor measures how much more you can borrow before your position gets liquidated.\n\nIt’s calculated as:  \n(Your collateral value × liquidation threshold) / (Your borrowed amount + fees)\n\nIf health factor drops to 1, your position is at risk. If it goes below 1, the system automatically liquidates your position to repay debt and return collateral to the pool.\n\nA higher health factor means safer borrowing. Keep it above 1 to avoid liquidation.",
+   "If your health factor drops below 1, your position is automatically liquidated.\n\nThe system triggers a liquidator to repay the borrowed amount using your collateral. The liquidator gets a small fee (usually 5% of the repayment). After liquidation, your collateral is returned to Aave, and you lose any excess value beyond what was borrowed.\n\nThis prevents further losses to lenders. Always monitor your health factor, especially when borrowing against volatile assets.",
+   "Keep your private key secure—never share it or store it online.\n\nUse a hardware wallet like Ledger or Trezor for added security.\n\nAvoid borrowing too much relative to your collateral; maintain a health factor well above 1.\n\nOnly deposit stablecoins into Aave pools—avoid volatile tokens unless you understand the risk.\n\nDo not use Aave on chains with poor security or low liquidity.\n\nCheck your position regularly in the app—Hermit can show your health factor and liquidation price.",
+   "Borrowing against ETH can be risky.\n\nETH is volatile—it can drop fast, increasing your liquidation risk.\n\nAave uses collateralization ratios. If ETH drops, your health factor may fall below 1, triggering a liquidation.\n\nYou also pay variable interest rates, which rise during high demand.\n\nIf you're using ETH as collateral, ensure your collateral value exceeds your borrow amount by a wide margin.\n\nOnly do this if you expect ETH to rise soon and can manage the risk.\n\nBetter alternatives: use stablecoins (USDC, USDT) as collateral and borrow other stablecoins."
+  ]
+ },
+ {
+  "id": "mt5",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   37,
+   48,
+   62,
+   32,
+   37
+  ],
+  "replies": [
+   "You can't send money to Hermit from the chat. Money only moves when you approve a transaction in the app, and only for the exact amount you need. The app shows your balances on the Wallets page.",
+   "Coinbase supports USDC (USDC.e) and USDT (USDT.e). Use USDC.e for the best experience with Hermit, as it’s native to Ethereum and works seamlessly with Aave and other DeFi protocols. USDT.e is also supported but may have higher fees or slower confirmations. Always check the token symbol before sending.",
+   "If you send funds to the wrong network, they may be lost. Hermit only accepts Ethereum mainnet and Arbitrum, and only USDC.e and USDT.e tokens. Sending USDC or USDT on unsupported chains (like Base or Polygon) will not work. Always double-check the network and token symbol before sending. If you're unsure, use the app’s Wallets page to check your balances and approvals.",
+   "Transfers on Ethereum mainnet take 15 to 30 seconds on average. On Arbitrum, they’re usually faster—5 to 15 seconds. Confirmations depend on network congestion. Always check the status in the Wallets page.",
+   "You can’t trade perps in Hermit yet. The app currently supports Aave lending and swaps via Uniswap. Perp trading requires using a dedicated exchange like Hyperliquid or Hyperliquid’s API. Check their site for sign-up and funding rates."
+  ]
+ },
+ {
+  "id": "mt6",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   39,
+   40,
+   34,
+   36,
+   37
+  ],
+  "replies": [
+   "A seed phrase, or recovery phrase, is a list of words that can rebuild your wallet and every key in it. Anyone who has it can take your funds. Never share it, and never type it into a website.",
+   "No. I can't see your wallets or keys. I never ask for them. The app shows your balances on screen, but I can't read them from here. If you want to move funds, do it yourself with the Wallets page.",
+   "Write it on paper and keep it somewhere safe and offline: a locked drawer, a safety deposit box, or a secure digital storage device. Never keep it online, on photos, or in notes apps.",
+   "If your phone dies, your seed phrase is still yours. Keep it written down and stored offline. You can restore your wallet on any new device using the 12 words. No one else can access it.",
+   "Never give your seed phrase to anyone, even if they say they're fixing your wallet. It's not needed. If someone asks for it, it's a scam. Your wallet is only accessible with the 12 words you created."
+  ]
+ },
+ {
+  "id": "mt7",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   33,
+   20,
+   29,
+   39,
+   36
+  ],
+  "replies": [
+   "APR is the yearly rate without compounding. APY is the yearly rate with compounding built in, so it is a bit higher than APR. Compare both rates when you look at an offer.",
+   "They usually show APY. It is the yearly rate with compounding included, which is what you actually earn over time.",
+   "Because a 10% APY means you earn more than a 10% APR over a year. Compounding turns small gains into bigger ones. APY is the real number to compare.",
+   "It could be real or it could be a scam. Check where the 40% comes from. Look for a source like DefiLlama, then compare it to the rate the vault pays. If they don't match, it's likely a fake.",
+   "Ask: What is the APY and how often is it compounded? Who owns the underlying asset? Is the rate variable or fixed? Are there any fees? Is the protocol audited? Is it a well-known, established protocol?"
+  ]
+ },
+ {
+  "id": "mt8",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   31,
+   29,
+   42,
+   31,
+   33
+  ],
+  "replies": [
+   "Hyperliquid supports BTC perpetuals. I can't set up trades or wallets from chat, so use the app. Your own wallet and phrase are needed to move money, so check them first.",
+   "Risk 1% to 2% per trade at most. With $500, that’s $5 to $10.  \nUse smaller positions if you’re unsure.  \nNever risk more than you can afford to lose.",
+   "Place your stop-loss below key support levels.  \nFor BTC, common support zones are around $63,000–$64,000 (as of recent data).  \nUse the price chart in the Trade tab to find recent support.  \nSet it tight enough to avoid being stopped out by noise.",
+   "Start with 5x leverage for BTC.  \nHigher leverage increases risk—don’t go above 10x unless you’re confident.  \nUse cross margin to protect your account balance.  \nAlways test with a small position first.",
+   "Enter long BTC perpetuals at 5x or 10x, aiming for 2% on entry.  \nStop-loss at key support (check the chart).  \nTarget the next major resistance level.  \nClose early if price moves against you."
+  ]
+ },
+ {
+  "id": "mt9",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 1,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   40,
+   48,
+   32,
+   36,
+   37
+  ],
+  "replies": [
+   "Hi there, I'm writing to let you know my payment of $1,500.00 for 28 October is 3 days behind schedule. It's from my own wallet, so nothing was sent through the app. I'll pay it as soon as I can.",
+   "Dear Mr Smith,\n\nI am writing to inform you that my rent payment of $1,500.00 for 28 October is 3 days late. The payment came from my own wallet, so nothing was sent through the app. I will make it up as soon as possible.\n\nKind regards,  \nAlex",
+   "Dear Mr Smith,\n\nMy rent payment of $1,500.00 for 28 October is 3 days late. Nothing was sent through the app. I will pay it up as soon as possible.\n\nRegards, Alex",
+   "Dear Mr Smith,\n\nMy rent payment of $1,500.00 for 28 October is 3 days late. Nothing was sent through the app. I will pay it up as soon as possible. This won't happen again.\n\nRegards, Alex",
+   "Hi there,\n\nI need to tell you about a missed meeting with the legal team. I was meant to be there but couldn't make it. I've rescheduled it for Thursday. Can you send me a quick reminder?"
+  ]
+ },
+ {
+  "id": "mt10",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   105,
+   73,
+   78,
+   99,
+   86
+  ],
+  "replies": [
+   "USDC is a stablecoin pegged to the US dollar, issued by Circle. It’s regulated and backed 1:1 by reserves held in secure accounts.\n\nUSDT is another stablecoin pegged to the US dollar, issued by Tether. It’s also backed 1:1 by reserves, but its audit history has raised concerns in some circles.\n\nKey differences:\n- USDC is more transparent and regularly audited by independent firms.\n- USDT has faced scrutiny over reserve disclosure.\n- USDC is used widely in DeFi and institutional settings.\n- Both are accepted on most blockchains, including Ethereum, Arbitrum, and Base.\n\nNeither is risk-free. Always check the issuer’s audits and compliance status.",
+   "USDC is generally considered safer due to stronger audit transparency and regulatory compliance.\n\nTether (USDT) has faced ongoing scrutiny over reserve disclosures and audit independence.\n\nBoth are pegged 1:1 to the US dollar, but only USDC has consistently passed rigorous, independent audits with full reserve reporting.\n\nIf safety is your top priority, USDC is the better choice—especially for long-term or institutional use.\n\nAlways verify the chain and contract address before using either token.",
+   "USDe is a stablecoin launched by Coinbase, pegged 1:1 to the US dollar.\n\nIt operates on Ethereum and other EVM chains, with reserves held in custody by Coinbase.\n\nUnlike USDC, USDe uses a more centralized model—reserves are managed by Coinbase, not fully on-chain.\n\nIt is not yet as widely adopted as USDC or USDT.\n\nAudits have been conducted, but it is newer and less proven in real-world usage.\n\nFor safety and trust, USDC remains the more established option.",
+   "Yes, stablecoins can depeg from $1.\n\nThis happens when the value of their backing (like reserves) drops below the peg, causing the token’s market price to fall.\n\nUSDC and USDT are designed to stay pegged, but past incidents (e.g., Tether’s 2023 reserve issues) show that depegs can occur due to audit failures, fraud, or lack of transparency.\n\nUSDe has no history of depegging yet, but its centralized nature increases risk if reserves are mismanaged.\n\nNo stablecoin is completely immune—always monitor news and audits.\n\nIf depegging occurs, you could lose value even if the token is supposed to be stable.",
+   "Split $10k across three stablecoins for diversification:\n\n- $4,000 USDC: highest transparency, trusted by institutions.\n- $3,000 USDT: widely used, but audit concerns remain.\n- $3,000 USDe: new, Coinbase-backed, less proven in volume.\n\nRationale:\n- USDC leads in audit history and compliance.\n- USDT has faced scrutiny but is deeply entrenched.\n- USDe offers a newer alternative with centralized custody.\n\nKeep all tokens on Ethereum or Base for best support. Monitor reserves and audits regularly.\n\nDo not hold all funds in one stablecoin—diversify to reduce risk."
+  ]
+ },
+ {
+  "id": "mt11",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   43,
+   50,
+   39,
+   37,
+   59
+  ],
+  "replies": [
+   "Approving a token lets a contract spend a set amount of your tokens. You approve the exact amount you want to spend, and Hermit only approves what you ask for. Each approval can be revoked in Wallets. Approvals can last forever unless revoked.",
+   "Unlimited approvals let a contract spend any amount of your tokens at any time, with no cap. If the contract is hacked or misused, attackers can drain your entire balance. Even if the contract is safe now, a future bug could still cause loss. Always use limited approvals when possible.",
+   "Go to the Tokens page in the app. Select the token, then click \"Approve\" again. Enter the same amount as the original approval, but this time choose \"Revoke\" instead. Confirm with your passcode. The approval is removed after confirmation.",
+   "Yes. In the Tokens page, you can see each token's current approval status. Approvals show the contract address, token name, and the amount approved. You can revoke any approval by entering the same amount and selecting \"Revoke\".",
+   "A permit signature scam tricks users into signing a permit that lets a malicious contract spend their tokens. The scammer uses a fake app or link to prompt you to approve a large amount, often hiding the real contract address. Once signed, the permit grants full spending power. Always verify contract addresses before approving. Never approve on unknown sites."
+  ]
+ },
+ {
+  "id": "mt12",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   55,
+   62,
+   37,
+   39,
+   40
+  ],
+  "replies": [
+   "A bridge moves your tokens from one chain to another. It checks the rules of each network, creates a new token on the other side, and you can swap back later. Hermit can't run a bridge itself. The app lists chains and tokens supported by bridges. Use the official bridge for the best safety record.",
+   "Bridges are safer when they are:  \n- On a well-known chain (Ethereum, Base, Arbitrum).  \n- Supported by established protocols like Lido or Uniswap.  \n- Using a verified address in the app's settings.  \n\nAlways check the bridge's reputation before sending. If the bridge is not listed in the app, it may be unverified. Never send funds to an unknown or unofficial bridge address.",
+   "The cheapest way is to use the native bridge in the app.  \nIt uses Base's low gas fees and direct routing.  \nNo extra steps needed—just connect your wallet and confirm.  \nAlways double-check the destination chain before confirming.",
+   "Relay is a cross-chain bridge that lets you move assets between Ethereum and Base.  \nIt’s fast, secure, and uses low-cost transactions.  \nHermit supports Relay for seamless transfers between these chains.  \nAlways verify the destination network before confirming any transfer.",
+   "Fees vary based on network congestion and token type.  \nOn Base, costs are usually under $0.10 for small amounts.  \nCheck the current gas price in the app’s Bridge section before sending.  \nAlways confirm the final fee after reviewing the details."
+  ]
+ },
+ {
+  "id": "mt13",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   76,
+   69,
+   64,
+   61,
+   56
+  ],
+  "replies": [
+   "Think of it like this:  \n- A 1% risk per trade means you lose no more than 1% of your account balance on any single trade.  \n- If you have $1,000 and risk 1%, you’re risking $10 max per trade.  \n- This keeps your losses small even after a bad run.  \n- Use stop-losses to enforce this rule.  \n- Don’t size based on emotion—stick to your plan.  \n\nThis way, one losing trade doesn’t wipe you out.",
+   "R multiple = your average win size divided by your average loss size.\n\nExample:  \n- You win $50 on average, lose $25 on average.  \n- R multiple = $50 / $25 = 2R.\n\nIt tells you how much bigger your wins are compared to your losses.  \nHigher R multiple means better risk-reward.  \nA 2R or higher is strong; below 1R is risky.  \nUse it to compare trades or strategies.",
+   "For a 2R edge, you need a win rate of about 33% to break even.\n\n- 33% win rate → 2R edge → 67% loss rate → still profitable over time.  \n- Higher win rates (e.g., 50%) make the strategy more reliable.  \n- But even at 33%, consistent execution matters more than exact win rate.  \n\nFocus on managing risk and sticking to your edge.",
+   "At 1R, you need a win rate of about 50% to break even.\n\n- 50% win rate → 1R edge → 50% loss rate → neutral expected value.  \n- To be profitable, you need over 50% win rate.  \n- Most traders struggle to maintain consistent 50%+ win rates in real markets.  \n\nA 1R edge is weak unless you have exceptional consistency.",
+   "Risk-reward (R) matters more than win rate.\n\nWhy:  \n- A 2R edge with 33% wins beats a 1R edge with 90% wins long-term.  \n- High win rate alone doesn’t fix poor risk management.  \n- Low R multipliers hurt even with good win rates.  \n\nFocus on building strong risk-reward first.  \nThen work on improving win rate sustainably."
+  ]
+ },
+ {
+  "id": "mt14",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   26,
+   23,
+   31,
+   24,
+   30
+  ],
+  "replies": [
+   "$3,000 a month is $250 per week. That’s the total you have each week. How much do you want to save? What are your biggest expenses?",
+   "20% of $250 is $50. So save $50 each week. The rest ($200) goes to spending and needs. Prioritise what you need most.",
+   "Savings should cover: a buffer for emergencies, a cushion before debt gets bigger, and a pool for future goals. Keep it separate from your usual spending so it doesn’t get touched.",
+   "Only if you understand the risks. Crypto can lose value fast. Hermit can't hold crypto yet. Use a wallet like MetaMask or Ledger instead.",
+   "| Category     | Amount/Week |\n|--------------|-------------|\n| Savings      | $50         |\n| Spending     | $200        |\n| Needs        | $200        |\n\nTotal: $250. Adjust numbers if your weekly income changes."
+  ]
+ },
+ {
+  "id": "mt15",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 1,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   75,
+   39,
+   83,
+   61,
+   48
+  ],
+  "replies": [
+   "Cross margin uses your entire account balance as collateral for all positions. If one position loses, funds from other positions can cover the loss. Isolated margin assigns a fixed amount of margin to each position. Losses are limited to that amount; if a position loses its full margin, the position closes and you lose that money. Cross is riskier but more flexible. Isolated is safer for high-leverage trades. Hermit only supports cross margin on Hyperliquid.",
+   "Hermit uses cross margin on Hyperliquid. Your entire account balance is used as collateral across all positions. Losses in one position can be covered by gains or remaining funds in others. There is no isolated margin option in Hermit.",
+   "With cross margin, if one trade goes bad, losses come from your total account balance. You don’t lose just the margin you put into that trade. Other positions or available cash can cover the deficit. This increases risk because losing a single trade can wipe out your entire account fast. With isolated margin, each trade has its own fixed margin. If it loses, you lose only that amount. Cross margin is used in Hermit, so your whole balance is at stake per trade.",
+   "Use smaller position sizes relative to your account value. Set stop-loss orders to limit damage. Avoid over-leveraging—don’t use more than 10x leverage unless you’re confident. Use Hedged Perps (cross-margin) to offset risk with opposite positions. Keep funds in stablecoins like USDC. Never risk more than you can afford to lose. Monitor your liquidation price and close trades before they hit it.",
+   "Hermit uses cross margin on Hyperliquid. That means all your account balance is at risk if one trade fails. There’s no isolated margin option. To protect your account: keep position size small, set stop-losses, avoid high leverage, use hedging strategies, and never risk more than you can afford."
+  ]
+ },
+ {
+  "id": "mt16",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   64,
+   64,
+   43,
+   40,
+   48
+  ],
+  "replies": [
+   "MEV is extra profit that block builders or bots earn by choosing the order of transactions. A common form is a sandwich attack, where a bot trades just before and after your swap to push your price worse. It mostly hits large swaps on busy pools. You see it in the review table, under Take fee and Std dev. Smaller fees lower the risk.",
+   "A bot trades a huge amount right before and after your swap to push the price against you. The pool sees your swap as smaller, so it quotes a worse price, and the bot profits from the gap. It usually only works on big swaps on busy pools. You can reduce it by using smaller swaps and checking the review table for high fees.",
+   "Split your swap into smaller parts, use a low-fee AMM like Raydium, and check the review table for high take fee and standard deviation. These signs mean more slippage and higher sandwich risk. Avoid swapping large amounts at once during high network activity.",
+   "Yes, it matters on Solana too. Even though Solana is fast, bots still scan liquidity pools and can front-run swaps. High slippage and large swaps increase risk. Use smaller swaps, check the review table, and avoid trading during peak times.",
+   "Set slippage between 0.1% and 0.5% for most swaps. Lower is safer but may not execute. Higher slippage (above 1%) increases risk, especially if you're getting sandwiched. Use the review table to see actual slippage before confirming. If standard deviation is high, reduce slippage or split the swap."
+  ]
+ },
+ {
+  "id": "mt17",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   32,
+   29,
+   35,
+   37,
+   30
+  ],
+  "replies": [
+   "I can't see live markets from chat, and any price I gave you would be made up. Check the real price on the Trade page, then ask me a question about it.",
+   "I don't have a read on this one: it's a market move, not a Hermit call, and nobody can predict it. The risk is loss of your own money.",
+   "Here are a few things that would help: a clear reason to use BTC over other stablecoins, a drop in trading fees, or a new use for it. I can't predict them, but they'd help.",
+   "Start small. Use only money you're willing to lose, and keep it small until you know how you feel about it. Size depends on your risk and goals, and I can't tell you what's right for you.",
+   "Sell if the price stops rising and keeps falling, or if you need the money. There's no fixed rule, because selling early or holding through a crash both cost you."
+  ]
+ },
+ {
+  "id": "mt18",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   77,
+   28,
+   38,
+   42,
+   33
+  ],
+  "replies": [
+   "A market maker offers buy and sell prices for an asset at the same time. They keep both sides of the trade open, so you can buy from them or sell to them. When one side fills and the other doesn't, they make a small profit on the difference. They earn this by being willing to accept a narrow spread, rather than holding the asset. They are paid to provide liquidity, not because they predict the price.",
+   "They make money by being willing to accept a narrow spread, rather than holding the asset. They earn this by providing liquidity, not because they predict the price.",
+   "If you hold the asset you've quoted against, you have inventory. If the price moves against you, your inventory loses value. A market maker who holds inventory risks a loss if the price keeps moving in one direction.",
+   "You could run a small one, but it would be risky. You'd need to monitor prices and place trades manually. Without automation, it's hard to manage large volumes. You'd also need to handle settlement and funding costs. It's not a simple setup.",
+   "First, a sudden move against your position would hurt your profit. Then, funding or gas costs could add up fast. After that, you might not be able to exit the trade quickly enough."
+  ]
+ },
+ {
+  "id": "mt19",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   26,
+   34,
+   32,
+   29,
+   28
+  ],
+  "replies": [
+   "I can help you with questions, writing, explaining, planning and files you attach to this chat. Anything that leaves the device isn't something I can do.",
+   "No. I can't place trades from chat. The Trade page is where trades happen, and you open them there. I can check what's happening on the market, but placing the order is your decision.",
+   "Your chats stay on your device. Nothing leaves it, so there's no cloud record and no server to hand your data over to. Chat won't save anything unless you ask it to.",
+   "Yes. Everything runs on your device, including the AI. There's no cloud and no server behind it. What you type and what files you attach stay on your device.",
+   "You can't see your wallets or balances from chat, move money, trade, browse the web or read email. Those are features on their own pages in the app."
+  ]
+ },
+ {
+  "id": "mt20",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   86,
+   64,
+   57,
+   56,
+   60
+  ],
+  "replies": [
+   "That's a common scam setup: real projects don't give out tokens for free, and anyone who asks you to sign up, verify your wallet, or send funds before they arrive is trying to steal from you. Never send funds or share your seed phrase. If the token shows up, check its contract address on a trusted explorer like Etherscan. If it looks fake or suspicious, report it. Your wallet still controls the funds — you can move them if you want, but only if they're real.",
+   "No. Selling it would mean giving up control of the funds without any guarantee of profit. If it's not a legitimate token, selling it could lock you out of it permanently. Only sell if you're sure it's a real token with value, and only after you've verified the contract address. If in doubt, keep it. Your wallet is the only safe place for it.",
+   "Do not connect your wallet. Legitimate airdrops never ask you to connect your wallet to claim more tokens. If a site asks you to connect your wallet to claim anything, it’s a scam. Never share your seed phrase or approve any transaction. The only way to safely interact with a blockchain is through the app’s built-in features.",
+   "No. Never sign a message from an unknown site. Scammers use fake messages to trick people into approving transactions that drain their wallets. The app does not require signing messages to claim anything. If a site asks you to sign a message, it’s a scam. Your seed phrase is never asked for — never give it.",
+   "Stop using the site. Do not connect your wallet, do not sign anything, and do not send funds. Check the contract address on Etherscan to see if it’s real. If it’s not a known project, it’s likely a scam. Your funds are safe in your wallet if you didn’t send them yet. Only interact with verified projects through official channels."
+  ]
+ },
+ {
+  "id": "mt21",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   57,
+   51,
+   38,
+   48,
+   42
+  ],
+  "replies": [
+   "An order book shows the current buy and sell offers in a market. Each row is a single offer, with its price and size. Offers are listed by price, with the lowest buy prices at the top and the highest sell prices at the bottom. Your order fills the best available offer, one row at a time.",
+   "A wall is a limit on how much someone can trade, often used to protect a pool or prevent a large move. A liquidity provider may put up a wall to keep a price from moving too far. It can also mean a firm refuses to trade past a certain point.",
+   "Spoofing is placing fake orders to mislead other traders about what prices are available. It usually happens just before a real order to push prices away from the real value. It is against the rules of most exchanges.",
+   "More depth means more volume available at each price, so your order is more likely to fill fully. Less depth means you may only fill part of it, or the fill price could be worse. Depth also affects how fast a price moves when you place an order.",
+   "Use a market order. It fills right away at the current market price. A limit order would only fill if the price reaches your chosen level, which might not happen at all. For $5k, a market order gives you certainty and speed."
+  ]
+ },
+ {
+  "id": "mt22",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   29,
+   34,
+   28,
+   30,
+   19
+  ],
+  "replies": [
+   "Bitcoin's mining reward cuts in half every 4 years. The last one was in 2020, so the next is due about 2024. It slows supply and keeps inflation low.",
+   "It doesn't always pump prices. Some see it as a sure thing, but others see it as a risk with no guarantee. Past performance isn't a promise. Prices can drop after a halving too.",
+   "More uncertainty. Bitcoin's price has been volatile, and miners are less willing to keep going. Fewer new coins make selling harder, which could push prices up or down.",
+   "Yes. Less money entering the system means less buying pressure. That can help prices rise, but it also puts more stress on the network. Watch for sudden spikes or drops.",
+   "A halving reduces Bitcoin rewards every 4 years, cutting supply and often pushing prices higher, though it’s not guaranteed."
+  ]
+ },
+ {
+  "id": "mt23",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 2,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   30,
+   40,
+   56,
+   84,
+   50
+  ],
+  "replies": [
+   "Here's a clean version:\n\n```python\ndef liquidation_price(margin, entry_price, leverage):\n    return margin / (leverage * entry_price)\n```\n\nCall with: `liquidation_price(100, 5000, 5)`  \nReturns the price at which the position gets liquidated.",
+   "Updated function with maintenance margin:\n\n```python\ndef liquidation_price(margin, entry_price, leverage, maintenance_margin=0.02):\n    return margin / (leverage * entry_price) * (1 - maintenance_margin)\n```\n\nMaintenance margin reduces the liquidation price. Default is 2%. Call with: `liquidation_price(100, 5000, 5, 0.03)` for 3% maintenance.",
+   "Updated to handle both longs and shorts:\n\n```python\ndef liquidation_price(margin, entry_price, leverage, is_short=False, maintenance_margin=0.02):\n    if is_short:\n        return margin / (leverage * entry_price) * (1 + maintenance_margin)\n    else:\n        return margin / (leverage * entry_price) * (1 - maintenance_margin)\n```\n\nFor short: `liquidation_price(100, 5000, 5, True)`  \nFor long: `liquidation_price(100, 5000, 5, False)`  \nReturns price where position gets liquidated.",
+   "Final version with docstring:\n\n```python\ndef liquidation_price(margin, entry_price, leverage, is_short=False, maintenance_margin=0.02):\n    \"\"\"\n    Calculate the liquidation price for a perp position.\n    \n    Args:\n        margin: Initial margin deposited (USD).\n        entry_price: Entry price in USD.\n        leverage: Leverage ratio (e.g., 5 for 5x).\n        is_short: If True, calculate for a short position.\n        maintenance_margin: Maintenance margin percentage (default 0.02 = 2%).\n    \n    Returns:\n        Liquidation price as float.\n    \"\"\"\n    if is_short:\n        return margin / (leverage * entry_price) * (1 + maintenance_margin)\n    else:\n        return margin / (leverage * entry_price) * (1 - maintenance_margin)\n```",
+   "Quick test in Python:\n\n```python\n# Test long at 5x\nprint(liquidation_price(100, 5000, 5, False))  # ~3.92\n\n# Test short at 5x\nprint(liquidation_price(100, 5000, 5, True))  # ~4.08\n\n# Change maintenance margin to 3%\nprint(liquidation_price(100, 5000, 5, False, 0.03))  # ~3.84\n```\n\nRun with `python your_script.py` or in any Python shell."
+  ]
+ },
+ {
+  "id": "mt24",
+  "seed": 1,
+  "turns": 5,
+  "rep_within": 0,
+  "rep_across": 0,
+  "para_repeat": 0,
+  "empty": 0,
+  "runaway": 0,
+  "words": [
+   54,
+   50,
+   47,
+   45,
+   41
+  ],
+  "replies": [
+   "It's normal to feel stressed. Check your position: size, liquidation price, and unrealised PnL. If it's close to liquidation, consider reducing leverage or closing part of the position. You can adjust up to 50% of your margin in the Positions tab. If you're unsure, take a step back—your funds are on this device only.",
+   "At 5x with a 30% loss, you're close to liquidation. Your liquidation price is likely within 1-2% of current price. Reduce leverage to 2x or lower to improve safety. Or close part of the position to limit further risk. The app shows your estimated liquidation price in the review screen.",
+   "No. Adding more to a losing position increases your risk without improving odds. At 5x with a 30% loss, you're already near liquidation. Adding more could trigger a forced close. Instead, reduce leverage or close part of the position. Your funds stay on-device—no risk from third parties.",
+   "Reduce leverage to 2x or close part of the position. Check your liquidation price in the Positions tab—it’s likely within 1-2% of current price. If you’re unsure, close the position to avoid forced liquidation. Your funds are on this device only—no risk from external services.",
+   "In the Positions tab, select the trade. Tap \"Edit\" at the top, then adjust the size to close half. Confirm the change. The app will show the updated liquidation price after the change. No approvals or delays—this is instant and on-device."
+  ]
+ }
+]

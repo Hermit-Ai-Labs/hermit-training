@@ -1,0 +1,605 @@
+{
+  "calculator": {
+    "kind": "read",
+    "opens_review": false,
+    "result_example": {
+      "result": "164.5"
+    },
+    "other_results": {
+      "error": {
+        "error": "Couldn't evaluate that expression"
+      }
+    }
+  },
+  "get_price": {
+    "kind": "read",
+    "opens_review": false,
+    "result_example": {
+      "change_24h_pct": -1.84,
+      "price": 142.37,
+      "source": "Hyperliquid mark price",
+      "symbol": "SOL"
+    },
+    "other_results": {
+      "stock": {
+        "change_24h_pct": 0.62,
+        "price": 131.4,
+        "source": "trade.xyz perp on Hyperliquid (tracks the stock)",
+        "symbol": "NVDA"
+      },
+      "no_change": {
+        "change_24h_pct": null,
+        "price": 131.4,
+        "source": "trade.xyz perp on Hyperliquid (tracks the stock)",
+        "symbol": "NVDA"
+      },
+      "no_market": {
+        "error": "No Hyperliquid market for FOO. Answer from what you know instead, and say there's no live price here."
+      }
+    },
+    "notes": "Stocks and indexes come from trade.xyz perps: say it is a perp that tracks the stock and trades 24/7."
+  },
+  "get_balances": {
+    "kind": "read",
+    "opens_review": false,
+    "result_example": {
+      "holdings": [
+        {
+          "amount": "120.5",
+          "chain": "base",
+          "symbol": "USDC",
+          "usd": 120.5
+        },
+        {
+          "amount": "40",
+          "chain": "arbitrum",
+          "symbol": "USDC",
+          "usd": 40
+        },
+        {
+          "amount": "0.82",
+          "chain": "solana",
+          "symbol": "SOL",
+          "usd": 116.74
+        }
+      ],
+      "near_account": "alice.near"
+    },
+    "other_results": {
+      "empty": {
+        "holdings": []
+      },
+      "unreachable": {
+        "holdings": [
+          {
+            "amount": "120.5",
+            "chain": "base",
+            "symbol": "USDC",
+            "usd": 120.5
+          }
+        ],
+        "unreachable": [
+          "bnb"
+        ]
+      },
+      "no_near": {
+        "holdings": [],
+        "near": "No NEAR account on this wallet yet; ..."
+      }
+    },
+    "notes": "Zero balances are omitted. Chain ids: base, arbitrum, ethereum, bnb, polygon, solana, near."
+  },
+  "hyperliquid_account": {
+    "kind": "read",
+    "opens_review": false,
+    "result_example": {
+      "account_value": 250.5,
+      "available_usdc": 180.2,
+      "margin_used": 70.3,
+      "open_orders": [
+        {
+          "coin": "ETH",
+          "price": 3100,
+          "side": "buy",
+          "size": 0.5
+        }
+      ],
+      "positions": [
+        {
+          "coin": "SOL",
+          "entry": 140.1,
+          "leverage": 5,
+          "liquidation": 118.4,
+          "side": "long",
+          "size": 10,
+          "unrealised_pnl": 22.6
+        }
+      ]
+    },
+    "other_results": {
+      "error": {
+        "error": "No wallet on this iPhone yet"
+      },
+      "empty": {
+        "account_value": 0,
+        "available_usdc": 0,
+        "margin_used": 0,
+        "open_orders": [],
+        "positions": []
+      }
+    },
+    "notes": "liquidation may be null. Mac says 'this Mac'."
+  },
+  "position_math": {
+    "kind": "read",
+    "opens_review": false,
+    "result_example": {
+      "distance_to_liq_pct": 20,
+      "entry": 140,
+      "leverage": 5,
+      "liquidation_price": 112,
+      "margin": 200,
+      "pnl": 50,
+      "price": 145,
+      "quantity": 7.142857,
+      "roe_pct": 25,
+      "side": "long",
+      "size_usd": 1000
+    }
+  },
+  "search_markets": {
+    "kind": "read",
+    "opens_review": false,
+    "result_example": {
+      "markets": [
+        {
+          "funding_hourly_pct": 0.00125,
+          "max_leverage": 40,
+          "name": "BTC-PERP",
+          "price": 97250,
+          "type": "perp",
+          "volume_24h_usd": 1840000000
+        },
+        {
+          "funding_hourly_pct": -0.0031,
+          "max_leverage": 20,
+          "name": "SOL-PERP",
+          "price": 142.37,
+          "type": "perp",
+          "volume_24h_usd": 410000000
+        }
+      ]
+    },
+    "notes": "HOURLY funding in percent (funding_hourly_pct). Annualised = hourly * 24 * 365. The old training sim wrongly used funding_8h_pct."
+  },
+  "get_yields": {
+    "kind": "read",
+    "opens_review": false,
+    "result_example": {
+      "pools": [
+        {
+          "apy_pct": 6.8,
+          "asset": "USDC",
+          "chain": "Base",
+          "protocol": "Morpho",
+          "tvl_usd": 182000000
+        },
+        {
+          "apy_pct": 4.21,
+          "asset": "USDC",
+          "chain": "Base",
+          "protocol": "Aave v3",
+          "tvl_usd": 950000000
+        }
+      ]
+    }
+  },
+  "prepare_trade": {
+    "kind": "prepare",
+    "opens_review": true,
+    "result_example": {
+      "status": "review_opened",
+      "kind": "trade",
+      "executed": false,
+      "note": "Waiting for the user to approve with Face ID."
+    },
+    "other_results": {
+      "not_enough_margin": {
+        "error": "Not enough margin: 12.40 USDC available, 50.00 needed",
+        "prepared": false
+      },
+      "blocked": {
+        "note": "Nothing was prepared. Tell the user why.",
+        "reasons": [
+          "This trade is above your daily limit for the assistant."
+        ],
+        "status": "blocked"
+      },
+      "not_tradable": {
+        "error": "XYZ isn't tradable on Hyperliquid"
+      },
+      "no_wallet": {
+        "error": "No wallet on this iPhone to trade with"
+      }
+    },
+    "notes": "Leverage is clamped to the asset max. Pass the user's stop and limit digits exactly."
+  },
+  "prepare_swap": {
+    "kind": "prepare",
+    "opens_review": true,
+    "result_example": {
+      "amount_in_usd": 20,
+      "amount_out": "0.0066",
+      "amount_out_usd": 19.86,
+      "fee_bps": 35,
+      "from": "20 USDC on Base",
+      "note": "Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.",
+      "policy": "allow",
+      "route": "NEAR Intents",
+      "seconds": 14,
+      "signature_verified": true,
+      "status": "prepared_for_review",
+      "to": "about 0.0066 ETH on Arbitrum",
+      "total_cost_usd": 0.14
+    },
+    "other_results": {
+      "blocked": {
+        "note": "Nothing was prepared. Tell the user why.",
+        "reasons": [
+          "Amount is above your daily limit for the assistant."
+        ],
+        "status": "blocked"
+      },
+      "warn": {
+        "amount_in_usd": 900,
+        "amount_out": "0.29",
+        "amount_out_usd": 893.2,
+        "fee_bps": 35,
+        "from": "900 USDC on Base",
+        "note": "Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.",
+        "policy": "warn",
+        "route": "NEAR Intents",
+        "seconds": 20,
+        "signature_verified": true,
+        "status": "prepared_for_review",
+        "to": "about 0.29 ETH on Arbitrum",
+        "total_cost_usd": 3.1,
+        "warnings": [
+          "This is more than half of your balance."
+        ]
+      }
+    },
+    "notes": "route is always NEAR Intents. amount_out is already rounded: repeat it as given."
+  },
+  "prepare_send": {
+    "kind": "prepare",
+    "opens_review": true,
+    "result_example": {
+      "amount": "10 USDC",
+      "executed": false,
+      "kind": "send",
+      "network": "Base",
+      "note": "Waiting for the user to approve with Face ID.",
+      "status": "review_opened"
+    },
+    "other_results": {
+      "needs_chain": {
+        "note": "Nothing was prepared. Ask the user which network, in one short question.",
+        "options": [
+          "base",
+          "arbitrum"
+        ],
+        "prepared": false,
+        "question": "Which network should the send use? You hold USDC on Base and Arbitrum (Base: 120.5, Arbitrum: 40).",
+        "status": "needs_chain"
+      },
+      "refused": {
+        "error": "Refused: the user didn't type that address in this chat. Only send to an address the user gave you themselves. Ask them for it."
+      },
+      "blocked": {
+        "note": "Nothing was prepared. Tell the user why.",
+        "reasons": [
+          "Recipient flagged as a known scam address."
+        ],
+        "status": "blocked"
+      }
+    },
+    "notes": "network is where the app put it: tell the user which network."
+  },
+  "open_add_funds": {
+    "kind": "open",
+    "opens_review": false,
+    "result_example": {
+      "goal": "wallet",
+      "note": "The user taps it to open Add funds.",
+      "screen": "add_funds",
+      "status": "button_shown"
+    },
+    "other_results": {
+      "hyperliquid": {
+        "goal": "hyperliquid",
+        "note": "The user taps it to open Add funds.",
+        "screen": "add_funds",
+        "status": "button_shown"
+      }
+    },
+    "notes": "A button appears in chat; nothing opens by itself, so do not say it opened."
+  },
+  "get_quote": {
+    "kind": "read",
+    "opens_review": false,
+    "result_example": {
+      "amount_in_usd": 20,
+      "amount_out": "0.0066",
+      "amount_out_usd": 19.86,
+      "fee_bps": 35,
+      "from": "20 USDC on Base",
+      "route": "NEAR Intents",
+      "seconds": 14,
+      "signature_verified": true,
+      "to": "about 0.0066 ETH on Arbitrum",
+      "total_cost_usd": 0.14
+    },
+    "other_results": {
+      "error": {
+        "error": "Amount is below the minimum for this route (about $1)."
+      }
+    },
+    "notes": "No review opens. total_cost_usd is all-in fees and spread, not gas."
+  },
+  "prepare_multisend": {
+    "kind": "prepare",
+    "opens_review": true,
+    "result_example": {
+      "executed": false,
+      "fees_up_to": "0.12 USDC",
+      "kind": "multisend",
+      "left_out": [
+        "row 4: not an address"
+      ],
+      "left_out_count": 1,
+      "network": "Base",
+      "note": "Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.",
+      "recipients": 9,
+      "status": "review_opened",
+      "total": "135 USDC",
+      "warnings": [
+        "Row 7 is the same address as row 2."
+      ]
+    },
+    "other_results": {
+      "clean": {
+        "executed": false,
+        "fees_up_to": "0.12 USDC",
+        "kind": "multisend",
+        "network": "Base",
+        "note": "Nothing has moved. The Batch send review lists every recipient; the user approves all of it with one Face ID, or cancels.",
+        "recipients": 3,
+        "status": "review_opened",
+        "total": "60 USDC"
+      },
+      "needs_chain": {
+        "note": "Nothing was prepared. Ask the user which network, in one short question.",
+        "options": [
+          "base",
+          "arbitrum"
+        ],
+        "prepared": false,
+        "question": "Which network should the send use? You hold USDC on Base and Arbitrum (Base: 120.5, Arbitrum: 40).",
+        "status": "needs_chain"
+      },
+      "refused": {
+        "error": "Refused: 0x1234abcd56… isn't in the user's messages or attached file. Only send to addresses the user gave you. Ask them for the list."
+      },
+      "blocked": {
+        "note": "Nothing was prepared. Tell the user why.",
+        "reasons": [
+          "Total is above your daily limit for the assistant."
+        ],
+        "status": "blocked"
+      }
+    },
+    "notes": "left_out and warnings only when present. Never total rows you cannot see: the review shows the true total."
+  },
+  "prepare_deposit": {
+    "kind": "prepare",
+    "opens_review": true,
+    "result_example": {
+      "amount": "50 USDC",
+      "apy_pct": 4.21,
+      "executed": false,
+      "kind": "deposit",
+      "note": "Waiting for the user to review the deposit and approve it with Face ID.",
+      "pool": "Aave v3 on Base",
+      "status": "review_opened"
+    },
+    "other_results": {
+      "unsupported": {
+        "note": "Only Aave v3 deposits can be prepared here. Other pools are in Earn, DeFi, with Ask.",
+        "prepared": false,
+        "status": "unsupported"
+      },
+      "insufficient": {
+        "holding": "20 USDC on Base",
+        "note": "The user holds less than that. Tell them.",
+        "prepared": false,
+        "status": "insufficient"
+      },
+      "needs_chain": {
+        "note": "Nothing was prepared. Ask the user which network, in one short question.",
+        "options": [
+          "base",
+          "arbitrum"
+        ],
+        "prepared": false,
+        "question": "Which network should the deposit use? You hold USDC on Base and Arbitrum (Base: 120.5, Arbitrum: 40).",
+        "status": "needs_chain"
+      }
+    }
+  },
+  "prepare_withdraw": {
+    "kind": "prepare",
+    "opens_review": true,
+    "result_example": {
+      "status": "review_opened",
+      "kind": "withdraw",
+      "executed": false,
+      "note": "Waiting for the user to approve with Face ID."
+    },
+    "other_results": {
+      "nothing_to_withdraw": {
+        "note": "The user has no USDC in Aave. Tell them.",
+        "prepared": false,
+        "status": "nothing_to_withdraw"
+      },
+      "needs_choice": {
+        "note": "Nothing was prepared. Ask the user which one.",
+        "prepared": false,
+        "question": "Which deposit? 52.31 USDC on Base, 10 USDC on Arbitrum.",
+        "status": "needs_choice"
+      },
+      "insufficient": {
+        "note": "Only 52.31 USDC is in Aave on Base. Tell the user.",
+        "prepared": false,
+        "status": "insufficient",
+        "supplied": "52.31 USDC"
+      }
+    },
+    "notes": "Leave amount out to withdraw everything (the review shows 'All, about 52.31 USDC')."
+  },
+  "prepare_buy": {
+    "kind": "prepare",
+    "opens_review": true,
+    "result_example": {
+      "executed": false,
+      "kind": "buy",
+      "note": "Nothing has moved. The Buy review is open with this Jupiter quote; the user approves it with Face ID or cancels.",
+      "price_impact_pct": 0.03,
+      "route": "Jupiter via Orca, Raydium",
+      "slippage_pct": 0.5,
+      "status": "review_opened",
+      "symbol": "WIF",
+      "you_get": "about 4.82 WIF",
+      "you_pay": "10 USDC on Solana"
+    },
+    "other_results": {
+      "unverified": {
+        "note": "Nothing was prepared. Tell the user why.",
+        "reasons": [
+          "There's no verified XYZ token on Solana, so Hermit won't buy one."
+        ],
+        "status": "blocked"
+      },
+      "insufficient": {
+        "holding": "3.2 USDC and 0.01 SOL on Solana",
+        "note": "The user holds less than that. Tell them.",
+        "prepared": false,
+        "status": "insufficient"
+      },
+      "no_wallet": {
+        "error": "No wallet on this iPhone to buy with"
+      },
+      "blocked": {
+        "note": "Nothing was prepared. Tell the user why.",
+        "reasons": [
+          "Amount is above your daily limit for the assistant."
+        ],
+        "status": "blocked"
+      }
+    },
+    "notes": "NEW. Designed result, mirrors the Buy review lines. Default $10 and 0.5% slippage if the user gives none. Only Solana tokens Jupiter marks verified; ETH, SOL and BNB buys are prepare_swap, HYPE and BTC are Hyperliquid."
+  },
+  "prepare_close": {
+    "kind": "prepare",
+    "opens_review": true,
+    "result_example": {
+      "closing": "all of the SOL long, 10 SOL",
+      "executed": false,
+      "kind": "close",
+      "note": "Waiting for the user to approve with Face ID.",
+      "order": "Market, reduce only",
+      "status": "review_opened",
+      "unrealised_pnl": 22.6
+    },
+    "other_results": {
+      "partial": {
+        "closing": "50% of the SOL long, 5 SOL",
+        "executed": false,
+        "kind": "close",
+        "note": "Waiting for the user to approve with Face ID.",
+        "order": "Market, reduce only",
+        "status": "review_opened",
+        "unrealised_pnl": 11.3
+      },
+      "no_position": {
+        "note": "The user has no open SOL position on Hyperliquid. Tell them.",
+        "prepared": false,
+        "status": "no_position"
+      },
+      "no_wallet": {
+        "error": "No wallet on this iPhone to trade with"
+      }
+    },
+    "notes": "NEW. Designed result. Review title 'Close SOL long'. Use it instead of an opposite prepare_trade, which would add margin."
+  },
+  "get_activity": {
+    "kind": "read",
+    "opens_review": false,
+    "result_example": {
+      "activity": [
+        {
+          "status": "in_progress",
+          "time": "2026-11-10 14:41",
+          "what": "Swap 1 USDC on Solana to USDC on Base"
+        },
+        {
+          "status": "confirmed",
+          "time": "2026-11-10 14:32",
+          "what": "Sent 0.5 USDC to 0x12…ab"
+        },
+        {
+          "status": "failed",
+          "time": "2026-11-09 09:05",
+          "what": "Bought 4.82 WIF with 10 USDC"
+        }
+      ],
+      "in_progress": 1,
+      "note": "Reviews the user has not approved yet do not appear here."
+    },
+    "other_results": {
+      "empty": {
+        "activity": [],
+        "in_progress": 0,
+        "note": "No activity yet. Reviews the user has not approved yet do not appear here."
+      },
+      "error": {
+        "error": "No wallet on this iPhone yet"
+      }
+    },
+    "notes": "NEW. Designed result. Row text follows the Activity page ('Sent 0.5 USDC to 0x12…ab'). A row with status confirmed is the ONLY thing besides a status 'sent' that lets the model say money moved. Status values: confirmed, failed, in_progress."
+  },
+  "open_app": {
+    "kind": "open",
+    "opens_review": false,
+    "result_example": {
+      "note": "Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.",
+      "opened": "https://app.uniswap.org",
+      "status": "opened"
+    },
+    "other_results": {
+      "by_url": {
+        "note": "Opened in Hermit's browser. Nothing connects to the wallet until the user approves it.",
+        "opened": "https://example.com/app",
+        "status": "opened"
+      },
+      "not_found": {
+        "note": "No dApp called Foo in Explore. Ask the user for the web address.",
+        "status": "not_found"
+      },
+      "bad_url": {
+        "error": "Only http and https addresses can be opened."
+      }
+    },
+    "notes": "NEW. Designed result. A bare 'uniswap.org' becomes https. Names come from Explore (Hyperliquid, Aave, Pendle, Ethena, Jupiter, Uniswap, Lido, Pump.fun, Morpho, Kamino, Polymarket, Aerodrome, Kalshi, ...). Does not open a review and does not connect anything."
+  }
+}

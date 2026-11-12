@@ -1,0 +1,2658 @@
+[
+ {
+  "id": "quote_ask-q0",
+  "suite": "legacy_quote",
+  "kind": "quote_ask",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"base\", \"to_symbol\": \"NEAR\", \"to_chain\": \"near\", \"amount\": 0.02}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "base",
+         "to_symbol": "NEAR",
+         "to_chain": "near",
+         "amount": 0.02
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"ETH\", \"from_chain\": \"base\", \"to_symbol\": \"NEAR\", \"to_chain\": \"near\", \"amount_in\": 0.02, \"amount_out\": 5.057881, \"amount_in_usd\": 40.16, \"amount_out_usd\": 40.11, \"fee_usd\": 0.05, \"eta_seconds\": 20}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "You'd get about 5.0579 NEAR for 0.02 ETH through NEAR Intents, and that is about $40.11. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q1",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"ethereum\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount\": 0.25}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "ethereum",
+         "to_symbol": "BTC",
+         "to_chain": "bitcoin",
+         "amount": 0.25
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"ETH\", \"from_chain\": \"ethereum\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount_in\": 0.25, \"amount_out\": 0.01230276, \"amount_in_usd\": 862.32, \"amount_out_usd\": 861.26, \"fee_usd\": 1.06, \"eta_seconds\": 30}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "0.25 ETH on Ethereum into 1 BTC on Bitcoin through NEAR Intents would get you 0.01230276 BTC. It's about $1.06 in fees and roughly 30 seconds. This is only a quote. Want me to set it up for review?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 66
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "swap_direct-q2",
+  "suite": "legacy_quote",
+  "kind": "swap_direct",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"NEAR\", \"to_chain\": \"near\", \"amount\": 500}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "NEAR",
+         "to_chain": "near",
+         "amount": 500
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-5733\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "I've prepared a swap of 500 USDC from Base into NEAR on NEAR. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote_ask-q3",
+  "suite": "legacy_quote",
+  "kind": "quote_ask",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"ethereum\", \"to_symbol\": \"NEAR\", \"to_chain\": \"near\", \"amount\": 25}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "ethereum",
+         "to_symbol": "NEAR",
+         "to_chain": "near",
+         "amount": 25
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"USDC\", \"from_chain\": \"ethereum\", \"to_symbol\": \"NEAR\", \"to_chain\": \"near\", \"amount_in\": 25.0, \"amount_out\": 5.259275, \"amount_in_usd\": 25.0, \"amount_out_usd\": 24.95, \"fee_usd\": 0.05, \"eta_seconds\": 90}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "You'd get about 5.2593 NEAR for 25 USDC on Ethereum through NEAR Intents, and that's only a quote. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 40
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "swap_direct-q4",
+  "suite": "legacy_quote",
+  "kind": "swap_direct",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"ethereum\", \"to_symbol\": \"USDC\", \"to_chain\": \"base\", \"amount\": 0.25}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "ethereum",
+         "to_symbol": "USDC",
+         "to_chain": "base",
+         "amount": 0.25
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-7138\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "I've prepared a swap of 0.25 ETH from Ethereum to base, through NEAR Intents. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 31
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q5",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"ethereum\", \"amount\": 0.25}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "base",
+         "to_symbol": "ETH",
+         "to_chain": "ethereum",
+         "amount": 0.25
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"ETH\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"ethereum\", \"amount_in\": 0.25, \"amount_out\": 0.24943487, \"amount_in_usd\": 747.62, \"amount_out_usd\": 745.93, \"fee_usd\": 1.69, \"eta_seconds\": 300}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "You'd get about 0.2494 ETH on Ethereum for 0.25 ETH on Base, at a fee of $1.69. That's only a quote. Want me to set it up for review?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 49
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "swap_direct-q6",
+  "suite": "legacy_quote",
+  "kind": "swap_direct",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"polygon\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 500}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "polygon",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 500
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-7299\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared a swap of 500 USDC from Polygon into ETH on Base. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 27
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q7",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"NEAR\", \"from_chain\": \"near\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 686}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "NEAR",
+         "from_chain": "near",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 686
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"NEAR\", \"from_chain\": \"near\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount_in\": 686.0, \"amount_out\": 1.44735964, \"amount_in_usd\": 4997.51, \"amount_out_usd\": 4987.5, \"fee_usd\": 10.01, \"eta_seconds\": 120}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I got a quote: 686 NEAR on NEAR for 1.4474 ETH on Base. It's about $4987.50 out, with about $10.01 in fees and roughly 120 seconds left. This is only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 69
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "swap_direct-q8",
+  "suite": "legacy_quote",
+  "kind": "swap_direct",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"NEAR\", \"to_chain\": \"near\", \"amount\": 150}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "NEAR",
+         "to_chain": "near",
+         "amount": 150
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-3877\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "I've prepared a swap of 150 USDC from Base into NEAR on NEAR. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote_ask-q9",
+  "suite": "legacy_quote",
+  "kind": "quote_ask",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount\": 0.05}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "arbitrum",
+         "to_symbol": "BTC",
+         "to_chain": "bitcoin",
+         "amount": 0.05
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount_in\": 0.05, \"amount_out\": 0.00160326, \"amount_in_usd\": 185.92, \"amount_out_usd\": 185.57, \"fee_usd\": 0.35, \"eta_seconds\": 60}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "You'd get about 0.00160326 BTC (worth $185.57) for 0.05 ETH on Arbitrum, at a fee of $0.35 and about 60 seconds. This is only a quote. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 65
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q10",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"near\", \"amount\": 0.25}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "base",
+         "to_symbol": "ETH",
+         "to_chain": "near",
+         "amount": 0.25
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"ETH\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"near\", \"amount_in\": 0.25, \"amount_out\": 0.24933536, \"amount_in_usd\": 929.08, \"amount_out_usd\": 926.61, \"fee_usd\": 2.47, \"eta_seconds\": 300}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "You'd get about 0.2493 ETH on NEAR for 0.25 ETH on Base, USD $926.61 out versus $929.08 in, through NEAR Intents. That's only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 61
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "swap_direct-q11",
+  "suite": "legacy_quote",
+  "kind": "swap_direct",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"BNB\", \"from_chain\": \"bsc\", \"to_symbol\": \"USDC\", \"to_chain\": \"arbitrum\", \"amount\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "BNB",
+         "from_chain": "bsc",
+         "to_symbol": "USDC",
+         "to_chain": "arbitrum",
+         "amount": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-9230\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "I've prepared a swap of 5 BNB from BNB Chain into Arbitrum, review ID sw-9230. Approve it with Face ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 38
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q12",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"BNB\", \"to_chain\": \"bsc\", \"amount\": 1}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "arbitrum",
+         "to_symbol": "BNB",
+         "to_chain": "bsc",
+         "amount": 1
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"BNB\", \"to_chain\": \"bsc\", \"amount_in\": 1.0, \"amount_out\": 4.962876, \"amount_in_usd\": 4369.86, \"amount_out_usd\": 4362.12, \"fee_usd\": 7.74, \"eta_seconds\": 90}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "You'd get about 4.9629 BNB ($4,362.12) for 1 ETH on Arbitrum, through NEAR Intents. That's after you pay a $7.74 fee. This is only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 61
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "swap_direct-q13",
+  "suite": "legacy_quote",
+  "kind": "swap_direct",
+  "ok": false,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"base\", \"to_symbol\": \"MON\", \"to_chain\": \"near\", \"amount\": 0.005}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "base",
+         "to_symbol": "MON",
+         "to_chain": "near",
+         "amount": 0.005
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-7311\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "I've prepared a swap of 0.005 ETH from Base into NEAR for MON. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q14",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 0.005}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "arbitrum",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 0.005
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"ETH\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount_in\": 0.005, \"amount_out\": 0.004987, \"amount_in_usd\": 23.07, \"amount_out_usd\": 23.01, \"fee_usd\": 0.06, \"eta_seconds\": 30}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "0.005 ETH on Arbitrum into 0.004987 ETH on Base through NEAR Intents. It's about $0.06 in fees and roughly 30 seconds. That's only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 56
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q15",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"solana\", \"to_symbol\": \"ETH\", \"to_chain\": \"ethereum\", \"amount\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "solana",
+         "to_symbol": "ETH",
+         "to_chain": "ethereum",
+         "amount": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"USDC\", \"from_chain\": \"solana\", \"to_symbol\": \"ETH\", \"to_chain\": \"ethereum\", \"amount_in\": 5.0, \"amount_out\": 0.00204613, \"amount_in_usd\": 5.0, \"amount_out_usd\": 4.95, \"fee_usd\": 0.05, \"eta_seconds\": 300}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I got a quote: 5 USDC on Solana for 0.00204613 ETH on Ethereum, about $4.95 out, fee about $0.05, roughly 5 minutes. It's just a quote for now. Want me to set it up for review?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 66
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q16",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"MON\", \"from_chain\": \"monad\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount\": 23248}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "MON",
+         "from_chain": "monad",
+         "to_symbol": "BTC",
+         "to_chain": "bitcoin",
+         "amount": 23248
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"MON\", \"from_chain\": \"monad\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount_in\": 23248.0, \"amount_out\": 0.02902193, \"amount_in_usd\": 2000.03, \"amount_out_usd\": 1996.22, \"fee_usd\": 3.81, \"eta_seconds\": 60}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "NEAR Intents quotes 23248 MON on Monad at 0.02902193 BTC. That's about $1,996.22 coming out, with about $3.81 in fees and roughly 60 seconds left. This is only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 71
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote_ask-q17",
+  "suite": "legacy_quote",
+  "kind": "quote_ask",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"ethereum\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount\": 0.05}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "ethereum",
+         "to_symbol": "BTC",
+         "to_chain": "bitcoin",
+         "amount": 0.05
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"ETH\", \"from_chain\": \"ethereum\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount_in\": 0.05, \"amount_out\": 0.00085328, \"amount_in_usd\": 100.51, \"amount_out_usd\": 100.31, \"fee_usd\": 0.2, \"eta_seconds\": 300}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "You'd get about 0.00085328 BTC (worth $100.31) for 0.05 ETH on Ethereum, at a fee of $0.20. That's only a quote. Say the word and I'll prepare it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 61
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q18",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDT\", \"from_chain\": \"ethereum\", \"to_symbol\": \"USDC\", \"to_chain\": \"solana\", \"amount\": 10}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDT",
+         "from_chain": "ethereum",
+         "to_symbol": "USDC",
+         "to_chain": "solana",
+         "amount": 10
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"USDT\", \"from_chain\": \"ethereum\", \"to_symbol\": \"USDC\", \"to_chain\": \"solana\", \"amount_in\": 10.0, \"amount_out\": 9.95, \"amount_in_usd\": 10.0, \"amount_out_usd\": 9.95, \"fee_usd\": 0.05, \"eta_seconds\": 20}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "You'd get about 9.95 USDC on Solana for 10 USDT on Ethereum, through NEAR Intents. That's about $9.95 out, with about $0.05 in fees. This is only a quote. Say the word and I'll prepare it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 64
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q19",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"ethereum\", \"to_symbol\": \"USDC\", \"to_chain\": \"solana\", \"amount\": 200}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "ethereum",
+         "to_symbol": "USDC",
+         "to_chain": "solana",
+         "amount": 200
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"USDC\", \"from_chain\": \"ethereum\", \"to_symbol\": \"USDC\", \"to_chain\": \"solana\", \"amount_in\": 200.0, \"amount_out\": 199.51, \"amount_in_usd\": 200.0, \"amount_out_usd\": 199.51, \"fee_usd\": 0.49, \"eta_seconds\": 300}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "You'd get 199.51 USDC on Solana for 200 USDC on Ethereum, routed through NEAR Intents. The fee is $0.49 and it should take about 5 minutes. This is only a quote. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 61
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q20",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDT\", \"from_chain\": \"ethereum\", \"to_symbol\": \"NEAR\", \"to_chain\": \"near\", \"amount\": 2000}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDT",
+         "from_chain": "ethereum",
+         "to_symbol": "NEAR",
+         "to_chain": "near",
+         "amount": 2000
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"USDT\", \"from_chain\": \"ethereum\", \"to_symbol\": \"NEAR\", \"to_chain\": \"near\", \"amount_in\": 2000.0, \"amount_out\": 535.757982, \"amount_in_usd\": 2000.0, \"amount_out_usd\": 1996.77, \"fee_usd\": 3.23, \"eta_seconds\": 20}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "You'd get about 535.76 NEAR for 2,000 USDT on Ethereum, worth roughly $1,996.77. The fee is $3.23 and it takes about 20 seconds. This is only a quote. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 66
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q21",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"base\", \"to_symbol\": \"USDC\", \"to_chain\": \"hyperliquid\", \"amount\": 0.01}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "base",
+         "to_symbol": "USDC",
+         "to_chain": "hyperliquid",
+         "amount": 0.01
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"ETH\", \"from_chain\": \"base\", \"to_symbol\": \"USDC\", \"to_chain\": \"hyperliquid\", \"amount_in\": 0.01, \"amount_out\": 24.11, \"amount_in_usd\": 24.17, \"amount_out_usd\": 24.11, \"fee_usd\": 0.06, \"eta_seconds\": 20}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "You'd get about 24.11 USDC on Hyperliquid (about $24.11) for 0.01 ETH on Base, at a fee of $0.06. That's only a quote. Say the word and I'll prepare it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 59
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q22",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"SOL\", \"from_chain\": \"solana\", \"to_symbol\": \"ETH\", \"to_chain\": \"arbitrum\", \"amount\": 3}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "SOL",
+         "from_chain": "solana",
+         "to_symbol": "ETH",
+         "to_chain": "arbitrum",
+         "amount": 3
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"SOL\", \"from_chain\": \"solana\", \"to_symbol\": \"ETH\", \"to_chain\": \"arbitrum\", \"amount_in\": 3.0, \"amount_out\": 0.18317043, \"amount_in_usd\": 344.28, \"amount_out_usd\": 343.32, \"fee_usd\": 0.96, \"eta_seconds\": 300}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "I got a quote: 3 SOL on Solana for 0.18317043 ETH on Arbitrum, about $343.32 out, through NEAR Intents. That's only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 55
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q23",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"BNB\", \"from_chain\": \"bsc\", \"to_symbol\": \"USDC\", \"to_chain\": \"hyperliquid\", \"amount\": 3}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "BNB",
+         "from_chain": "bsc",
+         "to_symbol": "USDC",
+         "to_chain": "hyperliquid",
+         "amount": 3
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"BNB\", \"from_chain\": \"bsc\", \"to_symbol\": \"USDC\", \"to_chain\": \"hyperliquid\", \"amount_in\": 3.0, \"amount_out\": 2256.49, \"amount_in_usd\": 2259.6, \"amount_out_usd\": 2256.49, \"fee_usd\": 3.11, \"eta_seconds\": 20}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "You'd get 2,256.49 USDC on Hyperliquid for 3 BNB on BNB Chain, at about $3.11 in fees and roughly 20 seconds. This is only a quote. Want me to set it up for review?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 58
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote_then_prepare-q24",
+  "suite": "legacy_quote",
+  "kind": "quote_then_prepare",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDT\", \"from_chain\": \"ethereum\", \"to_symbol\": \"ETH\", \"to_chain\": \"arbitrum\", \"amount\": 10}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDT",
+         "from_chain": "ethereum",
+         "to_symbol": "ETH",
+         "to_chain": "arbitrum",
+         "amount": 10
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-3414\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "I've prepared it as a swap: 10 USDT on Ethereum for 0.00248187 ETH on Arbitrum. It's waiting for your Face ID approval.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote_then_prepare-q25",
+  "suite": "legacy_quote",
+  "kind": "quote_then_prepare",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"polygon\", \"to_symbol\": \"MON\", \"to_chain\": \"monad\", \"amount\": 5000}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "polygon",
+         "to_symbol": "MON",
+         "to_chain": "monad",
+         "amount": 5000
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-7674\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "I've prepared a swap of 5000 USDC from Polygon into MON on Monad through NEAR Intents. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 33
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q26",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"SOL\", \"from_chain\": \"solana\", \"to_symbol\": \"BNB\", \"to_chain\": \"bsc\", \"amount\": 0.25}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "SOL",
+         "from_chain": "solana",
+         "to_symbol": "BNB",
+         "to_chain": "bsc",
+         "amount": 0.25
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"SOL\", \"from_chain\": \"solana\", \"to_symbol\": \"BNB\", \"to_chain\": \"bsc\", \"amount_in\": 0.25, \"amount_out\": 0.057692, \"amount_in_usd\": 51.41, \"amount_out_usd\": 51.33, \"fee_usd\": 0.08, \"eta_seconds\": 60}"
+      ],
+      "ntok": 54
+     },
+     {
+      "text": "0.25 SOL on Solana into BNB on BNB Chain comes to about 0.057692 BNB, through NEAR Intents, for about $0.08 in fees. That's only a quote. Should I prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote-q27",
+  "suite": "legacy_quote",
+  "kind": "quote",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"SOL\", \"from_chain\": \"solana\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount\": 10}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "SOL",
+         "from_chain": "solana",
+         "to_symbol": "BTC",
+         "to_chain": "bitcoin",
+         "amount": 10
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"provider\": \"NEAR Intents\", \"from_symbol\": \"SOL\", \"from_chain\": \"solana\", \"to_symbol\": \"BTC\", \"to_chain\": \"bitcoin\", \"amount_in\": 10.0, \"amount_out\": 0.02333243, \"amount_in_usd\": 1465.1, \"amount_out_usd\": 1462.85, \"fee_usd\": 2.25, \"eta_seconds\": 45}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "10 SOL on Solana into 1 BTC in Bitcoin through NEAR Intents would land you 0.02333243 BTC. It's about $2.25 in fees and roughly 45 seconds. That's only a quote. Want me to set it up for review?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 65
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote_then_prepare-q28",
+  "suite": "legacy_quote",
+  "kind": "quote_then_prepare",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDT\", \"from_chain\": \"bsc\", \"to_symbol\": \"NEAR\", \"to_chain\": \"near\", \"amount\": 500}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDT",
+         "from_chain": "bsc",
+         "to_symbol": "NEAR",
+         "to_chain": "near",
+         "amount": 500
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-6463\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "I've prepared a swap of 500 USDT on BNB Chain for NEAR, review ID sw-6463. Approve it with Face ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 40
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "quote_then_prepare-q29",
+  "suite": "legacy_quote",
+  "kind": "quote_then_prepare",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDT\", \"from_chain\": \"bsc\", \"to_symbol\": \"USDC\", \"to_chain\": \"arbitrum\", \"amount\": 20}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDT",
+         "from_chain": "bsc",
+         "to_symbol": "USDC",
+         "to_chain": "arbitrum",
+         "amount": 20
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-5330\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "I've prepared it as a swap: 20 USDT on BNB Chain for USDC on Arbitrum. It's waiting for your Face ID approval.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 33
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "swap_direct-q30",
+  "suite": "legacy_quote",
+  "kind": "swap_direct",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"ethereum\", \"to_symbol\": \"ETH\", \"to_chain\": \"arbitrum\", \"amount\": 0.005}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "ethereum",
+         "to_symbol": "ETH",
+         "to_chain": "arbitrum",
+         "amount": 0.005
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-3231\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "I've prepared a swap of 0.005 ETH from Ethereum to Arbitrum through NEAR Intents. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 32
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "swap_direct-q31",
+  "suite": "legacy_quote",
+  "kind": "swap_direct",
+  "ok": true,
+  "checks": {
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"ETH\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"ethereum\", \"amount\": 0.1}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "ETH",
+         "from_chain": "base",
+         "to_symbol": "ETH",
+         "to_chain": "ethereum",
+         "amount": 0.1
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"swap\", \"review_id\": \"sw-6158\", \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I've prepared a swap of 0.1 ETH from Base to Ethereum. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 24
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ }
+]

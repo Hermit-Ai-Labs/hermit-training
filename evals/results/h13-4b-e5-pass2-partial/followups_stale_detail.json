@@ -1,0 +1,6922 @@
+[
+ {
+  "id": "followups-0",
+  "suite": "followups_stale",
+  "kind": "m2_evm_contract_memory",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SUI\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SUI"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 6.13, \"price\": 2.6079, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SUI\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "$2.6079. That's up 6.13% on the day.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 21
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_address\", \"arguments\": {\"chain\": \"base\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_address",
+        "arguments": {
+         "chain": "base"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"addresses\": [{\"address\": \"0xcbaaf1c6a5B61B2C38401763cad7567eE77706d0\", \"family\": \"evm\", \"networks\": [\"ethereum\", \"base\", \"arbitrum\", \"bnb\", \"polygon\", \"monad\"], \"wallet\": \"Main\"}], \"note\": \"Only send tokens on these networks to these addresses. The QR code is in Add funds.\"}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "The address for LINK on Base is 0xcbaaf1c6a5B61B2C38401763cad7567eE77706d0.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 46
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     1,
+     "get_address",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   false
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-1",
+  "suite": "followups_stale",
+  "kind": "j3_enough_margin",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"ETH\", \"side\": \"long\", \"size_usd\": 300, \"leverage\": 2, \"order_type\": \"market\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "ETH",
+         "side": "long",
+         "size_usd": 300,
+         "leverage": 2,
+         "order_type": "market"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I've prepared a $300 ETH long at 2x, market order. Approve it with Face ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"hyperliquid_account\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "hyperliquid_account",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"account_value\": 4401.14, \"available_usdc\": 4401.14, \"margin_used\": 0, \"open_orders\": [], \"positions\": []}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(300 / 2, 2)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(300 / 2, 2)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"150\"}"
+      ],
+      "ntok": 29
+     },
+     {
+      "text": "Yes, 4,401.14 USDC is available and 150 is the margin needed.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 25
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     1,
+     "hyperliquid_account",
+     "recorded"
+    ],
+    [
+     1,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-3",
+  "suite": "followups_stale",
+  "kind": "d1_undo_swap",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": false,
+   "no_restate_error": true,
+   "no_reprepare_unasked": false,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"ethereum\", \"to_symbol\": \"ETH\", \"to_chain\": \"ethereum\", \"amount\": 25}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "ethereum",
+         "to_symbol": "ETH",
+         "to_chain": "ethereum",
+         "amount": 25
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 25, \"amount_out\": \"0.0129\", \"amount_out_usd\": 24.93, \"fee_bps\": 30, \"from\": \"25 USDC on Ethereum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 11, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.0129 ETH on Ethereum\", \"total_cost_usd\": 0.07}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I've prepared swapping 25 USDC on Ethereum for about 0.0129 ETH on Ethereum through NEAR Intents. Total cost is $0.07. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 44
+     }
+    ],
+    [
+     {
+      "text": "There's no undo after approval, so I can't reverse it. What you can do: cancel the review and start over, or keep with the swap.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 32
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"cancel_order\", \"arguments\": {\"coin\": \"ETH\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "cancel_order",
+        "arguments": {
+         "coin": "ETH"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"note\": \"The user has no open ETH orders. Tell them.\", \"prepared\": false, \"status\": \"nothing_to_cancel\"}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "You have no open ETH order, so there's nothing to cancel.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 14
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     2,
+     "cancel_order",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   false,
+   false
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-4",
+  "suite": "followups_stale",
+  "kind": "k_bridge_arrived",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"polygon\", \"to_symbol\": \"USDC\", \"to_chain\": \"ethereum\", \"amount\": 150}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "polygon",
+         "to_symbol": "USDC",
+         "to_chain": "ethereum",
+         "amount": 150
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 150, \"amount_out\": \"150\", \"amount_out_usd\": 149.55, \"fee_bps\": 30, \"from\": \"150 USDC on Polygon\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 11, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 150 USDC on Ethereum\", \"total_cost_usd\": 0.45}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "I've prepared 150 USDC on Polygon to about 150 USDC on Ethereum through NEAR Intents. Total cost is $0.45. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 42
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       },
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"confirmed\", \"time\": \"2026-11-11 09:07\", \"what\": \"Swap 150 USDC on Polygon to USDC on Ethereum\"}], \"in_progress\": 0, \"note\": \"Reviews the user has not approved yet do not appear here.\"}",
+       "{\"holdings\": [{\"amount\": \"1129.68\", \"chain\": \"polygon\", \"symbol\": \"USDC\", \"usd\": 1129.68}, {\"amount\": \"598.31\", \"chain\": \"ethereum\", \"symbol\": \"USDC\", \"usd\": 598.31}]}"
+      ],
+      "ntok": 32
+     },
+     {
+      "text": "Yes, Activity says confirmed, and your Ethereum balance is 598.31 USDC.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 21
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     1,
+     "get_activity",
+     "recorded"
+    ],
+    [
+     1,
+     "get_balances",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-6",
+  "suite": "followups_stale",
+  "kind": "b3_change_chain",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"base\", \"amount\": 150}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "base",
+         "amount": 150
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 150, \"amount_out\": \"149\", \"amount_out_usd\": 149.47, \"fee_bps\": 35, \"from\": \"150 USDC on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 14, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 149 USDC on Base\", \"total_cost_usd\": 0.53}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "I've prepared 150 USDC on Arbitrum to about 149 USDC on Base through NEAR Intents. Total cost is $0.53. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"polygon\", \"amount\": 150}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "polygon",
+         "amount": 150
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 150, \"amount_out\": \"149\", \"amount_out_usd\": 149.47, \"fee_bps\": 35, \"from\": \"150 USDC on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 18, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 149 USDC on Polygon\", \"total_cost_usd\": 0.53}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "I've prepared a swap of 150 USDC on Arbitrum to about 149 USDC on Polygon through NEAR Intents, total cost $0.53. The swap review you had before is still open, so close it if you don't need it. Nothing happens until you approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 68
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     1,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-7",
+  "suite": "followups_stale",
+  "kind": "e3_address_from_activity",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -10.32, \"price\": 134.06, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "$134.06. That's down 10.32% on the day.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 22
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"failed\", \"time\": \"2026-11-11 09:14\", \"what\": \"Sent 40 USDC to 0xB8…23\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-11 09:07\", \"what\": \"Swap 40 USDC on Base to ETH on Base\"}], \"in_progress\": 0, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "Activity lists it as failed, so I can't give you the address. It's \"Sent 40 USDC to 0xB8…23\" from your wallet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 37
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     1,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-8",
+  "suite": "followups_stale",
+  "kind": "l1_fee_from_result",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 200}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 200
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 200, \"amount_out\": \"0.0911\", \"amount_out_usd\": 199.3, \"fee_bps\": 35, \"from\": \"200 USDC on Base\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 23, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.0911 ETH on Base\", \"total_cost_usd\": 0.7}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared swapping 200 USDC on Base for about 0.0911 ETH on Base through NEAR Intents. Total cost is $0.7. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 44
+     }
+    ],
+    [
+     {
+      "text": "The total fee is 35 bps, which comes to $0.7 on $200.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 23
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-9",
+  "suite": "followups_stale",
+  "kind": "g4_trimmed_cancel_order",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": false,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "I haven't prepared anything in this chat, so there's nothing to cancel. Tell me which order you mean and I'll look for it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   false
+  ],
+  "pooled": {
+   "turns_ok": [
+    0,
+    1
+   ]
+  }
+ },
+ {
+  "id": "followups-12",
+  "suite": "followups_stale",
+  "kind": "g1_trimmed_address",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "I can't repeat a send to an old address. Paste the new one here and I'll prepare it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 22
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   false
+  ],
+  "pooled": {
+   "turns_ok": [
+    0,
+    1
+   ]
+  }
+ },
+ {
+  "id": "followups-13",
+  "suite": "followups_stale",
+  "kind": "j3_enough_margin",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"BNB\", \"side\": \"short\", \"size_usd\": 100, \"leverage\": 2, \"order_type\": \"market\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "BNB",
+         "side": "short",
+         "size_usd": 100,
+         "leverage": 2,
+         "order_type": "market"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared a $100 BNB short at 2x, market order. Approve it with Face ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 30
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"1279.51\", \"chain\": \"base\", \"symbol\": \"USDC\", \"usd\": 1279.51}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"max(10, round(round(1279.51 * 0.15, 0) / 5 - 0.4, 0) * 5)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "max(10, round(round(1279.51 * 0.15, 0) / 5 - 0.4, 0) * 5)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"190\"}"
+      ],
+      "ntok": 58
+     },
+     {
+      "text": "Your wallet holds 1,279.51 USDC, which covers the $100 position plus 190 left over.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 31
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     1,
+     "get_balances",
+     "sim"
+    ],
+    [
+     1,
+     "calculator",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   false
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-14",
+  "suite": "followups_stale",
+  "kind": "a2_same_trade_abs_ask",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": false,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"DOGE\", \"side\": \"long\", \"size_usd\": 75, \"leverage\": 2, \"order_type\": \"market\", \"stop_loss\": 0.35371}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "DOGE",
+         "side": "long",
+         "size_usd": 75,
+         "leverage": 2,
+         "order_type": "market",
+         "stop_loss": 0.35371
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 62
+     },
+     {
+      "text": "I've prepared a $75 DOGE long at 2x, market order, with the stop loss at $0.3537. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 39
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -1.23, \"price\": 215.07, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "The live SOL price is $215.07, so your DOGE stop at $0.3537 can't carry over. Do you want the same percentage around there, or a new level?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 45
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"SOL\", \"side\": \"long\", \"size_usd\": 75, \"leverage\": 2, \"order_type\": \"market\", \"stop_loss\": 201.53}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "SOL",
+         "side": "long",
+         "size_usd": 75,
+         "leverage": 2,
+         "order_type": "market",
+         "stop_loss": 201.53
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 61
+     },
+     {
+      "text": "I've prepared a $75 SOL long at 2x, market order, with the stop loss at $201.53. Your DOGE long review is still waiting, so close it if you don't want that one. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 58
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     1,
+     "get_price",
+     "recorded"
+    ],
+    [
+     2,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   false,
+   false,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-15",
+  "suite": "followups_stale",
+  "kind": "d2_undo_trade",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"BTC\", \"side\": \"short\", \"size_usd\": 100, \"leverage\": 5, \"order_type\": \"market\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "BTC",
+         "side": "short",
+         "size_usd": 100,
+         "leverage": 5,
+         "order_type": "market"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I've prepared a $100 BTC short at 5x, market order. Approve it with Face ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ],
+    [
+     {
+      "text": "There's no undo for an approved trade. I can prepare a close of the BTC short as a new review. Want me to?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 27
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_close\", \"arguments\": {\"coin\": \"BTC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_close",
+        "arguments": {
+         "coin": "BTC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"closing\": \"all of the BTC short, 0.0015 BTC\", \"executed\": false, \"kind\": \"close\", \"note\": \"Waiting for the user to approve with Face ID.\", \"order\": \"Market, reduce only\", \"status\": \"review_opened\", \"unrealised_pnl\": 0}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "The close is prepared as a new review: all of the BTC short, 0.0015 BTC, market, reduce only. It only happens when you approve it with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 40
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     2,
+     "prepare_close",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-17",
+  "suite": "followups_stale",
+  "kind": "h2_balance_after_swap",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"USDC\", \"to_chain\": \"arbitrum\", \"amount\": 150}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "USDC",
+         "to_chain": "arbitrum",
+         "amount": 150
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 150, \"amount_out\": \"149\", \"amount_out_usd\": 149.47, \"fee_bps\": 35, \"from\": \"150 USDC on Base\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 14, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 149 USDC on Arbitrum\", \"total_cost_usd\": 0.53}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "I've prepared a swap of 150 USDC on Base for about 149 USDC on Arbitrum, through NEAR Intents. All-in cost is $0.53. Approve it with Face ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 53
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"DOGE\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "DOGE"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 2.39, \"price\": 0.24398, \"source\": \"Hyperliquid mark price\", \"symbol\": \"DOGE\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "Right now DOGE is $0.24398, up 2.39% on the day.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 25
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"280.07\", \"chain\": \"base\", \"symbol\": \"USDC\", \"usd\": 280.07}, {\"amount\": \"149.47\", \"chain\": \"arbitrum\", \"symbol\": \"USDC\", \"usd\": 149.47}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "Your balances are 280.07 USDC on Base and 149.47 USDC on Arbitrum.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 28
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     1,
+     "get_price",
+     "recorded"
+    ],
+    [
+     2,
+     "get_balances",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-18",
+  "suite": "followups_stale",
+  "kind": "k_bridge_arrived",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"USDC\", \"to_chain\": \"polygon\", \"amount\": 200}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "USDC",
+         "to_chain": "polygon",
+         "amount": 200
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 200, \"amount_out\": \"199\", \"amount_out_usd\": 199.3, \"fee_bps\": 35, \"from\": \"200 USDC on Base\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 8, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 199 USDC on Polygon\", \"total_cost_usd\": 0.7}"
+      ],
+      "ntok": 51
+     },
+     {
+      "text": "I've prepared 200 USDC on Base to about 199 USDC on Polygon through NEAR Intents. Total cost is $0.7. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ],
+    [
+     {
+      "text": "A bridge moves your tokens from one blockchain to another. You start with 200 USDC on Base and end with about 199 USDC on Polygon, after fees and network costs.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       },
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"confirmed\", \"time\": \"2026-11-11 09:07\", \"what\": \"Swap 200 USDC on Base to USDC on Polygon\"}], \"in_progress\": 0, \"note\": \"Reviews the user has not approved yet do not appear here.\"}",
+       "{\"holdings\": [{\"amount\": \"565.75\", \"chain\": \"base\", \"symbol\": \"USDC\", \"usd\": 565.75}, {\"amount\": \"981.38\", \"chain\": \"polygon\", \"symbol\": \"USDC\", \"usd\": 981.38}]}"
+      ],
+      "ntok": 32
+     },
+     {
+      "text": "Yes, Activity says confirmed, and your Polygon balance is 981.38 USDC.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 21
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     2,
+     "get_activity",
+     "recorded"
+    ],
+    [
+     2,
+     "get_balances",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-19",
+  "suite": "followups_stale",
+  "kind": "j1_enough_send",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0x225425988E4F7f1142BB4aE1537e8e4Cd5ABC03C\", \"amount\": 150, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0x225425988E4F7f1142BB4aE1537e8e4Cd5ABC03C",
+         "amount": 150,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"150 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 72
+     },
+     {
+      "text": "Prepared: 150 USDC on Base to 0x225425988E4F7f1142BB4aE1537e8e4Cd5ABC03C. It's waiting for your Touch ID on the review screen.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 64
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"314.96\", \"chain\": \"base\", \"symbol\": \"USDC\", \"usd\": 314.96}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"314.96 - 150\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "314.96 - 150"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"164.96\"}"
+      ],
+      "ntok": 28
+     },
+     {
+      "text": "Yes. You hold 314.96 USDC on Base and the send is 150 USDC, so 164.96 would be left.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 38
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_send",
+     "recorded"
+    ],
+    [
+     1,
+     "get_balances",
+     "recorded"
+    ],
+    [
+     1,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-20",
+  "suite": "followups_stale",
+  "kind": "f2_cancel_which_review",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"BTC\", \"side\": \"long\", \"size_usd\": 200, \"leverage\": 3, \"order_type\": \"market\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "BTC",
+         "side": "long",
+         "size_usd": 200,
+         "leverage": 3,
+         "order_type": "market"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Touch ID.\"}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I've prepared a $200 BTC long at 3x, market order. Approve it with Touch ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"AVAX\", \"side\": \"long\", \"size_usd\": 100, \"leverage\": 2, \"order_type\": \"market\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "AVAX",
+         "side": "long",
+         "size_usd": 100,
+         "leverage": 2,
+         "order_type": "market"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Touch ID.\"}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "Your AVAX long is prepared: $100 at 2x, market order. The earlier BTC long review is still open. Close it if you don't want it. Review it and approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 45
+     }
+    ],
+    [
+     {
+      "text": "Do you want to drop the BTC long or the AVAX long? Tap Cancel on that review, nothing has moved yet.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 25
+     }
+    ],
+    [
+     {
+      "text": "Tap Cancel on the BTC review; nothing has moved. The AVAX review stays open.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 18
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     1,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    4,
+    4
+   ]
+  }
+ },
+ {
+  "id": "followups-21",
+  "suite": "followups_stale",
+  "kind": "d3_undo_send",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0x16614F803Dc61e7f30a4E94920A81375917bf5DB\", \"amount\": 50, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0x16614F803Dc61e7f30a4E94920A81375917bf5DB",
+         "amount": 50,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"50 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Face ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 73
+     },
+     {
+      "text": "I've prepared a send of 50 USDC to 0x16614F803Dc61e7f30a4E94920A81375917bf5DB on Base. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 64
+     }
+    ],
+    [
+     {
+      "text": "There's no undo after approval, but I can prepare the send again as a new review. Should I?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 22
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_send",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-22",
+  "suite": "followups_stale",
+  "kind": "n4_topic_switch_return",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"ETH\", \"side\": \"long\", \"size_usd\": 100, \"leverage\": 3, \"order_type\": \"market\", \"stop_loss\": 2683.11}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "ETH",
+         "side": "long",
+         "size_usd": 100,
+         "leverage": 3,
+         "order_type": "market",
+         "stop_loss": 2683.11
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Touch ID.\"}"
+      ],
+      "ntok": 62
+     },
+     {
+      "text": "I've prepared a $100 ETH long at 3x, market order, with the stop loss at $2,683.11. Review it and approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"250 * 20 / 100\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "250 * 20 / 100"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"50\"}"
+      ],
+      "ntok": 29
+     },
+     {
+      "text": "That's 50.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 6
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"ETH\", \"side\": \"long\", \"size_usd\": 100, \"leverage\": 5, \"order_type\": \"market\", \"stop_loss\": 2683.11}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "ETH",
+         "side": "long",
+         "size_usd": 100,
+         "leverage": 5,
+         "order_type": "market",
+         "stop_loss": 2683.11
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Touch ID.\"}"
+      ],
+      "ntok": 62
+     },
+     {
+      "text": "Updated and prepared: a 5x ETH long for $100, market order, with the stop loss at $2,683.11. The first review (ETH long) is still open. Close it if you only want this one. Approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 60
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     1,
+     "calculator",
+     "recorded"
+    ],
+    [
+     2,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-23",
+  "suite": "followups_stale",
+  "kind": "b2_change_size",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"BTC\", \"side\": \"long\", \"size_usd\": 300, \"leverage\": 5, \"order_type\": \"market\", \"stop_loss\": 66437}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "BTC",
+         "side": "long",
+         "size_usd": 300,
+         "leverage": 5,
+         "order_type": "market",
+         "stop_loss": 66437
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 60
+     },
+     {
+      "text": "I've prepared a $300 BTC long at 5x, market order, with the stop loss at $66,437. Review it and approve with Face ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ],
+    [
+     {
+      "text": "Liquidation is when the exchange closes your leveraged position because your margin can no longer cover the losses, and you lose the margin you put in. Lower leverage puts the liquidation price farther from your entry.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 42
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"300 * 2\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "300 * 2"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"600\"}"
+      ],
+      "ntok": 23
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"BTC\", \"side\": \"long\", \"size_usd\": 600, \"leverage\": 5, \"order_type\": \"market\", \"stop_loss\": 66437}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "BTC",
+         "side": "long",
+         "size_usd": 600,
+         "leverage": 5,
+         "order_type": "market",
+         "stop_loss": 66437
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 60
+     },
+     {
+      "text": "Updated and prepared: a 5x BTC long for $600, market order, with the stop loss at $66,437. The earlier BTC long review is still open, so close it if you only want this one. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 57
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     2,
+     "calculator",
+     "recorded"
+    ],
+    [
+     2,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-25",
+  "suite": "followups_stale",
+  "kind": "h1_balance_after_send",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0xc60A59dADdf3a1e3C6cC02585E7E9dcCFF1029eD\", \"amount\": 25, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0xc60A59dADdf3a1e3C6cC02585E7E9dcCFF1029eD",
+         "amount": 25,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"25 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Face ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 70
+     },
+     {
+      "text": "I've prepared a send of 25 USDC to 0xc60A59dADdf3a1e3C6cC02585E7E9dcCFF1029eD on Base. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 61
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"302.64\", \"chain\": \"base\", \"symbol\": \"USDC\", \"usd\": 302.64}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "Right now you hold 302.64 USDC on Base ($302.64).",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 23
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_send",
+     "recorded"
+    ],
+    [
+     1,
+     "get_balances",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-26",
+  "suite": "followups_stale",
+  "kind": "a3_same_send_new_address",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0x6b964d5cF6bF049F1d331698dd9CC43409e808fD\", \"amount\": 15, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0x6b964d5cF6bF049F1d331698dd9CC43409e808fD",
+         "amount": 15,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"15 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 73
+     },
+     {
+      "text": "I've prepared a send of 15 USDC to 0x6b964d5cF6bF049F1d331698dd9CC43409e808fD on Base. Review it and approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 64
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"HYPE\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "HYPE"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 12.2, \"price\": 35.368, \"source\": \"Hyperliquid mark price\", \"symbol\": \"HYPE\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "HYPE is $35.368 right now, up 12.2% today.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 22
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0xec5A6Ce9Dc879A30316a4f869fA87b3d0381BA3b\", \"amount\": 15, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0xec5A6Ce9Dc879A30316a4f869fA87b3d0381BA3b",
+         "amount": 15,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"15 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 71
+     },
+     {
+      "text": "I've prepared a send of 15 USDC to 0xec5A6Ce9Dc879A30316a4f869fA87b3d0381BA3b on Base. Approve it with Touch ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 65
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_send",
+     "recorded"
+    ],
+    [
+     1,
+     "get_price",
+     "recorded"
+    ],
+    [
+     2,
+     "prepare_send",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-27",
+  "suite": "followups_stale",
+  "kind": "k_bridge_arrived",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"USDC\", \"to_chain\": \"base\", \"amount\": 75}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "USDC",
+         "to_chain": "base",
+         "amount": 75
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 75, \"amount_out\": \"74.7\", \"amount_out_usd\": 74.74, \"fee_bps\": 35, \"from\": \"75 USDC on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 15, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 74.7 USDC on Base\", \"total_cost_usd\": 0.26}"
+      ],
+      "ntok": 52
+     },
+     {
+      "text": "I've prepared 75 USDC on Arbitrum to about 74.7 USDC on Base through NEAR Intents. Total cost is $0.26. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       },
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"in_progress\", \"time\": \"2026-11-11 09:07\", \"what\": \"Swap 75 USDC on Arbitrum to USDC on Base\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}",
+       "{\"holdings\": [{\"amount\": \"1046.39\", \"chain\": \"arbitrum\", \"symbol\": \"USDC\", \"usd\": 1046.39}, {\"amount\": \"182.33\", \"chain\": \"base\", \"symbol\": \"USDC\", \"usd\": 182.33}]}"
+      ],
+      "ntok": 32
+     },
+     {
+      "text": "Not yet: Activity lists it as in progress. I'll check again in a moment and tell you back.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 22
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     1,
+     "get_activity",
+     "recorded"
+    ],
+    [
+     1,
+     "get_balances",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   false
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-28",
+  "suite": "followups_stale",
+  "kind": "c2_cancel_open_order",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_positions\", \"arguments\": {\"kind\": \"perps\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_positions",
+        "arguments": {
+         "kind": "perps"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"perps\": {\"open_orders\": [{\"coin\": \"AVAX\", \"id\": \"8101\", \"kind\": \"limit\", \"price\": 16.72, \"side\": \"buy\", \"size\": 23.92}], \"positions\": []}, \"wallet\": \"Main\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "You have one open order: a buy limit for 23.92 AVAX at $16.72.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 26
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"cancel_order\", \"arguments\": {\"coin\": \"AVAX\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "cancel_order",
+        "arguments": {
+         "coin": "AVAX"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"cancelling\": \"AVAX buy limit, 23.92 AVAX at $16.72\", \"executed\": false, \"kind\": \"cancel_order\", \"note\": \"Waiting for the user to tap Confirm. Nothing is cancelled yet.\", \"status\": \"card_opened\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I've drafted a card for the AVAX buy limit, 23.92 AVAX at $16.72. Nothing is cancelled until you tap Confirm.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 36
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_positions",
+     "sim"
+    ],
+    [
+     1,
+     "cancel_order",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   false,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-30",
+  "suite": "followups_stale",
+  "kind": "e1_address_from_history",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0xa7e092c5d8eEb31F147Ae291C7b74F4B17Dadebb\", \"amount\": 20, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0xa7e092c5d8eEb31F147Ae291C7b74F4B17Dadebb",
+         "amount": 20,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"20 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Face ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 70
+     },
+     {
+      "text": "I've prepared a send of 20 USDC to 0xa7e092c5d8eEb31F147Ae291C7b74F4B17Dadebb on Base. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 61
+     }
+    ],
+    [
+     {
+      "text": "A bridge moves your tokens from one blockchain into another, so you can use them where they're needed. You start with the token on the first chain, and the final balance shows up on the second.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ],
+    [
+     {
+      "text": "The address is 0xa7e092c5d8eEb31F147Ae291C7b74F4B17Dadebb.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 42
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_send",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-31",
+  "suite": "followups_stale",
+  "kind": "e2_own_address_later",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_address\", \"arguments\": {\"chain\": \"ethereum\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_address",
+        "arguments": {
+         "chain": "ethereum"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"addresses\": [{\"address\": \"0x89785968Cc86Bf8207285241A9D5fcA763d203B7\", \"family\": \"evm\", \"networks\": [\"ethereum\", \"base\", \"arbitrum\", \"bnb\", \"polygon\", \"monad\"], \"wallet\": \"Main\"}], \"note\": \"Only send tokens on these networks to these addresses. The QR code is in Add funds.\"}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "Your Ethereum address is 0x89785968Cc86Bf8207285241A9D5fcA763d203B7.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 46
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SOL\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SOL"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -12.57, \"price\": 188.89, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SOL\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "SOL is $188.89, down 12.57% in the last 24 hours.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 27
+     }
+    ],
+    [
+     {
+      "text": "Liquidation is when the exchange closes your leveraged position because your margin can no longer cover the loss. Lower leverage keeps it further from your account balance.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 31
+     }
+    ],
+    [
+     {
+      "text": "That was the Solana address: 0x89785968Cc86Bf8207285241A9D5fcA763d203B7.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 49
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_address",
+     "recorded"
+    ],
+    [
+     1,
+     "get_price",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    4,
+    4
+   ]
+  }
+ },
+ {
+  "id": "followups-32",
+  "suite": "followups_stale",
+  "kind": "b1_change_leverage",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"ETH\", \"side\": \"long\", \"size_usd\": 50, \"leverage\": 5, \"order_type\": \"market\", \"stop_loss\": 1918.35}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "ETH",
+         "side": "long",
+         "size_usd": 50,
+         "leverage": 5,
+         "order_type": "market",
+         "stop_loss": 1918.35
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Touch ID.\"}"
+      ],
+      "ntok": 61
+     },
+     {
+      "text": "I've prepared a $50 ETH long at 5x, market order, with the stop loss at $1,918.35. Review it and approve with Touch ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 44
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"ETH\", \"side\": \"long\", \"size_usd\": 50, \"leverage\": 20, \"order_type\": \"market\", \"stop_loss\": 1918.35}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "ETH",
+         "side": "long",
+         "size_usd": 50,
+         "leverage": 20,
+         "order_type": "market",
+         "stop_loss": 1918.35
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Touch ID.\"}"
+      ],
+      "ntok": 62
+     },
+     {
+      "text": "Updated and prepared: a $50 ETH long at 20x, market order, with the stop loss at $1,918.35. The first review (ETH long) is still open. Close it if you only want this one. Approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 60
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     1,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-33",
+  "suite": "followups_stale",
+  "kind": "f3_same_for_which",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"SOL\", \"side\": \"long\", \"size_usd\": 200, \"leverage\": 2, \"order_type\": \"market\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "SOL",
+         "side": "long",
+         "size_usd": 200,
+         "leverage": 2,
+         "order_type": "market"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared a $200 SOL long at 2x, market order. Approve it with Face ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"BNB\", \"side\": \"short\", \"size_usd\": 50, \"leverage\": 5, \"order_type\": \"market\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "BNB",
+         "side": "short",
+         "size_usd": 50,
+         "leverage": 5,
+         "order_type": "market"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "Your BNB short is prepared: $50 at 5x, market order. The SOL long review is still open, so close it if you don't want it. Nothing happens until you approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 45
+     }
+    ],
+    [
+     {
+      "text": "What size and leverage for the SUI?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 9
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     1,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   false
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-34",
+  "suite": "followups_stale",
+  "kind": "n2_answer_then_call",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": false,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"1997.14\", \"chain\": \"base\", \"symbol\": \"USDC\", \"usd\": 1997.14}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"\", \"amount\": 150, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "",
+         "amount": 150,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"150 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Face ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 33
+     },
+     {
+      "text": "I've prepared a send of 150 USDC on Base. Check the address on the review screen, then approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0x23a5DAe3e4d8eBfD407030d0669A82264dbd3a56\", \"amount\": 150, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0x23a5DAe3e4d8eBfD407030d0669A82264dbd3a56",
+         "amount": 150,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"150 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Face ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 74
+     },
+     {
+      "text": "Prepared: 150 USDC on Base to 0x23a5DAe3e4d8eBfD407030d0669A82264dbd3a56. Check that address on the review screen, then approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 68
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "sim"
+    ],
+    [
+     0,
+     "prepare_send",
+     "sim"
+    ],
+    [
+     1,
+     "prepare_send",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   false,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-35",
+  "suite": "followups_stale",
+  "kind": "n1_same_request_twice",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": false,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0xD27a8bBd3ea5f8AA33490429f6C37D3888795eC2\", \"amount\": 100, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0xD27a8bBd3ea5f8AA33490429f6C37D3888795eC2",
+         "amount": 100,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"100 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 73
+     },
+     {
+      "text": "I've prepared a send of 100 USDC to 0xD27a8bBd3ea5f8AA33490429f6C37D3888795eC2 on Base. Review it and approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 64
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0xD27a8bBd3ea5f8AA33490429f6C37D3888795eC2\", \"amount\": 100, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0xD27a8bBd3ea5f8AA33490429f6C37D3888795eC2",
+         "amount": 100,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"100 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 73
+     },
+     {
+      "text": "I've prepared a send of 100 USDC to 0xD27a8bBd3ea5f8AA33490429f6C37D3888795eC2 on Base. Nothing happens until you approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 65
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_send",
+     "recorded"
+    ],
+    [
+     1,
+     "prepare_send",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   false
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-36",
+  "suite": "followups_stale",
+  "kind": "b4_change_swap_amount",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 150}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 150
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 150, \"amount_out\": \"0.0494\", \"amount_out_usd\": 149.47, \"fee_bps\": 35, \"from\": \"150 USDC on Base\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 11, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.0494 ETH on Base\", \"total_cost_usd\": 0.53}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared swapping 150 USDC on Base for about 0.0494 ETH on Base through NEAR Intents. Total cost is $0.53. Approve it with Face ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 50
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 250}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 250
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 250, \"amount_out\": \"0.0824\", \"amount_out_usd\": 249.12, \"fee_bps\": 35, \"from\": \"250 USDC on Base\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 16, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.0824 ETH on Base\", \"total_cost_usd\": 0.88}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared the swap again at 250 USDC on Base for about 0.0824 ETH on Base. The total cost is $0.88. The first review is still open. Close it if you only want this one. Nothing happens until you approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 63
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     1,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-38",
+  "suite": "followups_stale",
+  "kind": "c1_cancel_review",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"ETH\", \"to_chain\": \"arbitrum\", \"amount\": 100}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "ETH",
+         "to_chain": "arbitrum",
+         "amount": 100
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 100, \"amount_out\": \"0.0318\", \"amount_out_usd\": 99.65, \"fee_bps\": 35, \"from\": \"100 USDC on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 24, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.0318 ETH on Arbitrum\", \"total_cost_usd\": 0.35}"
+      ],
+      "ntok": 54
+     },
+     {
+      "text": "I've prepared 100 USDC on Arbitrum to about 0.0318 ETH on Arbitrum through NEAR Intents. Total cost is $0.35. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 46
+     }
+    ],
+    [
+     {
+      "text": "Tap Cancel on the review; nothing was sent.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 10
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-39",
+  "suite": "followups_stale",
+  "kind": "c2_cancel_open_order",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": false,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_positions\", \"arguments\": {\"kind\": \"perps\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_positions",
+        "arguments": {
+         "kind": "perps"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"perps\": {\"open_orders\": [{\"coin\": \"HYPE\", \"id\": \"8101\", \"kind\": \"limit\", \"price\": 44.826, \"side\": \"sell\", \"size\": 6.69}], \"positions\": []}, \"wallet\": \"Main\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "You have one open order: a sell limit for 6.69 HYPE at $44.83.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 25
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"cancel_order\", \"arguments\": {\"coin\": \"HYPE\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "cancel_order",
+        "arguments": {
+         "coin": "HYPE"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"cancelling\": \"HYPE sell limit, 6.69 HYPE at $44.826\", \"executed\": false, \"kind\": \"cancel_order\", \"note\": \"Waiting for the user to tap Confirm. Nothing is cancelled yet.\", \"status\": \"card_opened\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I've drafted a card for the HYPE sell limit, 6.69 HYPE at $44.826. Nothing is cancelled until you tap Confirm.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 36
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_positions",
+     "sim"
+    ],
+    [
+     1,
+     "cancel_order",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   false,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-40",
+  "suite": "followups_stale",
+  "kind": "n2_answer_then_call",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "How much (in dollars) and what leverage?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 10
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"ETH\", \"side\": \"long\", \"size_usd\": 100, \"leverage\": 2, \"order_type\": \"market\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "ETH",
+         "side": "long",
+         "size_usd": 100,
+         "leverage": 2,
+         "order_type": "market"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Touch ID.\"}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I've prepared a $100 ETH long at 2x, market order. Approve it with Touch ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 29
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     1,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-42",
+  "suite": "followups_stale",
+  "kind": "d3_undo_send",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0x4267f090f26000d2d2bc3709546c198100a709a0\", \"amount\": 20, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0x4267f090f26000d2d2bc3709546c198100a709a0",
+         "amount": 20,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"20 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Face ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 74
+     },
+     {
+      "text": "I've prepared a send of 20 USDC to 0x4267f090f26000d2d2bc3709546c198100a709a0 on Base. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 65
+     }
+    ],
+    [
+     {
+      "text": "There's no undo after approval, but I can prepare the reverse as a new review. Should I?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 21
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_send",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-43",
+  "suite": "followups_stale",
+  "kind": "j2_enough_swap",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 250}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 250
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 250, \"amount_out\": \"0.106\", \"amount_out_usd\": 249.12, \"fee_bps\": 35, \"from\": \"250 USDC on Base\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 16, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.106 ETH on Base\", \"total_cost_usd\": 0.88}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared swapping 250 USDC on Base for about 0.106 ETH on Base through NEAR Intents. Total cost is $0.88. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 44
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {\"limit\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {
+         "limit": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [], \"in_progress\": 0, \"note\": \"No activity yet. Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "Activity is empty, so nothing was approved yet. Nothing moves until you approve the review with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 21
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     1,
+     "get_activity",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   false
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-45",
+  "suite": "followups_stale",
+  "kind": "c3_cancel_nothing",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"AVAX\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "AVAX"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -11.99, \"price\": 36.33, \"source\": \"Hyperliquid mark price\", \"symbol\": \"AVAX\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "AVAX is at $36.33, down 11.99% in the last 24 hours.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 27
+     }
+    ],
+    [
+     {
+      "text": "There's no order to cancel in this chat. I can't tell you what happened there either. Activity in Wallets shows what happened.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 28
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   false
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-46",
+  "suite": "followups_stale",
+  "kind": "b4_change_swap_amount",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"ETH\", \"to_chain\": \"arbitrum\", \"amount\": 60}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "ETH",
+         "to_chain": "arbitrum",
+         "amount": 60
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 60, \"amount_out\": \"0.0168\", \"amount_out_usd\": 59.82, \"fee_bps\": 30, \"from\": \"60 USDC on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Touch ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 22, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.0168 ETH on Arbitrum\", \"total_cost_usd\": 0.18}"
+      ],
+      "ntok": 53
+     },
+     {
+      "text": "I've prepared 60 USDC on Arbitrum to about 0.0168 ETH on Arbitrum through NEAR Intents. Total cost is $0.18. Approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 45
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"ETH\", \"to_chain\": \"arbitrum\", \"amount\": 120}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "ETH",
+         "to_chain": "arbitrum",
+         "amount": 120
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 120, \"amount_out\": \"0.0337\", \"amount_out_usd\": 119.64, \"fee_bps\": 30, \"from\": \"120 USDC on Arbitrum\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Touch ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 25, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.0337 ETH on Arbitrum\", \"total_cost_usd\": 0.36}"
+      ],
+      "ntok": 54
+     },
+     {
+      "text": "I've prepared the swap again at 120 USDC on Arbitrum for about 0.0337 ETH on Arbitrum. The total cost is $0.36. The swap review you had before is still open, so close it if you don't need it. Approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 66
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     1,
+     "prepare_swap",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-47",
+  "suite": "followups_stale",
+  "kind": "m1_solana_mint_lookup",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Liquidation is when the exchange closes your leveraged position because your margin can no longer cover the loss. Lower leverage keeps it further from your funds.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 30
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"search_tokens\", \"arguments\": {\"query\": \"FARTCOIN\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "search_tokens",
+        "arguments": {
+         "query": "FARTCOIN"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"tokens\": [{\"change_24h_pct\": 4.9, \"liquidity_usd\": 4110000, \"mint\": \"DmLUoQMco95Fdu5R5UhiDW6tBCp5M6Pm1NugG4rt4m3q\", \"name\": \"Fartcoin\", \"price\": 0.41, \"symbol\": \"FARTCOIN\", \"tags\": [], \"verified\": true, \"volume_24h_usd\": 104670000}]}"
+      ],
+      "ntok": 22
+     },
+     {
+      "text": "The FARTCOIN mint is DmLUoQMco95Fdu5R5UhiDW6tBCp5M6Pm1NugG4rt4m3q. It's marked verified.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 48
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"250 * 30 / 100\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "250 * 30 / 100"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"75\"}"
+      ],
+      "ntok": 29
+     },
+     {
+      "text": "That's 75.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 6
+     }
+    ],
+    [
+     {
+      "text": "It was DmLUoQMco95Fdu5R5UhiDW6tBCp5M6Pm1NugG4rt4m3q for FARTCOIN.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     1,
+     "search_tokens",
+     "recorded"
+    ],
+    [
+     2,
+     "calculator",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    4,
+    4
+   ]
+  }
+ },
+ {
+  "id": "followups-48",
+  "suite": "followups_stale",
+  "kind": "h2_balance_after_swap",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"794.07\", \"chain\": \"base\", \"symbol\": \"USDC\", \"usd\": 794.07}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "You have 794.07 USDC on Base.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 14
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"base\", \"to_symbol\": \"ETH\", \"to_chain\": \"base\", \"amount\": 50}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "base",
+         "to_symbol": "ETH",
+         "to_chain": "base",
+         "amount": 50
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 50, \"amount_out\": \"0.0269\", \"amount_out_usd\": 49.83, \"fee_bps\": 35, \"from\": \"50 USDC on Base\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 25, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 0.0269 ETH on Base\", \"total_cost_usd\": 0.17}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "I've prepared 50 USDC on Base to about 0.0269 ETH on Base through NEAR Intents. Total cost is $0.17. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"744.07\", \"chain\": \"base\", \"symbol\": \"USDC\", \"usd\": 744.07}, {\"amount\": \"0.026901\", \"chain\": \"base\", \"symbol\": \"ETH\", \"usd\": 49.83}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "Your balances are 744.07 USDC on Base and 0.026901 ETH on Base.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 28
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "recorded"
+    ],
+    [
+     1,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     2,
+     "get_balances",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-49",
+  "suite": "followups_stale",
+  "kind": "d2_undo_trade",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SUI\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SUI"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": -1.56, \"price\": 1.7574, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SUI\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"calculator\", \"arguments\": {\"expression\": \"round(1.7574 * 0.97, 4)\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "calculator",
+        "arguments": {
+         "expression": "round(1.7574 * 0.97, 4)"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"result\": \"1.7047\"}"
+      ],
+      "ntok": 35
+     },
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"SUI\", \"side\": \"long\", \"size_usd\": 100, \"leverage\": 5, \"order_type\": \"market\", \"stop_loss\": 1.7047}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "SUI",
+         "side": "long",
+         "size_usd": 100,
+         "leverage": 5,
+         "order_type": "market",
+         "stop_loss": 1.7047
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 62
+     },
+     {
+      "text": "Your SUI long is prepared: $100 at 5x, market order, with the stop loss 3% under today's $1.7574 at $1.7047. Approve it with Face ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 56
+     }
+    ],
+    [
+     {
+      "text": "There's no undo after approval, but I can prepare closing the SUI long as a new review. Should I?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 24
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ],
+    [
+     0,
+     "calculator",
+     "recorded"
+    ],
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-50",
+  "suite": "followups_stale",
+  "kind": "l3_fee_needs_quote",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"1843.89\", \"chain\": \"arbitrum\", \"symbol\": \"USDC\", \"usd\": 1843.89}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "You have 1,843.89 USDC on Arbitrum. How much do you want to swap to ETH?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 27
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_quote\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"arbitrum\", \"to_symbol\": \"ETH\", \"to_chain\": \"arbitrum\", \"amount\": 150}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_quote",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "arbitrum",
+         "to_symbol": "ETH",
+         "to_chain": "arbitrum",
+         "amount": 150
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 150, \"amount_out\": \"0.0425\", \"amount_out_usd\": 149.4, \"fee_bps\": 40, \"from\": \"150 USDC on Arbitrum\", \"route\": \"NEAR Intents\", \"seconds\": 17, \"signature_verified\": true, \"to\": \"about 0.0425 ETH on Arbitrum\", \"total_cost_usd\": 0.6}"
+      ],
+      "ntok": 54
+     },
+     {
+      "text": "The total cost is $0.6 and the all-in amount is 150 USDC on Arbitrum. Want me to prepare it?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 30
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "recorded"
+    ],
+    [
+     1,
+     "get_quote",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-52",
+  "suite": "followups_stale",
+  "kind": "l2_fee_send",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0x92B88Fb523E67F40e22F26F63DD3BCC95cb2135c\", \"amount\": 100, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0x92B88Fb523E67F40e22F26F63DD3BCC95cb2135c",
+         "amount": 100,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"100 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Face ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 73
+     },
+     {
+      "text": "I've prepared a send of 100 USDC to 0x92B88Fb523E67F40e22F26F63DD3BCC95cb2135c on Base. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 64
+     }
+    ],
+    [
+     {
+      "text": "There's no fee figure I can give you for a send from here. Look at the review before you approve.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 23
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_send",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-53",
+  "suite": "followups_stale",
+  "kind": "b1_change_leverage",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"SOL\", \"side\": \"short\", \"size_usd\": 100, \"leverage\": 2, \"order_type\": \"market\", \"stop_loss\": 130}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "SOL",
+         "side": "short",
+         "size_usd": 100,
+         "leverage": 2,
+         "order_type": "market",
+         "stop_loss": 130
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 59
+     },
+     {
+      "text": "I've prepared a $100 SOL short at 2x, market order with a stop at $130. Review it and approve with Face ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 38
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"SOL\", \"side\": \"short\", \"size_usd\": 100, \"leverage\": 10, \"order_type\": \"market\", \"stop_loss\": 130}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "SOL",
+         "side": "short",
+         "size_usd": 100,
+         "leverage": 10,
+         "order_type": "market",
+         "stop_loss": 130
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 60
+     },
+     {
+      "text": "Updated: I've prepared a $100 SOL short at 10x, market order with a stop at $130. The SOL short review you had before is still open, so close it if you don't need it. Nothing happens until you approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 59
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     1,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-54",
+  "suite": "followups_stale",
+  "kind": "n1_same_request_twice",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0xfBa2CF163a2133597413fc7f1e0e4f4766dA6046\", \"amount\": 5, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0xfBa2CF163a2133597413fc7f1e0e4f4766dA6046",
+         "amount": 5,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"5 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Face ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 70
+     },
+     {
+      "text": "I've prepared sending 5 USDC to 0xfBa2CF163a2133597413fc7f1e0e4f4766dA6046 on Base. Review it and approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 59
+     }
+    ],
+    [
+     {
+      "text": "That was already prepared: 5 USDC to 0xfBa2CF163a2133597413fc7f1e0e4f4766dA6046 on Base. Do you want a second one?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 59
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_send",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-55",
+  "suite": "followups_stale",
+  "kind": "n1_same_request_twice",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0xBDd115fBda28e4be4D3352f12834687a72524bB3\", \"amount\": 100, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0xBDd115fBda28e4be4D3352f12834687a72524bB3",
+         "amount": 100,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"100 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 72
+     },
+     {
+      "text": "I've prepared a send of 100 USDC to 0xBDd115fBda28e4be4D3352f12834687a72524bB3 on Base. Review it and approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 63
+     }
+    ],
+    [
+     {
+      "text": "That was already prepared: 100 USDC to 0xBDd115fBda28e4be4D3352f12834687a72524bB3 on Base. Do you want another one?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 60
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_send\", \"arguments\": {\"to_address\": \"0xBDd115fBda28e4be4D3352f12834687a72524bB3\", \"amount\": 100, \"symbol\": \"USDC\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_send",
+        "arguments": {
+         "to_address": "0xBDd115fBda28e4be4D3352f12834687a72524bB3",
+         "amount": 100,
+         "symbol": "USDC"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount\": \"100 USDC\", \"executed\": false, \"kind\": \"send\", \"network\": \"Base\", \"note\": \"Waiting for the user to approve with Touch ID.\", \"status\": \"review_opened\"}"
+      ],
+      "ntok": 72
+     },
+     {
+      "text": "I've prepared a send of 100 USDC to 0xBDd115fBda28e4be4D3352f12834687a72524bB3 on Base. Nothing happens until you approve with Touch ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 64
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_send",
+     "recorded"
+    ],
+    [
+     2,
+     "prepare_send",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-56",
+  "suite": "followups_stale",
+  "kind": "a2_same_trade_abs_ask",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": false,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"LINK\", \"side\": \"long\", \"size_usd\": 50, \"leverage\": 3, \"order_type\": \"market\", \"stop_loss\": 17.895}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "LINK",
+         "side": "long",
+         "size_usd": 50,
+         "leverage": 3,
+         "order_type": "market",
+         "stop_loss": 17.895
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 60
+     },
+     {
+      "text": "I've prepared a $50 LINK long at 3x, market order, with the stop loss at $17.89. Review it and approve with Face ID when you're ready.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"SUI\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "SUI"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 0.88, \"price\": 3.5777, \"source\": \"Hyperliquid mark price\", \"symbol\": \"SUI\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "The live SUI price is $3.5777, so LINK's stop at $17.89 wouldn't apply to it. Do you want the same percentage off, or a new level?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 44
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"SUI\", \"side\": \"long\", \"size_usd\": 50, \"leverage\": 3, \"order_type\": \"market\", \"stop_loss\": 3.3716}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "SUI",
+         "side": "long",
+         "size_usd": 50,
+         "leverage": 3,
+         "order_type": "market",
+         "stop_loss": 3.3716
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 61
+     },
+     {
+      "text": "I've prepared a $50 SUI long at 3x, market order, with the stop loss at $3.3716. The earlier LINK long review is still open. Close it if you don't want it. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 55
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     1,
+     "get_price",
+     "recorded"
+    ],
+    [
+     2,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   false,
+   false,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-57",
+  "suite": "followups_stale",
+  "kind": "c3_cancel_nothing",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_price\", \"arguments\": {\"symbol\": \"HYPE\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_price",
+        "arguments": {
+         "symbol": "HYPE"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"change_24h_pct\": 12.93, \"price\": 37.864, \"source\": \"Hyperliquid mark price\", \"symbol\": \"HYPE\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "Right now HYPE is $37.864, up 12.93% in 24h.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 27
+     }
+    ],
+    [
+     {
+      "text": "I haven't prepared anything in this chat, so there's nothing to cancel. Tell me which order you mean and I'll look.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 27
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_price",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "id": "followups-58",
+  "suite": "followups_stale",
+  "kind": "f3_same_for_which",
+  "ok": true,
+  "checks": {
+   "score_item": true,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"BNB\", \"side\": \"long\", \"size_usd\": 150, \"leverage\": 3, \"order_type\": \"market\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "BNB",
+         "side": "long",
+         "size_usd": 150,
+         "leverage": 3,
+         "order_type": "market"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared a $150 BNB long at 3x. It's waiting for your Face ID approval.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 25
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_trade\", \"arguments\": {\"coin\": \"HYPE\", \"side\": \"short\", \"size_usd\": 50, \"leverage\": 5, \"order_type\": \"market\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_trade",
+        "arguments": {
+         "coin": "HYPE",
+         "side": "short",
+         "size_usd": 50,
+         "leverage": 5,
+         "order_type": "market"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"status\": \"review_opened\", \"kind\": \"trade\", \"executed\": false, \"note\": \"Waiting for the user to approve with Face ID.\"}"
+      ],
+      "ntok": 49
+     },
+     {
+      "text": "Your HYPE short is prepared: $50 at 5x, market order. The earlier BNB long review is still open. Close it if you don't want it. Approve with Face ID.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ],
+    [
+     {
+      "text": "Do you want the same leverage as the HYPE short (5x) or the BNB long (3x)?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 24
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_trade",
+     "recorded"
+    ],
+    [
+     1,
+     "prepare_trade",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   true,
+   true
+  ],
+  "pooled": {
+   "turns_ok": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": "followups-59",
+  "suite": "followups_stale",
+  "kind": "k_bridge_arrived",
+  "ok": false,
+  "checks": {
+   "score_item": false,
+   "carry_ok": true,
+   "no_restate_error": true,
+   "no_reprepare_unasked": true,
+   "rounded_ok": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "carry_ok",
+   "len_ok",
+   "no_relay",
+   "no_reprepare_unasked",
+   "no_restate_error",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "rounded_ok",
+   "score_item",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_swap\", \"arguments\": {\"from_symbol\": \"USDC\", \"from_chain\": \"polygon\", \"to_symbol\": \"USDC\", \"to_chain\": \"ethereum\", \"amount\": 50}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_swap",
+        "arguments": {
+         "from_symbol": "USDC",
+         "from_chain": "polygon",
+         "to_symbol": "USDC",
+         "to_chain": "ethereum",
+         "amount": 50
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"amount_in_usd\": 50, \"amount_out\": \"49.9\", \"amount_out_usd\": 49.85, \"fee_bps\": 30, \"from\": \"50 USDC on Polygon\", \"note\": \"Nothing has moved. The Swap review is open with this NEAR Intents quote; the user approves it with Face ID or cancels.\", \"policy\": \"allow\", \"route\": \"NEAR Intents\", \"seconds\": 25, \"signature_verified\": true, \"status\": \"prepared_for_review\", \"to\": \"about 49.9 USDC on Ethereum\", \"total_cost_usd\": 0.15}"
+      ],
+      "ntok": 50
+     },
+     {
+      "text": "I've prepared a swap of 50 USDC on Polygon for about 49.9 USDC on Ethereum, through NEAR Intents. All-in cost is $0.15. Approve it with Face ID when it looks right.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 52
+     }
+    ],
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>\n<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       },
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [], \"in_progress\": 0, \"note\": \"No activity yet. Reviews the user has not approved yet do not appear here.\"}",
+       "{\"holdings\": [{\"amount\": \"581.86\", \"chain\": \"polygon\", \"symbol\": \"USDC\", \"usd\": 581.86}, {\"amount\": \"407.84\", \"chain\": \"ethereum\", \"symbol\": \"USDC\", \"usd\": 407.84}]}"
+      ],
+      "ntok": 32
+     },
+     {
+      "text": "Nothing in Activity yet, and I can't tell from here whether the swap is in progress. You'll see what happened in Activity once it's finished.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 31
+     }
+    ]
+   ],
+   "ended": [
+    true,
+    true
+   ],
+   "capped": [
+    false,
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_swap",
+     "recorded"
+    ],
+    [
+     1,
+     "get_activity",
+     "recorded"
+    ],
+    [
+     1,
+     "get_balances",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true,
+  "turn_ok": [
+   true,
+   false
+  ],
+  "pooled": {
+   "turns_ok": [
+    1,
+    2
+   ]
+  }
+ }
+]

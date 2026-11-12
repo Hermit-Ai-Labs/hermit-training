@@ -1,0 +1,823 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "calculator",
+      "description": "Evaluate an arithmetic expression exactly and return the result. Use it for any arithmetic beyond trivial; never do multi-step maths in your head. Supports + - * / ** ( ), sqrt(), ln(), log10(), exp(), abs(), min(), max(), round(x, n).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "expression": {
+            "type": "string",
+            "description": "The expression to evaluate, e.g. '(2410.5 - 2311) * 0.75'."
+          }
+        },
+        "required": [
+          "expression"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_price",
+      "description": "Get the live price and 24h change of a coin or token (Hyperliquid, falling back to Binance). Always call this before stating a current price; never invent prices.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string",
+            "description": "Ticker, e.g. 'BTC', 'ETH', 'SOL', 'HYPE'."
+          }
+        },
+        "required": [
+          "symbol"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_balances",
+      "description": "Get the user's wallet holdings: a list of {symbol, chain, amount, usd}. Optionally filter to one chain.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "chain": {
+            "type": "string",
+            "description": "Optional chain filter, e.g. 'ethereum', 'base', 'arbitrum', 'bsc', 'solana', 'hyperliquid'."
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "hyperliquid_account",
+      "description": "Get the user's Hyperliquid account: account value, margin used, available USDC, open positions (coin, side, size, entry, liquidation price, unrealised pnl, leverage) and open orders.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "position_math",
+      "description": "Compute a perp position's margin, liquidation price, and (if price is given) pnl and ROE.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "side": {
+            "type": "string",
+            "enum": [
+              "long",
+              "short"
+            ]
+          },
+          "entry": {
+            "type": "number",
+            "description": "Entry price in USD."
+          },
+          "size_usd": {
+            "type": "number",
+            "description": "Position notional in USD."
+          },
+          "leverage": {
+            "type": "number",
+            "description": "Leverage, e.g. 5 for 5x."
+          },
+          "price": {
+            "type": "number",
+            "description": "Optional current or target price, for pnl and ROE."
+          },
+          "maintenance_margin": {
+            "type": "number",
+            "description": "Optional maintenance margin as a fraction, e.g. 0.005 for 0.5%. Defaults to 0."
+          }
+        },
+        "required": [
+          "side",
+          "entry",
+          "size_usd",
+          "leverage"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "search_markets",
+      "description": "Search markets (perps, spot pairs, pools) matching a query. Returns name, type, price, funding (perps) and APY (pools).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Free text, e.g. 'SOL perp', 'PEPE', 'ETH USDC pool'."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_yields",
+      "description": "Get the top yield pools: protocol, chain, asset, apy, tvl. Optionally filter by asset and/or chain.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "asset": {
+            "type": "string",
+            "description": "Optional asset, e.g. 'USDC', 'ETH'."
+          },
+          "chain": {
+            "type": "string",
+            "description": "Optional chain, e.g. 'base', 'arbitrum'."
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "prepare_trade",
+      "description": "Prepare a Hyperliquid perp order and open the app's review screen. The user approves it with Face ID; nothing is executed by this call. Never say the trade happened; say it is prepared for review.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "coin": {
+            "type": "string",
+            "description": "Ticker, e.g. 'BTC'."
+          },
+          "side": {
+            "type": "string",
+            "enum": [
+              "long",
+              "short"
+            ]
+          },
+          "size_usd": {
+            "type": "number",
+            "description": "Notional size in USD."
+          },
+          "leverage": {
+            "type": "number"
+          },
+          "order_type": {
+            "type": "string",
+            "enum": [
+              "market",
+              "limit"
+            ]
+          },
+          "limit_price": {
+            "type": "number",
+            "description": "Required when order_type is limit."
+          },
+          "take_profit": {
+            "type": "number",
+            "description": "Optional take-profit trigger price."
+          },
+          "stop_loss": {
+            "type": "number",
+            "description": "Optional stop-loss trigger price."
+          }
+        },
+        "required": [
+          "coin",
+          "side",
+          "size_usd",
+          "leverage",
+          "order_type"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "prepare_swap",
+      "description": "Prepare a swap or bridge (through NEAR Intents) and open the Swap/Bridge review screen for the user to approve. Nothing is executed by this call.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "from_symbol": {
+            "type": "string"
+          },
+          "from_chain": {
+            "type": "string"
+          },
+          "to_symbol": {
+            "type": "string"
+          },
+          "to_chain": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "description": "Amount of from_symbol to swap."
+          }
+        },
+        "required": [
+          "from_symbol",
+          "from_chain",
+          "to_symbol",
+          "to_chain",
+          "amount"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "prepare_send",
+      "description": "Prepare a transfer and open the Send review screen for the user to approve. Copy the address character for character (keep EVM checksum case and base58 case).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to_address": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "chain": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "to_address",
+          "amount",
+          "symbol",
+          "chain"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "open_add_funds",
+      "description": "Open the Add funds flow (deposit QR code and network choice) for the wallet or for Hyperliquid.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "goal": {
+            "type": "string",
+            "enum": [
+              "wallet",
+              "hyperliquid"
+            ]
+          }
+        },
+        "required": [
+          "goal"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_quote",
+      "description": "Get a live NEAR Intents (1Click) quote for a swap or bridge without preparing anything: amount out, dollar values, fee and time. Chains: ethereum, base, arbitrum, bsc, polygon, monad, solana, near, bitcoin (destination only), hyperliquid (USDC destination only).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "from_symbol": {
+            "type": "string"
+          },
+          "from_chain": {
+            "type": "string"
+          },
+          "to_symbol": {
+            "type": "string"
+          },
+          "to_chain": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "description": "Amount of from_symbol."
+          }
+        },
+        "required": [
+          "from_symbol",
+          "from_chain",
+          "to_symbol",
+          "to_chain",
+          "amount"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "prepare_multisend",
+      "description": "Prepare one token transfer to many addresses (a list or a spreadsheet of address and amount) and open the Batch send review for the user to approve. Nothing is executed by this call.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "chain": {
+            "type": "string"
+          },
+          "recipients": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "address",
+                "amount"
+              ]
+            }
+          }
+        },
+        "required": [
+          "symbol",
+          "recipients"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "prepare_deposit",
+      "description": "Prepare a deposit into a yield pool (Aave v3 on Ethereum, Base or Arbitrum) and open the Deposit review for the user to approve. Nothing is executed by this call.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "type": "string",
+            "description": "Pool project, e.g. 'aave-v3'."
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "chain": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "symbol",
+          "amount"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "prepare_withdraw",
+      "description": "Prepare a withdrawal from the user's Aave v3 deposit and open the review for the user to approve. Leave amount out to withdraw all. Nothing is executed by this call.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "chain": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "symbol"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "prepare_buy",
+      "description": "Prepare a buy of a Solana token with USDC or SOL through Jupiter and open the Buy review for the user to approve. Only Jupiter-verified tokens. Nothing is executed by this call.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string",
+            "description": "Token ticker, e.g. 'WIF', 'BONK'."
+          },
+          "amount_usd": {
+            "type": "number",
+            "description": "How much to spend, in US dollars."
+          },
+          "pay_with": {
+            "type": "string",
+            "enum": [
+              "USDC",
+              "SOL"
+            ],
+            "description": "Optional. What to pay with. Leave out unless the user said; the app uses USDC if held, else SOL."
+          }
+        },
+        "required": [
+          "symbol",
+          "amount_usd"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "prepare_close",
+      "description": "Prepare closing an open Hyperliquid position, fully or by percent (market, reduce only), and open the Close review for the user to approve. Nothing is executed by this call.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "coin": {
+            "type": "string",
+            "description": "Ticker of the open position, e.g. 'SOL'."
+          },
+          "percent": {
+            "type": "number",
+            "description": "Optional. Share of the position to close, 1 to 100. Leave out to close all of it."
+          }
+        },
+        "required": [
+          "coin"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_activity",
+      "description": "Get the user's recent wallet activity: sends, swaps and buys with status (confirmed, failed or in progress), newest first, and how many are in progress. Use it to check whether something happened.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "description": "Optional. How many rows to return, newest first. Defaults to 10."
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "open_app",
+      "description": "Open a site or dApp in Hermit's browser, by name (e.g. 'Uniswap', 'Aave') or by url. Nothing connects to the wallet until the user approves it.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of a dApp or site, e.g. 'Uniswap'."
+          },
+          "url": {
+            "type": "string",
+            "description": "A full web address, e.g. 'https://app.uniswap.org'. Use this when the user gave one."
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "prepare_sell",
+      "description": "Prepare a sale of a Solana token the user holds, for USDC or SOL, and open the Sell review for the user to approve with Face ID. Give percent or amount. Nothing is executed by this call.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "description": "Ticker, or the mint if the user pasted it or search_tokens returned it."
+          },
+          "percent": {
+            "type": "number",
+            "description": "1 to 100. All of it is 100."
+          },
+          "amount": {
+            "type": "number",
+            "description": "Token units. Use instead of percent."
+          },
+          "receive": {
+            "type": "string",
+            "enum": [
+              "USDC",
+              "SOL"
+            ],
+            "description": "Optional. Leave out unless the user said."
+          }
+        },
+        "required": [
+          "token"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "search_tokens",
+      "description": "Find a Solana token by name, ticker or mint: up to 5 matches with verified flag, price, liquidity and safety tags (Freeze on, Mint on, Low liquidity, New). Use before buying an unfamiliar token and for 'is it safe'.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Name, ticker or mint address."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_positions",
+      "description": "Get what the user holds beyond wallet balances: spot Solana tokens (average cost, pnl), Aave deposits (apy), Hyperliquid positions and open orders, take profit and stop loss included, each with an id.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "all",
+              "spot",
+              "earn",
+              "perps"
+            ],
+            "description": "Optional. Defaults to all."
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_portfolio",
+      "description": "Get the user's total value in US dollars across the selected wallet, spot tokens, Aave and Hyperliquid, split by place, with the biggest holdings.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "cancel_order",
+      "description": "Cancel an open Hyperliquid order, take profit or stop loss once the user taps Confirm on a card. Coin 'all' cancels every open limit order. Cancelling a stop loss leaves the position unprotected.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "coin": {
+            "type": "string",
+            "description": "Ticker of the order, e.g. 'ETH', or 'all'."
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "order",
+              "take_profit",
+              "stop_loss"
+            ],
+            "description": "Optional. Only what the user said."
+          },
+          "order_id": {
+            "type": "string",
+            "description": "Optional. The id from get_positions."
+          }
+        },
+        "required": [
+          "coin"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "set_tp_sl",
+      "description": "Prepare a take profit and/or stop loss (reduce only) on an open Hyperliquid position and open the review for the user to approve with Face ID. Nothing is executed by this call.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "coin": {
+            "type": "string",
+            "description": "Ticker of the open position, e.g. 'SOL'."
+          },
+          "take_profit": {
+            "type": "number",
+            "description": "Optional. Trigger price in USD."
+          },
+          "stop_loss": {
+            "type": "number",
+            "description": "Optional. Trigger price in USD."
+          }
+        },
+        "required": [
+          "coin"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "create_automation",
+      "description": "Set up a scheduled automation: on schedule Hermit runs the prompt and posts the answer in a chat. It can look things up and prepare actions, never approve them. The user confirms on a card.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Short title."
+          },
+          "prompt": {
+            "type": "string",
+            "description": "The instruction to run each time, e.g. 'Tell me the SOL price.'"
+          },
+          "schedule": {
+            "type": "string",
+            "description": "e.g. 'every morning at 8', 'every 5 minutes'."
+          }
+        },
+        "required": [
+          "name",
+          "prompt",
+          "schedule"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "schedule_payment",
+      "description": "Schedule a payment reminder to a saved contact or typed address, once or repeating. Nothing is sent by itself: when due, the user approves the send with Face ID. The user confirms the schedule on a card.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "payee": {
+            "type": "string",
+            "description": "Saved contact name, or an address the user typed."
+          },
+          "amount": {
+            "type": "number"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "chain": {
+            "type": "string",
+            "description": "Optional. Leave out unless the user said."
+          },
+          "when": {
+            "type": "string",
+            "description": "First due date and time, e.g. 'Dec 1 9:00'."
+          },
+          "repeat": {
+            "type": "string",
+            "enum": [
+              "once",
+              "weekly",
+              "monthly"
+            ],
+            "description": "Optional. Default once."
+          }
+        },
+        "required": [
+          "payee",
+          "amount",
+          "symbol",
+          "when"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "add_contact",
+      "description": "Save a contact so the user can pay them by name. The address must be one the user typed in this chat. The user confirms on a card showing the full address.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "network": {
+            "type": "string",
+            "description": "Optional, e.g. 'base', 'solana'. Leave out unless the user said."
+          }
+        },
+        "required": [
+          "name",
+          "address"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "open_page",
+      "description": "Show a button that opens a page of the Hermit app. Use it to point the user to a screen instead of describing taps.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "string",
+            "enum": [
+              "home",
+              "wallets",
+              "trade",
+              "earn",
+              "payments",
+              "explore",
+              "calendar",
+              "projects",
+              "automations",
+              "files",
+              "connectors",
+              "settings"
+            ]
+          },
+          "tab": {
+            "type": "string",
+            "description": "Optional. trade: markets, positions. earn: save, positions, explore. payments: schedule, payees, transfer, apis. settings: profile, safety, memory, models, cloud."
+          }
+        },
+        "required": [
+          "page"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_address",
+      "description": "Get the user's own receive address per network family (never keys), or a saved contact's address when contact is given. Use it for 'what is my address' and to pay a contact by name.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "contact": {
+            "type": "string",
+            "description": "Optional. A saved contact's name."
+          },
+          "chain": {
+            "type": "string",
+            "description": "Optional. e.g. 'base', 'solana'."
+          }
+        },
+        "required": []
+      }
+    }
+  }
+]

@@ -1,0 +1,1282 @@
+[
+ {
+  "category": "fee",
+  "q": "Taker fee is 2 bps. I trade $180,371.36 notional. How much do I pay?",
+  "answer": 36.074272,
+  "ok": true,
+  "used_calc": true,
+  "text": "Fee: $36.07."
+ },
+ {
+  "category": "option_payoff",
+  "q": "Long a 4.32 strike call, paid 0.04. Expiry price 3.89. PnL per contract?",
+  "answer": -0.04,
+  "ok": true,
+  "used_calc": true,
+  "text": "Profit per contract: -$0.04."
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is -0.1418% every 8 hours. Annualised simply (no compounding), what percent per year? Answer with just the number.",
+  "answer": -155.271,
+  "ok": true,
+  "used_calc": true,
+  "text": "-155.27%"
+ },
+ {
+  "category": "slippage_pct",
+  "q": "I expected to buy at 3610 but my average fill was 3651.06. What was my slippage in percent? Only the number please.",
+  "answer": 1.13739612,
+  "ok": true,
+  "used_calc": true,
+  "text": "1.14%"
+ },
+ {
+  "category": "pred_market_ev",
+  "q": "A prediction market YES share costs $0.76 and pays $1 if it happens. I think the real chance is 81%. What's the expected profit on a $1000 bet?",
+  "answer": 65.78947368,
+  "ok": true,
+  "used_calc": true,
+  "text": "Expected profit: $65.79."
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "I LP a 50/50 pool and one side's price changes by a factor of 1.9. How much impermanent loss is that?",
+  "answer": 4.93759481,
+  "ok": true,
+  "used_calc": true,
+  "text": "Impermanent loss: 4.94%. That's versus just holding, before fees earned."
+ },
+ {
+  "category": "borrow_capacity",
+  "q": "My collateral is $3,000 with a max LTV of 70%. I've already borrowed $370. How much more can I borrow?",
+  "answer": 1730.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "You can borrow: $1,730.00."
+ },
+ {
+  "category": "avg_entry",
+  "q": "I bought $250 worth at each of these prices: 115.9, 136.39. What's my average entry price? Just the number.",
+  "answer": 125.31294146,
+  "ok": true,
+  "used_calc": true,
+  "text": "$125.31"
+ },
+ {
+  "category": "liq_mm",
+  "q": "Isolated 5x short from $1961, maintenance margin 1.25%. Liquidation price? Use liq = entry x (1 + 1/lev) / (1 + mm). Answer with just the number.",
+  "answer": 2324.14814815,
+  "ok": true,
+  "used_calc": true,
+  "text": "$2,324.15"
+ },
+ {
+  "category": "effective_leverage",
+  "q": "My account equity is $10,000 and I have open positions of $1,000, $15,000 notional. What's my effective leverage? Just the number.",
+  "answer": 1.6,
+  "ok": true,
+  "used_calc": true,
+  "text": "Effective leverage: 1.6x."
+ },
+ {
+  "category": "pred_market_ev",
+  "q": "A prediction market YES share costs $0.31 and pays $1 if it happens. I think the real chance is 41%. What's the expected profit on a $10 bet?",
+  "answer": 3.22580645,
+  "ok": true,
+  "used_calc": true,
+  "text": "Expected profit: $3.2258."
+ },
+ {
+  "category": "basis_annual",
+  "q": "Spot is 2947 and the 45-day future is 3001. What's the annualised basis (simple)? Just the number.",
+  "answer": 14.86257211,
+  "ok": true,
+  "used_calc": true,
+  "text": "14.86%"
+ },
+ {
+  "category": "funding_payment",
+  "q": "Funding 0.0247% per 1h on $10000 notional. Cost over 72 hours?",
+  "answer": 177.84,
+  "ok": true,
+  "used_calc": true,
+  "text": "Funding paid: $177.84."
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 10 units at $25.41 and closed at $26.68. What is my profit in dollars? Answer with just the number.",
+  "answer": 12.7,
+  "ok": true,
+  "used_calc": true,
+  "text": "$12.70"
+ },
+ {
+  "category": "pred_implied",
+  "q": "On a prediction market YES is 85 cents and NO is 18 cents. What's the implied probability of YES after removing the overround? Just the number.",
+  "answer": 82.52427184,
+  "ok": true,
+  "used_calc": true,
+  "text": "82.52%"
+ },
+ {
+  "category": "compound_growth",
+  "q": "If I put $20,000 into a vault at 8% APY, how much will I have after 5 years? Just the number.",
+  "answer": 29386.561536,
+  "ok": true,
+  "used_calc": true,
+  "text": "$29,386.56"
+ },
+ {
+  "category": "roe",
+  "q": "Short at $94.71, 2x leverage, mark $100.39. ROE %?",
+  "answer": -11.99450956,
+  "ok": true,
+  "used_calc": true,
+  "text": "ROE: -11.99%."
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "I LP a 50/50 pool and one side's price changes by a factor of 0.43. How much impermanent loss is that?",
+  "answer": 8.28757309,
+  "ok": true,
+  "used_calc": true,
+  "text": "Impermanent loss: 8.29%. That's versus just holding, before fees earned."
+ },
+ {
+  "category": "fee",
+  "q": "Taker fee is 7 bps. I trade $107,238.66 notional. How much do I pay?",
+  "answer": 75.067062,
+  "ok": true,
+  "used_calc": true,
+  "text": "Fee: $75.07."
+ },
+ {
+  "category": "aave_liq_price",
+  "q": "I supplied 1 ETH on Aave (liquidation threshold 83%) and borrowed $2,670 USDC. At what ETH price does my health factor hit 1? Answer with just the number.",
+  "answer": 3216.86746988,
+  "ok": true,
+  "used_calc": true,
+  "text": "$3,216.87"
+ },
+ {
+  "category": "compound_growth",
+  "q": "If I put $1,000 into a vault at 5% APY, how much will I have after 1 year? Only the number please.",
+  "answer": 1050.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1,050.00"
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "I LP a 50/50 pool and one side's price changes by a factor of 1.54. How much impermanent loss is that?",
+  "answer": 2.28603428,
+  "ok": true,
+  "used_calc": true,
+  "text": "Impermanent loss: 2.29%. That's versus just holding, before fees earned."
+ },
+ {
+  "category": "drawdown_recover",
+  "q": "After a 50% drawdown, how much do I need to make to recover?",
+  "answer": 100.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Gain needed: 100%."
+ },
+ {
+  "category": "drawdown_recover",
+  "q": "After a 25% drawdown, how much do I need to make to recover?",
+  "answer": 33.33333333,
+  "ok": true,
+  "used_calc": true,
+  "text": "Gain needed: 33.33%."
+ },
+ {
+  "category": "funding_annual",
+  "q": "Funding is -0.0372% per 8h. What's that as a simple yearly rate?",
+  "answer": -40.734,
+  "ok": true,
+  "used_calc": true,
+  "text": "Annualised funding: -40.73%. Funding changes all the time, so treat it as a snapshot."
+ },
+ {
+  "category": "drawdown_recover",
+  "q": "After a 60% drawdown, how much do I need to make to recover?",
+  "answer": 150.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Gain needed: 150%."
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $0.96 put for a premium of $0.02. At expiry the spot is $0.88. Profit per contract in dollars (negative if a loss)? Only the number please.",
+  "answer": 0.06,
+  "ok": true,
+  "used_calc": true,
+  "text": "$0.06"
+ },
+ {
+  "category": "dca",
+  "q": "$100 a week for 26 weeks, total invested?",
+  "answer": 2600,
+  "ok": true,
+  "used_calc": true,
+  "text": "Total invested: $2,600.00."
+ },
+ {
+  "category": "pred_implied",
+  "q": "On a prediction market YES is 14 cents and NO is 89 cents. What's the implied probability of YES after removing the overround? Answer with just the number.",
+  "answer": 13.59223301,
+  "ok": true,
+  "used_calc": true,
+  "text": "13.6%"
+ },
+ {
+  "category": "stop_from_risk",
+  "q": "I'm buying 1 coins at $3494 and want to lose at most $200 if stopped. Where should my stop be? Only the number please.",
+  "answer": 3294.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Stop: $3,294.00."
+ },
+ {
+  "category": "position_size",
+  "q": "Account $1,000.00, risking 0.5% a trade. Entry 2667 with a stop 3% below. Position size in coins?",
+  "answer": 0.06249219,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 0.0625."
+ },
+ {
+  "category": "liq_price_short",
+  "q": "I am short 15x with entry at $3.89. Ignoring fees and maintenance, at what price am I liquidated?",
+  "answer": 4.14933333,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation price: $4.1493. Real liquidation comes a bit earlier because of maintenance margin and fees."
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 3 units at $4.53 and closed at $5.66. What is my profit in dollars?",
+  "answer": 3.39,
+  "ok": true,
+  "used_calc": true,
+  "text": "PnL: $3.39."
+ },
+ {
+  "category": "lp_fees",
+  "q": "A pool does $5,000,000 volume a day with a 1% fee tier. I own 1% of the liquidity. My fees per day? Just the number.",
+  "answer": 500.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$500.00"
+ },
+ {
+  "category": "funding_payment",
+  "q": "I hold a $1,000 perp position. Funding is 0.0136% every 8 hours and I'm on the paying side. How much funding do I pay over 168 hours? Answer with just the number.",
+  "answer": 2.856,
+  "ok": true,
+  "used_calc": true,
+  "text": "$2.856"
+ },
+ {
+  "category": "rr_ratio",
+  "q": "Short at 69321, stop 70707.42, target 65854.95. What's the reward to risk ratio? Just the number.",
+  "answer": 2.5,
+  "ok": true,
+  "used_calc": true,
+  "text": "Reward to risk: 2.5."
+ },
+ {
+  "category": "liq_price_short",
+  "q": "4x short from $15158: liquidation price with no maintenance margin?",
+  "answer": 18947.5,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation price: $18,947.50. Real liquidation comes a bit earlier because of maintenance margin and fees."
+ },
+ {
+  "category": "position_size",
+  "q": "Account $7,500.00, risking 1% a trade. Entry 4.97 with a stop 15% below. Position size in coins?",
+  "answer": 100.60362173,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 100.6036."
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 50 ETH and 125,000 USDC. With the 0.3% fee, how much USDC do I get for 2 ETH? Round to 2dp, just the number.",
+  "answer": 4793.82236412,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 4,793.82 USDC."
+ },
+ {
+  "category": "liq_price_short",
+  "q": "2x short from $133.56: liquidation price with no maintenance margin?",
+  "answer": 200.34,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation price: $200.34. Real liquidation comes a bit earlier because of maintenance margin and fees."
+ },
+ {
+  "category": "liq_price_long",
+  "q": "Where's my liquidation on a 2x long from 35.55? Ignore fees and maintenance margin.",
+  "answer": 17.775,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation price: $17.78. Real liquidation comes a bit earlier because of maintenance margin and fees."
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $2558. Round-trip fees total 12 bps. At what sell price do I break even? Just the number.",
+  "answer": 2561.0696,
+  "ok": true,
+  "used_calc": true,
+  "text": "$2,561.07"
+ },
+ {
+  "category": "pnl_short",
+  "q": "Short 0.1 from 12103, closed at 10650.64. What's my PnL?",
+  "answer": 145.236,
+  "ok": true,
+  "used_calc": true,
+  "text": "Short PnL: $145.24."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Order book shows 3.27 bid and 3.28 ask (mid 3.275). How wide is the spread in bps?",
+  "answer": 30.53435115,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 30.53 bps."
+ },
+ {
+  "category": "r_multiple",
+  "q": "Long entry 4820, stop 4771.8, I exited at 4844.1. How many R did I make? Answer with just the number.",
+  "answer": 0.5,
+  "ok": true,
+  "used_calc": true,
+  "text": "Result: 0.5R."
+ },
+ {
+  "category": "dca",
+  "q": "$150 a week for 26 weeks, total invested?",
+  "answer": 3900,
+  "ok": true,
+  "used_calc": true,
+  "text": "Total invested: $3,900.00."
+ },
+ {
+  "category": "position_size",
+  "q": "Account $25,000.00, risking 0.25% a trade. Entry 481.13 with a stop 8% below. Position size in coins?",
+  "answer": 1.62378151,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 1.6238."
+ },
+ {
+  "category": "roe",
+  "q": "Short at $111.23, 5x leverage, mark $112.9. ROE %?",
+  "answer": -7.50696754,
+  "ok": true,
+  "used_calc": true,
+  "text": "ROE: -7.51%."
+ },
+ {
+  "category": "aave_liq_price",
+  "q": "I supplied 3 ETH on Aave (liquidation threshold 82.5%) and borrowed $7,760 USDC. At what ETH price does my health factor hit 1? Only the number please.",
+  "answer": 3135.35353535,
+  "ok": true,
+  "used_calc": true,
+  "text": "$3,135.35"
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $150.00 every week for 4 weeks, how much do I invest in total? Just the number.",
+  "answer": 600,
+  "ok": true,
+  "used_calc": true,
+  "text": "$600.00"
+ },
+ {
+  "category": "position_size",
+  "q": "Account $2,500.00, risking 0.25% a trade. Entry 3.52 with a stop 15% below. Position size in coins?",
+  "answer": 11.83712121,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 11.84."
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $805.67 put for a premium of $17.56. At expiry the spot is $1047.37. Profit per contract in dollars (negative if a loss)? Answer with just the number.",
+  "answer": -17.56,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$17.56"
+ },
+ {
+  "category": "sum_balances",
+  "q": "I have 4 wallets with 2.4, 4.69, 4.85, 0.63 BNB. Total BNB? Round to 2dp, just the number.",
+  "answer": 12.57,
+  "ok": true,
+  "used_calc": true,
+  "text": "Total: 12.57."
+ },
+ {
+  "category": "avg_down",
+  "q": "I hold 5 at $4929 and buy 2 more at $3630.75. What's my new average entry (break-even price)? Answer with just the number.",
+  "answer": 4558.07142857,
+  "ok": true,
+  "used_calc": true,
+  "text": "$4,558.07"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Funding is -0.0924% per 1h. What's that as a simple yearly rate?",
+  "answer": -809.424,
+  "ok": true,
+  "used_calc": true,
+  "text": "Annualised funding: -809.42%. Funding changes all the time, so treat it as a snapshot."
+ },
+ {
+  "category": "pnl_short",
+  "q": "Short 0.25 from 8359, closed at 7690.28. What's my PnL?",
+  "answer": 167.18,
+  "ok": true,
+  "used_calc": true,
+  "text": "Short PnL: $167.18."
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "Constant product pool: 50 ETH / 75000 USDC, 0.3% fee. What do I receive selling 10 ETH?",
+  "answer": 12468.73436718,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 12,468.73 USDC."
+ },
+ {
+  "category": "slippage_pct",
+  "q": "I expected to buy at 4.13 but my average fill was 4.1488. What was my slippage in percent?",
+  "answer": 0.45520581,
+  "ok": true,
+  "used_calc": true,
+  "text": "Slippage: 0.46%."
+ },
+ {
+  "category": "liq_mm",
+  "q": "Where's the liquidation price on a 25x short at 1.39 if maintenance margin is 1.25%?",
+  "answer": 1.42775309,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation price: $1.4278."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Order book shows 3558.64 bid and 3559.36 ask (mid 3559). How wide is the spread in bps?",
+  "answer": 2.02304018,
+  "ok": true,
+  "used_calc": true,
+  "text": "Spread: 2.02 bps."
+ },
+ {
+  "category": "spread_bps",
+  "q": "Bid is 34, ask is 34.18. What is the spread in basis points off the mid of 34.09? Only the number please.",
+  "answer": 52.80140804,
+  "ok": false,
+  "used_calc": true,
+  "text": "Spread: 26.4 bps."
+ },
+ {
+  "category": "aave_liq_price",
+  "q": "I supplied 5 ETH on Aave (liquidation threshold 80%) and borrowed $3,150 USDC. At what ETH price does my health factor hit 1? Just the number.",
+  "answer": 787.5,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation ETH price: $787.50."
+ },
+ {
+  "category": "drawdown_recover",
+  "q": "My portfolio is down 10%. What percent gain do I need to get back to even? Only the number please.",
+  "answer": 11.11111111,
+  "ok": true,
+  "used_calc": true,
+  "text": "11.11%"
+ },
+ {
+  "category": "avg_entry",
+  "q": "I bought $500 worth at each of these prices: 4334.85, 4064.03, 4284.2, 5267.94. What's my average entry price?",
+  "answer": 4444.47903652,
+  "ok": true,
+  "used_calc": true,
+  "text": "Average entry: $4,444.48."
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "My coin fell 29% and then pumped 84%. Am I up or down overall, and by how much?",
+  "answer": 30.64,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 30.64%."
+ },
+ {
+  "category": "r_multiple",
+  "q": "Entry $284.32, stop $272.95, exit $307.06. Result in R multiples?",
+  "answer": 2.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Result: 2R."
+ },
+ {
+  "category": "basis_annual",
+  "q": "Spot is 29673 and the 90-day future is 29948. What's the annualised basis (simple)? Just the number.",
+  "answer": 3.75856091,
+  "ok": true,
+  "used_calc": true,
+  "text": "3.76%"
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "Entry 286.21, total fees in and out are 5 bps. Break-even exit price?",
+  "answer": 286.353105,
+  "ok": true,
+  "used_calc": true,
+  "text": "Break-even price: $286.35."
+ },
+ {
+  "category": "pred_market_ev",
+  "q": "YES trades at 17 cents. My estimate is 7%. Expected value of putting $10 on YES?",
+  "answer": -5.88235294,
+  "ok": true,
+  "used_calc": true,
+  "text": "Expected profit: -$5.8824."
+ },
+ {
+  "category": "apy_to_apr",
+  "q": "A vault shows 18% APY with daily compounding. What's the equivalent APR? Just the number.",
+  "answer": 16.55519716,
+  "ok": true,
+  "used_calc": true,
+  "text": "16.56%"
+ },
+ {
+  "category": "margin_required",
+  "q": "How much margin do I need for a $40,000 position at 2x? Answer with just the number.",
+  "answer": 20000.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$20,000.00"
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 7 bps applies to a $88,985.89 order. Fee in dollars? Answer with just the number.",
+  "answer": 62.290123,
+  "ok": true,
+  "used_calc": true,
+  "text": "$62.29"
+ },
+ {
+  "category": "roe",
+  "q": "Long at $49205, 10x leverage, mark $50189.1. ROE %?",
+  "answer": 20.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "ROE: 20%."
+ },
+ {
+  "category": "sum_balances",
+  "q": "Add up my SOL: 0.82, 0.2, 4.77.",
+  "answer": 5.79,
+  "ok": true,
+  "used_calc": true,
+  "text": "Total: 5.79."
+ },
+ {
+  "category": "pred_implied",
+  "q": "On a prediction market YES is 26 cents and NO is 76 cents. What's the implied probability of YES after removing the overround? Just the number.",
+  "answer": 25.49019608,
+  "ok": true,
+  "used_calc": true,
+  "text": "25.49%"
+ },
+ {
+  "category": "drawdown_recover",
+  "q": "My portfolio is down 40%. What percent gain do I need to get back to even? Just the number.",
+  "answer": 66.66666667,
+  "ok": true,
+  "used_calc": true,
+  "text": "66.67%"
+ },
+ {
+  "category": "borrow_capacity",
+  "q": "My collateral is $1,000 with a max LTV of 70%. I've already borrowed $320. How much more can I borrow? Only the number please.",
+  "answer": 380.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$380.00"
+ },
+ {
+  "category": "option_payoff",
+  "q": "I bought a $2.66 call for a premium of $0.02. At expiry the spot is $2.26. Profit per contract in dollars (negative if a loss)?",
+  "answer": -0.02,
+  "ok": true,
+  "used_calc": true,
+  "text": "Profit per contract: -$0.02."
+ },
+ {
+  "category": "funding_payment",
+  "q": "Funding 0.0062% per 1h on $1000 notional. Cost over 24 hours?",
+  "answer": 1.488,
+  "ok": true,
+  "used_calc": true,
+  "text": "Funding paid: $1.488."
+ },
+ {
+  "category": "depeg_loss",
+  "q": "I hold 5,000 of a stablecoin that depegged to $0.937. How much value have I lost in dollars?",
+  "answer": 315.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Loss: $315.00."
+ },
+ {
+  "category": "mcap_price",
+  "q": "A token has 1,000,000 tokens in circulation. What price gives it a $100,000,000 market cap?",
+  "answer": 100.0,
+  "ok": false,
+  "used_calc": true,
+  "text": "Price = market cap / supply = 1."
+ },
+ {
+  "category": "apy_to_apr",
+  "q": "A vault shows 80% APY with daily compounding. What's the equivalent APR? Only the number please.",
+  "answer": 58.82601974,
+  "ok": true,
+  "used_calc": true,
+  "text": "APR: 58.83%."
+ },
+ {
+  "category": "breakeven_fees",
+  "q": "I buy at $16.55. Round-trip fees total 60 bps. At what sell price do I break even? Only the number please.",
+  "answer": 16.6493,
+  "ok": true,
+  "used_calc": true,
+  "text": "$16.65"
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "A token drops 32% then rises 28%. Overall, what percent is it down from the start? Just the magnitude as a number.",
+  "answer": 12.96,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 12.96%."
+ },
+ {
+  "category": "compound_growth",
+  "q": "$5000 compounding at 6% a year for 2 years. End value?",
+  "answer": 5618.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "End value: $5,618.00."
+ },
+ {
+  "category": "gas_cost",
+  "q": "A transaction uses 120,000 gas at 0.01 gwei. ETH is $2549. How much does it cost in dollars? Only the number please.",
+  "answer": 0.0030588,
+  "ok": true,
+  "used_calc": true,
+  "text": "$0.0030588"
+ },
+ {
+  "category": "rr_ratio",
+  "q": "Short at 72207, stop 74373.21, target 67874.58. What's the reward to risk ratio? Answer with just the number.",
+  "answer": 2.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Reward to risk: 2."
+ },
+ {
+  "category": "fee",
+  "q": "A fee of 7 bps applies to a $72,580.92 order. Fee in dollars?",
+  "answer": 50.806644,
+  "ok": true,
+  "used_calc": true,
+  "text": "Fee: $50.81."
+ },
+ {
+  "category": "lp_fees",
+  "q": "A pool does $25,000,000 volume a day with a 1% fee tier. I own 0.1% of the liquidity. My fees per day?",
+  "answer": 250.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Your fees per day: $250.00."
+ },
+ {
+  "category": "avg_entry",
+  "q": "I bought $500 worth at each of these prices: 166.96, 142.99. What's my average entry price? Answer with just the number.",
+  "answer": 154.04813938,
+  "ok": true,
+  "used_calc": true,
+  "text": "$154.05"
+ },
+ {
+  "category": "position_size",
+  "q": "My account is $15,000.00. I risk 1.5% per trade. Entry $37.01, stop 15% away. How many units should I buy so the stop loses exactly my risk? Round to 4dp, just the number.",
+  "answer": 40.5295866,
+  "ok": true,
+  "used_calc": true,
+  "text": "Position size: 40.5296."
+ },
+ {
+  "category": "aave_liq_price",
+  "q": "I supplied 10 ETH on Aave (liquidation threshold 80%) and borrowed $12,890 USDC. At what ETH price does my health factor hit 1? Only the number please.",
+  "answer": 1611.25,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1,611.25"
+ },
+ {
+  "category": "pnl_short",
+  "q": "Short 0.25 from 26.12, closed at 28.73. What's my PnL?",
+  "answer": -0.6525,
+  "ok": true,
+  "used_calc": true,
+  "text": "Short PnL: -$0.6525."
+ },
+ {
+  "category": "pnl_long",
+  "q": "Long 10 coins from 124.21 to 130.42, what's the PnL in USD?",
+  "answer": 62.1,
+  "ok": true,
+  "used_calc": true,
+  "text": "PnL: $62.10."
+ },
+ {
+  "category": "pred_market_ev",
+  "q": "A prediction market YES share costs $0.75 and pays $1 if it happens. I think the real chance is 80%. What's the expected profit on a $1000 bet? Just the number.",
+  "answer": 66.66666667,
+  "ok": true,
+  "used_calc": true,
+  "text": "$66.67"
+ },
+ {
+  "category": "aave_liq_price",
+  "q": "I supplied 1 ETH on Aave (liquidation threshold 80%) and borrowed $2,440 USDC. At what ETH price does my health factor hit 1? Only the number please.",
+  "answer": 3050.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation ETH price: $3,050.00."
+ },
+ {
+  "category": "basis_annual",
+  "q": "Spot is 66485 and the 30-day future is 68654. What's the annualised basis (simple)? Just the number.",
+  "answer": 39.69241182,
+  "ok": true,
+  "used_calc": true,
+  "text": "39.7%"
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "Market making: 3 bps captured per round trip, 200 round trips of $50000. Gross?",
+  "answer": 3000.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Gross profit: $3,000.00."
+ },
+ {
+  "category": "liq_mm",
+  "q": "Where's the liquidation price on a 5x short at 3983 if maintenance margin is 0.5%?",
+  "answer": 4755.82089552,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation price: $4,755.82."
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 10x with entry at $3877. Ignoring fees and maintenance margin, at what price am I liquidated? Answer with just the number.",
+  "answer": 3489.3,
+  "ok": true,
+  "used_calc": true,
+  "text": "$3,489.30"
+ },
+ {
+  "category": "liq_price_long",
+  "q": "I am long 10x with entry at $5.35. Ignoring fees and maintenance margin, at what price am I liquidated?",
+  "answer": 4.815,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation price: $4.815. Real liquidation comes a bit earlier because of maintenance margin and fees."
+ },
+ {
+  "category": "stop_from_risk",
+  "q": "I'm buying 2 coins at $385.03 and want to lose at most $100 if stopped. Where should my stop be?",
+  "answer": 335.03,
+  "ok": true,
+  "used_calc": true,
+  "text": "Stop: $335.03."
+ },
+ {
+  "category": "compound_growth",
+  "q": "$1000 compounding at 6% a year for 2 years. End value?",
+  "answer": 1123.6,
+  "ok": true,
+  "used_calc": true,
+  "text": "End value: $1,123.60."
+ },
+ {
+  "category": "rr_ratio",
+  "q": "Long at 158.36, stop 155.19, target 161.53. What's the reward to risk ratio? Just the number.",
+  "answer": 1.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Reward to risk: 1."
+ },
+ {
+  "category": "r_multiple",
+  "q": "Entry $3466, stop $3396.68, exit $3569.98. Result in R multiples?",
+  "answer": 1.5,
+  "ok": true,
+  "used_calc": true,
+  "text": "Result: 1.5R."
+ },
+ {
+  "category": "lp_fees",
+  "q": "A pool does $5,000,000 volume a day with a 0.05% fee tier. I own 2% of the liquidity. My fees per day?",
+  "answer": 50.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Your fees per day: $50.00."
+ },
+ {
+  "category": "pnl_short",
+  "q": "I shorted 10 units at $9.59 and covered at $9.3. Profit in dollars (negative if a loss)? Only the number please.",
+  "answer": 2.9,
+  "ok": true,
+  "used_calc": true,
+  "text": "$2.90"
+ },
+ {
+  "category": "liq_mm",
+  "q": "Isolated 10x short from $5.79, maintenance margin 0.4%. Liquidation price? Use liq = entry x (1 + 1/lev) / (1 + mm).",
+  "answer": 6.3436255,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation price: $6.3436."
+ },
+ {
+  "category": "margin_required",
+  "q": "I want $40,000.00 notional with 40x leverage. Margin required?",
+  "answer": 1000.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Margin needed: $1,000.00."
+ },
+ {
+  "category": "drawdown_recover",
+  "q": "My portfolio is down 10%. What percent gain do I need to get back to even?",
+  "answer": 11.11111111,
+  "ok": true,
+  "used_calc": true,
+  "text": "Gain needed: 11.11%."
+ },
+ {
+  "category": "mm_spread_capture",
+  "q": "I make markets quoting 1 bps wide and capture the full spread on 20 round trips of $20,000.00 each. Gross profit in dollars? Answer with just the number.",
+  "answer": 40.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$40.00"
+ },
+ {
+  "category": "tp_price",
+  "q": "Short entry 600.66, stop 630.69. Where do I put the take-profit for 4R?",
+  "answer": 480.54,
+  "ok": true,
+  "used_calc": true,
+  "text": "Take-profit: $480.54."
+ },
+ {
+  "category": "r_multiple",
+  "q": "Entry $200.27, stop $190.26, exit $230.3. Result in R multiples?",
+  "answer": 3.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Result: 3R."
+ },
+ {
+  "category": "effective_leverage",
+  "q": "My account equity is $10,000 and I have open positions of $1,000, $1,000, $2,500 notional. What's my effective leverage?",
+  "answer": 0.45,
+  "ok": true,
+  "used_calc": true,
+  "text": "Effective leverage: 0.45x."
+ },
+ {
+  "category": "mcap_price",
+  "q": "A token has 1,000,000,000 tokens in circulation. What price gives it a $5,000,000 market cap? Just the number.",
+  "answer": 0.005,
+  "ok": true,
+  "used_calc": true,
+  "text": "$0.005"
+ },
+ {
+  "category": "avg_entry",
+  "q": "I bought $500 worth at each of these prices: 83.63, 83.36, 72.15, 96.23. What's my average entry price? Just the number.",
+  "answer": 82.97829626,
+  "ok": true,
+  "used_calc": true,
+  "text": "$82.98"
+ },
+ {
+  "category": "aave_liq_price",
+  "q": "I supplied 1 ETH on Aave (liquidation threshold 83%) and borrowed $920 USDC. At what ETH price does my health factor hit 1? Just the number.",
+  "answer": 1108.43373494,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation ETH price: $1,108.43."
+ },
+ {
+  "category": "tp_price",
+  "q": "Long entry 456.75, stop 452.18. Where do I put the take-profit for 1.5R? Just the number.",
+  "answer": 463.605,
+  "ok": true,
+  "used_calc": true,
+  "text": "$463.61"
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 50 ETH and 125,000 USDC. With the 0.3% fee, how much USDC do I get for 1 ETH? Round to 2dp, just the number.",
+  "answer": 2443.77120223,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 2,443.77 USDC."
+ },
+ {
+  "category": "dca",
+  "q": "If I DCA $100.00 every week for 52 weeks, how much do I invest in total? Answer with just the number.",
+  "answer": 5200,
+  "ok": true,
+  "used_calc": true,
+  "text": "$5,200.00"
+ },
+ {
+  "category": "rr_ratio",
+  "q": "Short at 42.16, stop 42.79, target 39.63. What's the reward to risk ratio?",
+  "answer": 4.01587302,
+  "ok": true,
+  "used_calc": true,
+  "text": "Reward to risk: 4.02."
+ },
+ {
+  "category": "stop_from_risk",
+  "q": "I'm buying 1 coins at $561.14 and want to lose at most $25 if stopped. Where should my stop be?",
+  "answer": 536.14,
+  "ok": true,
+  "used_calc": true,
+  "text": "Stop: $536.14."
+ },
+ {
+  "category": "rr_ratio",
+  "q": "Short at 1.75, stop 1.78, target 1.72. What's the reward to risk ratio? Only the number please.",
+  "answer": 1.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Reward to risk: 1."
+ },
+ {
+  "category": "tp_price",
+  "q": "Short entry 1213, stop 1249.39. Where do I put the take-profit for 2R? Just the number.",
+  "answer": 1140.22,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1,140.22"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 0.1 units at $108.37 and closed at $140.88. What is my profit in dollars? Just the number.",
+  "answer": 3.251,
+  "ok": true,
+  "used_calc": true,
+  "text": "$3.251"
+ },
+ {
+  "category": "lp_fees",
+  "q": "A pool does $10,000,000 volume a day with a 0.3% fee tier. I own 0.01% of the liquidity. My fees per day? Just the number.",
+  "answer": 3.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$3.00"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 1.5 units at $3.75 and closed at $4.88. What is my profit in dollars? Only the number please.",
+  "answer": 1.695,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1.695"
+ },
+ {
+  "category": "avg_down",
+  "q": "I hold 5 at $325 and buy 5 more at $230.1. What's my new average entry (break-even price)? Answer with just the number.",
+  "answer": 277.55,
+  "ok": true,
+  "used_calc": true,
+  "text": "$277.55"
+ },
+ {
+  "category": "sum_balances",
+  "q": "I have 3 wallets with 5, 2.7, 0.38 SOL. Total SOL? Round to 2dp, just the number.",
+  "answer": 8.08,
+  "ok": true,
+  "used_calc": true,
+  "text": "Total: 8.08."
+ },
+ {
+  "category": "liq_price_long",
+  "q": "Where's my liquidation on a 20x long from 4.05? Ignore fees and maintenance margin.",
+  "answer": 3.8475,
+  "ok": true,
+  "used_calc": true,
+  "text": "Liquidation price: $3.8475."
+ },
+ {
+  "category": "pnl_short",
+  "q": "Short 3 from 46652, closed at 44319.4. What's my PnL?",
+  "answer": 6997.8,
+  "ok": true,
+  "used_calc": true,
+  "text": "Short PnL: $6,997.80."
+ },
+ {
+  "category": "stop_from_risk",
+  "q": "I'm buying 20 coins at $198.01 and want to lose at most $25 if stopped. Where should my stop be? Answer with just the number.",
+  "answer": 196.76,
+  "ok": true,
+  "used_calc": true,
+  "text": "$196.76"
+ },
+ {
+  "category": "impermanent_loss",
+  "q": "A token in a 50/50 LP moves 4.68x against the other. What is the impermanent loss as a percent (magnitude)? Round to 2dp, just the number.",
+  "answer": 23.8263815,
+  "ok": true,
+  "used_calc": true,
+  "text": "23.83%"
+ },
+ {
+  "category": "lp_fees",
+  "q": "A pool does $25,000,000 volume a day with a 0.01% fee tier. I own 0.01% of the liquidity. My fees per day? Only the number please.",
+  "answer": 0.25,
+  "ok": true,
+  "used_calc": true,
+  "text": "$0.25"
+ },
+ {
+  "category": "r_multiple",
+  "q": "Long entry 9.58, stop 9.39, I exited at 9.68. How many R did I make? Answer with just the number.",
+  "answer": 0.52631579,
+  "ok": true,
+  "used_calc": true,
+  "text": "0.53R"
+ },
+ {
+  "category": "funding_payment",
+  "q": "I hold a $2,500 perp position. Funding is 0.0359% every 8 hours and I'm on the paying side. How much funding do I pay over 72 hours? Just the number.",
+  "answer": 8.0775,
+  "ok": true,
+  "used_calc": true,
+  "text": "$8.08"
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "Constant product pool: 200 ETH / 360000 USDC, 0.3% fee. What do I receive selling 3 ETH?",
+  "answer": 5304.47162682,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 5,304.47 USDC."
+ },
+ {
+  "category": "kelly",
+  "q": "A strategy wins 61% of the time, paying 2:1 (win 2 units, lose 1). What fraction of the bankroll does the Kelly criterion suggest, as a percent? Round to 2dp, just the number.",
+  "answer": 41.5,
+  "ok": true,
+  "used_calc": true,
+  "text": "41.5%"
+ },
+ {
+  "category": "pnl_long",
+  "q": "I went long 0.25 units at $339.67 and closed at $237.77. What is my profit in dollars? Answer with just the number.",
+  "answer": -25.475,
+  "ok": true,
+  "used_calc": true,
+  "text": "-$25.48"
+ },
+ {
+  "category": "compound_growth",
+  "q": "If I put $1,000 into a vault at 10% APY, how much will I have after 5 years? Only the number please.",
+  "answer": 1610.51,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1,610.51"
+ },
+ {
+  "category": "slippage_pct",
+  "q": "I expected to buy at 4.04 but my average fill was 4.0495. What was my slippage in percent? Just the number.",
+  "answer": 0.23514851,
+  "ok": true,
+  "used_calc": true,
+  "text": "Slippage: 0.24%."
+ },
+ {
+  "category": "apr_to_apy",
+  "q": "A pool pays 12% APR, compounded daily. What's the APY? Answer with just the number.",
+  "answer": 12.74746156,
+  "ok": true,
+  "used_calc": true,
+  "text": "APY: 12.75%."
+ },
+ {
+  "category": "depeg_loss",
+  "q": "I hold 1,000 of a stablecoin that depegged to $0.908. How much value have I lost in dollars? Just the number.",
+  "answer": 92.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$92.00"
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is -0.0273% every 1 hour. Annualised simply (no compounding), what percent per year?",
+  "answer": -239.148,
+  "ok": true,
+  "used_calc": true,
+  "text": "Annualised funding: -239.15%. Funding changes all the time, so treat it as a snapshot."
+ },
+ {
+  "category": "pred_implied",
+  "q": "On a prediction market YES is 17 cents and NO is 83 cents. What's the implied probability of YES after removing the overround? Only the number please.",
+  "answer": 17.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Implied probability: 17%."
+ },
+ {
+  "category": "sum_balances",
+  "q": "Add up my ETH: 4.58, 5, 1.48.",
+  "answer": 11.06,
+  "ok": true,
+  "used_calc": true,
+  "text": "Total: 11.06."
+ },
+ {
+  "category": "borrow_capacity",
+  "q": "My collateral is $5,000 with a max LTV of 70%. I've already borrowed $2,500. How much more can I borrow? Just the number.",
+  "answer": 1000.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1,000.00"
+ },
+ {
+  "category": "borrow_capacity",
+  "q": "My collateral is $5,000 with a max LTV of 80%. I've already borrowed $2,250. How much more can I borrow? Answer with just the number.",
+  "answer": 1750.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$1,750.00"
+ },
+ {
+  "category": "mcap_price",
+  "q": "A token has 21,000,000 tokens in circulation. What price gives it a $20,000,000 market cap? Answer with just the number.",
+  "answer": 0.95238095,
+  "ok": true,
+  "used_calc": true,
+  "text": "$0.9524"
+ },
+ {
+  "category": "slippage_pct",
+  "q": "I expected to buy at 3.07 but my average fill was 3.0943. What was my slippage in percent? Only the number please.",
+  "answer": 0.79153094,
+  "ok": true,
+  "used_calc": true,
+  "text": "Slippage: 0.79%."
+ },
+ {
+  "category": "health_factor",
+  "q": "On Aave I have $2,000 of collateral with a liquidation threshold of 80% and $1,280 borrowed. What's my health factor? Only the number please.",
+  "answer": 1.25,
+  "ok": true,
+  "used_calc": true,
+  "text": "Health factor: 1.25."
+ },
+ {
+  "category": "tp_price",
+  "q": "Short entry 170.49, stop 173.9. Where do I put the take-profit for 3R? Only the number please.",
+  "answer": 160.26,
+  "ok": true,
+  "used_calc": true,
+  "text": "$160.26"
+ },
+ {
+  "category": "rr_ratio",
+  "q": "Long at 82845, stop 82016.55, target 86158.8. What's the reward to risk ratio?",
+  "answer": 4.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Reward to risk: 4."
+ },
+ {
+  "category": "compound_growth",
+  "q": "$1000 compounding at 8% a year for 5 years. End value?",
+  "answer": 1469.3280768,
+  "ok": true,
+  "used_calc": true,
+  "text": "End value: $1,469.33."
+ },
+ {
+  "category": "effective_leverage",
+  "q": "My account equity is $10,000 and I have open positions of $500, $500 notional. What's my effective leverage? Just the number.",
+  "answer": 0.1,
+  "ok": true,
+  "used_calc": true,
+  "text": "Effective leverage: 0.1x."
+ },
+ {
+  "category": "r_multiple",
+  "q": "Long entry 328.54, stop 318.68, I exited at 338.4. How many R did I make? Answer with just the number.",
+  "answer": 1.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "Result: 1R."
+ },
+ {
+  "category": "lp_fees",
+  "q": "A pool does $2,000,000 volume a day with a 1% fee tier. I own 0.5% of the liquidity. My fees per day? Just the number.",
+  "answer": 100.0,
+  "ok": true,
+  "used_calc": true,
+  "text": "$100.00"
+ },
+ {
+  "category": "amm_v2_out",
+  "q": "A Uniswap v2 pool has 100 ETH and 180,000 USDC. With the 0.3% fee, how much USDC do I get for 1.5 ETH? Round to 2dp, just the number.",
+  "answer": 2652.23581341,
+  "ok": true,
+  "used_calc": true,
+  "text": "You'd receive: 2,652.24 USDC."
+ },
+ {
+  "category": "funding_annual",
+  "q": "Perp funding is -0.0697% every 8 hours. Annualised simply (no compounding), what percent per year? Only the number please.",
+  "answer": -76.3215,
+  "ok": true,
+  "used_calc": true,
+  "text": "-76.32%"
+ },
+ {
+  "category": "pct_roundtrip",
+  "q": "My coin fell 43% and then pumped 132%. Am I up or down overall, and by how much?",
+  "answer": 32.24,
+  "ok": true,
+  "used_calc": true,
+  "text": "Net change: 32.24%."
+ }
+]

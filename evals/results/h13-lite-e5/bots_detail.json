@@ -1,0 +1,32 @@
+[
+ {
+  "id": "grid_levels",
+  "ok": true,
+  "why": "ok"
+ },
+ {
+  "id": "mm_quotes",
+  "ok": false,
+  "why": "flat quotes {'bid': 100.0, 'ask': 100.0, 'bid_size': 1.0, 'ask_size': 1.0}"
+ },
+ {
+  "id": "position_size",
+  "ok": true,
+  "why": "ok"
+ },
+ {
+  "id": "backtest_sma",
+  "ok": true,
+  "why": "ok"
+ },
+ {
+  "id": "mm_run",
+  "ok": false,
+  "why": "raised: AssertionError()"
+ },
+ {
+  "id": "funding_arb",
+  "ok": true,
+  "why": "ok"
+ }
+]

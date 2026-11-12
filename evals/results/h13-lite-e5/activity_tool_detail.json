@@ -1,0 +1,2747 @@
+[
+ {
+  "id": "activity_tool-0",
+  "suite": "activity_tool",
+  "kind": "general_list",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"in_progress\", \"time\": \"2026-11-09 17:08\", \"what\": \"Bought 0.852 LINK with 20 USDC\"}, {\"status\": \"failed\", \"time\": \"2026-11-08 10:54\", \"what\": \"Withdrew 20 DAI from Aave v3 on Arbitrum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-08 10:18\", \"what\": \"Swap 100 USDC to HYPE on Polygon\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-08 09:07\", \"what\": \"Sent 308 DOGE to vault.eth\"}, {\"status\": \"failed\", \"time\": \"2026-11-08 08:47\", \"what\": \"Sent 736000 BONK to 0xE882…5480\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-08 07:52\", \"what\": \"Swap 75 USDC to USDT on Base\"}, {\"status\": \"failed\", \"time\": \"2026-11-07 16:20\", \"what\": \"Sent 77.1 DOGE to vault.eth\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "You have 7 recent items, and 1 is still in progress.\nHere are the newest 5:\n- Bought 0.852 LINK with 20 USDC, in progress, 2026-11-09 17:08\n- Withdrew 20 DAI from Aave v3 on Arbitrum, failed, 2026-11-08 10:54\n- Swap 100 USDC to HYPE on Polygon, confirmed, 2026-11-08 10:18\n- Sent 308 DOGE to vault.eth, confirmed, 2026-11-08 09:07\n- Sent 736000 BONK to 0xE882…5480, failed, 2026-11-08 08:47\n\nOne of them shows as failed. Want me to check your balances?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 222
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-1",
+  "suite": "activity_tool",
+  "kind": "pending_none_pending",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"confirmed\", \"time\": \"2026-11-07 14:35\", \"what\": \"Bought 0.854 HYPE with 25 USDC\"}, {\"status\": \"failed\", \"time\": \"2026-11-07 13:54\", \"what\": \"Bought 184000 BONK with 5 USDC\"}, {\"status\": \"failed\", \"time\": \"2026-11-05 21:05\", \"what\": \"Sent 2.81 AVAX to 0x0158…AfC4\"}, {\"status\": \"failed\", \"time\": \"2026-11-03 23:22\", \"what\": \"Withdrew 120 USDC from Aave v3 on Ethereum\"}, {\"status\": \"failed\", \"time\": \"2026-11-03 22:47\", \"what\": \"Bought 14.4 JUP with 10 USDC\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-02 16:03\", \"what\": \"Swap 1 USDC to USDT on Base\"}], \"in_progress\": 0, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "Nothing is in progress right now. The latest item:\n- Bought 0.854 HYPE with 25 USDC, confirmed, 2026-11-07 14:35",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 47
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-2",
+  "suite": "activity_tool",
+  "kind": "specific_hit_failed",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": false,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"confirmed\", \"time\": \"2026-11-05 08:23\", \"what\": \"Deposited 2 DAI into Aave v3 on Base\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-05 07:28\", \"what\": \"Swap 0.188 ETH to HYPE on Ethereum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-05 07:07\", \"what\": \"Deposited 75 USDC into Aave v3 on Base\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-05 01:00\", \"what\": \"Withdrew 120 USDT from Aave v3 on Ethereum\"}, {\"status\": \"failed\", \"time\": \"2026-11-04 21:01\", \"what\": \"Bought 4.03 LINK with 100 USDC\"}, {\"status\": \"failed\", \"time\": \"2026-11-04 19:47\", \"what\": \"Bought 0.00188 ETH with 5 USDC\"}], \"in_progress\": 0, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "I don't see it in Activity. Reviews you haven't approved yet don't show here.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 19
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-3",
+  "suite": "activity_tool",
+  "kind": "error_wallet",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"No wallet on this iPhone yet\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "This iPhone has no wallet yet, so there's nothing to read. Create or import one in Wallets first.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 23
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-4",
+  "suite": "activity_tool",
+  "kind": "limit_list",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {\"limit\": 7}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {
+         "limit": 7
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"in_progress\", \"time\": \"2026-11-09 22:34\", \"what\": \"Bought 194 DOGE with 25 USDC\"}, {\"status\": \"in_progress\", \"time\": \"2026-11-09 21:26\", \"what\": \"Sent 227 ARB to noah.eth\"}], \"in_progress\": 2, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "You have 2 in progress:\n- Bought 194 DOGE with 25 USDC, in progress, 2026-11-09 22:34\n- Sent 227 ARB to noah.eth, in progress, 2026-11-09 21:26",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 76
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-5",
+  "suite": "activity_tool",
+  "kind": "general_list",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"failed\", \"time\": \"2026-11-04 17:45\", \"what\": \"Deposited 500 USDC into Aave v3 on Arbitrum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-04 17:18\", \"what\": \"Sent 436 WIF to 0xc745…C9a2\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-04 16:33\", \"what\": \"Sent 2 USDC to 0x3D62…C633\"}, {\"status\": \"failed\", \"time\": \"2026-11-03 23:17\", \"what\": \"Bought 28.3 DOGE with 10 USDC\"}], \"in_progress\": 0, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "Nothing is in progress. 4 recent items in total.\nHere they are:\n- Deposited 500 USDC into Aave v3 on Arbitrum, failed, 2026-11-04 17:45\n- Sent 436 WIF to 0xc745…C9a2, confirmed, 2026-11-04 17:18\n- Sent 2 USDC to 0x3D62…C633, confirmed, 2026-11-04 16:33\n- Bought 28.3 DOGE with 10 USDC, failed, 2026-11-03 23:17\n\nOne of them shows as failed. I can check your balances if you want.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 187
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-6",
+  "suite": "activity_tool",
+  "kind": "kind_pending_match",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": false,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_positions\", \"arguments\": {\"kind\": \"earn\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_positions",
+        "arguments": {
+         "kind": "earn"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"unknown tool get_positions\"}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "I couldn't read that. It says it can't read your Aave deposits, so I don't have a number for it.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 27
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_positions",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-7",
+  "suite": "activity_tool",
+  "kind": "not_activity_balance",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_balances\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_balances",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"holdings\": [{\"amount\": \"1.0144\", \"chain\": \"base\", \"symbol\": \"ETH\", \"usd\": 2193.12}, {\"amount\": \"19211.2\", \"chain\": \"polygon\", \"symbol\": \"POL\", \"usd\": 10235.73}]}"
+      ],
+      "ntok": 16
+     },
+     {
+      "text": "You hold 1.0144 ETH on Base and 19,211.2 POL on Polygon.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 26
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_balances",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-8",
+  "suite": "activity_tool",
+  "kind": "general_list",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"confirmed\", \"time\": \"2026-11-07 13:37\", \"what\": \"Sent 102 SUI to 7gD6…tJj9\"}], \"in_progress\": 0, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "Nothing is in progress. 1 recent item in total.\n- Sent 102 SUI to 7gD6…tJj9, confirmed, 2026-11-07 13:37",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 51
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-9",
+  "suite": "activity_tool",
+  "kind": "specific_hit_failed",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": false,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"in_progress\", \"time\": \"2026-11-08 15:21\", \"what\": \"Bought 3.41 UNI with 50 USDC\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-08 12:15\", \"what\": \"Swap 20 USDC to AAVE on Solana\"}, {\"status\": \"failed\", \"time\": \"2026-11-08 12:04\", \"what\": \"Withdrew 12.5 USDC from Aave v3 on Base\"}, {\"status\": \"failed\", \"time\": \"2026-11-07 09:44\", \"what\": \"Deposited 150 USDC into Aave v3 on Ethereum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-05 16:29\", \"what\": \"Sent 1010000 BONK to 0xFB…cB\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "It's still in progress: Bought 3.41 UNI with 50 USDC, 2026-11-08 15:21.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 39
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-10",
+  "suite": "activity_tool",
+  "kind": "general_list",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"in_progress\", \"time\": \"2026-11-07 21:24\", \"what\": \"Sent 131 WIF to 0x58…63\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-07 10:43\", \"what\": \"Deposited 12.5 USDT into Aave v3 on Ethereum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-07 10:20\", \"what\": \"Sent 19.2 JUP to 0x8b14…1d96\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-07 09:29\", \"what\": \"Withdrew 20 USDC from Aave v3 on Ethereum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-06 04:43\", \"what\": \"Bought 0.456 HYPE with 15 USDC\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "You have 5 recent items, and 1 is still in progress.\nHere are the newest 5:\n- Sent 131 WIF to 0x58…63, in progress, 2026-11-07 21:24\n- Deposited 12.5 USDT into Aave v3 on Ethereum, confirmed, 2026-11-07 10:43\n- Sent 19.2 JUP to 0x8b14…1d96, confirmed, 2026-11-07 10:20\n- Withdrew 20 USDC from Aave v3 on Ethereum, confirmed, 2026-11-07 09:29\n- Bought 0.456 HYPE with 15 USDC, confirmed, 2026-11-06 04:43",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 215
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-11",
+  "suite": "activity_tool",
+  "kind": "kind_pending_match",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"in_progress\", \"time\": \"2026-11-08 13:55\", \"what\": \"Deposited 500 USDC into Aave v3 on Ethereum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-08 13:53\", \"what\": \"Sent 1710000 BONK to 0x62…83\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "1 deposit still in progress:\n- Deposited 500 USDC into Aave v3 on Ethereum, in progress, 2026-11-08 13:55",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-12",
+  "suite": "activity_tool",
+  "kind": "not_activity_hash",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "restraint",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "A transaction hash is a long string that identifies a single blockchain transaction. Search it in a block explorer for its status, amount and addresses.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 28
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-13",
+  "suite": "activity_tool",
+  "kind": "limit_list",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {\"limit\": 5}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {
+         "limit": 5
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"failed\", \"time\": \"2026-11-06 16:27\", \"what\": \"Swap 1 USDT on Base to USDT on Arbitrum\"}, {\"status\": \"in_progress\", \"time\": \"2026-11-06 15:49\", \"what\": \"Swap 1.75 SOL to HYPE on Solana\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "You have 2 recent items, and 1 is still in progress.\n- Swap 1 USDT on Base to USDT on Arbitrum, failed, 2026-11-06 16:27\n- Swap 1.75 SOL to HYPE on Solana, in progress, 2026-11-06 15:49\n\nOne shows as failed. I can check your balances if you want.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 100
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-14",
+  "suite": "activity_tool",
+  "kind": "followup_pending",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "Still in progress:\n- Swap 2 USDC on BNB Chain to USDC on Ethereum, in progress, 2026-11-05 21:25",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 40
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-15",
+  "suite": "activity_tool",
+  "kind": "limit_list",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": false,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {\"limit\": 9}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {
+         "limit": 9
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"failed\", \"time\": \"2026-11-10 23:07\", \"what\": \"Deposited 25 USDC into Aave v3 on Arbitrum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-10 21:45\", \"what\": \"Swap 50 USDC on Polygon to USDC on Ethereum\"}], \"in_progress\": 0, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 19
+     },
+     {
+      "text": "Nothing is in progress. 2 recent items in total.\nHere they are:\n- Deposited 25 USDC into Aave v3 on Arbitrum, failed, 2026-11-10 23:07\n- Swap 50 USDC on Polygon to USDC on Ethereum, confirmed, 2026-11-10 21:45",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 87
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-17",
+  "suite": "activity_tool",
+  "kind": "pending_pending",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"in_progress\", \"time\": \"2026-11-03 15:41\", \"what\": \"Bought 828000 BONK with 15 USDC\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-03 03:52\", \"what\": \"Withdrew 0.0888 ETH from Aave v3 on Arbitrum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-01 13:37\", \"what\": \"Withdrew 100 USDC from Aave v3 on Arbitrum\"}, {\"status\": \"failed\", \"time\": \"2026-11-01 13:18\", \"what\": \"Bought 552000 BONK with 10 USDC\"}, {\"status\": \"failed\", \"time\": \"2026-11-01 13:11\", \"what\": \"Swap 0.5 USDT to HYPE on Arbitrum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-01 11:47\", \"what\": \"Sent 96.1 WIF to 0x34…6C\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "1 still in progress:\n- Bought 828000 BONK with 15 USDC, in progress, 2026-11-03 15:41",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 44
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-18",
+  "suite": "activity_tool",
+  "kind": "specific_hit_in_progress",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": false,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"in_progress\", \"time\": \"2026-11-04 23:35\", \"what\": \"Sent 0.566 AVAX to 0xc3…Df\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "I don't see it in Activity. Reviews you haven't approved yet don't show here.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 19
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-19",
+  "suite": "activity_tool",
+  "kind": "general_list",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"confirmed\", \"time\": \"2026-11-10 12:22\", \"what\": \"Sent 2.32 AVAX to 0x43…d6\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-10 11:15\", \"what\": \"Bought 68.7 WIF with 50 USDC\"}], \"in_progress\": 0, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "Nothing is in progress. 2 recent items in total.\nHere they are:\n- Sent 2.32 AVAX to 0x43…d6, confirmed, 2026-11-10 12:22\n- Bought 68.7 WIF with 50 USDC, confirmed, 2026-11-10 11:15",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 90
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-20",
+  "suite": "activity_tool",
+  "kind": "specific_hit_confirmed",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"confirmed\", \"time\": \"2026-11-06 22:05\", \"what\": \"Withdrew 150 USDC from Aave v3 on Arbitrum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-06 21:36\", \"what\": \"Swap 75 USDT on Arbitrum to USDT on Base\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-06 21:06\", \"what\": \"Sent 2.32 LINK to 0xa8…86\"}, {\"status\": \"in_progress\", \"time\": \"2026-11-06 20:29\", \"what\": \"Swap 0.0339 ETH to BONK on Base\"}, {\"status\": \"failed\", \"time\": \"2026-11-06 17:04\", \"what\": \"Swap 0.00508 ETH to UNI on Solana\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-06 15:38\", \"what\": \"Sent 25 USDC to D2FJ…yjG9\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-04 23:10\", \"what\": \"Sent 0.142 BNB to 0x0a…83\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "Activity shows it as confirmed: Sent 2.32 LINK to 0xa8…86, 2026-11-06 21:36.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 40
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-21",
+  "suite": "activity_tool",
+  "kind": "pending_pending",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"in_progress\", \"time\": \"2026-11-10 23:22\", \"what\": \"Sent 1000 USDC to 0x26…Cb\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-10 22:33\", \"what\": \"Sent 0.0199 ETH to 0xc0ec…e222\"}, {\"status\": \"failed\", \"time\": \"2026-11-10 21:15\", \"what\": \"Bought 0.00724 BNB with 5 USDC\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-09 04:48\", \"what\": \"Bought 0.255 SOL with 25 USDC\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "1 still in progress:\n- Sent 1000 USDC to 0x26…Cb, in progress, 2026-11-10 23:22",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-22",
+  "suite": "activity_tool",
+  "kind": "kind_pending_match",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"failed\", \"time\": \"2026-11-09 11:53\", \"what\": \"Bought 0.205 HYPE with 10 USDC\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-09 04:37\", \"what\": \"Bought 1.03 HYPE with 50 USDC\"}, {\"status\": \"in_progress\", \"time\": \"2026-11-08 14:53\", \"what\": \"Withdrew 12.5 USDC from Aave v3 on Base\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-08 13:58\", \"what\": \"Bought 0.00763 BNB with 5 USDC\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-08 12:52\", \"what\": \"Swap 0.00623 ETH on Polygon to ETH on Base\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "1 in progress:\n- Withdrew 12.5 USDC from Aave v3 on Base, in progress, 2026-11-08 14:53",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 43
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-23",
+  "suite": "activity_tool",
+  "kind": "last_kind_match",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": false,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"confirmed\", \"time\": \"2026-11-05 08:22\", \"what\": \"Sent 6.82 LINK to 0xde…18\"}, {\"status\": \"in_progress\", \"time\": \"2026-11-05 07:46\", \"what\": \"Sent 0.856 BNB to 0x6A…Dc\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-05 07:06\", \"what\": \"Sent 3970000 BONK to 0x01…3B\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-03 06:33\", \"what\": \"Swap 1.71 BNB to LINK on Arbitrum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-03 05:09\", \"what\": \"Withdrew 500 USDT from Aave v3 on Base\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-01 20:02\", \"what\": \"Swap 20 USDT on Solana to USDT on Ethereum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-01 00:00\", \"what\": \"Swap 25 USDC to DAI on Base\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "Your latest swap in Activity:\n- Swap 20 USDT on Solana to USDT on Ethereum, confirmed, 2026-11-01 20:02",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-24",
+  "suite": "activity_tool",
+  "kind": "specific_hit_in_progress",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": false,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": false,
+   "selection": false,
+   "exact_digits": false,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": false,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": false,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"prepare_withdraw\", \"arguments\": {\"symbol\": \"ETH\"}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "prepare_withdraw",
+        "arguments": {
+         "symbol": "ETH"
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"error\": \"unknown tool prepare_withdraw\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "I can't do that: I don't have a withdraw button for Hermit, only for Aave v3 deposits. Want me to prepare an Aave v3 deposit?",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 36
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "prepare_withdraw",
+     "sim"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-25",
+  "suite": "activity_tool",
+  "kind": "followup_pending",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "The first one in your list, withdrew 0.5 USDC from Aave v3 on Ethereum, is confirmed. The second, swap 0.325 BNB to BONK on BNB Chain, is still in progress.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 53
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": []
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-26",
+  "suite": "activity_tool",
+  "kind": "specific_hit_confirmed",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": false,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"in_progress\", \"time\": \"2026-11-03 21:53\", \"what\": \"Sent 1000 USDT to 0x5e…41\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-03 20:47\", \"what\": \"Swap 455 SUI to BNB on Arbitrum\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "I haven't prepared anything in this chat. I can't tell which item you mean. Activity in Wallets shows each one's status, and 1 is still in progress.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 36
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-27",
+  "suite": "activity_tool",
+  "kind": "latest_row",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"confirmed\", \"time\": \"2026-11-05 20:30\", \"what\": \"Sent 5.3 AAVE to 0x3d…1f\"}, {\"status\": \"failed\", \"time\": \"2026-11-04 10:28\", \"what\": \"Sent 30.5 JUP to 0x8Bb1…4e41\"}, {\"status\": \"failed\", \"time\": \"2026-11-04 10:03\", \"what\": \"Sent 2.65 AAVE to 0xa5…9d\"}], \"in_progress\": 0, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "Your latest send:\n- Sent 5.3 AAVE to 0x3d…1f, confirmed, 2026-11-05 20:30",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 41
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-28",
+  "suite": "activity_tool",
+  "kind": "last_kind_match",
+  "ok": false,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": false,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {}
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"in_progress\", \"time\": \"2026-11-08 17:27\", \"what\": \"Deposited 5 USDC into Aave v3 on Base\"}, {\"status\": \"in_progress\", \"time\": \"2026-11-08 16:31\", \"what\": \"Bought 15 JUP with 10 USDC\"}, {\"status\": \"in_progress\", \"time\": \"2026-11-08 15:04\", \"what\": \"Sent 27.2 AVAX to 0xb3…49\"}], \"in_progress\": 3, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 15
+     },
+     {
+      "text": "I haven't prepared anything in this chat. I can't tell which item you mean. Activity in Wallets shows each one's status, and 3 are still in progress.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 36
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ },
+ {
+  "id": "activity_tool-29",
+  "suite": "activity_tool",
+  "kind": "limit_list",
+  "ok": true,
+  "checks": {
+   "decision": true,
+   "first_name": true,
+   "types_ok": true,
+   "final_nonempty": true,
+   "right_tool": true,
+   "selection": true,
+   "exact_digits": true,
+   "no_chain_invented": true,
+   "asked_when_needed": true,
+   "no_ask_for_data": true,
+   "no_unbacked_done": true,
+   "no_relay": true,
+   "route_text": true,
+   "decimals_ok": true,
+   "no_invented_price": true,
+   "restraint": true,
+   "bio_word": true,
+   "rows_verbatim": true,
+   "answer_forbidden": true,
+   "list_len_ok": true,
+   "wrong_money": true,
+   "parse_ok": true,
+   "terminates": true,
+   "no_runaway": true,
+   "arg_provenance": true,
+   "len_ok": true,
+   "preamble_ok": true,
+   "pack_respected": true
+  },
+  "gates": [
+   "arg_provenance",
+   "bio_word",
+   "exact_digits",
+   "len_ok",
+   "no_relay",
+   "no_runaway",
+   "no_unbacked_done",
+   "pack_respected",
+   "parse_ok",
+   "preamble_ok",
+   "right_tool",
+   "rows_verbatim",
+   "terminates",
+   "wrong_money"
+  ],
+  "not_scored": [],
+  "traj": {
+   "segments": [
+    [
+     {
+      "text": "<tool_call>\n{\"name\": \"get_activity\", \"arguments\": {\"limit\": 12}}\n</tool_call>",
+      "calls": [
+       {
+        "name": "get_activity",
+        "arguments": {
+         "limit": 12
+        }
+       }
+      ],
+      "bad": 0,
+      "hit_max": false,
+      "results": [
+       "{\"activity\": [{\"status\": \"confirmed\", \"time\": \"2026-11-09 21:00\", \"what\": \"Sent 162 SUI to 0x5465…8ad1\"}, {\"status\": \"in_progress\", \"time\": \"2026-11-09 20:41\", \"what\": \"Deposited 0.0663 ETH into Aave v3 on Arbitrum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-09 19:39\", \"what\": \"Bought 2.28 LINK with 25 USDC\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-09 09:17\", \"what\": \"Deposited 12.5 USDC into Aave v3 on Base\"}, {\"status\": \"failed\", \"time\": \"2026-11-09 08:54\", \"what\": \"Deposited 1 USDC into Aave v3 on Base\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-08 15:45\", \"what\": \"Swap 0.00497 ETH on Base to ETH on Ethereum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-08 14:17\", \"what\": \"Swap 0.0999 SOL to WIF on Arbitrum\"}, {\"status\": \"confirmed\", \"time\": \"2026-11-08 13:45\", \"what\": \"Swap 12.5 USDC to JUP on Solana\"}], \"in_progress\": 1, \"note\": \"Reviews the user has not approved yet do not appear here.\"}"
+      ],
+      "ntok": 20
+     },
+     {
+      "text": "Latest activity: 8 recent items, 1 in progress.\nHere are the newest 5:\n- Sent 162 SUI to 0x5465…8ad1, confirmed, 2026-11-09 21:00\n- Deposited 0.0663 ETH into Aave v3 on Arbitrum, in progress, 2026-11-09 20:41\n- Bought 2.28 LINK with 25 USDC, confirmed, 2026-11-09 19:39\n- Deposited 12.5 USDC into Aave v3 on Base, confirmed, 2026-11-09 09:17\n- Deposited 1 USDC into Aave v3 on Base, failed, 2026-11-09 08:54\n\nOne of them shows as failed. I can check your balances if you want.",
+      "calls": [],
+      "bad": 0,
+      "hit_max": false,
+      "results": [],
+      "ntok": 226
+     }
+    ]
+   ],
+   "ended": [
+    true
+   ],
+   "capped": [
+    false
+   ],
+   "done": true,
+   "runner_log": [
+    [
+     0,
+     "get_activity",
+     "recorded"
+    ]
+   ]
+  },
+  "sha_ok": true
+ }
+]
