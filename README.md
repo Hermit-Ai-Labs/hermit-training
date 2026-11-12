@@ -1,5 +1,13 @@
 # Hermit 1.3 training
 
+[![Hermit 1.3 on Hugging Face](https://img.shields.io/badge/model-Hermit%201.3-FFD21E?logo=huggingface&logoColor=black&labelColor=111111)](https://huggingface.co/aiquantgod/Hermit-1.3-4B-MLX-5bit)
+[![Hermit 1.3 Lite on Hugging Face](https://img.shields.io/badge/model-Hermit%201.3%20Lite-FFD21E?logo=huggingface&logoColor=black&labelColor=111111)](https://huggingface.co/aiquantgod/Hermit-1.3-Lite-MLX-6bit)
+[![Code: MIT](https://img.shields.io/badge/code-MIT-4E1F96.svg)](LICENSE)
+[![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-4E1F96.svg)](data/LICENSE)
+[![Base: Qwen3, Apache-2.0](https://img.shields.io/badge/base-Qwen3%20(Apache--2.0)-111111.svg)](NOTICE.md)
+[![Hermit app](https://img.shields.io/badge/app-hermit--app-4E1F96?logo=github&logoColor=white)](https://github.com/Hermit-Ai-Labs/hermit-app)
+[![Built on NEAR](https://img.shields.io/badge/built%20on-NEAR-00EC97?labelColor=111111)](https://docs.hermit.my/near/overview/)
+
 This repo shows how the two on-device models behind the Hermit wallet were made: **Hermit 1.3** (4B) and **Hermit 1.3 Lite** (1.7B). It holds the training data, the programs that wrote it, the test suites and scorer, the real results, and the exact training and quantisation steps.
 
 Hermit is a wallet for iPhone and Mac with an AI assistant that runs on the device. The assistant never holds a key. It calls a fixed set of tools (30 in this version), and anything that moves money becomes a review the user approves with Face ID or Touch ID.
